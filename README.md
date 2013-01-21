@@ -1,4 +1,4 @@
 Mocha
 =====
 
-The personal site of Mig Reyes, powered by Jekyll.
+The personal website of Mig Reyes, powered by Jekyll. 

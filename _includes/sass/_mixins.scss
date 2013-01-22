@@ -1,6 +1,12 @@
 // Colors ------------------------------------- *
 
 // Effects ------------------------------------ *
+@mixin box {
+          box-sizing: border-box;
+       -o-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 @mixin fade {
           transition: all 0.2s ease;
        -o-transition: all 0.2s ease;

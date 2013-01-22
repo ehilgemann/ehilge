@@ -1,8 +1,11 @@
 <header role="banner" id="top">
-  <a href="/">Mig Reyes</a>
+  <h1><a href="/">Mig Reyes</a></h1>
   <nav role="navigation">
     <ul>
-      <li><a href="/">Home</a></li>
+      <li{% if page.class == "is" %} class="active"{% endif %}><a href="/is">About</a></li>
+      <li{% if page.class == "makes" %} class="active"{% endif %}><a href="/makes">Work</a></li>
+      <li{% if page.class == "thinks" %} class="active"{% endif %}><a href="/thinks">Thoughts</a></li>
+      <li{% if page.class == "recommends" %} class="active"{% endif %}><a href="/recommends">Resources</a></li>
     </ul>
   </nav>
 </header>

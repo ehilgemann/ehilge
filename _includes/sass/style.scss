@@ -1,2 +1,67 @@
-@import "reset";
-@import "mixins";
+@import "mixins", "reset";
+
+body {
+  background-color: #FFF;
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding: 15px;
+}
+
+header[role="banner"] {
+  @include box;
+  @include clearfix;
+  margin: 0 auto 20px;
+  padding: 10px 20px 0;
+  max-width: 1000px;
+  width: 100%;
+
+  h1 { float: left; padding: 10px 0 0 0; }
+  h1 a {
+    border: 3px solid black;
+    color: black;
+    font-family: "Futura";
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 2px;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  ul { @include clearfix; float: right; }
+  li {
+    display: block;
+    float: left;
+    margin: 0 15px 0 0;
+
+    a {
+      display: block;
+      padding: 6px 0 10px;
+      text-decoration: none;
+    }
+
+    &.active a {
+      border-top: 3px solid #000;
+      margin-top: -3px;
+    }
+  }
+}
+
+.content {
+  @include box;
+  @include clearfix;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 1000px;
+  width: 100%;
+}
+
+footer {
+  @include box;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+
+  .active { font-weight: bold; }
+  section { margin: 0 0 30px 0; }
+}

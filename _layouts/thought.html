@@ -1,9 +1,16 @@
 {% include head.html %}
-  <body{% if page.class %} class="{{ page.class }}" {% endif %}>
+  <body class="think">
     {% include header.html %}
     <div class="content">
-      <h1>{{ page.title }}</h1>
-      {{ content }}
+      <article>
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+      </article>
+      <aside>
+        <ul>
+          <li><a href="/thinks">&larr; all thoughts</a></li>
+        </ul>
+      </aside>
     </div>
     {% include footer.html %}
     <script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js"></script>

@@ -1,5 +1,43 @@
-<footer role="contentinfo">
-  <ul>
-    <li><a href="/">Home</a></li>
-  </ul>
+<footer>
+  <section class="navigation">
+    <h2>Browse</h2>
+    <ul>
+      <li{% if page.class == "is" %} class="active"{% endif %}><a href="/is">About</a></li>
+      <li{% if page.class == "makes" %} class="active"{% endif %}><a href="/makes">Work</a></li>
+      <li{% if page.class == "thinks" %} class="active"{% endif %}><a href="/thinks">Thoughts</a></li>
+      <li{% if page.class == "recommends" %} class="active"{% endif %}><a href="/recommends">Resources</a></li>
+    </ul>
+  </section>
+  <section class="contact">
+    <h2>Contact</h2>
+    <script src="/assets/javascript/email.js"></script>
+    <p>I&rsquo;m happy at 37signals. No recruiters, please.</p>
+  </section>
+  <section class="twitter">
+    <h2>Tweeting</h2>
+    <div id="tweet"></div>
+    <p>You can follow me on Twitter &rarr; <a href="http://twitter.com/migreyes" title="@migreyes">@migreyes</a></p>
+  </section>
+  <section class="written">
+    <h2>Recently written</h2>
+    <ul>
+    {% for thought in site.categories.thinks limit:5 %}
+      {% unless thought.title == page.title %}
+      <li><a href="{{ thought.url }}"{% if thought.origin %} target="_blank"{% endif %}>{{ thought.title }}</a></li>
+      {% endunless %}
+    {% endfor %}
+    </ul>
+  </section>
+  <section class="elsewhere">
+    <h2>Elsewhere</h2>
+    <ul>
+      <li><a href="http://37signals.com/svn/writers/mig" target="_blank">Signal vs. Noise</a></li>
+      <li><a href="http://twitter.com/migreyes" target="_blank">Twitter</a></li>
+      <li><a href="http://dribbble.com/migreyes" target="_blank">Dribbble</a></li>
+      <li><a href="http://instagram.com/migreyes" target="_blank">Instagram</a></li>
+    </ul>
+  </section>
+  <section class="Chicago">
+    <p>Hand-crafted in Chicago</p>
+  </section>
 </footer>

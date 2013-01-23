@@ -4,4 +4,24 @@ class: thinks
 layout: default
 ---
 
-Hello.
+<section class="essays">
+  <h2>Recently written</h2>
+  <ul>
+  {% for thought in site.categories.thinks %}
+    {% unless thought.title == page.title %}
+    <li><a href="{{ thought.url }}"{% if thought.origin %} target="_blank"{% endif %}>{{ thought.title }}</a></li>
+    {% endunless %}
+  {% endfor %}
+  </ul>
+</section>
+
+<section class="beliefs">
+  <h2>Beliefs</h2>
+  <ul>
+  {% for thought in site.categories.beliefs %}
+    {% unless thought.title == page.title %}
+    <li>{{ thought.title }}</li>
+    {% endunless %}
+  {% endfor %}
+  </ul>
+</section>

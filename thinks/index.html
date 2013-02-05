@@ -9,7 +9,11 @@ layout: default
   <ul>
   {% for thought in site.categories.thinks %}
     {% unless thought.title == page.title %}
-    <li><a href="{{ thought.url }}"{% if thought.origin %} target="_blank"{% endif %}>{{ thought.title }}</a></li>
+      {% if thought.svn %}
+        <li><a href="http://37svn.com/{{ thought.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ thought.title }}">{{ thought.title }}</a></li>
+      {% else %}
+        <li><a href="{{ thought.url }}">{{ thought.title }}</a></li>
+      {% endif %}
     {% endunless %}
   {% endfor %}
   </ul>

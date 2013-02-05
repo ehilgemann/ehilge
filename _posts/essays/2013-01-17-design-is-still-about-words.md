@@ -1,6 +1,5 @@
 ---
 title: "Reminder: Design is still about words"
-origin: svn
+svn: 3404
 category: thinks
-permalink: http://37signals.com/svn/posts/3404-reminder-design-is-still-about-words
 ---

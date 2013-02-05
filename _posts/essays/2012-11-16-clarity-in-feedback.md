@@ -1,6 +1,5 @@
 ---
 title: "A case for clarity in feedback"
-origin: svn
+svn: 3297
 category: thinks
-permalink: http://37signals.com/svn/posts/3297-a-case-for-clarity-in-feedback
 ---

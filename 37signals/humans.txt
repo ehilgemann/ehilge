@@ -1,0 +1,17 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Designer: Mig Reyes
+  Site: migreyes.com
+  Twitter: @migreyes
+  Location: Chicago, IL
+
+/* THANKS */
+  Names (& URL): You.
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery
+  Software: Photoshop, Coda

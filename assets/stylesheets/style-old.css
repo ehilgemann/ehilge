@@ -1,0 +1,437 @@
+/* Main Styling
+-------------------------------------------------------------------------------*/
+body {
+	background: #FDFFFF;
+	font-family: "ff-meta-serif-web-pro",serif;
+	font-size: 1em;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.5em;
+	width: 100%;
+}
+
+body, select, input, textarea {color: #333;}
+
+a {
+  color: #5EACEE;
+	text-decoration: none;
+	transition: all .1s linear;
+   -o-transition: all .1s linear;
+   -moz-transition: all .1s linear;
+   -webkit-transition: all .1s linear;
+}
+a:visited {color: #5EACEE;}
+a:hover {color: #008aff; text-decoration: underline;}
+a:active {}
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+
+/* Navigation Setup
+-------------------------------------------------------------------------------*/
+header {
+	font-family: "proxima-nova",sans-serif;
+	font-size: 1em;
+	font-style: normal;
+	font-weight: 700;
+}
+
+	header a { }
+	header a:hover {text-decoration: none;}
+		
+		#nav-work a:hover { color: #FF4242; }
+		#nav-thoughts a:hover { color: #B7D552; }
+		#nav-profile a:hover { color: #5EACEE; }
+	
+
+/* Wrapper Setup
+-------------------------------------------------------------------------------*/
+.wrapper {
+	margin: 0 auto;
+	overflow: auto;
+	position: relative;
+	width: 80%;
+}
+
+
+/* Content Setup
+-------------------------------------------------------------------------------*/
+article.content {
+	float: right;
+	padding: 0;
+}
+	article.content h1 {
+		color: #555;
+		font-family: "proxima-nova",sans-serif;
+		font-style: normal;
+		font-weight: 500;
+	}
+	
+	div.read p {
+		margin: 0;
+	}
+	div.read p + p {
+		text-indent: 2em;
+	}
+
+/* Footer Setup
+-------------------------------------------------------------------------------*/
+footer {
+	font-family: "proxima-nova",sans-serif;
+	font-style: normal;
+	font-weight: 500;
+	width: 100%;
+}
+  .footer-bio {
+    border-bottom: 1px solid #CCC;
+  }
+  .footer-tumblr h2, .footer-elsewhere h2 { margin-top: 3px; }
+
+/* Media Queries
+-------------------------------------------------------------------------------*/
+/*
+/* Up to 640px ----------- */
+@media only screen and (max-width: 42em) {
+	/* Navigation */
+	header, nav { margin: 0; width: 100%; }
+	header {
+		background: #FDFFFF;
+		border-bottom: 1px solid #CCC;
+		font-size: .75em;
+		letter-spacing: .2em;
+		margin: -4px 0 0 0;
+		text-transform: uppercase;
+	}
+	header a { color: #999; }
+	header h1 {
+		display: block;
+		float: left;
+		padding: .5em 0;
+		text-align: center;
+		width: 25%;
+	}
+		header h1 a:hover { color: #666; }
+		header li {
+			background: #FDFFFF;
+			display: block;
+			float: left;
+			padding: .5em 0;
+			text-align: center;
+			width: 25%;
+		}
+		
+		nav a:hover {
+			-moz-border-radius: 0.188em;
+			-webkit-border-radius: 0.188em;
+			border-radius: 0.188em;
+			color: #FFF;
+			padding: 0.188em 0.188em 0.188em 0.25em;
+			
+		}
+	
+	/* Content */
+	article.content {
+		margin: 1.25em 0 0 0;
+		width: 100%;
+	}
+		article.content h1 {
+			font-size: 1.875em;
+			line-height: 1.25em;
+			margin: 0 0 .6em 0;
+		}
+	/* Footer */
+	#profile-pic {
+		border-radius: 31.25em;
+		margin: 2em 0 1em 25%;
+		overflow: auto;
+		width: 50%;
+	}
+	.footer-bio p {
+		font-size: 1.5em;
+		line-height: 1.5em;
+		margin: 0 0 1em 0;
+	}
+	.footer-twitter, .footer-tumblr, .footer-elsewhere, .footer-email {
+		float: left;
+		font-size: 1.15em;
+		line-height: 1.5em;
+		padding: 1em 0;
+	}
+		.footer-twitter {
+			list-style: none;
+			width: 100%;
+		}
+			#twitter-follow {
+				margin: 1em 0 0 0;
+			}
+		.footer-tumblr {
+			width: 60%;
+		}
+			.footer-tumblr li {
+				margin: 0 0 .4em 0;
+			}
+		.footer-elsewhere {
+			width: 35%;
+		}
+	.footer-email {
+	  border-top: 1px solid #CCC;
+		text-align: center;
+		width: 100%;
+	}
+	.footer-email p span.no-recruiters {
+		color: #CCC;
+		font-style: italic;
+	}
+		#footer-inquiries {
+			display: none;
+		}
+}
+
+/* Width: 640px ----------- */
+@media only screen and (min-width: 42em) {
+	header {
+		/* Left Menu
+		float: left;
+		min-width: 6.85em;
+		padding: 2.5em 0 0 0;
+		text-align: right;
+		width: 16.5%;
+		z-index: 500;
+		*/
+		background: #FDFFFF;
+		border-bottom: 1px solid #CCC;
+		font-size: .75em;
+		left: 0;
+		letter-spacing: .2em;
+		margin: 0;
+		overflow: auto;
+		position: fixed;
+		top: 0;
+		text-transform: uppercase;
+		width: 100%;
+		z-index: 500;
+	}
+		header a {color: #999;}
+		header a:hover {text-decoration: none;}
+		
+		/* Top Version */
+		header h1 {
+			display: block;
+			float: left;
+			font-size: 2em;
+			font-weight: normal;
+			letter-spacing: 0;
+			padding: .5em 0;
+			text-align: center;
+			text-transform: none;
+			width: 25%;
+		}
+		header h1 a:hover { color: #666; }
+		header li {
+			background: #FDFFFF;
+			display: block;
+			float: left;
+			padding: 1.2em 0 0 0;
+			text-align: center;
+			width: 25%;
+		}
+
+		nav {
+			font-size: .8em;
+			letter-spacing: 0.375em;
+			text-transform: uppercase;
+			margin: 0 auto;
+			max-width: 520px;
+			overflow: auto;
+			width: 80%;
+		}
+
+	.wrapper {
+		margin: 0 auto;
+		overflow: auto;
+		max-width: 50em;
+		width: 80%;
+	}
+	article.content {
+		margin: 4.5em auto 1em;
+		overflow: visible;
+		width: 80%;
+	}
+		article.content h1 {
+			color: #555;
+			font-family: "proxima-nova",sans-serif;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 1.875em;
+			line-height: 1.25em;
+			margin: 0 0 .6em 0;
+		}
+	footer {
+		margin: 1.875em 0 0 0;
+		padding: 1.25em 0 1.875em 0;
+	}
+		.footer-bio, .footer-social, .footer-email  {
+			overflow: auto;
+			padding: 1.875em 0 1.875em 0;
+		}
+		.footer-bio {
+			font-size: 1.5em;
+			line-height: 1.5em;
+		}
+			#profile-pic {
+				border-radius: 31.25em;
+				float: left;
+				margin: -0.85em 0 0 0;
+				overflow: auto;
+				width: 17%;
+			}
+			.footer-bio p {
+				float: right;
+				margin-top: .5em;
+				width: 80%;
+			}
+		/* Footer Social */
+			.footer-twitter {
+				list-style-type: none;
+				float: left;
+				width: 50%;
+			}
+				#twitter-follow {
+					margin: 1em 0 0 0;
+				}
+			.footer-tumblr {
+				float: left;
+				list-style-type: none;
+				line-height: 1em;
+				margin: 0 5% 0 5%;
+				padding: 0 0 0 2em;
+				width: 20%;
+			}
+				.footer-tumblr li {
+					padding: .5em 0 .2em 0;
+
+				}
+					#tumblr-last {
+						border: none;
+					}
+			.footer-elsewhere {
+				float: left;
+				line-height: 1em;
+				width: 15%;
+			}
+				.footer-elsewhere li {
+					padding: .5em 0 .2em 0;
+				}
+			.footer-email {
+			  border-top: 1px solid #CCC;
+				text-align: center;
+				width: 100%;
+			}
+			.footer-email span.no-recruiters {
+				font-style: italic;
+				color: #999;
+			}
+}
+/* Width: 888px ----------- */
+@media screen and (min-width: 55.5em) {
+
+}
+/* Width: 984px ----------- */
+@media screen and (min-width: 61.5em) {
+	/*
+	.wrapper {
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+	*/
+}
+/* Width: 1200px ----------- */
+@media screen and (min-width: 75em) {
+	/*
+	.wrapper {
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	*/
+}
+/* Width: 1392px ----------- */
+@media screen and (min-width: 87em) {
+
+}
+/* Width: 1680px ----------- */
+@media screen and (min-width: 105em) {
+	body {
+		background: #FDFFFF 0 0 no-repeat url(../images/cat.jpg);
+	}
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  
+}
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+
+}

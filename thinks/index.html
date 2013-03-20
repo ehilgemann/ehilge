@@ -22,10 +22,8 @@ layout: default
 <section class="beliefs">
   <h2>Beliefs</h2>
   <ul>
-  {% for thought in site.categories.beliefs %}
-    {% unless thought.title == page.title %}
-    <li>{{ thought.title }}</li>
-    {% endunless %}
+  {% for quip in site.categories.beliefs %}
+    <li>{{ quip.title }}</li>
   {% endfor %}
   </ul>
 </section>

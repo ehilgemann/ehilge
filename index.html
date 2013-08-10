@@ -13,14 +13,10 @@
   <meta name="author" content="Mig Reyes">
   <meta name="Copyright" content="Copyright Mig Reyes 2012. All Rights Reserved.">
 
-  <link rel="shortcut icon" href="_/img/favicon.ico">
-  <link rel="apple-touch-icon" href="_/img/apple-touch-icon.png">
-
   <script type="text/javascript" src="http://use.typekit.com/bsq5wuz.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
-  <script src="/scripts/functions.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="/assets/stylesheets/reset.css">
   <link rel="stylesheet" href="/assets/stylesheets/style-old.css">
@@ -41,8 +37,8 @@
     <article class="footer-social">
 
       <div class="footer-twitter">
-          <h2>Tweeting</h2>
-          <div id="tweet"></div>
+          <h2>About</h2>
+          I’m part of the design team at 37signals, where I enjoy working on things that impact people’s lives. Formerly at <a href="http://threadless.com" target="_blank">Threadless</a>, and an ad agency refugee.
           <p id="twitter-follow">You can follow me on Twitter &rarr; <a href="http://twitter.com/migreyes" class="twitterer" title="@migreyes">@migreyes</a></p>
       </div>
 
@@ -59,10 +55,10 @@
       <div class="footer-elsewhere">
         <h2>Elsewhere</h2>
         <ul>
-          <li><a href="http://37signals.com/svn/writers/mig">Signal vs. Noise</a></li>
           <li><a href="http://instagram.com/migreyes/">Instagram</a></li>
-          <li><a href="http://dribbble.com/migreyes">Dribbble</a></li>
           <li><a href="http://humblepied.com">Humble Pied</a></li>
+          <li><a href="http://37signals.com/svn/writers/mig">Signal vs. Noise</a></li>
+          <li><a href="http://dribbble.com/migreyes">Dribbble</a></li>
           <!-- <li><a href="https://gimmebar.com/loves/migreyes">Gimme Bar</a></li> -->
         </ul>
       </div>
@@ -111,28 +107,6 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-</script>
-<script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
-<script src="http://twitterjs.googlecode.com/svn/trunk/src/twitter.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-getTwitters('tweet', {
-    id: 'migreyes',
-    count: 1,
-    enableLinks: true,
-    ignoreReplies: true,
-    clearContents: true,
-    template: '%text% <span style="color: #CCC;">&ndash;</span> <a href="http://twitter.com/%user_screen_name%/statuses/%id%/">%time%</a>'
-});
-</script>
-<script src="http://platform.twitter.com/anywhere.js?id=tmnQYrTlVb4B2UNvzPtZpQ&amp;v=1"></script>
-<script type="text/javascript">
-  twttr.anywhere(function (T) {
-      T("a.twitterer").hovercards({
-      username: function(node) {
-            return node.title;
-      }
-    });
-  });
 </script>
 </body>
 </html>

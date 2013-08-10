@@ -3,9 +3,11 @@
 body {
   @include font-smoothing(antialiased);
   background-color: #FFF;
-  font-family: $font-alto;
+  font-family: $font-tisa;
   font-size: 1.1rem; // 18px
   line-height: 1.5rem; // 24px
+
+  li { list-style: none; }
 }
 
 header[role="banner"] {
@@ -14,26 +16,20 @@ header[role="banner"] {
   margin: 0 auto;
   width: 100%;
 
-  h1 {
+  strong {
     color: #333;
     float: left;
     font-family: $font-tisa;
-    font-style: italic;
-    font-weight: 400;
-
-    a {
-      color: black;
-      font-family: $font-alto;
-      font-style: normal;
-      letter-spacing: 4px;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
+    font-weight: normal;
   }
 
   ul {
     @include clearfix;
     float: right;
+  }
+
+  li {
+    display: inline-block;
   }
 }
 

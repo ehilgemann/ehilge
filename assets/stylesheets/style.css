@@ -88,9 +88,11 @@ body {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   background-color: #FFF;
-  font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
   font-size: 1.1rem;
   line-height: 1.5rem; }
+  body li {
+    list-style: none; }
 
 header[role="banner"] {
   -webkit-box-sizing: border-box;
@@ -105,19 +107,11 @@ header[role="banner"] {
     height: 0;
     clear: both;
     visibility: hidden; }
-  header[role="banner"] h1 {
+  header[role="banner"] strong {
     color: #333;
     float: left;
     font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
-    font-style: italic;
-    font-weight: 400; }
-    header[role="banner"] h1 a {
-      color: black;
-      font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
-      font-style: normal;
-      letter-spacing: 4px;
-      text-decoration: none;
-      text-transform: uppercase; }
+    font-weight: normal; }
   header[role="banner"] ul {
     zoom: 1;
     float: right; }
@@ -127,6 +121,8 @@ header[role="banner"] {
       height: 0;
       clear: both;
       visibility: hidden; }
+  header[role="banner"] li {
+    display: inline-block; }
 
 .content {
   -webkit-box-sizing: border-box;

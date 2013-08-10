@@ -1,31 +1,29 @@
-@import "mixins", "reset";
+@import "mixins", "reset", "fonts";
 
 body {
+  @include font-smoothing(antialiased);
   background-color: #FFF;
-  font-family: $sans;
-  font-size: 18px;
-  line-height: 26px;
-  padding: 15px;
+  font-family: $font-alto;
+  font-size: 1.1rem; // 18px
+  line-height: 1.5rem; // 24px
 }
 
 header[role="banner"] {
-  @include box;
+  @include border-box;
   @include clearfix;
-  margin: 0 auto 20px;
-  padding: 10px 20px 0;
+  margin: 0 auto;
   width: 100%;
 
   h1 {
     color: #333;
-    float: left; padding: 10px 0 0 0;
-    font-family: $serif;
-    font-size: 14px;
+    float: left;
+    font-family: $font-tisa;
     font-style: italic;
     font-weight: 400;
+
     a {
       color: black;
-      font-family: $sans-alt;
-      font-size: 14px;
+      font-family: $font-alto;
       font-style: normal;
       letter-spacing: 4px;
       text-decoration: none;
@@ -40,24 +38,25 @@ header[role="banner"] {
 }
 
 .content {
-  @include box;
+  @include border-box;
   @include clearfix;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1rem;
   position: relative;
   max-width: 960px;
   width: 100%;
 }
 
 footer {
-  @include box;
+  @include border-box;
   margin: 0 auto;
-  padding: 20px;
-  max-width: 1000px;
+  padding: 1rem;
+  max-width: 960px;
   width: 100%;
 
   .active { font-weight: bold; }
-  section { margin: 0 0 30px 0; }
+
+  section { margin: 0 0 1.7rem 0; }
 }
 
 @import "profile", "writes";

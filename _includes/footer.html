@@ -2,7 +2,7 @@
   <section class="navigation">
     <h2>Browse</h2>
     <ul>
-      <li{% if page.class == "profile" %} class="active"{% endif %}><a href="/profile">About</a></li>
+      <li{% if page.class == "profile" %} class="active"{% endif %}><a href="/is">About</a></li>
       <li{% if page.class == "makes" %} class="active"{% endif %}><a href="/makes">Work</a></li>
       <li{% if page.class == "writes" %} class="active"{% endif %}><a href="/writes">Writings</a></li>
       <li{% if page.class == "recommends" %} class="active"{% endif %}><a href="/recommends">Resources</a></li>
@@ -21,12 +21,12 @@
   <section class="written">
     <h2>Recently written</h2>
     <ul>
-    {% for thought in site.categories.thinks limit:5 %}
-      {% unless thought.title == page.title %}
-        {% if thought.svn %}
-          <li><a href="http://37svn.com/{{ thought.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ thought.title }}">{{ thought.title }}</a></li>
+    {% for essay in site.categories.essays limit:5 %}
+      {% unless essay.title == page.title %}
+        {% if essay.svn %}
+          <li><a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a></li>
         {% else %}
-          <li><a href="{{ thought.url }}">{{ thought.title }}</a></li>
+          <li><a href="{{ essay.url }}">{{ essay.title }}</a></li>
         {% endif %}
       {% endunless %}
     {% endfor %}

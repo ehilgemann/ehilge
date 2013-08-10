@@ -1,43 +1,76 @@
 // Colors ------------------------------------- *
 
 // Effects ------------------------------------ *
-@mixin box {
-          box-sizing: border-box;
-       -o-box-sizing: border-box;
-     -moz-box-sizing: border-box;
+@mixin animate($args...) {
+  -webkit-animation: $args;
+     -moz-animation: $args;
+      -ms-animation: $args;
+       -o-animation: $args;
+          animation: $args;
+}
+
+@mixin backface-visibility {
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+@mixin border-box {
   -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
-@mixin fade {
-          transition: all 0.2s ease;
-       -o-transition: all 0.2s ease;
-     -moz-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-}
-@mixin delay($time) {
-          transition-delay: $time;
-       -o-transition-delay: $time;
-     -moz-transition-delay: $time;
-  -webkit-transition-delay: $time;
-}
-@mixin rounded($amount) {
-          border-radius: $amount;
-       -o-border-radius: $amount;
-     -moz-border-radius: $amount;
+
+@mixin border-radius($amount) {
   -webkit-border-radius: $amount;
+     -moz-border-radius: $amount;
+       -o-border-radius: $amount;
+          border-radius: $amount;
 }
-@mixin shadow($amount, $color) {
-          box-shadow: 0 0 $amount $color;
-       -o-box-shadow: 0 0 $amount $color;
-     -moz-box-shadow: 0 0 $amount $color;
-  -webkit-box-shadow: 0 0 $amount $color;
+
+@mixin box-shadow($attrs) {
+  -webkit-box-shadow: $attrs;
+     -moz-box-shadow: $attrs;
+       -o-box-shadow: $attrs;
+          box-shadow: $attrs;
 }
+
 @mixin opacity($amount) {
-          opacity: $amount;
-       -o-opacity: $amount;
-     -moz-opacity: $amount;
   -webkit-opacity: $amount;
+     -moz-opacity: $amount;
+       -o-opacity: $amount;
+          opacity: $amount;
 }
-@mixin smooth { -webkit-font-smoothing: antialiased; }
+
+@mixin transform($attrs) {
+  -webkit-transform: $attrs;
+     -moz-transform: $attrs;
+      -ms-transform: $attrs;
+          transform: $attrs;
+}
+
+@mixin transition($attrs) {
+  -webkit-transition: $attrs;
+     -moz-transition: $attrs;
+      -ms-transition: $attrs;
+          transition: $attrs;
+}
+
+@mixin transition-delay($delay) {
+  -webkit-transition-delay: $delay;
+     -moz-transition-delay: $delay;
+      -ms-transition-delay: $delay;
+          transition-delay: $delay;
+}
+
+@mixin transform-origin($args) {
+          transform-origin: $args;
+       -o-transform-origin: $args;
+      -ms-transform-origin: $args;
+     -moz-transform-origin: $args;
+  -webkit-transform-origin: $args;
+}
 
 // Development ------------------------------------- *
 @mixin debug { background: #FFFFEE; outline: 1px solid red !important; }
@@ -58,24 +91,18 @@
 
 // Typography ------------------------------------- *
 @charset "UTF-8";
-$serif: "leitura-news-1","leitura-news-2",serif;
-$sans: "ff-dagny-web-pro-1","ff-dagny-web-pro-2", sans-serif;
-$sans-alt: "soleil-1","soleil-2", sans-serif;
 
-$chaparral: "chaparral-pro-1","chaparral-pro-2", serif;
+@mixin font-smoothing($attr) {
+          font-smoothing: $attr;
+  -webkit-font-smoothing: $attr;
+}
+
+$font-alto: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
+$font-tisa: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
 
 // Media Queries ------------------------------------- *
-$break-320: 320px;
-$break-480: 480px;
-$break-960: 960px;
-
-@mixin respond-to($media) {
-  @if $media == 320 {
-    @media only screen and (min-width: $break-320) { @content; } }
-  @if $media == 480 {
-    @media only screen and (min-width: $break-480) { @content; } }
-  @if $media == 960 {
-    @media only screen and (min-width: $break-960) { @content; } }
+@mixin responsive-break-point($media) {
+  @media only screen and (min-width: $media) { @content; }
 }
 
 // Retina ------------------------------------- *

@@ -1,7 +1,7 @@
 ---
 title: "Lessons Learned from Two Years of Tees"
 date: 2011-07-07 12:00
-category: thinks
+category: essays
 layout: thought
 ---
 

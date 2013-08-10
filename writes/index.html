@@ -1,0 +1,29 @@
+---
+title: Short Essays
+class: writes
+layout: default
+---
+
+<section class="essays">
+  <h2>Recently written</h2>
+  <ul>
+  {% for essay in site.categories.essays %}
+    {% unless essay.title == page.title %}
+      {% if essay.svn %}
+        <li><a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a></li>
+      {% else %}
+        <li><a href="{{ essay.url }}">{{ essay.title }}</a></li>
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+  </ul>
+</section>
+
+<section class="beliefs">
+  <h2>Beliefs</h2>
+  <ul>
+  {% for quip in site.categories.quips %}
+    <li>{{ quip.title }}</li>
+  {% endfor %}
+  </ul>
+</section>

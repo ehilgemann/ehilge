@@ -1,3 +1,22 @@
-body.profile {
+section.introduction {
 
+  #biography-chooser li { cursor: pointer; }
+
+  figure { display: none; }
+}
+
+// iPad ————————————————————————————————————— /
+@include responsive-break-point(641px) {
+
+  section.introduction {
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1em;
+      margin-bottom: 1rem;
+    }
+
+    .biography-long,
+    .biography-short { display: none; }
+  }
 }

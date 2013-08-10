@@ -88,6 +88,7 @@ body {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   background-color: #FFF;
+  color: #333;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
   font-size: 1.1rem;
   line-height: 1.5rem; }
@@ -99,7 +100,9 @@ header[role="banner"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   zoom: 1;
+  font-size: 1rem;
   margin: 0 auto;
+  padding: 1rem 2rem;
   width: 100%; }
   header[role="banner"]:after {
     content: ".";
@@ -123,6 +126,12 @@ header[role="banner"] {
       visibility: hidden; }
   header[role="banner"] li {
     display: inline-block; }
+  header[role="banner"] a {
+    color: blue; }
+    header[role="banner"] a:visited {
+      color: blue; }
+    header[role="banner"] a:hover {
+      text-decoration: none; }
 
 .content {
   -webkit-box-sizing: border-box;
@@ -146,7 +155,7 @@ footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
   max-width: 960px;
   width: 100%; }
   footer .active {
@@ -154,6 +163,19 @@ footer {
   footer section {
     margin: 0 0 1.7rem 0; }
 
+section.introduction #biography-chooser li {
+  cursor: pointer; }
+section.introduction figure {
+  display: none; }
+
+@media only screen and (min-width: 641px) {
+  section.introduction h1 {
+    font-size: 2rem;
+    line-height: 1em;
+    margin-bottom: 1rem; }
+  section.introduction .biography-long,
+  section.introduction .biography-short {
+    display: none; } }
 body.writes article {
   font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
   font-size: 18px;

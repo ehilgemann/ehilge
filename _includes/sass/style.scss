@@ -3,6 +3,7 @@
 body {
   @include font-smoothing(antialiased);
   background-color: #FFF;
+  color: #333;
   font-family: $font-tisa;
   font-size: 1.1rem; // 18px
   line-height: 1.5rem; // 24px
@@ -13,7 +14,9 @@ body {
 header[role="banner"] {
   @include border-box;
   @include clearfix;
+  font-size: 1rem;
   margin: 0 auto;
+  padding: 1rem 2rem;
   width: 100%;
 
   strong {
@@ -28,8 +31,14 @@ header[role="banner"] {
     float: right;
   }
 
-  li {
-    display: inline-block;
+  li { display: inline-block; }
+
+  a {
+    color: blue;
+
+    &:visited { color: blue; }
+    &:hover { text-decoration: none; }
+    &:hover { }
   }
 }
 
@@ -46,7 +55,7 @@ header[role="banner"] {
 footer {
   @include border-box;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
   max-width: 960px;
   width: 100%;
 

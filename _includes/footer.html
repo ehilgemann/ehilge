@@ -1,6 +1,7 @@
 <footer>
   <section class="navigation">
     <h2>Browse</h2>
+
     <ul>
       <li{% if page.class == "profile" %} class="active"{% endif %}><a href="/is">About</a></li>
       <li{% if page.class == "makes" %} class="active"{% endif %}><a href="/makes">Work</a></li>
@@ -8,18 +9,37 @@
       <li{% if page.class == "recommends" %} class="active"{% endif %}><a href="/recommends">Resources</a></li>
     </ul>
   </section>
+
   <section class="contact">
-    <h2>Contact</h2>
-    <script src="/assets/javascript/email.js"></script>
-    <p>I&rsquo;m happy at 37signals. No recruiters, please.</p>
+    <h2>Get in touch</h2>
+
+    <div class="email">
+      Email:<br>
+      <script src="/assets/javascript/email.js"></script>
+      <small>I&rsquo;m happy at 37signals. No recruiters, please.</small>
+    </div>
+
+    <div class="office">
+      Snail mail:
+      <address>
+        37signals / Mig Reyes<br>
+        30 North Racine Avenue<br>
+        Suite 200<br>
+        Chicago, IL 60607
+      </address>
+
+      <small>Office tours and visits by appointment only, please.</small>
+    </div>
   </section>
+
   <section class="twitter">
     <h2>Tweeting</h2>
-    <div id="tweet"></div>
-    <p>You can follow me on Twitter &rarr; <a href="http://twitter.com/migreyes" title="@migreyes">@migreyes</a></p>
+    <p>For faster communication, you can follow me on Twitter &rarr; <a href="http://twitter.com/migreyes" title="@migreyes">@migreyes</a></p>
   </section>
+
   <section class="written">
     <h2>Recently written</h2>
+
     <ul>
     {% for essay in site.categories.essays limit:5 %}
       {% unless essay.title == page.title %}
@@ -32,20 +52,22 @@
     {% endfor %}
     </ul>
   </section>
+
   <section class="elsewhere">
     <h2>Elsewhere</h2>
     <ul>
       <li><a href="http://37signals.com/svn/writers/mig" target="_blank">Signal vs. Noise</a></li>
-      <li><a href="http://twitter.com/migreyes" target="_blank">Twitter</a></li>
-      <li><a href="http://dribbble.com/migreyes" target="_blank">Dribbble</a></li>
       <li><a href="http://instagram.com/migreyes" target="_blank">Instagram</a></li>
+      <li><a href="http://dribbble.com/migreyes" target="_blank">Dribbble</a></li>
       <li><a href="https://github.com/migreyes" target="_blank">GitHub</a></li>
     </ul>
   </section>
+
   <section class="colophon">
     <h2>Colophon</h2>
     Jekyll. Sass. Sublime Text 2. Typekit. Mocha.
   </section>
+
   <section class="chicago">
     <p>Hand-crafted in ✶✶✶✶ Chicago</p>
   </section>

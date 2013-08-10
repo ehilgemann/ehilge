@@ -167,6 +167,11 @@ section.introduction #biography-chooser li {
   cursor: pointer; }
 section.introduction figure {
   display: none; }
+section.introduction .biography-medium,
+section.introduction .biography-long {
+  display: none; }
+section.introduction .biography-short {
+  display: block; }
 
 @media only screen and (min-width: 641px) {
   section.introduction h1 {
@@ -175,7 +180,15 @@ section.introduction figure {
     margin-bottom: 1rem; }
   section.introduction .biography-long,
   section.introduction .biography-short {
-    display: none; } }
+    display: none; }
+  section.introduction .biography-medium {
+    display: block; } }
+@media only screen and (min-width: 800px) {
+  section.introduction .biography-short,
+  section.introduction .biography-medium {
+    display: none; }
+  section.introduction .biography-long {
+    display: block; } }
 body.writes article {
   font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
   font-size: 18px;

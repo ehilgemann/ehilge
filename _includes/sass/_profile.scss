@@ -3,6 +3,10 @@ section.introduction {
   #biography-chooser li { cursor: pointer; }
 
   figure { display: none; }
+
+  .biography-medium,
+  .biography-long { display: none; }
+  .biography-short { display: block; }
 }
 
 // iPad ————————————————————————————————————— /
@@ -18,5 +22,17 @@ section.introduction {
 
     .biography-long,
     .biography-short { display: none; }
+    .biography-medium { display: block; }
+  }
+}
+
+// Browser ————————————————————————————————————— /
+@include responsive-break-point(800px) {
+
+  section.introduction {
+
+    .biography-short,
+    .biography-medium { display: none; }
+    .biography-long { display: block; }
   }
 }

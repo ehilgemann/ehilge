@@ -4,9 +4,13 @@ section.introduction {
 
   figure { display: none; }
 
-  .biography-medium,
-  .biography-long { display: none; }
-  .biography-short { display: block; }
+  // .biography-medium,
+  // .biography-long { display: none; }
+  // .biography-short { display: block; }
+
+  p {
+    margin: 0 0 1rem;
+  }
 }
 
 // iPad ————————————————————————————————————— /
@@ -22,7 +26,7 @@ section.introduction {
 
     .biography-long,
     .biography-short { display: none; }
-    .biography-medium { display: block; }
+    // .biography-medium { display: block; }
   }
 }
 
@@ -31,8 +35,8 @@ section.introduction {
 
   section.introduction {
 
-    .biography-short,
-    .biography-medium { display: none; }
-    .biography-long { display: block; }
+    // .biography-short,
+    // .biography-medium { display: none; }
+    // .biography-long { display: block; }
   }
 }

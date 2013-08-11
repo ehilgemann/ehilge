@@ -162,16 +162,36 @@ footer {
     font-weight: bold; }
   footer section {
     margin: 0 0 1.7rem 0; }
+  footer section.chicago {
+    font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
+    text-align: center; }
+    footer section.chicago p {
+      color: #666;
+      font-size: .65rem;
+      font-weight: bold;
+      letter-spacing: .2rem;
+      margin-bottom: .3rem;
+      text-transform: uppercase; }
+    footer section.chicago em {
+      color: #999;
+      font-style: normal; }
+  footer .chicago-flag {
+    background: white;
+    border-bottom: .5em solid #B3DDF2;
+    border-top: .5em solid #B3DDF2;
+    color: #FF0000;
+    display: inline-block;
+    font-size: .6rem;
+    letter-spacing: .25em;
+    line-height: 1.5em;
+    padding: 0 .6em; }
 
 section.introduction #biography-chooser li {
   cursor: pointer; }
 section.introduction figure {
   display: none; }
-section.introduction .biography-medium,
-section.introduction .biography-long {
-  display: none; }
-section.introduction .biography-short {
-  display: block; }
+section.introduction p {
+  margin: 0 0 1rem; }
 
 @media only screen and (min-width: 641px) {
   section.introduction h1 {
@@ -180,15 +200,7 @@ section.introduction .biography-short {
     margin-bottom: 1rem; }
   section.introduction .biography-long,
   section.introduction .biography-short {
-    display: none; }
-  section.introduction .biography-medium {
-    display: block; } }
-@media only screen and (min-width: 800px) {
-  section.introduction .biography-short,
-  section.introduction .biography-medium {
-    display: none; }
-  section.introduction .biography-long {
-    display: block; } }
+    display: none; } }
 body.writes article {
   font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
   font-size: 18px;

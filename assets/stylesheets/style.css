@@ -66,6 +66,98 @@ hr {
 input, select {
   vertical-align: middle; }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-o-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-to-grey {
+  0% {
+    background-color: white; }
+
+  100% {
+    background-color: #999; } }
+
+@-o-keyframes fade-to-grey {
+  0% {
+    background-color: white; }
+
+  100% {
+    background-color: #999; } }
+
+@-moz-keyframes fade-to-grey {
+  0% {
+    background-color: white; }
+
+  100% {
+    background-color: #999; } }
+
+@-webkit-keyframes fade-to-grey {
+  0% {
+    background-color: white; }
+
+  100% {
+    background-color: #999; } }
+
+@-webkit-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+
+@-moz-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(20px); }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0); } }
+
+@-o-keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(20px); }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0); } }
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 @font-face {
   font-family: 'Alto';
   font-style: normal;
@@ -201,20 +293,38 @@ section.introduction p {
   section.introduction .biography-long,
   section.introduction .biography-short {
     display: none; } }
-body.writes article {
-  font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
+body.essay .content {
+  -webkit-animation: fade-in-up 0.5s both;
+  -moz-animation: fade-in-up 0.5s both;
+  -ms-animation: fade-in-up 0.5s both;
+  -o-animation: fade-in-up 0.5s both;
+  animation: fade-in-up 0.5s both; }
+body.essay article {
   font-size: 18px;
   font-weight: 400;
   line-height: 30px;
   max-width: 580px;
   width: 100%; }
-  body.writes article h1 {
+  body.essay article h1 {
     font-size: 42px;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
     line-height: 36px;
     margin-bottom: 20px; }
-  body.writes article p {
+  body.essay article p {
     color: #333;
     margin-bottom: 15px; }
-  body.writes article iframe.twitter-tweet {
-    margin-bottom: 20px !important; }
+
+body.portfolio {
+  -webkit-animation: fade-to-grey 1s both;
+  -moz-animation: fade-to-grey 1s both;
+  -ms-animation: fade-to-grey 1s both;
+  -o-animation: fade-to-grey 1s both;
+  animation: fade-to-grey 1s both;
+  background: #999; }
+  body.portfolio header[role="banner"] a {
+    color: white; }
+  body.portfolio h1 {
+    color: black;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: -.05em; }

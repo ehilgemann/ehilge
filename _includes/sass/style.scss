@@ -1,4 +1,4 @@
-@import "mixins", "reset", "fonts";
+@import "mixins", "reset", "animations", "fonts";
 
 body {
   @include font-smoothing(antialiased);
@@ -95,5 +95,10 @@ footer {
   }
 }
 
+// iPad ————————————————————————————————————— /
+@include responsive-break-point(641px) {
 
-@import "about", "writes";
+}
+
+
+@import "about", "writes", "essays", "portfolio";

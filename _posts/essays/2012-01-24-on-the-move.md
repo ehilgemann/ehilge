@@ -2,7 +2,7 @@
 title: "On the Move"
 date: 2012-01-24 12:00
 category: essays
-layout: thought
+layout: essay
 ---
 
 ![Threadless to 37signals](http://media.tumblr.com/tumblr_ly9uuhRJeg1qzolz5.gif "Threadless to 37signals")

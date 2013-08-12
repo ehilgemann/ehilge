@@ -473,3 +473,18 @@ body.portfolio {
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: -.05em; }
+  body.portfolio footer a {
+    color: white; }
+  body.portfolio footer .contact-inline {
+    text-align: center; }
+    body.portfolio footer .contact-inline p {
+      display: inline;
+      margin: 0 1rem; }
+    body.portfolio footer .contact-inline small {
+      color: #666;
+      display: block;
+      font-size: .8em; }
+  body.portfolio footer .chicago p {
+    border-bottom-color: #999; }
+  body.portfolio footer .chicago:hover p {
+    color: #EEE; }

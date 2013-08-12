@@ -14,4 +14,30 @@ body.portfolio {
     font-weight: bold;
     letter-spacing: -.05em;
   }
+
+  footer {
+
+    a { color: white; }
+
+    .contact-inline {
+      text-align: center;
+
+      p {
+        display: inline;
+        margin: 0 1rem;
+      }
+
+      small {
+        color: #666;
+        display: block;
+        font-size: .8em;
+      }
+    }
+
+    .chicago {
+
+      p { border-bottom-color: #999; }
+      &:hover { p { color: #EEE; } }
+    }
+  }
 }

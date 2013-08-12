@@ -182,8 +182,20 @@ body {
   background-color: #FFF;
   color: #333;
   font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5rem; }
+  body a {
+    color: #177d9c;
+    margin: -.2rem;
+    padding: .2rem;
+    text-decoration: none; }
+    body a:visited {
+      color: #7ab9cc; }
+    body a:hover {
+      color: #177d9c;
+      text-decoration: underline; }
+    body a:active {
+      color: black; }
   body li {
     list-style: none; }
 
@@ -192,9 +204,11 @@ header[role="banner"] {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   zoom: 1;
+  font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
   font-size: 1rem;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem;
+  vertical-align: bottom;
   width: 100%; }
   header[role="banner"]:after {
     content: ".";
@@ -204,26 +218,13 @@ header[role="banner"] {
     visibility: hidden; }
   header[role="banner"] strong {
     color: #333;
-    float: left;
-    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
-    font-weight: normal; }
+    float: left; }
   header[role="banner"] ul {
-    zoom: 1;
     float: right; }
-    header[role="banner"] ul:after {
-      content: ".";
-      display: block;
-      height: 0;
-      clear: both;
-      visibility: hidden; }
   header[role="banner"] li {
     display: inline-block; }
-  header[role="banner"] a {
-    color: blue; }
-    header[role="banner"] a:visited {
-      color: blue; }
-    header[role="banner"] a:hover {
-      text-decoration: none; }
+  header[role="banner"] li:not(:first-child) {
+    margin-left: .5rem; }
 
 .content {
   -webkit-box-sizing: border-box;
@@ -233,7 +234,7 @@ header[role="banner"] {
   margin: 0 auto;
   padding: 1rem;
   position: relative;
-  max-width: 960px;
+  max-width: 1000px;
   width: 100%; }
   .content:after {
     content: ".";
@@ -247,26 +248,22 @@ footer {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 1rem 2rem;
-  max-width: 960px;
+  padding: 1rem;
+  max-width: 1000px;
   width: 100%; }
   footer .active {
     font-weight: bold; }
-  footer section {
-    margin: 0 0 1.7rem 0; }
-  footer section.chicago {
-    font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
-    text-align: center; }
-    footer section.chicago p {
+  footer section.browse {
+    text-align: center;
+    width: 100%; }
+    footer section.browse p {
       color: #666;
+      font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
       font-size: .65rem;
       font-weight: bold;
       letter-spacing: .2rem;
       margin-bottom: .3rem;
       text-transform: uppercase; }
-    footer section.chicago em {
-      color: #999;
-      font-style: normal; }
   footer .chicago-flag {
     background: white;
     border-bottom: .5em solid #B3DDF2;
@@ -278,21 +275,131 @@ footer {
     line-height: 1.5em;
     padding: 0 .6em; }
 
-section.introduction #biography-chooser li {
-  cursor: pointer; }
-section.introduction figure {
+.hidden {
   display: none; }
-section.introduction p {
-  margin: 0 0 1rem; }
+
+@media only screen and (min-width: 641px) {
+  footer {
+    zoom: 1;
+    font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif; }
+    footer:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    footer section.explore {
+      zoom: 1;
+      font-size: .95rem;
+      width: 100%; }
+      footer section.explore:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden; }
+      footer section.explore h2 {
+        margin-bottom: .5rem; }
+      footer section.explore li {
+        line-height: 1.25em;
+        margin-bottom: .5rem; }
+      footer section.explore .contact {
+        zoom: 1;
+        float: left;
+        margin-right: 2%;
+        width: 33%; }
+        footer section.explore .contact:after {
+          content: ".";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden; }
+        footer section.explore .contact address {
+          line-height: 1.25rem;
+          margin-bottom: 1rem; }
+        footer section.explore .contact p {
+          line-height: 1.5em; }
+      footer section.explore .elsewhere {
+        float: left;
+        margin-right: 2%;
+        width: 23%; }
+        footer section.explore .elsewhere a:visited {
+          color: #177d9c; }
+      footer section.explore .written {
+        float: right;
+        width: 40%; }
+      footer section.explore small {
+        color: #999;
+        display: block;
+        font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
+        font-size: .8em;
+        margin-top: .5rem; }
+    footer section.browse {
+      margin: 2em auto; }
+      footer section.browse li {
+        display: inline-block;
+        margin: .5em; } }
+@media only screen and (min-width: 1000px) {
+  header[role="banner"] {
+    padding-left: 2rem;
+    padding-right: 2rem; } }
+@media screen and (max-device-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%; } }
+section.introduction {
+  display: none; }
+  section.introduction #biography-chooser li {
+    cursor: pointer; }
+  section.introduction figure {
+    display: none; }
+  section.introduction p {
+    margin: 0 0 1rem; }
+
+section.speaking b {
+  color: #CCC;
+  font-weight: normal; }
+section.speaking i {
+  display: block; }
 
 @media only screen and (min-width: 641px) {
   section.introduction h1 {
     font-size: 2rem;
     line-height: 1em;
+    margin-bottom: 1rem; } }
+@media only screen and (min-width: 800px) {
+  section.lectures {
+    float: left;
+    width: 60%; }
+    section.lectures article {
+      margin-bottom: 3rem; }
+    section.lectures h2 {
+      font-size: 1.5rem;
+      letter-spacing: -1px;
+      line-height: 1em;
+      margin-bottom: .5rem; }
+
+  section.speaking h2 {
     margin-bottom: 1rem; }
-  section.introduction .biography-long,
-  section.introduction .biography-short {
-    display: none; } }
+  section.speaking li {
+    line-height: 1.25em;
+    margin-bottom: 1rem; }
+
+  section.kudos {
+    float: right;
+    width: 35%; }
+    section.kudos article {
+      margin-bottom: 3rem; }
+    section.kudos h2 {
+      font-size: 1.5rem;
+      letter-spacing: -1px;
+      line-height: 1em;
+      margin-bottom: .5rem; }
+    section.kudos h3 {
+      font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+      font-weight: normal; }
+    section.kudos li {
+      font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif; } }
 body.essay .content {
   -webkit-animation: fade-in-up 0.5s both;
   -moz-animation: fade-in-up 0.5s both;
@@ -313,6 +420,10 @@ body.essay article {
   body.essay article p {
     color: #333;
     margin-bottom: 15px; }
+body.essay .twitter-tweet {
+  position: relative;
+  left: -1rem;
+  width: 110%; }
 
 body.portfolio {
   -webkit-animation: fade-to-grey 1s both;

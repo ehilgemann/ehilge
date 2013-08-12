@@ -1,0 +1,17 @@
+body.portfolio {
+  @include animate(fade-to-grey 1s both);
+  background: #999;
+  // color: #EEE;
+
+  header[role="banner"] {
+
+    a { color: white; }
+  }
+
+  h1 {
+    color: black;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: -.05em;
+  }
+}

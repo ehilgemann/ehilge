@@ -5,8 +5,19 @@ body {
   background-color: #FFF;
   color: #333;
   font-family: $font-tisa;
-  font-size: 1.1rem; // 18px
+  font-size: 1rem; // 16px
   line-height: 1.5rem; // 24px
+
+  a {
+    color: $color-link;
+    margin: -.2rem;
+    padding: .2rem;
+    text-decoration: none;
+
+    &:visited { color: $color-link-visited; }
+    &:hover { color: $color-link; text-decoration: underline; }
+    &:active { color: black; }
+  }
 
   li { list-style: none; }
 }
@@ -14,32 +25,22 @@ body {
 header[role="banner"] {
   @include border-box;
   @include clearfix;
+  font-family: $font-alto;
   font-size: 1rem;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 1rem;
+  vertical-align: bottom;
   width: 100%;
 
   strong {
     color: #333;
     float: left;
-    font-family: $font-tisa;
-    font-weight: normal;
   }
 
-  ul {
-    @include clearfix;
-    float: right;
-  }
+  ul { float: right; }
 
   li { display: inline-block; }
-
-  a {
-    color: blue;
-
-    &:visited { color: blue; }
-    &:hover { text-decoration: none; }
-    &:hover { }
-  }
+  li:not(:first-child) { margin-left: .5rem; }
 }
 
 .content {
@@ -48,37 +49,31 @@ header[role="banner"] {
   margin: 0 auto;
   padding: 1rem;
   position: relative;
-  max-width: 960px;
+  max-width: 1000px;
   width: 100%;
 }
 
 footer {
   @include border-box;
   margin: 0 auto;
-  padding: 1rem 2rem;
-  max-width: 960px;
+  padding: 1rem;
+  max-width: 1000px;
   width: 100%;
 
   .active { font-weight: bold; }
 
-  section { margin: 0 0 1.7rem 0; }
-
-  section.chicago {
-    font-family: $font-alto;
+  section.browse {
     text-align: center;
+    width: 100%;
 
     p {
       color: #666;
+      font-family: $font-alto;
       font-size: .65rem;
       font-weight: bold;
       letter-spacing: .2rem;
       margin-bottom: .3rem;
       text-transform: uppercase;
-    }
-
-    em {
-      color: #999;
-      font-style: normal;
     }
   }
 
@@ -95,10 +90,88 @@ footer {
   }
 }
 
+.hidden { display: none; }
+
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(641px) {
 
+  footer {
+    @include clearfix;
+    font-family: $font-alto;
+
+    section.explore {
+      @include clearfix;
+      font-size: .95rem;
+      width: 100%;
+
+      h2 { margin-bottom: .5rem; }
+
+      li {
+        line-height: 1.25em;
+        margin-bottom: .5rem;
+      }
+
+      .contact {
+        @include clearfix;
+        float: left;
+        margin-right: 2%;
+        width: 33%;
+
+        address {
+          line-height: 1.25rem;
+          margin-bottom: 1rem;
+        }
+
+        p { line-height: 1.5em; }
+      }
+
+      .elsewhere {
+        float: left;
+        margin-right: 2%;
+        width: 23%;
+
+        a:visited { color: $color-link; }
+      }
+
+      .written {
+        float: right;
+        width: 40%;
+      }
+
+      small {
+        color: #999;
+        display: block;
+        font-family: $font-alto;
+        font-size: .8em;
+        margin-top: .5rem;
+      }
+    }
+
+    section.browse {
+      margin: 2em auto;
+
+      li {
+        display: inline-block;
+        margin: .5em;
+      }
+    }
+  }
 }
 
+// Browser ————————————————————————————————————— /
+@include responsive-break-point(1000px) {
+  header[role="banner"] {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+// Disable iOS font sizing
+@media screen and (max-device-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+  }
+}
 
 @import "about", "writes", "essays", "portfolio";

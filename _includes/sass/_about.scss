@@ -1,21 +1,27 @@
 section.introduction {
+  display: none;
 
   #biography-chooser li { cursor: pointer; }
 
   figure { display: none; }
-
-  // .biography-medium,
-  // .biography-long { display: none; }
-  // .biography-short { display: block; }
 
   p {
     margin: 0 0 1rem;
   }
 }
 
+section.speaking {
+
+  b {
+    color: #CCC;
+    font-weight: normal;
+  }
+
+  i { display: block; }
+}
+
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(641px) {
-
   section.introduction {
 
     h1 {
@@ -23,20 +29,61 @@ section.introduction {
       line-height: 1em;
       margin-bottom: 1rem;
     }
-
-    .biography-long,
-    .biography-short { display: none; }
-    // .biography-medium { display: block; }
   }
 }
 
 // Browser ————————————————————————————————————— /
 @include responsive-break-point(800px) {
-
   section.introduction {
 
-    // .biography-short,
-    // .biography-medium { display: none; }
-    // .biography-long { display: block; }
+  }
+
+  section.lectures {
+    float: left;
+    width: 60%;
+
+    article { margin-bottom: 3rem; }
+
+    h2 {
+      font-size: 1.5rem;
+      letter-spacing: -1px;
+      line-height: 1em;
+      margin-bottom: .5rem;
+    }
+  }
+
+  section.speaking {
+
+    h2 { margin-bottom: 1rem; }
+
+    li {
+      line-height: 1.25em;
+      margin-bottom: 1rem;
+    }
+  }
+
+  section.kudos {
+    float: right;
+    width: 35%;
+
+    article {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      letter-spacing: -1px;
+      line-height: 1em;
+      margin-bottom: .5rem;
+    }
+
+    h3 {
+      font-family: $font-tisa;
+      font-weight: normal;
+    }
+
+    li {
+      font-family: $font-alto;
+    }
   }
 }

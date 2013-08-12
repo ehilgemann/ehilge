@@ -261,29 +261,42 @@ footer {
   footer section.browse {
     text-align: center;
     width: 100%; }
-    footer section.browse p {
+    footer section.browse .chicago:hover {
+      text-decoration: none; }
+      footer section.browse .chicago:hover p {
+        border-bottom: 1px solid #B3DDF2;
+        color: #FF0000; }
+    footer section.browse .chicago p {
+      border-bottom: 1px solid white;
       color: #666;
+      display: inline-block;
       font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
       font-size: .65rem;
       font-weight: bold;
       letter-spacing: .2rem;
-      margin-bottom: .3rem;
+      line-height: 1.25em;
+      margin-bottom: .5rem;
       text-transform: uppercase; }
-  footer .chicago-flag {
-    background: white;
-    border-bottom: .5em solid #B3DDF2;
-    border-top: .5em solid #B3DDF2;
-    color: #FF0000;
-    display: inline-block;
-    font-size: .6rem;
-    letter-spacing: .25em;
-    line-height: 1.5em;
-    padding: 0 .6em; }
+    footer section.browse .chicago .chicago-flag {
+      background: white;
+      border-bottom: .5em solid #B3DDF2;
+      border-top: .5em solid #B3DDF2;
+      color: #FF0000;
+      display: block;
+      font-size: .6rem;
+      letter-spacing: .25em;
+      line-height: 1.5em;
+      margin: 0 auto;
+      padding: 0 .6em;
+      width: 2rem; }
 
 .hidden {
   display: none; }
 
 @media only screen and (min-width: 641px) {
+  header[role="banner"] {
+    padding-top: 2rem; }
+
   footer {
     zoom: 1;
     margin-top: 3rem;
@@ -313,7 +326,7 @@ footer {
         zoom: 1;
         float: left;
         margin-right: 2%;
-        width: 38%; }
+        width: 34%; }
         footer section.explore .contact:after {
           content: ".";
           display: block;
@@ -328,12 +341,12 @@ footer {
       footer section.explore .elsewhere {
         float: left;
         margin-right: 2%;
-        width: 16%; }
+        width: 18%; }
         footer section.explore .elsewhere a:visited {
           color: #177d9c; }
       footer section.explore .written {
         float: right;
-        width: 42%; }
+        width: 44%; }
       footer section.explore small {
         color: #999;
         display: block;
@@ -345,7 +358,7 @@ footer {
       footer section.browse li {
         display: inline-block;
         margin: .5em; } }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1032px) {
   header[role="banner"] {
     padding-left: 2rem;
     padding-right: 2rem; } }
@@ -360,11 +373,15 @@ section.biography {
   section.biography p {
     margin: 0 0 1rem; }
 
+section.speaking i {
+  color: #666;
+  display: block;
+  font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
+  font-style: normal; }
 section.speaking b {
   color: #CCC;
+  font-size: .8em;
   font-weight: normal; }
-section.speaking i {
-  display: block; }
 
 @media only screen and (min-width: 641px) {
   section.biography h1 {
@@ -405,10 +422,10 @@ section.speaking i {
     line-height: 1.25em;
     margin-bottom: 1rem; }
   section.speaking p {
-    color: #999;
+    color: #BBB;
     font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
     font-size: .9rem;
-    margin-top: .5rem; }
+    margin-top: .25rem; }
 
   section.kudos {
     float: right;

@@ -10,12 +10,18 @@ section.biography {
 
 section.speaking {
 
-  b {
-    color: #CCC;
-    font-weight: normal;
+  i {
+    color: #666;
+    display: block;
+    font-family: $font-alto;
+    font-style: normal;
   }
 
-  i { display: block; }
+  b {
+    color: #CCC;
+    font-size: .8em;
+    font-weight: normal;
+  }
 }
 
 // iPad ————————————————————————————————————— /
@@ -82,10 +88,10 @@ section.speaking {
     }
 
     p {
-      color: #999;
+      color: #BBB;
       font-family: $font-alto;
       font-size: .9rem;
-      margin-top: .5rem;
+      margin-top: .25rem;
     }
   }
 

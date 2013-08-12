@@ -1,9 +1,7 @@
-section.introduction {
-  display: none;
+section.biography {
+  @include hide; // TEMPORARY
 
   #biography-chooser li { cursor: pointer; }
-
-  figure { display: none; }
 
   p {
     margin: 0 0 1rem;
@@ -22,7 +20,7 @@ section.speaking {
 
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(641px) {
-  section.introduction {
+  section.biography {
 
     h1 {
       font-size: 2rem;
@@ -30,12 +28,34 @@ section.speaking {
       margin-bottom: 1rem;
     }
   }
+
+  section.kudos {
+
+    hgroup { margin-bottom: .5rem; }
+
+    h2 {
+      font-size: 1.5rem;
+      letter-spacing: -1px;
+      line-height: 1em;
+    }
+
+    h3 {
+      color: #999;
+      font-family: $font-tisa;
+      font-style: italic;
+      font-weight: normal;
+    }
+  }
 }
 
 // Browser ————————————————————————————————————— /
 @include responsive-break-point(800px) {
-  section.introduction {
+  section.biography {
 
+    p {
+      font-size: 1.1rem;
+      line-height: 1.5em;
+    }
   }
 
   section.lectures {
@@ -60,6 +80,13 @@ section.speaking {
       line-height: 1.25em;
       margin-bottom: 1rem;
     }
+
+    p {
+      color: #999;
+      font-family: $font-alto;
+      font-size: .9rem;
+      margin-top: .5rem;
+    }
   }
 
   section.kudos {
@@ -68,18 +95,6 @@ section.speaking {
 
     article {
       margin-bottom: 3rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      letter-spacing: -1px;
-      line-height: 1em;
-      margin-bottom: .5rem;
-    }
-
-    h3 {
-      font-family: $font-tisa;
-      font-weight: normal;
     }
 
     li {

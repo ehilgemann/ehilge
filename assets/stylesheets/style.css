@@ -227,6 +227,11 @@ header[role="banner"] {
     margin-left: .5rem; }
 
 .content {
+  -webkit-animation: fade-in 0.5s both;
+  -moz-animation: fade-in 0.5s both;
+  -ms-animation: fade-in 0.5s both;
+  -o-animation: fade-in 0.5s both;
+  animation: fade-in 0.5s both;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -281,6 +286,7 @@ footer {
 @media only screen and (min-width: 641px) {
   footer {
     zoom: 1;
+    margin-top: 3rem;
     font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif; }
     footer:after {
       content: ".";
@@ -307,7 +313,7 @@ footer {
         zoom: 1;
         float: left;
         margin-right: 2%;
-        width: 33%; }
+        width: 38%; }
         footer section.explore .contact:after {
           content: ".";
           display: block;
@@ -322,12 +328,12 @@ footer {
       footer section.explore .elsewhere {
         float: left;
         margin-right: 2%;
-        width: 23%; }
+        width: 16%; }
         footer section.explore .elsewhere a:visited {
           color: #177d9c; }
       footer section.explore .written {
         float: right;
-        width: 40%; }
+        width: 42%; }
       footer section.explore small {
         color: #999;
         display: block;
@@ -335,7 +341,7 @@ footer {
         font-size: .8em;
         margin-top: .5rem; }
     footer section.browse {
-      margin: 2em auto; }
+      margin: 3rem auto 2rem; }
       footer section.browse li {
         display: inline-block;
         margin: .5em; } }
@@ -347,13 +353,11 @@ footer {
   html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%; } }
-section.introduction {
+section.biography {
   display: none; }
-  section.introduction #biography-chooser li {
+  section.biography #biography-chooser li {
     cursor: pointer; }
-  section.introduction figure {
-    display: none; }
-  section.introduction p {
+  section.biography p {
     margin: 0 0 1rem; }
 
 section.speaking b {
@@ -363,11 +367,27 @@ section.speaking i {
   display: block; }
 
 @media only screen and (min-width: 641px) {
-  section.introduction h1 {
+  section.biography h1 {
     font-size: 2rem;
     line-height: 1em;
-    margin-bottom: 1rem; } }
+    margin-bottom: 1rem; }
+
+  section.kudos hgroup {
+    margin-bottom: .5rem; }
+  section.kudos h2 {
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    line-height: 1em; }
+  section.kudos h3 {
+    color: #999;
+    font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+    font-style: italic;
+    font-weight: normal; } }
 @media only screen and (min-width: 800px) {
+  section.biography p {
+    font-size: 1.1rem;
+    line-height: 1.5em; }
+
   section.lectures {
     float: left;
     width: 60%; }
@@ -384,20 +404,17 @@ section.speaking i {
   section.speaking li {
     line-height: 1.25em;
     margin-bottom: 1rem; }
+  section.speaking p {
+    color: #999;
+    font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
+    font-size: .9rem;
+    margin-top: .5rem; }
 
   section.kudos {
     float: right;
     width: 35%; }
     section.kudos article {
       margin-bottom: 3rem; }
-    section.kudos h2 {
-      font-size: 1.5rem;
-      letter-spacing: -1px;
-      line-height: 1em;
-      margin-bottom: .5rem; }
-    section.kudos h3 {
-      font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
-      font-weight: normal; }
     section.kudos li {
       font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif; } }
 body.essay .content {

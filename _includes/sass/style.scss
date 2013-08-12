@@ -44,6 +44,7 @@ header[role="banner"] {
 }
 
 .content {
+  @include animate(fade-in .5s both);
   @include border-box;
   @include clearfix;
   margin: 0 auto;
@@ -97,6 +98,7 @@ footer {
 
   footer {
     @include clearfix;
+    margin-top: 3rem;
     font-family: $font-alto;
 
     section.explore {
@@ -115,7 +117,7 @@ footer {
         @include clearfix;
         float: left;
         margin-right: 2%;
-        width: 33%;
+        width: 38%;
 
         address {
           line-height: 1.25rem;
@@ -128,14 +130,14 @@ footer {
       .elsewhere {
         float: left;
         margin-right: 2%;
-        width: 23%;
+        width: 16%;
 
         a:visited { color: $color-link; }
       }
 
       .written {
         float: right;
-        width: 40%;
+        width: 42%;
       }
 
       small {
@@ -148,7 +150,7 @@ footer {
     }
 
     section.browse {
-      margin: 2em auto;
+      margin: 3rem auto 2rem;
 
       li {
         display: inline-block;

@@ -32,15 +32,16 @@ header[role="banner"] {
   vertical-align: bottom;
   width: 100%;
 
-  strong {
-    color: #333;
-    float: left;
-  }
+  .active { text-decoration: underline; }
+
+  strong { float: left; }
+  strong a { color: #333; }
 
   ul { float: right; }
 
   li { display: inline-block; }
   li:not(:first-child) { margin-left: .5rem; }
+  li a:visited { color: $color-link; }
 }
 
 .content {
@@ -61,7 +62,11 @@ footer {
   max-width: 1000px;
   width: 100%;
 
-  .active { font-weight: bold; }
+  .active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  a:visited { color: $color-link; }
 
   section.browse {
     text-align: center;
@@ -111,6 +116,11 @@ footer {
 
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(641px) {
+  body {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   header[role="banner"] { padding-top: 2rem; }
 
   footer {
@@ -121,7 +131,6 @@ footer {
     section.explore {
       @include clearfix;
       font-size: .95rem;
-      width: 100%;
 
       h2 { margin-bottom: .5rem; }
 
@@ -130,11 +139,13 @@ footer {
         margin-bottom: .5rem;
       }
 
-      .contact {
-        @include clearfix;
+      div {
+        display: inline-block;
         float: left;
-        margin-right: 2%;
-        width: 34%;
+      }
+
+      .contact {
+        margin-right: 3rem;
 
         address {
           line-height: 1.25rem;
@@ -145,16 +156,15 @@ footer {
       }
 
       .elsewhere {
-        float: left;
-        margin-right: 2%;
-        width: 18%;
+        margin-right: 2rem;
 
         a:visited { color: $color-link; }
       }
 
       .written {
         float: right;
-        width: 44%;
+        max-width: 22rem;
+        width: 41%;
       }
 
       small {
@@ -167,7 +177,7 @@ footer {
     }
 
     section.browse {
-      margin: 3rem auto 2rem;
+      margin-top: 3rem;
 
       li {
         display: inline-block;
@@ -177,11 +187,16 @@ footer {
   }
 }
 
+// Tablet ————————————————————————————————————— /
+@include responsive-break-point(769px) {
+
+}
+
 // Browser ————————————————————————————————————— /
 @include responsive-break-point(1032px) {
   header[role="banner"] {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    // padding-left: 2rem;
+    // padding-right: 2rem;
   }
 }
 

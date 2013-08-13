@@ -1,11 +1,11 @@
 body.portfolio {
   @include animate(fade-to-grey 1s both);
   background: #999;
-  // color: #EEE;
 
   header[role="banner"] {
 
     a { color: white; }
+    strong a { color: black; }
   }
 
   h1 {
@@ -31,13 +31,11 @@ body.portfolio {
         color: #666;
         display: block;
         font-size: .8em;
+        margin-top: .5rem;
       }
     }
 
-    .chicago {
-
-      p { border-bottom-color: #999; }
-      &:hover { p { color: #EEE; } }
-    }
+    .chicago p { border-bottom-color: #999; }
+    .chicago:hover { p { color: #EEE; } }
   }
 }

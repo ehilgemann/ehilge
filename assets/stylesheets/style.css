@@ -216,15 +216,20 @@ header[role="banner"] {
     height: 0;
     clear: both;
     visibility: hidden; }
+  header[role="banner"] .active {
+    text-decoration: underline; }
   header[role="banner"] strong {
-    color: #333;
     float: left; }
+  header[role="banner"] strong a {
+    color: #333; }
   header[role="banner"] ul {
     float: right; }
   header[role="banner"] li {
     display: inline-block; }
   header[role="banner"] li:not(:first-child) {
     margin-left: .5rem; }
+  header[role="banner"] li a:visited {
+    color: #177d9c; }
 
 .content {
   -webkit-animation: fade-in 0.5s both;
@@ -257,7 +262,10 @@ footer {
   max-width: 1000px;
   width: 100%; }
   footer .active {
-    font-weight: bold; }
+    font-weight: bold;
+    text-decoration: underline; }
+  footer a:visited {
+    color: #177d9c; }
   footer section.browse {
     text-align: center;
     width: 100%; }
@@ -294,6 +302,10 @@ footer {
   display: none; }
 
 @media only screen and (min-width: 641px) {
+  body {
+    padding-left: 2rem;
+    padding-right: 2rem; }
+
   header[role="banner"] {
     padding-top: 2rem; }
 
@@ -309,8 +321,7 @@ footer {
       visibility: hidden; }
     footer section.explore {
       zoom: 1;
-      font-size: .95rem;
-      width: 100%; }
+      font-size: .95rem; }
       footer section.explore:after {
         content: ".";
         display: block;
@@ -322,31 +333,24 @@ footer {
       footer section.explore li {
         line-height: 1.25em;
         margin-bottom: .5rem; }
+      footer section.explore div {
+        display: inline-block;
+        float: left; }
       footer section.explore .contact {
-        zoom: 1;
-        float: left;
-        margin-right: 2%;
-        width: 34%; }
-        footer section.explore .contact:after {
-          content: ".";
-          display: block;
-          height: 0;
-          clear: both;
-          visibility: hidden; }
+        margin-right: 3rem; }
         footer section.explore .contact address {
           line-height: 1.25rem;
           margin-bottom: 1rem; }
         footer section.explore .contact p {
           line-height: 1.5em; }
       footer section.explore .elsewhere {
-        float: left;
-        margin-right: 2%;
-        width: 18%; }
+        margin-right: 2rem; }
         footer section.explore .elsewhere a:visited {
           color: #177d9c; }
       footer section.explore .written {
         float: right;
-        width: 44%; }
+        max-width: 22rem;
+        width: 41%; }
       footer section.explore small {
         color: #999;
         display: block;
@@ -354,14 +358,10 @@ footer {
         font-size: .8em;
         margin-top: .5rem; }
     footer section.browse {
-      margin: 3rem auto 2rem; }
+      margin-top: 3rem; }
       footer section.browse li {
         display: inline-block;
         margin: .5em; } }
-@media only screen and (min-width: 1032px) {
-  header[role="banner"] {
-    padding-left: 2rem;
-    padding-right: 2rem; } }
 @media screen and (max-device-width: 480px) {
   html {
     -webkit-text-size-adjust: 100%;
@@ -468,6 +468,8 @@ body.portfolio {
   background: #999; }
   body.portfolio header[role="banner"] a {
     color: white; }
+  body.portfolio header[role="banner"] strong a {
+    color: black; }
   body.portfolio h1 {
     color: black;
     font-size: 4rem;
@@ -483,7 +485,8 @@ body.portfolio {
     body.portfolio footer .contact-inline small {
       color: #666;
       display: block;
-      font-size: .8em; }
+      font-size: .8em;
+      margin-top: .5rem; }
   body.portfolio footer .chicago p {
     border-bottom-color: #999; }
   body.portfolio footer .chicago:hover p {

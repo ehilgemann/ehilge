@@ -503,7 +503,7 @@ body.portfolio {
     color: black; }
   body.portfolio h1 {
     color: black;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     letter-spacing: -.05em; }
   body.portfolio footer a {
@@ -522,3 +522,7 @@ body.portfolio {
     border-bottom-color: #999; }
   body.portfolio footer .chicago:hover p {
     color: #EEE; }
+
+@media only screen and (min-width: 641px) {
+  body.portfolio h1 {
+    margin-top: 2rem; } }

@@ -8,7 +8,7 @@ section.biography {
   }
 }
 
-section.speaking {
+article.speaking {
 
   i {
     color: #666;
@@ -18,7 +18,7 @@ section.speaking {
   }
 
   b {
-    color: #CCC;
+    color: #999;
     font-size: .8em;
     font-weight: normal;
   }
@@ -26,23 +26,16 @@ section.speaking {
 
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(641px) {
-  section.biography {
-
-    h1 {
-      font-size: 2rem;
-      line-height: 1em;
-      margin-bottom: 1rem;
-    }
-  }
-
-  section.kudos {
+  body.about .content section {
 
     hgroup { margin-bottom: .5rem; }
 
     h2 {
-      font-size: 1.5rem;
-      letter-spacing: -1px;
+      color: #F00;
+      font-size: .9rem;
+      letter-spacing: .3em;
       line-height: 1em;
+      text-transform: uppercase;
     }
 
     h3 {
@@ -50,6 +43,15 @@ section.speaking {
       font-family: $font-tisa;
       font-style: italic;
       font-weight: normal;
+    }
+  }
+
+  section.biography {
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1em;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -60,27 +62,30 @@ section.speaking {
 
     p {
       font-size: 1.1rem;
-      line-height: 1.5em;
+      line-height: 1.75em;
     }
   }
 
-  section.lectures {
-    float: left;
-    width: 60%;
+  section.teaching {
+    margin-left: 16.667%;
+    width: 66.668%;
 
-    article { margin-bottom: 3rem; }
-
-    h2 {
-      font-size: 1.5rem;
-      letter-spacing: -1px;
-      line-height: 1em;
-      margin-bottom: .5rem;
+    p {
+      font-size: 1.1rem;
+      line-height: 1.75em;
     }
   }
 
-  section.speaking {
+  section.kudos {
+    @include clearfix;
 
-    h2 { margin-bottom: 1rem; }
+    li { font-family: $font-alto; }
+  }
+
+  article.speaking {
+    float: right;
+    margin: 8rem 0 0 2%;
+    width: 50%;
 
     li {
       line-height: 1.25em;
@@ -95,16 +100,18 @@ section.speaking {
     }
   }
 
-  section.kudos {
-    float: right;
-    width: 35%;
+  article.interviews {
+    padding-top: 18rem;
+    width: 33.33%;
+  }
 
-    article {
-      margin-bottom: 3rem;
-    }
+  article.print {
+    margin: 6rem 0 0 16.667%;
+    width: 33.33%;
+  }
 
-    li {
-      font-family: $font-alto;
-    }
+  article.press {
+    margin: 8rem 0 0 16.667%;
+    width: 33.33%;
   }
 }

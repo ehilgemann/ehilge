@@ -185,14 +185,14 @@ body {
   font-size: 1rem;
   line-height: 1.5rem; }
   body a {
-    color: #177d9c;
+    color: #5eacee;
     margin: -.2rem;
     padding: .2rem;
     text-decoration: none; }
     body a:visited {
       color: #7ab9cc; }
     body a:hover {
-      color: #177d9c;
+      color: #5eacee;
       text-decoration: underline; }
     body a:active {
       color: black; }
@@ -229,7 +229,7 @@ header[role="banner"] {
   header[role="banner"] li:not(:first-child) {
     margin-left: .5rem; }
   header[role="banner"] li a:visited {
-    color: #177d9c; }
+    color: #5eacee; }
 
 .content {
   -webkit-animation: fade-in 0.5s both;
@@ -265,7 +265,7 @@ footer {
     font-weight: bold;
     text-decoration: underline; }
   footer a:visited {
-    color: #177d9c; }
+    color: #5eacee; }
   footer section.browse {
     text-align: center;
     width: 100%; }
@@ -337,16 +337,18 @@ footer {
         display: inline-block;
         float: left; }
       footer section.explore .contact {
-        margin-right: 3rem; }
+        margin-right: 3rem;
+        width: 25%; }
         footer section.explore .contact address {
           line-height: 1.25rem;
           margin-bottom: 1rem; }
         footer section.explore .contact p {
           line-height: 1.5em; }
       footer section.explore .elsewhere {
-        margin-right: 2rem; }
+        margin-right: 2rem;
+        width: 16%; }
         footer section.explore .elsewhere a:visited {
-          color: #177d9c; }
+          color: #5eacee; }
       footer section.explore .written {
         float: right;
         max-width: 22rem;
@@ -373,67 +375,82 @@ section.biography {
   section.biography p {
     margin: 0 0 1rem; }
 
-section.speaking i {
+article.speaking i {
   color: #666;
   display: block;
   font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
   font-style: normal; }
-section.speaking b {
-  color: #CCC;
+article.speaking b {
+  color: #999;
   font-size: .8em;
   font-weight: normal; }
 
 @media only screen and (min-width: 641px) {
-  section.biography h1 {
-    font-size: 2rem;
-    line-height: 1em;
-    margin-bottom: 1rem; }
-
-  section.kudos hgroup {
+  body.about .content section hgroup {
     margin-bottom: .5rem; }
-  section.kudos h2 {
-    font-size: 1.5rem;
-    letter-spacing: -1px;
-    line-height: 1em; }
-  section.kudos h3 {
+  body.about .content section h2 {
+    color: #F00;
+    font-size: .9rem;
+    letter-spacing: .3em;
+    line-height: 1em;
+    text-transform: uppercase; }
+  body.about .content section h3 {
     color: #999;
     font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
     font-style: italic;
-    font-weight: normal; } }
+    font-weight: normal; }
+
+  section.biography h1 {
+    font-size: 2rem;
+    line-height: 1em;
+    margin-bottom: 1rem; } }
 @media only screen and (min-width: 800px) {
   section.biography p {
     font-size: 1.1rem;
-    line-height: 1.5em; }
+    line-height: 1.75em; }
 
-  section.lectures {
-    float: left;
-    width: 60%; }
-    section.lectures article {
-      margin-bottom: 3rem; }
-    section.lectures h2 {
-      font-size: 1.5rem;
-      letter-spacing: -1px;
-      line-height: 1em;
-      margin-bottom: .5rem; }
-
-  section.speaking h2 {
-    margin-bottom: 1rem; }
-  section.speaking li {
-    line-height: 1.25em;
-    margin-bottom: 1rem; }
-  section.speaking p {
-    color: #BBB;
-    font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
-    font-size: .9rem;
-    margin-top: .25rem; }
+  section.teaching {
+    margin-left: 16.667%;
+    width: 66.668%; }
+    section.teaching p {
+      font-size: 1.1rem;
+      line-height: 1.75em; }
 
   section.kudos {
-    float: right;
-    width: 35%; }
-    section.kudos article {
-      margin-bottom: 3rem; }
+    zoom: 1; }
+    section.kudos:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
     section.kudos li {
-      font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif; } }
+      font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif; }
+
+  article.speaking {
+    float: right;
+    margin: 8rem 0 0 2%;
+    width: 50%; }
+    article.speaking li {
+      line-height: 1.25em;
+      margin-bottom: 1rem; }
+    article.speaking p {
+      color: #BBB;
+      font-family: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
+      font-size: .9rem;
+      margin-top: .25rem; }
+
+  article.interviews {
+    padding-top: 18rem;
+    width: 33.33%; }
+
+  article.print {
+    margin: 6rem 0 0 16.667%;
+    width: 33.33%; }
+
+  article.press {
+    margin: 8rem 0 0 16.667%;
+    width: 33.33%; } }
 body.essay .content {
   -webkit-animation: fade-in-up 0.5s both;
   -moz-animation: fade-in-up 0.5s both;

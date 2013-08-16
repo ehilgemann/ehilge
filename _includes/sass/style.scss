@@ -146,6 +146,7 @@ footer {
 
       .contact {
         margin-right: 3rem;
+        width: 25%;
 
         address {
           line-height: 1.25rem;
@@ -157,6 +158,7 @@ footer {
 
       .elsewhere {
         margin-right: 2rem;
+        width: 16%;
 
         a:visited { color: $color-link; }
       }
@@ -194,10 +196,7 @@ footer {
 
 // Browser ————————————————————————————————————— /
 @include responsive-break-point(1032px) {
-  header[role="banner"] {
-    // padding-left: 2rem;
-    // padding-right: 2rem;
-  }
+
 }
 
 // Disable iOS font sizing ————————————————————————————————————— /

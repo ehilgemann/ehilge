@@ -2,7 +2,7 @@ showWidth = ->
   document.title = "Mig Reyes " + $(window).width()
 
 $ ->
-  showWidth()
+  # showWidth()
 
-  $(window).resize ->
-    showWidth()
+  # $(window).resize ->
+  #   showWidth()

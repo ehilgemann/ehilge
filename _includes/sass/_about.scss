@@ -105,13 +105,18 @@ article.speaking {
     width: 33.33%;
   }
 
-  article.print {
-    margin: 6rem 0 0 16.667%;
-    width: 33.33%;
-  }
-
   article.press {
     margin: 8rem 0 0 16.667%;
     width: 33.33%;
+  }
+
+  article.print {
+    margin: 8rem 0 0 16.667%;
+    width: 33.33%;
+  }
+
+  section.colophon {
+    margin: 8rem 0 10rem 50%;
+    width: 50%;
   }
 }

@@ -364,6 +364,9 @@ footer {
       footer section.browse li {
         display: inline-block;
         margin: .5em; } }
+@media only screen and (min-width: 1280px) {
+  header[role="banner"] strong {
+    position: fixed; } }
 @media screen and (max-device-width: 480px) {
   html {
     -webkit-text-size-adjust: 100%;
@@ -398,10 +401,19 @@ article.speaking b {
     font-style: italic;
     font-weight: normal; }
 
-  section.biography h1 {
-    font-size: 2rem;
-    line-height: 1em;
-    margin-bottom: 1rem; } }
+  section.biography {
+    margin: 8rem auto; }
+    section.biography h1 {
+      color: #F00;
+      font-size: 3rem;
+      letter-spacing: -.04em;
+      line-height: 1em;
+      margin-bottom: 1rem;
+      margin-left: 16.667%;
+      width: 83.335%; }
+    section.biography p {
+      margin-left: 33.333%;
+      width: 66.667%; } }
 @media only screen and (min-width: 800px) {
   section.biography p {
     font-size: 1.1rem;
@@ -451,7 +463,7 @@ article.speaking b {
     width: 33.33%; }
 
   section.colophon {
-    margin: 8rem 0 10rem 50%;
+    margin: 4rem 0 10rem 50%;
     width: 50%; } }
 body.essay .content {
   -webkit-animation: fade-in-up 0.5s both;

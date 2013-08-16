@@ -46,11 +46,21 @@ article.speaking {
   }
 
   section.biography {
+    margin: 8rem auto;
 
     h1 {
-      font-size: 2rem;
+      color: #F00;
+      font-size: 3rem;
+      letter-spacing: -.04em;
       line-height: 1em;
       margin-bottom: 1rem;
+      margin-left: 16.667%;
+      width: 83.335%;
+    }
+
+    p {
+      margin-left: 33.333%;
+      width: 66.667%;
     }
   }
 }
@@ -115,7 +125,7 @@ article.speaking {
   }
 
   section.colophon {
-    margin: 8rem 0 10rem 50%;
+    margin: 4rem 0 10rem 50%;
     width: 50%;
   }
 }

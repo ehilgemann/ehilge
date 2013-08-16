@@ -194,9 +194,14 @@ footer {
 
 }
 
-// Browser ————————————————————————————————————— /
-@include responsive-break-point(1032px) {
+// Long Browser ————————————————————————————————————— /
+@include responsive-break-point(1280px) {
+  header[role="banner"] {
 
+    strong {
+      position: fixed;
+    }
+  }
 }
 
 // Disable iOS font sizing ————————————————————————————————————— /

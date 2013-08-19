@@ -19,10 +19,11 @@
 
       <ul>
         <li><a href="http://instagram.com/migreyes" target="_blank" title="Selfie-free, guaranteed.">Instagram</a></li>
-        <li><a href="http://37signals.com/svn/writers/mig" target="_blank">Signal vs. Noise</a></li>
         <li><a href="https://rdio.com/people/migreyes" target="_blank">Rdio</a></li>
+        <li><a href="http://mig.vsco.co" target="_blank" title="Documenting every day.">VSCO</a></li>
         <li><a href="https://github.com/migreyes" target="_blank">GitHub</a></li>
         <li><a href="http://dribbble.com/migreyes" target="_blank">Dribbble</a></li>
+        <li><a href="http://37signals.com/svn/writers/mig" target="_blank">Signal vs. Noise</a></li>
       </ul>
     </div>
 
@@ -30,7 +31,7 @@
       <h2>Recently written</h2>
 
       <ul>
-      {% for essay in site.categories.essays limit:5 %}
+      {% for essay in site.categories.essays limit:6 %}
         {% unless essay.title == page.title %}
           {% if essay.svn %}
             <li><a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a></li>

@@ -1,4 +1,10 @@
-section.biography {
+.biography, .teaching {
+
+  p a:link { text-decoration: underline; }
+  p a:hover { text-decoration: none; }
+}
+
+.biography {
 
   #biography-chooser li { cursor: pointer; }
 
@@ -7,7 +13,7 @@ section.biography {
   }
 }
 
-article.speaking {
+.speaking {
 
   i {
     color: #666;

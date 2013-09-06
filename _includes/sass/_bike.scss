@@ -1,11 +1,160 @@
-body.bike {
+$green: #157665;
+$column-width: 14.666666667%;
 
+body.bike {
+  @include border-box;
+  background-color: #f4f0ee;
+  color: #333;
+  font-family: Courier, sans-serif;
+  font-size: 18px;
+  padding: 1em;
+
+  h1, h2, h3 { font-family: Courier, sans-serif; }
+
+  a {
+    color: $green;
+    text-decoration: underline;
+  }
+
+  #content {
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+  }
+
+  span.title { display: none; }
+
+  .hero {
+
+    h1 {
+      font-size: 1.5em;
+      letter-spacing: -.05em;
+      line-height: 1.1em;
+      margin-bottom: 1em;
+    }
+
+    article { margin-bottom: 5%; }
+
+    p { margin-bottom: 1em; }
+  }
+
+  .vitals {
+
+    article {
+      border-top: 4px solid #333;
+      padding-top: 1em;
+    }
+
+    p {
+      margin-bottom: 1em;
+    }
+
+    .price-old {
+      color: #999;
+      text-decoration: line-through;
+    }
+
+    .price-now { color: $green; }
+  }
+
+  .contact { margin: 4em 0; }
+
+  .remember {
+    color: #999;
+    font-size: 12px;
+    line-height: 1em;
+
+    p { margin-bottom: .25em; }
+  }
 }
 
 
 // ————————————————————————————————————— /
-@include responsive-break-point(640px) {
+@include responsive-break-point(768px) {
   body.bike {
+    padding: 2em;
 
+    span.title {
+      display: block;
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      position: absolute;
+      right: 0;
+      text-transform: uppercase;
+      top: 0;
+    }
+
+    .hero {
+      margin-bottom: 15%;
+
+      h1 {
+        font-size: 4em;
+        letter-spacing: -.1em;
+        line-height: .9em;
+        width: 66.666666668%;
+      }
+
+      article {
+        font-size: 14px;
+        margin-top: 10%;
+        margin-left: 33.333333332%;
+        width: 66.666666668%;
+
+        h2 {
+          border-top: 4px solid #333;
+          font-size: 3em;
+          padding-top: .25em;
+          letter-spacing: -.1em;
+          line-height: .8em;
+          margin-bottom: .5em;
+          word-wrap: break-word;
+          width: 20%;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .vitals {
+      @include clearfix;
+
+      article {
+        @include border-box;
+        float: left;
+        font-size: 14px;
+        line-height: 1.2em;
+        margin-right: 2%;
+        max-width: 200px;
+        width: $column-width;
+
+        h2 {
+          font-size: 3em;
+          min-height: 3em;
+          letter-spacing: -.1em;
+          line-height: .8em;
+          margin-bottom: .5em;
+          word-wrap: break-word;
+        }
+      }
+    }
+
+    .contact {
+      margin-bottom: 10%;
+      margin-left: 33.333333332%;
+      width: 50%;
+    }
+
+    .remember {
+      margin-bottom: 10%;
+      margin-left: 33.333333332%;
+      width: 50%;
+    }
   }
 }
+
+
+// 6 columns. 200px each.
+// 14.666666667%, 2% margin

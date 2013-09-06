@@ -165,6 +165,13 @@ body.bike {
           word-wrap: break-word;
         }
       }
+
+      .price-now {
+        display: block;
+        font-size: 3em;
+        letter-spacing: -.09em;
+        margin-top: .5em;
+      }
     }
 
     .contact {

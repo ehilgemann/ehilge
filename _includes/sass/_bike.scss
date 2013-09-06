@@ -164,6 +164,12 @@ body.bike {
           margin-bottom: .5em;
           word-wrap: break-word;
         }
+
+        sup {
+          display: inline-block;
+          font-size: .8em;
+          vertical-align: super;
+        }
       }
 
       .price-now {

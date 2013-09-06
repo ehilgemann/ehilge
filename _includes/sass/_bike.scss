@@ -101,6 +101,16 @@ body.bike {
       top: 12em;
     }
 
+    span.enjoy {
+      bottom: 4.5em;
+      right: -12em;
+      -webkit-transform: rotate(90deg);
+         -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+              transform: rotate(90deg);
+      text-align: right;
+    }
+
     .hero {
       margin-bottom: 15%;
 
@@ -158,6 +168,7 @@ body.bike {
     }
 
     .contact {
+      position: relative;
       margin-bottom: 10%;
       margin-left: 33.333333332%;
       width: 50%;

@@ -22,9 +22,10 @@ body.bike {
     max-width: 1200px;
   }
 
-  span.title { display: none; }
+  span.accent { display: none; }
 
   .hero {
+    position: relative;
 
     h1 {
       font-size: 1.5em;
@@ -33,7 +34,10 @@ body.bike {
       margin-bottom: 1em;
     }
 
-    article { margin-bottom: 5%; }
+    article {
+      margin-bottom: 5%;
+      position: relative;
+    }
 
     p { margin-bottom: 1em; }
   }
@@ -74,15 +78,27 @@ body.bike {
   body.bike {
     padding: 2em;
 
-    span.title {
+    span.accent {
       display: block;
       font-size: 11px;
       font-weight: bold;
       letter-spacing: 3px;
       position: absolute;
-      right: 0;
       text-transform: uppercase;
+    }
+
+    span.sale {
+      right: 0;
       top: 0;
+    }
+
+    span.places {
+      left: -50%;
+      -webkit-transform: rotate(-90deg);
+         -moz-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg);
+      top: 12em;
     }
 
     .hero {

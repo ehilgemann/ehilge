@@ -2,12 +2,11 @@ $green: #157665;
 $column-width: 14.666666667%;
 
 body.bike {
-  @include border-box;
   background-color: #f4f0ee;
   color: #333;
   font-family: Courier, sans-serif;
   font-size: 18px;
-  padding: 1em;
+  padding: 0;
 
   h1, h2, h3 { font-family: Courier, sans-serif; }
 
@@ -17,9 +16,12 @@ body.bike {
   }
 
   #content {
+    @include border-box;
     margin: 0 auto;
+    padding: 1em;
     position: relative;
-    max-width: 1200px;
+    max-width: 1220px;
+    width: 100%;
   }
 
   span.accent { display: none; }
@@ -70,13 +72,33 @@ body.bike {
 
     p { margin-bottom: .25em; }
   }
+
+  .photos {
+    border-top: 4px solid #333;
+    overflow: scroll;
+    margin: 0;
+
+    figure {
+      background-attachment: fixed;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 100%;
+      width: 100%;
+
+      &.one { background-image: url('/assets/images/bike/train.jpg'); }
+      &.two { background-image: url('/assets/images/bike/street.jpg'); }
+      &.three { background-image: url('/assets/images/bike/guitar.jpg'); }
+    }
+  }
 }
 
 
 // ————————————————————————————————————— /
 @include responsive-break-point(768px) {
   body.bike {
-    padding: 2em;
+
+    #content { padding: 2em; }
 
     span.accent {
       display: block;
@@ -85,30 +107,30 @@ body.bike {
       letter-spacing: 3px;
       position: absolute;
       text-transform: uppercase;
-    }
 
-    span.sale {
-      right: 0;
-      top: 0;
-    }
+      &.sale {
+        right: 3em;
+        top: 3em;
+      }
 
-    span.places {
-      left: -50%;
-      -webkit-transform: rotate(-90deg);
-         -moz-transform: rotate(-90deg);
-          -ms-transform: rotate(-90deg);
-              transform: rotate(-90deg);
-      top: 12em;
-    }
+      &.places {
+        left: -50%;
+        -webkit-transform: rotate(-90deg);
+           -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+                transform: rotate(-90deg);
+        top: 12em;
+      }
 
-    span.enjoy {
-      bottom: 4.5em;
-      right: -12em;
-      -webkit-transform: rotate(90deg);
-         -moz-transform: rotate(90deg);
-          -ms-transform: rotate(90deg);
-              transform: rotate(90deg);
-      text-align: right;
+      &.enjoy {
+        bottom: 4.5em;
+        right: -12em;
+        -webkit-transform: rotate(90deg);
+           -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+        text-align: right;
+      }
     }
 
     .hero {
@@ -192,9 +214,9 @@ body.bike {
       margin-left: 33.333333332%;
       width: 50%;
     }
+
+    .photos {
+
+    }
   }
 }
-
-
-// 6 columns. 200px each.
-// 14.666666667%, 2% margin

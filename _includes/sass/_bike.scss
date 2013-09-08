@@ -81,18 +81,11 @@ body.bike {
   .photos {
     border-top: 4px solid #333;
     margin: 0;
-    overflow: visible;
     width: 100%;
 
-    figure {
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      background-size: 100%;
+    img {
+      height: auto;
       width: 100%;
-
-      &.one { background-image: url('/assets/images/bike/train.jpg'); }
-      &.two { background-image: url('/assets/images/bike/street.jpg'); }
-      &.three { background-image: url('/assets/images/bike/guitar.jpg'); }
     }
   }
 }
@@ -222,9 +215,20 @@ body.bike {
     }
 
     .photos {
-      overflow: auto;
+      @include clearfix;
+      overflow: hidden;
+      position: relative;
+      width: 100%;
 
-      figure { background-attachment: fixed; }
+      figure {
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        &:first-child { left: -10em; }
+        &:last-child { left: 20em; }
+      }
     }
   }
 }

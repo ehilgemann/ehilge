@@ -13,23 +13,9 @@ setGallerySize = (el, height) ->
   $el = $(el)
   $el.height height
 
-setGalleryOverflow = ->
-  if $(window).width() >= 768
-    $contentHeight = $('#content').height()
-    $photoHeight = calculatePhotoHeight()
-    $windowHeight = $(window).height()
-
-    if $(window).scrollTop() >= ($contentHeight - ($windowHeight - $photoHeight))
-      $('.photos').css 'overflow', 'auto'
-    else
-      $('.photos').css 'overflow', 'visible'
-
 
 $ ->
   setupGallery()
 
   $(window).resize ->
     setupGallery()
-
-  $(window).scroll ->
-    setGalleryOverflow()

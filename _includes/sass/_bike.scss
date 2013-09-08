@@ -222,6 +222,7 @@ body.bike {
     }
 
     .photos {
+      overflow: auto;
 
       figure { background-attachment: fixed; }
     }

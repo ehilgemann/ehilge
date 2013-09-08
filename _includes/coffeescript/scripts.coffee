@@ -20,7 +20,7 @@ setGalleryOverflow = ->
     $windowHeight = $(window).height()
 
     if $(window).scrollTop() >= ($contentHeight - ($windowHeight - $photoHeight))
-      $('.photos').css 'overflow', 'scroll'
+      $('.photos').css 'overflow', 'auto'
     else
       $('.photos').css 'overflow', 'visible'
 

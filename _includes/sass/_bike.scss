@@ -15,9 +15,12 @@ body.bike {
     text-decoration: underline;
   }
 
+  p { font-size: 16px; }
+
   #content {
     @include border-box;
     margin: 0 auto;
+    padding: 1em;
     position: relative;
     max-width: 1220px;
     width: 100%;
@@ -29,7 +32,7 @@ body.bike {
     position: relative;
 
     h1 {
-      font-size: 1.5em;
+      font-size: 1.75em;
       letter-spacing: -.05em;
       line-height: 1.1em;
       margin-bottom: 1em;
@@ -66,11 +69,13 @@ body.bike {
 
   .remember {
     color: #999;
-    font-size: 12px;
     line-height: 1em;
     margin-bottom: 2em;
 
-    p { margin-bottom: .25em; }
+    p {
+      font-size: 12px;
+      margin-bottom: .25em;
+    }
   }
 
   .photos {
@@ -186,6 +191,8 @@ body.bike {
           word-wrap: break-word;
         }
 
+        p { font-size: 14px; }
+
         sup {
           display: inline-block;
           font-size: .8em;
@@ -215,11 +222,8 @@ body.bike {
     }
 
     .photos {
-      // overflow: scroll;
 
-      figure {
-        background-attachment: fixed;
-      }
+      figure { background-attachment: fixed; }
     }
   }
 }

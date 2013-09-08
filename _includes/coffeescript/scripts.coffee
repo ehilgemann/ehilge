@@ -1,17 +1,25 @@
 showWidth = ->
   document.title = "Mig Reyes " + $(window).width()
 
-resizePhotosHeight = ->
-  adjustPhotoHeight $('.photos')
-  adjustPhotoHeight $('.photos figure')
+setupGallery = ->
+  $height = Math.floor($(window).width() * 0.535)
+  adjustPhotoSize $('.photos'), $height
+  adjustPhotoSize $('.photos figure'), $height
 
-adjustPhotoHeight = (el) ->
+adjustPhotoSize = (el, height) ->
   $el = $(el)
-  $el.height Math.floor($(window).width() * 0.54)
+  $el.height height
 
 
 $ ->
-  resizePhotosHeight()
+  setupGallery()
 
   $(window).resize ->
-    resizePhotosHeight()
+    setupGallery()
+
+  $(window).scroll ->
+    if $(window).width() >= 768
+      if $(window).scrollTop() >= ($('#content').height() + 24)
+        $('.photos').css 'overflow', 'scroll'
+      else
+        $('.photos').css 'overflow', 'visible'

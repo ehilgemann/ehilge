@@ -13,7 +13,7 @@ Stealing bikes is worse than stealing code, mmkay. Don’t do either.
 Site designed and programmed by Mig Reyes.
 
 Colophon:
-• HTML and Sass generated with Jekyll.
+• HTML, Sass, and CoffeeScript compiled with Jekyll.
 • Version control with Git via GitHub.
 • Hosted on Dreamhost.
 • Typeface: Courier. Because, fuck it. Why not.
@@ -73,7 +73,7 @@ What the fox say?
     <script type="text/javascript" src="/assets/javascript/scripts.js"></script>
     <script>(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-43019362-1","migreyes.com");ga("send","pageview")</script>
   </head>
-  <body{% if page.class %} class="{{ page.class }}" {% endif %}>
+  <body{% if page.class %} class="{{ page.class }}"{% endif %}>
     {{ content }}
   </body>
 </html>

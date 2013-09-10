@@ -78,7 +78,7 @@ body.bike {
     }
   }
 
-  .photos {
+  .gallery {
     border-top: 4px solid #333;
     margin: 0;
     width: 100%;
@@ -214,20 +214,18 @@ body.bike {
       width: 50%;
     }
 
-    .photos {
-      @include clearfix;
+    .gallery {
       overflow: hidden;
-      position: relative;
-      width: 100%;
 
-      figure {
+      .photos {
+        position: relative;
         left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
 
-        &:first-child { left: -10em; }
-        &:last-child { left: 20em; }
+        figure {
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
       }
     }
   }

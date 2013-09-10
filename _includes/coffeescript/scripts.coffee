@@ -68,6 +68,12 @@ $ ->
   $(window).resize ->
     setupGallery()
 
+  $('[data-photo~="next"]').on "click", ->
+    nextPhoto()
+
+  $('[data-photo~="previous"]').on "click", ->
+    previousPhoto()
+
   # Keyboard shortcuts and navigation.
   $(window).bind "keydown", (event) ->
     switch event.keyCode

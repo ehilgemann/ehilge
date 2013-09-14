@@ -64,6 +64,13 @@ body.bike {
       position: relative;
     }
 
+    h2 {
+      border-bottom: 4px solid #333;
+      font-size: 1.25em;
+      margin-bottom: .75em;
+      padding-bottom: .25em;
+    }
+
     p { margin-bottom: 1em; }
   }
 
@@ -179,12 +186,14 @@ body.bike {
         width: 66.666666668%;
 
         h2 {
+          border-bottom: none;
           border-top: 4px solid #333;
           font-size: 2.5em;
           padding-top: .25em;
           letter-spacing: -.1em;
           line-height: .8em;
           margin-bottom: .5em;
+          padding-bottom: 0;
           word-wrap: break-word;
           width: 20%;
         }

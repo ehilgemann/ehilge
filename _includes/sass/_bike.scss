@@ -277,6 +277,8 @@ body.bike {
           left: 0;
           position: absolute;
           top: 0;
+
+          &:hover { cursor: pointer; }
         }
       }
     }

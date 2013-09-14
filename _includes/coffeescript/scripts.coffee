@@ -3,10 +3,6 @@ $currentPhoto = 1
 showWidth = ->
   document.title = "Mig Reyes " + $(window).width()
 
-Test = ->
-  fun: ->
-    console.log "Fun!"
-
 setupGallery = ->
   $gallery = $('.gallery')
   $photos = $gallery.find('figure')
@@ -68,11 +64,20 @@ $ ->
   $(window).resize ->
     setupGallery()
 
+  if $(window).width() > 768
+    $('.photos figure').on "click", ->
+      nextPhoto()
+
   $('[data-photo~="next"]').on "click", ->
     nextPhoto()
 
   $('[data-photo~="previous"]').on "click", ->
     previousPhoto()
+
+  $(window).on "scroll", ->
+    $bike = $('.hero figure')
+    $bike.css 'top', ($(window).scrollTop() * .5)
+
 
   # Keyboard shortcuts and navigation.
   $(window).bind "keydown", (event) ->

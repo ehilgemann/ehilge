@@ -64,7 +64,7 @@ $ ->
   $(window).resize ->
     setupGallery()
 
-  if $(window).width() > 768
+  if $(window).width() >= 768
     $('.photos figure').on "click", ->
       nextPhoto()
 
@@ -74,8 +74,8 @@ $ ->
   $('[data-photo~="previous"]').on "click", ->
     previousPhoto()
 
+  $bike = $('.hero figure')
   $(window).on "scroll", ->
-    $bike = $('.hero figure')
     $bike.css 'top', ($(window).scrollTop() * .5)
 
 

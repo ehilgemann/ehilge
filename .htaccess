@@ -8,3 +8,4 @@ RedirectMatch 301 /portfolio /makes$1
 RedirectMatch 301 /writing /writes$1
 RedirectMatch 301 /thoughts /writes$1
 RedirectMatch 301 /resources /recommends$1
+RedirectMatch 301 /chicago /loves-chicago$1

@@ -28,9 +28,13 @@ body.portfolio {
       }
 
       small {
+        color: #666;
         display: block;
-        font-size: .8em;
+        font-size: .65rem;
+        font-weight: bold;
+        letter-spacing: .2rem;
         margin-top: .5rem;
+        text-transform: uppercase;
       }
     }
 

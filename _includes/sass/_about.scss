@@ -6,7 +6,8 @@
 
 .biography {
 
-  #biography-chooser li { cursor: pointer; }
+  article.small,
+  article.medium { display: none; }
 
   p {
     margin: 0 0 1rem;

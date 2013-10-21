@@ -1,7 +1,7 @@
 ---
 title: "On the Move"
 date: 2012-01-24 12:00
-category: essays
+category: writes
 layout: essay
 ---
 

@@ -7,7 +7,7 @@ layout: default
 <section class="essays">
   <h2>Recently written</h2>
   <ul>
-  {% for essay in site.categories.essays %}
+  {% for essay in site.categories.writes %}
     {% unless essay.title == page.title %}
       {% if essay.svn %}
         <li><a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a></li>

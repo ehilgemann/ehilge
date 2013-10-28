@@ -1,12 +1,22 @@
 ErrorDocument 404 /404.html
 Options -Indexes
 
-RedirectMatch 301 /about /is$1
-RedirectMatch 301 /profile /is$1
-RedirectMatch 301 /work /makes$1
-RedirectMatch 301 /portfolio /makes$1
-RedirectMatch 301 /writing /writes$1
-RedirectMatch 301 /thoughts /writes$1
-RedirectMatch 301 /resources /loves$1
-RedirectMatch 301 /recommends /loves$1
-RedirectMatch 301 /chicago /loves/chicago$1
+# RedirectMatch 301 /about /is$1
+# RedirectMatch 301 /profile /is$1
+# RedirectMatch 301 /work /makes$1
+# RedirectMatch 301 /portfolio /makes$1
+# RedirectMatch 301 /writing /writes$1
+# RedirectMatch 301 /thoughts /writes$1
+# RedirectMatch 301 /resources /loves$1
+# RedirectMatch 301 /recommends /loves$1
+# RedirectMatch 301 /chicago /loves/chicago$1
+
+RedirectMatch 301 /about /
+RedirectMatch 301 /profile /
+RedirectMatch 301 /work /
+RedirectMatch 301 /portfolio /
+RedirectMatch 301 /writing /
+RedirectMatch 301 /thoughts /
+RedirectMatch 301 /resources /
+RedirectMatch 301 /recommends /
+RedirectMatch 301 /chicago /

@@ -7,7 +7,7 @@
 .biography {
 
   article.small,
-  article.medium { display: none; }
+  button[data-bio=".large"] { display: none; }
 
   p {
     margin: 0 0 1rem;
@@ -52,8 +52,33 @@
     }
   }
 
+  section.portrait {
+    display: none;
+    background-color: rgba(0,0,0,.5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5000;
+
+    figure {
+      margin: 1rem auto;
+      height: auto;
+      width: 45%;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
   section.biography {
     margin: 8rem auto;
+
+    .biography-toggles { margin-left: 33.333%; }
+    .biography-toggles [data-bio=".large"] { margin-bottom: 6rem; }
 
     h1 {
       color: #F00;
@@ -66,6 +91,8 @@
       width: 83.335%;
       z-index: 1000;
     }
+
+    article.small h1 { margin-left: 33.333%; }
 
     p {
       margin-left: 33.333%;
@@ -105,7 +132,7 @@
         width: 100%;
       }
 
-      p {
+      figcaption {
         color: #999;
         font-size: .5em;
         margin-left: 14%;
@@ -114,7 +141,10 @@
         width: 100%;
         z-index: 200;
 
-        a { color: #999; }
+        a {
+          color: #999;
+          text-decoration: underline;
+        }
       }
     }
   }

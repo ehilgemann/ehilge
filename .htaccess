@@ -11,12 +11,12 @@ Options -Indexes
 # RedirectMatch 301 /recommends /loves$1
 # RedirectMatch 301 /chicago /loves/chicago$1
 
-RedirectMatch 301 /about /
-RedirectMatch 301 /profile /
-RedirectMatch 301 /work /
-RedirectMatch 301 /portfolio /
-RedirectMatch 301 /writing /
-RedirectMatch 301 /thoughts /
-RedirectMatch 301 /resources /
-RedirectMatch 301 /recommends /
-RedirectMatch 301 /chicago /
+RedirectMatch 301 /about /$1
+RedirectMatch 301 /profile /$1
+RedirectMatch 301 /work /$1
+RedirectMatch 301 /portfolio /$1
+RedirectMatch 301 /writing /$1
+RedirectMatch 301 /thoughts /$1
+RedirectMatch 301 /resources /$1
+RedirectMatch 301 /recommends /$1
+RedirectMatch 301 /chicago /$1

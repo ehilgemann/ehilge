@@ -11,7 +11,7 @@ $ ->
   $portraitSlider.find('img').on 'click', ->
     $portraitOriginal.fadeIn()
 
-  $('section.portrait').on 'click', ->
+  $portraitOriginal.on 'click', ->
     $(this).fadeOut()
 
   $(window).on 'scroll', ->

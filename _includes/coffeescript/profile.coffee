@@ -1,4 +1,3 @@
-
 toggleBio = (bioLength) ->
   $bio = $('section.biography')
   $bio.find('article').hide()
@@ -6,17 +5,17 @@ toggleBio = (bioLength) ->
   $('html, body').animate({scrollTop: 0}, 600)
 
 $ ->
-  $portraitTop = $('.portrait-top')
+  $portraitSlider = $('.portrait-slider')
   $portraitOriginal = $('.portrait')
 
-  $portraitTop.on 'click', ->
+  $portraitSlider.find('img').on 'click', ->
     $portraitOriginal.fadeIn()
 
   $('section.portrait').on 'click', ->
     $(this).fadeOut()
 
   $(window).on 'scroll', ->
-    $portraitTop.css 'top', ($(window).scrollTop() * -1.5)
+    $portraitSlider.css 'top', ($(window).scrollTop() * -1.5)
 
   $('button[data-toggle~="bio"]').on 'click', ->
     $('section.biography').find('button').show()

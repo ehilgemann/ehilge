@@ -25,7 +25,7 @@ body.about .ephemera { display: none; }
     margin: 0 0 1rem;
   }
 
-  .portrait-toggles { display: none; }
+  .portrait-thumbnails { display: none; }
 }
 
 .speaking {
@@ -154,7 +154,7 @@ body.about .ephemera { display: none; }
       line-height: 1.75em;
     }
 
-    .portrait-toggles {
+    .portrait-thumbnails {
       display: block;
       position: absolute;
       top: -8em;
@@ -167,7 +167,7 @@ body.about .ephemera { display: none; }
         width: 100%;
       }
 
-      .portrait-slider {
+      .portrait-toggle {
         margin-top: 8em;
         position: absolute;
         width: 100%;

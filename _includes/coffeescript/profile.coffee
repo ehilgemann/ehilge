@@ -1,3 +1,10 @@
+parallax = (element, start, stop, rate) ->
+  $(window).on 'scroll', ->
+    position = document.body.scrollTop
+
+    if position >= start and position <= stop
+      element.css 'top', ($(window).scrollTop() * rate)
+
 toggleBio = (bioLength) ->
   $bio = $('section.biography')
   $bio.find('article').hide()
@@ -5,21 +12,16 @@ toggleBio = (bioLength) ->
   $('html, body').animate({scrollTop: 0}, 600)
 
 $ ->
-  $portraitSlider = $('.portrait-slider')
-  $portraitOriginal = $('.portrait')
+  $portraitOverlay = $('.portrait')
 
-  $portraitSlider.find('img').on 'click', ->
-    $portraitOriginal.fadeIn()
+  $('.portrait-toggle img').on 'click', -> $portraitOverlay.fadeIn()
 
-  $portraitOriginal.on 'click', ->
+  $portraitOverlay.on 'click', ->
     if $(window).width() >= 800
       $(this).fadeOut()
 
-  $(window).on 'scroll', ->
-    $portraitSlider.css 'top', ($(window).scrollTop() * -1.5)
-
   # Toggle long versus short biographies.
-  $('[data-toggle~="bio"]').on 'click', ->
-    toggleBio($(this).data('bio'))
+  $('[data-toggle~="bio"]').on 'click', -> toggleBio($(this).data('bio'))
 
+  parallax($('.portrait-toggle'), -40, 250, -1.5)
 

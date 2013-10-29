@@ -137,6 +137,14 @@ footer {
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
   }
+
+  &.large {
+    font-size: 10em;
+    font-weight: normal;
+            opacity: .75;
+       -moz-opacity: .75;
+    -webkit-opacity: .75;
+  }
 }
 
 // iPad ————————————————————————————————————— /

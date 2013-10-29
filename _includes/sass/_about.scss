@@ -1,3 +1,16 @@
+body.about .ephemera { display: none; }
+
+.portrait {
+  width: 100%;
+
+  figure { width: 100%; }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
 .biography, .teaching {
 
   p a:link { text-decoration: underline; }
@@ -6,12 +19,13 @@
 
 .biography {
 
-  article.small,
-  button[data-bio=".large"] { display: none; }
+  article.short { display: none; }
 
   p {
     margin: 0 0 1rem;
   }
+
+  .portrait-toggles { display: none; }
 }
 
 .speaking {
@@ -31,7 +45,7 @@
 }
 
 // iPad ————————————————————————————————————— /
-@include responsive-break-point(641px) {
+@include responsive-break-point(640px) {
   body.about .content section {
 
     hgroup { margin-bottom: .5rem; }
@@ -50,14 +64,63 @@
       font-style: italic;
       font-weight: normal;
     }
+  }
 
-    .ephemera { display: none; }
+  section.biography {
+    margin: 8rem auto 0;
+
+    h1 {
+      color: #F00;
+      font-size: 3rem;
+      letter-spacing: -.04em;
+      line-height: 1em;
+      margin-bottom: 1rem;
+      margin-left: 16.667%;
+      position: relative;
+      width: 83.335%;
+      z-index: 1000;
+    }
+
+    article.short {
+      margin-bottom: 9em;
+
+      h1 { margin-left: 33.333%; }
+    }
+
+    article.long { margin-bottom: 8em; }
+
+    p {
+      margin-left: 33.333%;
+      width: 66.667%;
+    }
+
+    [data-toggle="bio"] {
+      color: $color-link;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-link-hover;
+        cursor: pointer;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// Browser ————————————————————————————————————— /
+@include responsive-break-point(800px) {
+  body.about .content section {
+
+    // Adjust so there’s no break on small widths
+    // which shows scrollbars.
+    // This may also be do to making the browser small then big again.
+    .ephemera { display: block; }
   }
 
   section.portrait {
     cursor: -webkit-zoom-out;
-    display: none;
     background-color: rgba(0,0,0,.8);
+    display: none;
     height: 100%;
     left: 0;
     position: fixed;
@@ -81,42 +144,6 @@
         text-align: center;
       }
     }
-  }
-
-  section.biography {
-    margin: 8rem auto;
-
-    .biography-toggles { margin-left: 33.333%; }
-    .biography-toggles [data-bio=".large"] { margin-bottom: 6rem; }
-
-    h1 {
-      color: #F00;
-      font-size: 3rem;
-      letter-spacing: -.04em;
-      line-height: 1em;
-      margin-bottom: 1rem;
-      margin-left: 16.667%;
-      position: relative;
-      width: 83.335%;
-      z-index: 1000;
-    }
-
-    article.small h1 { margin-left: 33.333%; }
-
-    p {
-      margin-left: 33.333%;
-      width: 66.667%;
-    }
-  }
-}
-
-// Browser ————————————————————————————————————— /
-@include responsive-break-point(800px) {
-  body.about .content section {
-
-    // Adjust so there’s no break on small widths
-    // which shows scrollbars.
-    .ephemera { display: block; }
   }
 
   section.biography {

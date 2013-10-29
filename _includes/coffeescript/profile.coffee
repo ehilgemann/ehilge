@@ -12,14 +12,14 @@ $ ->
     $portraitOriginal.fadeIn()
 
   $portraitOriginal.on 'click', ->
-    $(this).fadeOut()
+    if $(window).width() >= 800
+      $(this).fadeOut()
 
   $(window).on 'scroll', ->
     $portraitSlider.css 'top', ($(window).scrollTop() * -1.5)
 
-  $('button[data-toggle~="bio"]').on 'click', ->
-    $('section.biography').find('button').show()
-    $(this).hide()
+  # Toggle long versus short biographies.
+  $('[data-toggle~="bio"]').on 'click', ->
     toggleBio($(this).data('bio'))
 
 

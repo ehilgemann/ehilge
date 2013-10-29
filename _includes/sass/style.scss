@@ -15,7 +15,7 @@ body {
     text-decoration: none;
 
     &:visited { color: $color-link-visited; }
-    &:hover { color: $color-link; text-decoration: underline; }
+    &:hover { color: $color-link-hover; text-decoration: underline; }
     &:active { color: black; }
   }
 
@@ -57,6 +57,7 @@ header[role="banner"] {
 
 footer {
   @include border-box;
+  font-family: $font-alto;
   margin: 0 auto;
   padding: 1rem;
   max-width: 1000px;
@@ -115,7 +116,7 @@ footer {
 .hidden { display: none; }
 
 .ephemera {
-  color: rgba(94, 172, 238, .75);
+  color: rgba(94, 172, 238, .85);
   font-family: $font-alto;
   font-size: .75em;
   font-weight: bold;
@@ -141,9 +142,6 @@ footer {
   &.large {
     font-size: 10em;
     font-weight: normal;
-            opacity: .75;
-       -moz-opacity: .75;
-    -webkit-opacity: .75;
   }
 }
 
@@ -159,7 +157,6 @@ footer {
   footer {
     @include clearfix;
     margin-top: 3rem;
-    font-family: $font-alto;
 
     section.explore {
       @include clearfix;

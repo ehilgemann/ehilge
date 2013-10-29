@@ -50,6 +50,8 @@
       font-style: italic;
       font-weight: normal;
     }
+
+    .ephemera { display: none; }
   }
 
   section.portrait {
@@ -110,6 +112,13 @@
 
 // Browser ————————————————————————————————————— /
 @include responsive-break-point(800px) {
+  body.about .content section {
+
+    // Adjust so there’s no break on small widths
+    // which shows scrollbars.
+    .ephemera { display: block; }
+  }
+
   section.biography {
     position: relative;
 
@@ -167,6 +176,7 @@
 
   section.kudos {
     @include clearfix;
+    position: relative;
 
     li { font-family: $font-alto; }
   }
@@ -208,4 +218,17 @@
     margin: 2rem 0 10rem 50%;
     width: 50%;
   }
+}
+
+// Ephemera ————————————————————————————————————— /
+#midwest {
+  bottom: 15em;
+  left: 15%;
+}
+
+#give { right: -10%; }
+
+#nice {
+  bottom: 20%;
+  left: 43.5%;
 }

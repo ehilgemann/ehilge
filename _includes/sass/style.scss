@@ -114,6 +114,31 @@ footer {
 
 .hidden { display: none; }
 
+.ephemera {
+  color: rgba(94, 172, 238, .75);
+  font-family: $font-alto;
+  font-size: .75em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 1.25em;
+  text-transform: uppercase;
+  position: absolute;
+
+  &.clockwise {
+    -webkit-transform: rotate(-90deg);
+       -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+  }
+
+  &.counter-clockwise {
+    -webkit-transform: rotate(90deg);
+       -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(641px) {
   body {

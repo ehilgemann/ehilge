@@ -70,6 +70,14 @@ footer {
   }
   a:visited { color: $color-link; }
 
+  section.explore {
+
+    div { margin-bottom: 2em; }
+
+    .elsewhere { display: none; }
+  }
+
+
   section.browse {
     text-align: center;
     width: 100%;
@@ -164,7 +172,6 @@ footer {
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(641px) {
   body {
-    // border-top: none;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -189,6 +196,7 @@ footer {
       div {
         display: inline-block;
         float: left;
+        margin-bottom: 0;
       }
 
       .contact {
@@ -204,6 +212,7 @@ footer {
       }
 
       .elsewhere {
+        display: block;
         margin-right: 2%;
         width: 14.667%;
 

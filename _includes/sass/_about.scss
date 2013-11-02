@@ -1,4 +1,6 @@
-body.about .content section {
+body.about section {
+
+  article { margin-bottom: 2em; }
 
   hgroup { margin-bottom: .5rem; }
 
@@ -21,9 +23,12 @@ body.about .content section {
 }
 
 .portrait {
+  margin-bottom: 1em;
   width: 100%;
 
   figure { width: 100%; }
+
+  figcaption { display: none; }
 
   img {
     height: auto;
@@ -41,7 +46,24 @@ body.about .content section {
 
   article.short { display: none; }
 
+  h1 {
+    color: #F00;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
   p { margin: 0 0 1rem; }
+
+  [data-toggle="bio"] {
+    color: $color-link;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-link-hover;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
 
   .portrait-thumbnails { display: none; }
 }
@@ -69,11 +91,9 @@ body.about .content section {
     margin: 8rem auto 0;
 
     h1 {
-      color: #F00;
       font-size: 3rem;
       letter-spacing: -.04em;
       line-height: 1em;
-      margin-bottom: 1rem;
       margin-left: 16.667%;
       position: relative;
       width: 83.335%;
@@ -91,17 +111,6 @@ body.about .content section {
     p {
       margin-left: 33.333%;
       width: 66.667%;
-    }
-
-    [data-toggle="bio"] {
-      color: $color-link;
-      text-decoration: underline;
-
-      &:hover {
-        color: $color-link-hover;
-        cursor: pointer;
-        text-decoration: none;
-      }
     }
   }
 }
@@ -122,6 +131,7 @@ body.about .content section {
     display: none;
     height: 100%;
     left: 0;
+    margin: 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -142,6 +152,7 @@ body.about .content section {
         @include border-radius(0 0 5px 5px);
         background: rgba(0,0,0,.8);
         color: white;
+        display: block;
         font-size: .9em;
         margin: -.5em 0 0;
         padding: .5em 0;

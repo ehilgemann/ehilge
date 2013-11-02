@@ -21,9 +21,7 @@ body.about .ephemera { display: none; }
 
   article.short { display: none; }
 
-  p {
-    margin: 0 0 1rem;
-  }
+  p { margin: 0 0 1rem; }
 
   .portrait-thumbnails { display: none; }
 }
@@ -82,7 +80,7 @@ body.about .ephemera { display: none; }
     }
 
     article.short {
-      margin-bottom: 9em;
+      margin-bottom: 10em;
 
       h1 { margin-left: 33.333%; }
     }

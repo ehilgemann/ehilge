@@ -1,4 +1,24 @@
-body.about .ephemera { display: none; }
+body.about .content section {
+
+  hgroup { margin-bottom: .5rem; }
+
+  h2 {
+    color: #F00;
+    font-size: .9rem;
+    letter-spacing: .3em;
+    line-height: 1em;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: #999;
+    font-family: $font-tisa;
+    font-style: italic;
+    font-weight: normal;
+  }
+
+  .ephemera { display: none; }
+}
 
 .portrait {
   width: 100%;
@@ -44,25 +64,6 @@ body.about .ephemera { display: none; }
 
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
-  body.about .content section {
-
-    hgroup { margin-bottom: .5rem; }
-
-    h2 {
-      color: #F00;
-      font-size: .9rem;
-      letter-spacing: .3em;
-      line-height: 1em;
-      text-transform: uppercase;
-    }
-
-    h3 {
-      color: #999;
-      font-family: $font-tisa;
-      font-style: italic;
-      font-weight: normal;
-    }
-  }
 
   section.biography {
     margin: 8rem auto 0;

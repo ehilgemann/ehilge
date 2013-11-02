@@ -3,6 +3,7 @@
 body {
   @include font-smoothing(antialiased);
   background-color: #FFF;
+  border-top: .25em solid $color-link;
   color: #333;
   font-family: $font-tisa;
   font-size: 1rem; // 16px
@@ -163,6 +164,7 @@ footer {
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(641px) {
   body {
+    // border-top: none;
     padding-left: 2rem;
     padding-right: 2rem;
   }

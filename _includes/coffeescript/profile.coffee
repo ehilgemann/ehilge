@@ -5,11 +5,23 @@ parallax = (element, direction, start, stop, rate) ->
     if position >= start and position <= stop
       element.css direction, ($(window).scrollTop() * rate)
 
-toggleBio = (bioLength) ->
+swapBio = (bio) ->
   $bio = $('section.biography')
   $bio.find('article').hide()
-  $bio.find(bioLength).show()
-  $('html, body').animate({scrollTop: 0}, 600)
+  $bio.find(bio).show()
+
+toggleBio = (bio) ->
+  position = document.body.scrollTop
+
+  if position > 200
+    $('html, body').animate
+      scrollTop: 0
+    ,
+      duration: 500
+      complete: ->
+        swapBio bio
+  else
+    swapBio bio
 
 $ ->
   $portraitToggle = $('.portrait-toggle')
@@ -24,7 +36,7 @@ $ ->
       $(this).fadeOut()
 
   # Toggle long versus short biographies.
-  $('[data-toggle~="bio"]').on 'click', -> toggleBio($(this).data('bio'))
+  $('[data-toggle~="bio"]').on 'click', -> toggleBio $(this).data('bio')
 
   # Visual effect: slide toggle up when scrolling down.
   parallax $portraitToggle, 'top', -40, 250, -1.5

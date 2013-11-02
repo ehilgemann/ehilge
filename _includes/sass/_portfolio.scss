@@ -1,5 +1,6 @@
 body.portfolio {
   @include animate(fade-to-grey 1s both);
+  border-top-color: black;
   background: #999;
 
   header[role="banner"] {

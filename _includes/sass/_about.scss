@@ -103,7 +103,10 @@ body.about section {
     article.short {
       margin-bottom: 10em;
 
-      h1 { margin-left: 33.333%; }
+      h1 {
+        margin-left: 33.333%;
+        width: 66.667%;
+      }
     }
 
     article.long { margin-bottom: 8em; }

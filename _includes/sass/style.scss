@@ -174,8 +174,16 @@ footer {
   }
 }
 
+// Mobile Landscape ————————————————————————————————————— /
+@include responsive-break-point(480px) {
+  header[role="banner"] {
+
+    > a span { display: inline; }
+  }
+}
+
 // iPad ————————————————————————————————————— /
-@include responsive-break-point(641px) {
+@include responsive-break-point(640px) {
   body {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -183,8 +191,6 @@ footer {
 
   header[role="banner"] {
     padding-top: 2rem;
-
-    > a span { display: inline; }
   }
 
   footer {

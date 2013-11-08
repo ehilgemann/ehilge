@@ -278,7 +278,7 @@ aside.responsive {
   @include clearfix;
   @include border-box;
   background: rgba(0,0,0,1);
-  display: none;
+  // display: none;
   height: 100%;
   left: 0;
   position: fixed;
@@ -289,13 +289,13 @@ aside.responsive {
   p {
     color: #EEE;
     text-align: center;
+    margin-bottom: 5em;
     margin-top: 6em;
     width: 100%;
   }
 
   figure {
     position: relative;
-    top: 20%;
   }
 
   img {
@@ -303,13 +303,13 @@ aside.responsive {
   }
 
   .finger {
-    left: 33%;
+    left: 32%;
 
     img { z-index: 750; }
   }
 
   .hole {
-    right: 33%;
+    right: 35%;
 
     .a {
       right: 0;
@@ -320,6 +320,19 @@ aside.responsive {
       right: 0;
       z-index: 1000;
     }
+  }
+
+  .poop {
+    @include animate(fade-in-up .2s both);
+    display: block;
+    left: 33%;
+    top: 150px;
+  }
+}
+
+@include responsive-break-point(400px) {
+  aside.responsive {
+    .poop { display: none; }
   }
 }
 

@@ -7,14 +7,14 @@ parallax = (element, direction, start, stop, rate) ->
 
 swapBio = (bio) ->
   $bio = $('section.biography')
-  $bio.find('article').hide()
-  $bio.find(bio).show()
+  $bio.find('article:not(bio)').fadeOut ->
+    $bio.find(bio).fadeIn()
 
 toggleBio = (bio) ->
   position = document.body.scrollTop
 
   if position > 200
-    $('html, body').animate
+    $('body').animate
       scrollTop: 0
     ,
       duration: 500

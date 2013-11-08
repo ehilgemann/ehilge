@@ -22,7 +22,7 @@ body.about section {
   .ephemera { display: none; }
 }
 
-.portrait {
+section.portrait {
   margin-bottom: 1em;
   width: 100%;
 
@@ -36,13 +36,14 @@ body.about section {
   }
 }
 
-.biography, .teaching {
+section.biography,
+section.teaching {
 
   p a:link { text-decoration: underline; }
   p a:hover { text-decoration: none; }
 }
 
-.biography {
+section.biography {
 
   article.short { display: none; }
 
@@ -68,7 +69,7 @@ body.about section {
   .portrait-thumbnails { display: none; }
 }
 
-.speaking {
+section.speaking {
 
   i {
     color: #666;

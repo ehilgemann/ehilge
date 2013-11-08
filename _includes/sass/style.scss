@@ -273,6 +273,56 @@ footer {
   }
 }
 
+// Window Resize Finger Bang ————————————————————————————————————— /
+aside.responsive {
+  @include clearfix;
+  @include border-box;
+  background: rgba(0,0,0,1);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  p {
+    color: #EEE;
+    text-align: center;
+    margin-top: 6em;
+    width: 100%;
+  }
+
+  figure {
+    position: relative;
+    top: 20%;
+  }
+
+  img {
+    position: absolute;
+  }
+
+  .finger {
+    left: 33%;
+
+    img { z-index: 750; }
+  }
+
+  .hole {
+    right: 33%;
+
+    .a {
+      right: 0;
+      z-index: 500;
+    }
+
+    .ok {
+      right: 0;
+      z-index: 1000;
+    }
+  }
+}
+
 // Disable iOS font sizing ————————————————————————————————————— /
 @media screen and (max-device-width: 480px) {
   html {

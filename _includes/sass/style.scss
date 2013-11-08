@@ -35,8 +35,13 @@ header[role="banner"] {
 
   .active { text-decoration: underline; }
 
-  strong { float: left; }
-  strong a { color: #333; }
+  > a {
+    float: left;
+    font-weight: bold;
+    color: #333;
+
+    span { display: none; }
+  }
 
   ul { float: right; }
 
@@ -176,7 +181,11 @@ footer {
     padding-right: 2rem;
   }
 
-  header[role="banner"] { padding-top: 2rem; }
+  header[role="banner"] {
+    padding-top: 2rem;
+
+    > a span { display: inline; }
+  }
 
   footer {
     @include clearfix;
@@ -254,9 +263,7 @@ footer {
 @include responsive-break-point(1280px) {
   header[role="banner"] {
 
-    strong {
-      position: fixed;
-    }
+    > a { position: fixed; }
   }
 }
 

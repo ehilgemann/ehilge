@@ -142,6 +142,7 @@ section.speaking {
     z-index: 5000;
 
     figure {
+      @include animate(fade-in-up .5s both);
       margin: 2em auto 0;
       max-width: 45%;
 

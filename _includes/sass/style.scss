@@ -330,7 +330,7 @@ aside.responsive {
   }
 }
 
-@include responsive-break-point(400px) {
+@include responsive-break-point(401px) {
   aside.responsive {
     .poop { display: none; }
   }

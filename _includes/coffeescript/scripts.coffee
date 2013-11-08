@@ -3,7 +3,8 @@ responsivePSA = ->
   resizeTimer = undefined
 
   $(window).resize ->
-    $message.fadeIn()
+    # If more than 500ms has passed…
+    $message.one().fadeIn()
 
     # Reset any old countdowns
     clearTimeout resizeTimer if resizeTimer
@@ -26,4 +27,4 @@ $ ->
       when 27 # Escape
         escapable()
 
-  responsivePSA()
+  # responsivePSA()

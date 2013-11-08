@@ -278,7 +278,7 @@ aside.responsive {
   @include clearfix;
   @include border-box;
   background: rgba(0,0,0,1);
-  // display: none;
+  display: none;
   height: 100%;
   left: 0;
   position: fixed;

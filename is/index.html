@@ -113,34 +113,12 @@ layout: default
     </hgroup>
 
     <ul>
-      <li>
-        <h3><a href="http://amzn.com/1440313695">Mastering Type</a></h3>
-        Denise Bosler
-      </li>
-      <li>
-        <h3><a href="http://underconsideration.com/flaunt/">Flaunt</a></h3>
-        UnderConsideration
-      </li>
-      <li>
-        <h3><a href="http://www.amazon.com/gp/product/0811869032?ie=UTF8&tag=migrey-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=0811869032" target="_blank">The Graphic Eye</a></h3>
-        Stefan Bucher, Chronicle Books
-      </li>
-      <li>
-        <h3><a href="http://www.amazon.com/gp/product/1592535453?ie=UTF8&tag=migrey-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1592535453" target="_blank">Really Good Packaging Explained</a></h3>
-        Rockport Publishers
-      </li>
-      <li>
-        <h3><a href="http://www.amazon.com/gp/product/1600611478?ie=UTF8&tag=migrey-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1600611478" target="_blank">Creative Grab Bag</a></h3>
-        Ethan Bodnar, HOW Books
-      </li>
-      <li>
-        <h3><a href="http://www.amazon.com/gp/product/1600613020?ie=UTF8&tag=migrey-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1600613020" target="_blank">Freelance Design in Practice</a></h3>
-        Cathy Fishel
-      </li>
-      <li>
-        <h3><a href="http://www.amazon.com/gp/product/1592535801?ie=UTF8&tag=migrey-20&linkCode=as2&camp=1789&creative=390957&creativeASIN=1592535801" target="_blank">LogoLounge IV</a></h3>
-        Bill Gardner, Rockport Publishers
-      </li>
+      {% for publication in site.data.publications %}
+        <li>
+          <h3><a href="{{ publication.url }}">{{ publication.title }}</a></h3>
+          {{ publication.publisher }}
+        </li>
+      {% endfor %}
     </ul>
   </article>
 

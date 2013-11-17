@@ -100,18 +100,9 @@ layout: default
     </hgroup>
 
     <ul>
-      <li>AIGA</li>
-      <li>CMYK Magazine</li>
-      <li>Coudal</li>
-      <li>Grain Edit</li>
-      <li>HOW Magazine</li>
-      <li>Motionographer</li>
-      <li>Print (Nominated for 20 under 20)</li>
-      <li>siteInspire</li>
-      <li>Smashing Magazine</li>
-      <li>The Society of Typographic Arts</li>
-      <li>Swissmiss</li>
-      <li>UnderConsideration</li>
+      {% for press in site.data.press %}
+        <li>{{ press.title }}</li>
+      {% endfor %}
     </ul>
   </article>
 

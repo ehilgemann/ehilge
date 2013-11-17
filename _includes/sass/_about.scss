@@ -69,21 +69,6 @@ section.biography {
   .portrait-thumbnails { display: none; }
 }
 
-section.speaking {
-
-  i {
-    color: #666;
-    display: block;
-    font-family: $font-alto;
-    font-style: normal;
-  }
-
-  b {
-    color: #999;
-    font-size: .8em;
-    font-weight: normal;
-  }
-}
 
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
@@ -240,6 +225,10 @@ section.speaking {
     }
 
     p {
+      color: #666;
+    }
+
+    span {
       color: #BBB;
       font-family: $font-alto;
       font-size: .9rem;

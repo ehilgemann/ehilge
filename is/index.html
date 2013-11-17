@@ -68,93 +68,15 @@ layout: default
     </hgroup>
 
     <ul>
-      <li>
-        <h4>CreativeMornings, “Backwards”</h4>
-        <i>Morningstar HQ, Chicago, IL <b>/ May 2013</b></i>
-        <p><a href="http://creativemornings.com/talks/mig-reyes" target="_blank">Watch video</a> / <a href="http://www.flickr.com/photos/chicago_creativemornings/sets/72157633929237593" target="_blank">View photos</a> / <a href="http://blog.creativemornings.com/post/55099905352/in-honor-of-mays-theme-backwards-mig-reyes" target="_blank">Read recap</a></p>
-      </li>
-      <li>
-        <h4>Fête Dément</h4>
-        <i>AIGA West Michigan, Grand Rapids, MI <b>/ October 2012</b></i>
-      </li>
-      <li>
-        <h4>“Making by Breaking”</h4>
-        <i>Apple Store, Lincoln Park, Chicago, IL <b>/ July 2012</b></i>
-      </li>
-      <li class="hidden">
-        <h4>FPO Awards Judging</h4>
-        <i>UnderConsideration, Austin, TX <b>/ July 2012</b></i>
-      </li>
-      <li>
-        <h4>“Hard Work, Heart Work”</h4>
-        <i>MoxieCon, Chicago, IL <b>/ April 2012</b></i>
-      </li>
-      <li>
-        <h4>Build</h4>
-        <i>AIGA St. Louis, MO <b>/ February 2012</b></i>
-      </li>
-      <li>
-        <h4>“Emerging Designer’s Symposium”</h4>
-        <i>AIGA Design Conference, Phoenix, AZ <b>/ October 2011</b></i>
-      </li>
-      <li>
-        <h4>“Fuck the Police, Make What You Wanna”</h4>
-        <i>WMC Fest, Cleveland, OH <b>/ June 2011</b></i>
-      </li>
-      <li>
-        <h4>“How the New Kids On the Block Do It”</h4>
-        <i>HOW Design Conference, Chicago, IL <b>/ June 2011</b></i>
-      </li>
-      <li>
-        <h4>“Staying scrappy.”</h4>
-        <i>Zappos, Las Vegas, NV <b>/ October 2010</b></i>
-      </li>
-      <li>
-        <h4>“Designing for a Million+ of your Friends”</h4>
-        <i>The School of VISUAL ARTS, New York, NY <b>/ September 2010</b></i>
-      </li>
-      <li>
-        <h4>“Inspiring Awesomeness with Threadless”</h4>
-        <i>PSFK Salon, Chicago, IL <b>/ August 2010</b></i>
-      </li>
-      <li>
-        <h4>“What You Don’t Learn in Design School”</h4>
-        <i>HOW Design Conference, Denver, CO <b>/ June 2010</b></i>
-      </li>
-      <li class="hidden">
-        <h4>“I Swear I Wasn’t Procrastinating”</h4>
-        <i>Lipscomb University, Nashville, TN <b>/ April 2010</b></i>
-      </li>
-      <li class="hidden">
-        <h4>NORI Awards Judging</h4>
-        <i>Albany Ad Club, Albany, NY <b>/ March 2010</b></i>
-      </li>
-      <li class="hidden">
-        <h4>“Doodler to Designer”</h4>
-        <i>Nebraska Wesleyan University, Lincoln, NE <b>/ February 2010</b></i>
-      </li>
-      <li>
-        <h4>Show & Tell</h4>
-        <i>Portland State University, via Skype <b>/ February 2010</b></i>
-      </li>
-      <li class="hidden">
-        <h4>Spark Conference</h4>
-        <em>Schaumburg, IL</em>
-        <i>November 2009</i>
-      </li>
-      <li class="hidden">
-        <h4>The Show ‘n Tell Show</h4>
-        <em>Chicago IL</em>
-        <i>August 2009</i>
-      </li>
-      <li class="hidden">
-        <h4>“5 Things We Wish We Knew Earlier”</h4>
-        <i>The Illinois Intitute of Art, Schaumburg, IL <b>/ May 2009</b></i>
-      </li>
-      <li class="hidden">
-        <h4>“The Paths We Take”</h4>
-        <i>The Illinois Institute of Art, Schaumburg, IL <b>/ December 2007</b></i>
-      </li>
+      {% for talk in site.data.talks %}
+        <li>
+          <h4>{{ talk.title }}</h4>
+          <p>{{ talk.location }}</p>
+          {% if talk.video %}<span><a href="{{ talk.video }}" target="_blank">View video</a></span>{% endif %}
+          {% if talk.photos %}<span><a href="{{ talk.photos }}" target="_blank">View photos</a></span>{% endif %}
+          {% if talk.recap %}<span><a href="{{ talk.recap }}" target="_blank">View recap</a></span>{% endif %}
+        </li>
+      {% endfor %}
     </ul>
   </article>
 

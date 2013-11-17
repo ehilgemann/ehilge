@@ -87,9 +87,9 @@ layout: default
     </hgroup>
 
     <ul>
-      <li><a href="http://the-niche.com/MIG-REYES">The Niche</a></li>
-      <li><a href="http://www.papermag.com/2011/01/mig_reyeswwwe_could_be_next.php">PAPERMAG</a></li>
-      <li><a href="http://www.neenahpaperblog.com/2009/12/migreyes/">Neenah Paper</a></li>
+      {% for interview in site.data.interviews %}
+        <li><a href="{{ interview.url }}">{{ interview.title }}</a></li>
+      {% endfor %}
     </ul>
   </article>
 

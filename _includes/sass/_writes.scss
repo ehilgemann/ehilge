@@ -1,3 +1,57 @@
 body.writes {
 
+  section.essays {
+
+  }
+}
+
+// Mobile Landscape ————————————————————————————————————— /
+@include responsive-break-point(480px) {
+  body.writes {
+
+  }
+}
+
+// iPad ————————————————————————————————————— /
+@include responsive-break-point(640px) {
+  body.writes {
+
+  }
+}
+
+// Tablet ————————————————————————————————————— /
+@include responsive-break-point(768px) {
+  body.writes {
+
+    section.essays {
+
+      li {
+        margin-bottom: 2em;
+      }
+
+      a {
+        font-size: 2.5em;
+        letter-spacing: -2px;
+        line-height: 1.2em;
+      }
+
+      small {
+        color: #999;
+        display: block;
+        font-family: $font-alto;
+        font-size: .8em;
+      }
+
+      small.svn {
+
+      }
+    }
+  }
+}
+
+// Long Browser ————————————————————————————————————— /
+@include responsive-break-point(1280px) {
+  body.writes {
+
+  }
 }

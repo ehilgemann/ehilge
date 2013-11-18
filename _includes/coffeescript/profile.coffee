@@ -32,7 +32,7 @@ $ ->
 
   # Close zoomed-in portrait overlay.
   $portraitOverlay.on 'click', ->
-    if $(window).width() >= 800
+    if $(window).width() >= 768
       $(this).fadeOut()
 
   # Toggle long versus short biographies.

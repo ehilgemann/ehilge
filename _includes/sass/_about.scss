@@ -1,4 +1,5 @@
 body.about section {
+  @include border-box;
 
   article { margin-bottom: 2em; }
 
@@ -26,11 +27,15 @@ section.portrait {
   margin-bottom: 1em;
   width: 100%;
 
-  figure { width: 100%; }
+  figure {
+    margin: 0 auto;
+    width: 75%;
+  }
 
   figcaption { display: none; }
 
   img {
+    @include border-radius(50%);
     height: auto;
     width: 100%;
   }
@@ -49,7 +54,7 @@ section.biography {
 
   h1 {
     color: #F00;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 1rem;
   }
 
@@ -69,9 +74,39 @@ section.biography {
   .portrait-thumbnails { display: none; }
 }
 
+section.public {
+
+  article.speaking {
+
+    li {
+      line-height: 1.25em;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+// iPhone Landscape ————————————————————————————————————— /
+@include responsive-break-point(480px) {
+
+  body.about section {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  section.biography {
+
+    figure {
+      width: 50%;
+    }
+  }
+}
 
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
+
+  body.about section {
+    padding: 0;
+  }
 
   section.biography {
     margin: 8rem auto 0;
@@ -105,12 +140,9 @@ section.biography {
 }
 
 // Browser ————————————————————————————————————— /
-@include responsive-break-point(800px) {
+@include responsive-break-point(768px) {
   body.about .content section {
 
-    // Adjust so there’s no break on small widths
-    // which shows scrollbars.
-    // This may also be do to making the browser small then big again.
     .ephemera { display: block; }
   }
 
@@ -218,11 +250,6 @@ section.biography {
     float: right;
     margin: 8rem 0 0 2%;
     width: 50%;
-
-    li {
-      line-height: 1.25em;
-      margin-bottom: 1rem;
-    }
 
     p {
       color: #666;

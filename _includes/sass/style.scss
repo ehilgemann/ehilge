@@ -64,24 +64,45 @@ header[role="banner"] {
 footer {
   @include border-box;
   font-family: $font-alto;
-  margin: 0 auto;
+  margin: 0 auto 2em;
   padding: 1rem;
   max-width: 1000px;
   width: 100%;
+
+  a:visited { color: $color-link; }
 
   .active {
     font-weight: bold;
     text-decoration: underline;
   }
-  a:visited { color: $color-link; }
+
+  small {
+    color: #999;
+    display: block;
+    font-family: $font-alto;
+    font-size: .8em;
+    margin-top: .5rem;
+  }
 
   section.explore {
 
     div { margin-bottom: 2em; }
 
+    li {
+      line-height: 1.25em;
+      margin-bottom: .5rem;
+    }
+
+    .contact {
+
+      address {
+        line-height: 1.25em;
+        margin-bottom: 1em;
+      }
+    }
+
     .elsewhere { display: none; }
   }
-
 
   section.browse {
     text-align: center;
@@ -110,18 +131,18 @@ footer {
         text-transform: uppercase;
       }
 
-      .chicago-flag {
+      .flag {
         background: white;
-        border-bottom: .5em solid #B3DDF2;
-        border-top: .5em solid #B3DDF2;
+        border-bottom: .55em solid #B3DDF2;
+        border-top: .55em solid #B3DDF2;
         color: #FF0000;
-        display: block;
+        display: inline-block;
         font-size: .6rem;
-        letter-spacing: .25em;
+        letter-spacing: 2px;
         line-height: 1.5em;
         margin: 0 auto;
-        padding: 0 .6em;
-        width: 2rem;
+        padding: .3em .7em;
+        text-align: center;
       }
     }
   }
@@ -203,11 +224,6 @@ footer {
 
       h4 { margin-bottom: .5rem; }
 
-      li {
-        line-height: 1.25em;
-        margin-bottom: .5rem;
-      }
-
       div {
         display: inline-block;
         float: left;
@@ -217,11 +233,6 @@ footer {
       .contact {
         margin-right: 2%;
         width: 31.333%;
-
-        address {
-          line-height: 1.25rem;
-          margin-bottom: 1rem;
-        }
 
         p { line-height: 1.5em; }
       }
@@ -238,14 +249,6 @@ footer {
         float: right;
         max-width: 22rem;
         width: 50%;
-      }
-
-      small {
-        color: #999;
-        display: block;
-        font-family: $font-alto;
-        font-size: .8em;
-        margin-top: .5rem;
       }
     }
 

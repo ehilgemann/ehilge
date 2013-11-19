@@ -2,6 +2,9 @@ body.writes {
 
   section.essays {
 
+    small.svn {
+      background: url('/assets/images/icons/signals.png') 0 2px no-repeat;
+    }
   }
 }
 
@@ -40,12 +43,12 @@ body.writes {
         display: inline-block;
         font-family: $font-alto;
         font-size: .8em;
+        margin-right: .5em;
       }
 
-      small + small:before { content: "• "; }
-
       small.svn {
-
+        background-size: 16px 16px;
+        padding-left: 1.5em;
       }
     }
   }

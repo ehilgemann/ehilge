@@ -7,29 +7,31 @@ layout: default
 <section class="essays">
   <ul>
   {% for essay in site.categories.writes %}
-    {% unless essay.title == page.title %}
-      {% if essay.svn %}
-        <li>
-          <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
+    {% if essay.svn %}
+      <li>
+        <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
+        <p>
+          <small data-words="{{ essay.content | number_of_words }}"></small>
           <small class="svn">Written on Signal vs. Noise</small>
+        </p>
+      </li>
+    {% else %}
+      <li>
+        <a href="{{ essay.url }}">{{ essay.title }}</a>
+        <p>
           <small data-words="{{ essay.content | number_of_words }}"></small>
-        </li>
-      {% else %}
-        <li>
-          <a href="{{ essay.url }}">{{ essay.title }}</a>
-          <small data-words="{{ essay.content | number_of_words }}"></small>
-        </li>
-      {% endif %}
-    {% endunless %}
+        </p>
+      </li>
+    {% endif %}
   {% endfor %}
   </ul>
 </section>
 
 <section class="beliefs">
-  <h2>Beliefs</h2>
+  <h2>Half-baked thoughts</h2>
   <ul>
-  {% for quip in site.categories.quips %}
-    <li>{{ quip.title }}</li>
+  {% for thought in site.data.thoughts %}
+    <li>{{ thought.idea }}</li>
   {% endfor %}
   </ul>
 </section>

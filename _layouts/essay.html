@@ -4,13 +4,12 @@ class: writes
 {% include head.html %}
   <body class="essay">
     {% include header.html %}
+
     <div class="content">
       <article>
         <h1>{{ page.title }}</h1>
         {{ content }}
       </article>
-
-      {{ page.content | number_of_words }}
 
       <aside>
         <ul>
@@ -18,6 +17,7 @@ class: writes
         </ul>
       </aside>
     </div>
+
     {% include footer.html %}
   </body>
 </html>

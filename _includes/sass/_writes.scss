@@ -37,10 +37,12 @@ body.writes {
 
       small {
         color: #999;
-        display: block;
+        display: inline-block;
         font-family: $font-alto;
         font-size: .8em;
       }
+
+      small + small:before { content: "• "; }
 
       small.svn {
 

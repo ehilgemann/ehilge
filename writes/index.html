@@ -12,9 +12,13 @@ layout: default
         <li>
           <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
           <small class="svn">Written on Signal vs. Noise</small>
+          <small data-words="{{ essay.content | number_of_words }}"></small>
         </li>
       {% else %}
-        <li><a href="{{ essay.url }}">{{ essay.title }}</a></li>
+        <li>
+          <a href="{{ essay.url }}">{{ essay.title }}</a>
+          <small data-words="{{ essay.content | number_of_words }}"></small>
+        </li>
       {% endif %}
     {% endunless %}
   {% endfor %}

@@ -1,64 +1,54 @@
-body.writes {
+body.thinks {
+  @include animate(fade-to-grey 1s both);
+  border-top-color: black;
+  background: #999;
 
-  section.essays {
+  a { color: white; }
 
-    small.svn {
-      background: url('/assets/images/icons/signals.png') 0 2px no-repeat;
-    }
-  }
+  h2 a:link { text-decoration: underline; }
+  h2 a:visited { color: $color-link; }
 }
 
 // Mobile Landscape ————————————————————————————————————— /
 @include responsive-break-point(480px) {
-  body.writes {
+  body.thinks {
 
   }
 }
 
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
-  body.writes {
+  body.thinks {
 
   }
 }
 
 // Tablet ————————————————————————————————————— /
 @include responsive-break-point(768px) {
-  body.writes {
+  body.thinks {
 
-    section.essays {
+    section.thoughts {
 
       li {
-        margin-bottom: 2em;
-
-        a {
-          font-size: 2.5em;
-          letter-spacing: -2px;
-          line-height: 1.2em;
-        }
+        display: inline;
+        font-size: 2.25em;
+        letter-spacing: -1px;
+        line-height: 1.2em;
       }
 
-      small {
-        color: #999;
-        display: inline-block;
-        font-family: $font-alto;
-        font-size: .8em;
-        margin-right: .5em;
+      li:before {
+        content: " — ";
+        color: #CCC;
       }
 
-      small.svn {
-        background-size: 16px 16px;
-        padding-left: 1.5em;
-      }
-
-      p a:link { text-decoration: underline; }
+      li:first-child:before { content: ""; }
     }
   }
 }
 
 // Long Browser ————————————————————————————————————— /
 @include responsive-break-point(1280px) {
-  body.writes {
+  body.thinks {
 
   }
 }

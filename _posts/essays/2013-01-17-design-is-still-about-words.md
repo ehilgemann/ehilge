@@ -2,6 +2,7 @@
 title: "Reminder: Design is still about words"
 svn: 3404
 category: writes
+favorite: true
 ---
 Click away from the pen tool…
 

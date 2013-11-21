@@ -3,6 +3,7 @@ title: "Lessons Learned from Two Years of Tees"
 date: 2011-07-07 12:00
 category: writes
 layout: essay
+favorite: true
 ---
 
 ![Glory days.](http://media.threadless.com/media/2011/07/07/290890_Shirt-Small.jpg "Lessons learned.")

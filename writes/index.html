@@ -4,6 +4,26 @@ class: writes
 layout: default
 ---
 
+<aside class="start">
+  <h2>These are some of my favorites:</h2>
+  {% for essay in site.categories.writes %}
+    {% if essay.favorite %}
+      <ul>
+        {% if essay.svn %}
+          <li>
+            <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ essay.url }}">{{ essay.title }}</a>
+        {% endif %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+
+  <p>And then, <a href="/thinks" title="Half-baked ideas">ideas not quite ready for essays</a>.</p>
+</aside>
+
 <section class="essays">
   <ul>
   {% for essay in site.categories.writes %}

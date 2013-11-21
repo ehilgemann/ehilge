@@ -3,7 +3,7 @@ responsiveTest = ->
      document.title = $(window).width()
 
 responsivePSA = ->
-  $message = $('aside.responsive')
+  $message = $('aside.public-service-announcement')
   resizeTimer = undefined
 
   $(window).resize ->
@@ -27,5 +27,5 @@ $ ->
       when 27 # Escape
         escapable()
 
-  responsivePSA()
+  # responsivePSA()
   responsiveTest()

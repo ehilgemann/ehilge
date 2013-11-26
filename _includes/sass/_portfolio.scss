@@ -3,11 +3,7 @@ body.portfolio {
   border-top-color: black;
   background: #999;
 
-  header[role="banner"] {
-
-    a { color: white; }
-    strong a { color: black; }
-  }
+  header#top a { color: black; }
 
   h1 {
     color: black;

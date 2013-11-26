@@ -6,10 +6,28 @@ body.writes {
   }
   p a:visited { color: $color-link; }
 
-  aside.start {
-    font-family: $font-alto;
+  aside.sidebar {
 
-    p { line-height: 1.2em; }
+    h2 {
+      color: #F00;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      margin-bottom: 2em;
+    }
+
+    li {
+      line-height: 1.2em;
+      margin-bottom: .5em;
+    }
+
+    p {
+      font-family: $font-alto;
+      line-height: 1.2em;
+      margin: 0;
+    }
   }
 
   section.essays {
@@ -38,26 +56,16 @@ body.writes {
 @include responsive-break-point(768px) {
   body.writes {
 
-    aside.start {
-      float: right;
-      width: 33.33%;
-
-      ul {
-
-      }
-
-      li {
-      }
-
-      p {
-        margin-top: 1em;
-      }
+    aside.sidebar {
+      @include border-box;
+      float: left;
+      padding-right: 1.5em;
+      width: 33.333%;
     }
 
     section.essays {
-      float: left;
-      margin-right: 2.668%;
-      width: 64%;
+      float: right;
+      width: 66.668%%;
 
       li {
         margin-bottom: 2em;

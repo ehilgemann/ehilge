@@ -56,3 +56,20 @@
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
 }
+
+@-webkit-keyframes thought-attention {
+  0% { color: red; }
+  100% { color: #333; }
+}
+@-moz-keyframes thought-attention {
+  0% { color: red; }
+  100% { color: #333; }
+}
+@-o-keyframes thought-attention {
+  0% { color: red; }
+  100% { color: #333; }
+}
+@keyframes thought-attention {
+  0% { color: red; }
+  100% { color: #333; }
+}

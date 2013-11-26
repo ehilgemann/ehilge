@@ -14,8 +14,15 @@ $ ->
       $(this).text $readingTime + ' minute read'
 
   # Fade each essay in
-  $essayDelay = 0
+  $delay = 0
   $essayList.each ->
-    $essayDelay += 50
+    $delay += 50
     $(this).css opacity: 0
-    $(this).delay($essayDelay).fadeTo 500, 1
+    $(this).delay($delay).fadeTo 500, 1
+
+  # Fade each thought in
+  $thoughtList = $('[data-thought]')
+  $thoughtList.each ->
+    $delay += 50
+    $(this).css opacity: 0
+    $(this).delay($delay).fadeTo 500, 1

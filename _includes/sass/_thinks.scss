@@ -9,8 +9,49 @@ body.thinks {
   background: linear-gradient(to bottom,  #fdffff 0%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdffff', endColorstr='#b1d8f5',GradientType=0 );
 
-  h2 a:link { text-decoration: underline; }
-  h2 a:visited { color: $color-link; }
+  section.thoughts {
+
+    h2 {
+      color: #F00;
+      margin-bottom: 4em;
+    }
+
+    h2 a:link { text-decoration: underline; }
+    h2 a:visited { color: $color-link; }
+
+    li {
+      @include transition(color 2s .5s ease);
+      display: block;
+      font-size: 1.75em;
+      letter-spacing: -1px;
+      margin-left: 0%;
+      margin-bottom: 1em;
+      line-height: 1em;
+      max-width: 83.335%;
+
+      a {
+        color: #333;
+        display: block;
+        padding-top: 6em;
+        text-decoration: none;
+      }
+    }
+
+    li:nth-child(2n+2) { margin-left: 16.667%; }
+    li:nth-child(3n+3) { margin-left: 33.335%; }
+
+    li:hover {
+      @include transition(color 2s ease);
+      color: red;
+      cursor: default;
+    }
+
+
+    :target {
+      @include animate(thought-attention 5s both);
+      outline: none;
+    }
+  }
 }
 
 // Mobile Landscape ————————————————————————————————————— /
@@ -32,21 +73,7 @@ body.thinks {
   body.thinks {
 
     section.thoughts {
-      min-height: 600px;
 
-      li {
-        display: inline;
-        font-size: 2.25em;
-        letter-spacing: -1px;
-        line-height: 1.25em;
-
-      }
-
-      li:nth-child(even) { color: blue; }
-
-      li:nth-child(odd) { color: red; }
-
-      li:first-child:before { content: ""; }
     }
   }
 }

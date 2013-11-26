@@ -12,15 +12,25 @@ body.essay {
     width: 100%;
 
     h1 {
-      font-size: 42px;
+      font-size: 2.5em;
       letter-spacing: -2px;
       line-height: 36px;
       margin-bottom: 20px;
     }
 
+    h2 {
+      font-size: 1.75em;
+      margin-bottom: .25em;
+    }
+
     p {
       color: #333;
       margin-bottom: 15px;
+    }
+
+    li {
+      list-style: disc;
+      margin-bottom: 1em;
     }
   }
 

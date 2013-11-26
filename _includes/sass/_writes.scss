@@ -1,5 +1,7 @@
 body.writes {
 
+  h1, h2 { color: #F00; }
+
   p a:link {
     color: $color-link;
     text-decoration: underline;
@@ -9,9 +11,8 @@ body.writes {
   aside.sidebar {
 
     h2 {
-      color: #F00;
-      margin: 0;
-      padding: 0;
+      line-height: 1em;
+      margin-bottom: .5em;
     }
 
     ul {
@@ -56,16 +57,39 @@ body.writes {
 @include responsive-break-point(768px) {
   body.writes {
 
+    h1 {
+      font-size: 3em;
+      letter-spacing: -.04em;
+      line-height: 1em;
+      margin-bottom: .75em;
+    }
+
     aside.sidebar {
       @include border-box;
       float: left;
       padding-right: 1.5em;
       width: 33.333%;
+
+      li {
+        position: relative;
+      }
+
+      li:before {
+        color: #999;
+        content: "•";
+        position: absolute;
+        left: -1em;
+        top: -.125em;
+      }
     }
 
     section.essays {
       float: right;
-      width: 66.668%%;
+      width: 66.668%;
+
+      ul {
+        margin-top: -.5em;
+      }
 
       li {
         margin-bottom: 2em;

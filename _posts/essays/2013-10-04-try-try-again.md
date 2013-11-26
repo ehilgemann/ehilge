@@ -2,7 +2,7 @@
 title: Try, try again
 svn: 3646
 category: writes
-preview: What if we treated our work like scientists?
+preview: What if we treated our work like scientists did?
 favorite: true
 ---
 ## I wonder how many people stop themselves short of making something new in fear of it failing.

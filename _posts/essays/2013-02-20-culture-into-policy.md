@@ -3,6 +3,7 @@ title: "When culture turns into policy"
 svn: 3450
 category: writes
 favorite: true
+preview: The balancing act of trying to define your company’s culture
 ---
 # A fine line exists between spelling out company culture and inadvertently engraving it as policy.
 

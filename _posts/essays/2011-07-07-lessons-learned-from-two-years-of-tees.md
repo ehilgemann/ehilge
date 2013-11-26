@@ -1,9 +1,10 @@
 ---
-title: "Lessons Learned from Two Years of Tees"
+title: "Lessons from Two Years of Tees"
 date: 2011-07-07 12:00
 category: writes
 layout: essay
 favorite: true
+preview: 9 memorable take-aways from working two years at Threadless
 ---
 
 ![Glory days.](http://media.threadless.com/media/2011/07/07/290890_Shirt-Small.jpg "Lessons learned.")

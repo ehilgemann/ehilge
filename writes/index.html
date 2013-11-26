@@ -5,7 +5,7 @@ layout: default
 ---
 
 <aside class="start">
-  <h2>Start with my favorites:</h2>
+  <h2>Long form favorites:</h2>
   {% for essay in site.categories.writes %}
     {% if essay.favorite %}
       <ul>
@@ -16,12 +16,14 @@ layout: default
         {% else %}
           <li>
             <a href="{{ essay.url }}">{{ essay.title }}</a>
+          </li>
         {% endif %}
       </ul>
     {% endif %}
   {% endfor %}
 
-  <p>And then, <a href="/thinks" title="Half-baked ideas">ideas not quite ready for essays</a>.</p>
+  <h2>Short form:</h2>
+  <p><a href="/thinks" title="Half-baked ideas">Small ideas not quite ready for essays</a>. And bite-sized <a href="http://twitter.com/migreyes">thoughts on Twitter</a>. (No Foursquare checkins, guaranteed.)</p>
 </aside>
 
 <section class="essays">
@@ -30,6 +32,7 @@ layout: default
     {% if essay.svn %}
       <li>
         <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
+        {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
         <p>
           <small data-words="{{ essay.content | number_of_words }}"></small>
           <small class="svn">Written on Signal vs. Noise</small>
@@ -38,13 +41,12 @@ layout: default
     {% else %}
       <li>
         <a href="{{ essay.url }}">{{ essay.title }}</a>
-        <p>
-          <small data-words="{{ essay.content | number_of_words }}"></small>
-        </p>
+        {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
+        <p><small data-words="{{ essay.content | number_of_words }}"></small></p>
       </li>
     {% endif %}
   {% endfor %}
   </ul>
 
-  <p>Sometimes, I half half-baked thoughts not ready for a full article. <a href="/thinks">Those are here</a>.</p>
+  <p>I also keep a collection of <a href="/thinks">small ideas</a>, and share <a href="http://twitter.com/migreyes" title="Follow me on Twitter">tiny bits on Twitter</a>.</p>
 </section>

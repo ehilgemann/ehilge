@@ -1,5 +1,17 @@
 body.writes {
 
+  p a:link {
+    color: $color-link;
+    text-decoration: underline;
+  }
+  p a:visited { color: $color-link; }
+
+  aside.start {
+    font-family: $font-alto;
+
+    p { line-height: 1.2em; }
+  }
+
   section.essays {
 
     small.svn {

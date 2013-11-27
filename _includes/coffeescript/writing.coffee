@@ -1,3 +1,6 @@
+$('[data-essay-filter]').click ->
+  alert 'Clicked'
+
 $ ->
   $essays = $('section.essays')
   $essayList = $essays.find('li')
@@ -26,3 +29,5 @@ $ ->
     $delay += 50
     $(this).css opacity: 0
     $(this).delay($delay).fadeTo 500, 1
+
+

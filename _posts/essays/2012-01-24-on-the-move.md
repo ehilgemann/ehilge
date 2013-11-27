@@ -3,7 +3,7 @@ title: "On the Move"
 date: 2012-01-24 12:00
 category: writes
 layout: essay
-preview: A thank you to the Threadcrew as I move from one dream job to the next
+preview: A thank you to Threadless as I move from one great team to the next
 ---
 
 ![Threadless to 37signals](http://media.tumblr.com/tumblr_ly9uuhRJeg1qzolz5.gif "Threadless to 37signals")

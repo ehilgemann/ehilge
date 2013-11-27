@@ -2,7 +2,7 @@
 title: "A case for clarity in feedback"
 svn: 3297
 category: writes
-preview: Avoiding communication breakdowns by saying what you really mean
+preview: I made something a programmer thought "looked terrible." But did I?
 ---
 ## As an ad-agency refugee, I’ve struggled with my fair share of design debates with copywriters, project managers, clients, and everyone in between.
 

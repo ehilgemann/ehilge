@@ -4,7 +4,7 @@ date: 2011-07-07 12:00
 category: writes
 layout: essay
 favorite: true
-preview: 9 memorable take-aways from working two years at Threadless
+preview: Nine (or so) memorable take-aways from two years of building Threadless
 ---
 
 ![Glory days.](http://media.threadless.com/media/2011/07/07/290890_Shirt-Small.jpg "Lessons learned.")

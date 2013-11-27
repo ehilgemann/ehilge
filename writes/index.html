@@ -4,10 +4,10 @@ class: writes
 layout: default
 ---
 
-<h1>Short essays on creativity, design, and workplace culture…</h1>
+<h1>Short essays on creativity, craft, and culture…</h1>
 
 <aside class="sidebar">
-  <h2>Some of my favorite short essays</h2>
+  <h2>Start with some of my favorites</h2>
     <ul>
       {% for essay in site.categories.writes %}
         {% if essay.favorite %}
@@ -24,6 +24,13 @@ layout: default
       {% endfor %}
     </ul>
 
+  <h2>Filter by:</h2>
+  <ul>
+    <li data-essay-filter="favorites">Favorites</li>
+    <li data-essay-filter="shortest">Shortest reads first</li>
+    <li data-essay-filter="recent">Recently written first</li>
+  </ul>
+
   <h2>Short form thoughts</h2>
   <p>I collect <a href="/thinks" title="Half-baked ideas">bits and ideas</a> not quite ready for essays and <a href="http://twitter.com/migreyes">tweet some of them</a>, too.</p>
 </aside>
@@ -32,7 +39,7 @@ layout: default
   <ul>
   {% for essay in site.categories.writes %}
     {% if essay.svn %}
-      <li>
+      <li{% if essay.favorite %} data-favorite{% endif %}>
         <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
         {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
         <p>
@@ -41,7 +48,7 @@ layout: default
         </p>
       </li>
     {% else %}
-      <li>
+      <li{% if essay.favorite %} data-favorite{% endif %}>
         <a href="{{ essay.url }}">{{ essay.title }}</a>
         {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
         <p><small data-words="{{ essay.content | number_of_words }}"></small></p>

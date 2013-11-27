@@ -2,7 +2,7 @@
 title: "The Typography behind the Signal vs. Noise redesign"
 svn: 3285
 category: writes
-preview: Pulling back the curtains on the redesign I did for the 37signals blog
+preview: Dissecting my typography-first redesign I did for the 37signals blog
 ---
 ## We’ve been sharing our process and company values on Signal vs. Noise since 1999. It’s where we’ve planted the seeds for Getting Real and REWORK. And for many readers, it’s their first taste of 37signals. Yet, we haven’t given the look and feel any serious attention since 2005.
 

@@ -1,6 +1,14 @@
 body.writes {
 
-  h1, h2 { color: #F00; }
+  h1 {
+    color: #F00;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+  }
+
+  h2 { color: #666; }
 
   p a:link {
     color: $color-link;
@@ -9,6 +17,7 @@ body.writes {
   p a:visited { color: $color-link; }
 
   aside.sidebar {
+    display: none;
 
     h2 {
       line-height: 1em;
@@ -29,16 +38,39 @@ body.writes {
       line-height: 1.2em;
       margin: 0;
     }
-
-    .selected { font-weight: bold; }
   }
 
   section.essays {
+    @include border-box;
+    padding: 0 1em;
+    text-align: center;
 
-    li p { color: #666; }
+    li {
+      margin-bottom: 2em;
 
-    small.svn {
-      background: url('/assets/images/icons/signals.png') 0 2px no-repeat;
+      a {
+        font-size: 1.5em;
+      }
+
+      p {
+        color: #666;
+        line-height: 1.2em;
+        margin-bottom: .25em;
+      }
+
+      small {
+        color: #999;
+        display: inline-block;
+        font-family: $font-alto;
+        font-size: .8em;
+        margin-right: .5em;
+      }
+
+      small.svn {
+        background: url('/assets/images/icons/signals.png') 0 2px no-repeat;
+        background-size: 16px 16px;
+        padding-left: 1.5em;
+      }
     }
   }
 }
@@ -64,13 +96,14 @@ body.writes {
     h1 {
       font-size: 3em;
       letter-spacing: -.04em;
-      line-height: 1em;
       margin-top: .5em;
       margin-bottom: .75em;
+      text-align: left;
     }
 
     aside.sidebar {
       @include border-box;
+      display: block;
       float: left;
       padding-right: 1.5em;
       width: 33.333%;
@@ -86,38 +119,37 @@ body.writes {
         left: -1em;
         top: -.125em;
       }
+
+      div.toggles {
+        font-family: $font-alto;
+        margin-bottom: 2em;
+
+        span {
+          cursor: pointer;
+          display: block;
+        }
+      }
+
+      .selected { font-weight: bold; }
     }
 
     section.essays {
       float: right;
+      padding: 0;
+      text-align: left;
       width: 66.668%;
 
       ul {
         margin-top: -.5em;
       }
 
-      li {
-        margin-bottom: 2em;
-
-        a {
-          font-size: 2.5em;
-          letter-spacing: -2px;
-          line-height: 1.2em;
-        }
+      li a {
+        font-size: 2.5em;
+        letter-spacing: -2px;
+        line-height: 1.2em;
       }
 
-      small {
-        color: #999;
-        display: inline-block;
-        font-family: $font-alto;
-        font-size: .8em;
-        margin-right: .5em;
-      }
-
-      small.svn {
-        background-size: 16px 16px;
-        padding-left: 1.5em;
-      }
+      li p { margin: .25em 0; }
 
       p a:link { text-decoration: underline; }
     }

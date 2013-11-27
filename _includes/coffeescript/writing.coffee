@@ -1,12 +1,12 @@
 filterEssays = (essayType) ->
   $essays = $('section.essays ul')
   $essayList = $essays.find('li')
-  $unfavorited = $essays.find('li:not([data-favorite])')
+  $nonfavorites = $essays.find('li:not([data-favorite])')
   $favoriteToggle = $('[data-essay-filter~="favorites"]')
 
   switch essayType
     when 'favorites'
-      if $favoriteToggle.hasClass 'selected' then $unfavorited.show() else $unfavorited.hide()
+      if $favoriteToggle.hasClass 'selected' then $nonfavorites.show() else $nonfavorites.hide()
       $favoriteToggle.toggleClass 'selected'
     when 'recent'
       $essayList.sort(newestFirst).appendTo $essays

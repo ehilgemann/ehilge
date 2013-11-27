@@ -8,28 +8,28 @@ layout: default
 
 <aside class="sidebar">
   <h2>Start with some of my favorites</h2>
-    <ul>
-      {% for essay in site.categories.writes | limit: 4 %}
-        {% if essay.favorite %}
-          {% if essay.svn %}
-            <li>
-              <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
-            </li>
-          {% else %}
-            <li>
-              <a href="{{ essay.url }}">{{ essay.title }}</a>
-            </li>
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-    </ul>
-
-  <h2>Filter by:</h2>
   <ul>
-    <li data-essay-filter="favorites">Favorites</li>
-    <li data-essay-filter="shortest">Shortest reads first</li>
-    <li data-essay-filter="recent">Recently written first</li>
+    {% for essay in site.categories.writes | limit: 4 %}
+      {% if essay.favorite %}
+        {% if essay.svn %}
+          <li>
+            <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ essay.url }}">{{ essay.title }}</a>
+          </li>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
   </ul>
+
+  <div class="toggles">
+    <h2>Filter by:</h2>
+    <span data-essay-filter="favorites">Favorites</span>
+    <span data-essay-filter="shortest">Shortest reads first</span>
+    <span data-essay-filter="recent">Recently written first</span>
+  </div>
 
   <h2>Short form thoughts</h2>
   <p>I collect <a href="/thinks" title="Half-baked ideas">bits and ideas</a> not quite ready for essays and <a href="http://twitter.com/migreyes">tweet some of them</a>, too.</p>

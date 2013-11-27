@@ -9,7 +9,7 @@ layout: default
 <aside class="sidebar">
   <h2>Start with some of my favorites</h2>
     <ul>
-      {% for essay in site.categories.writes %}
+      {% for essay in site.categories.writes | limit: 4 %}
         {% if essay.favorite %}
           {% if essay.svn %}
             <li>
@@ -39,7 +39,7 @@ layout: default
   <ul>
   {% for essay in site.categories.writes %}
     {% if essay.svn %}
-      <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}">
+      <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
         <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
         {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
         <p>
@@ -48,7 +48,7 @@ layout: default
         </p>
       </li>
     {% else %}
-      <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}">
+      <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
         <a href="{{ essay.url }}">{{ essay.title }}</a>
         {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
         <p><small data-reading-time></small></p>

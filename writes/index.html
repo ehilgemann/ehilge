@@ -39,19 +39,19 @@ layout: default
   <ul>
   {% for essay in site.categories.writes %}
     {% if essay.svn %}
-      <li{% if essay.favorite %} data-favorite{% endif %}>
+      <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}">
         <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
         {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
         <p>
-          <small data-words="{{ essay.content | number_of_words }}"></small>
+          <small data-reading-time></small>
           <small class="svn">Written on Signal vs. Noise</small>
         </p>
       </li>
     {% else %}
-      <li{% if essay.favorite %} data-favorite{% endif %}>
+      <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}">
         <a href="{{ essay.url }}">{{ essay.title }}</a>
         {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
-        <p><small data-words="{{ essay.content | number_of_words }}"></small></p>
+        <p><small data-reading-time></small></p>
       </li>
     {% endif %}
   {% endfor %}

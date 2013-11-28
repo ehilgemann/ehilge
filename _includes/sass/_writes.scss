@@ -49,7 +49,9 @@ body.writes {
       margin-bottom: 2em;
 
       a {
+        display: block;
         font-size: 1.5em;
+        margin-bottom: .25em;
       }
 
       p {
@@ -146,10 +148,11 @@ body.writes {
       li a {
         font-size: 2.5em;
         letter-spacing: -2px;
-        line-height: 1.2em;
+        line-height: 1.1em;
+        margin-bottom: .1em;
       }
 
-      li p { margin: .25em 0; }
+      li p { margin: 0 0 .25em; }
 
       p a:link { text-decoration: underline; }
     }

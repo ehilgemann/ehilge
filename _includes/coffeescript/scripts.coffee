@@ -28,4 +28,4 @@ $ ->
         escapable()
 
   # responsivePSA()
-  responsiveTest()
+  # responsiveTest()

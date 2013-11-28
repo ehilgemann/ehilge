@@ -8,11 +8,11 @@ layout: default
 <h2>Education websites</h2>
 
 <h2>Apps</h2>
-<p>1password</p>
-<p>Moom</p>
-<p>Uber: UberMig</p>
-<p>YNAB: http://ynab.refr.cc/HWKB56Q</p>
+{% for app in site.data.apps %}
+  <p>{{ app.name }}<br>{{ app.code }}</p>
+{% endfor %}
 
 <h2>Chicago</h2>
 <h2>Menswear</h2>
 <h2>Friends</h2>
+<h2>Coffee Shops</h2>

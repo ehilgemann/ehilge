@@ -26,6 +26,7 @@ $ ->
     switch event.keyCode
       when 27 # Escape
         escapable()
+        exitProject()
 
   # responsivePSA()
   # responsiveTest()

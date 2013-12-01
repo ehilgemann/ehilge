@@ -9,8 +9,11 @@ $ ->
     $('body.portfolio h1').text $headline
 
     # Append entire project
-    $project = $('<div>').load($url + ' .details')
-    $(this).append $project
+    if $(this).find('.project-details').length
+      console.log "Exists"
+    else
+      $project = $('<div class="project-details">').load($url + ' .details')
+      $(this).append $project
 
     window.history.pushState('project', '', $url)
     document.title = $title
@@ -27,6 +30,7 @@ $ ->
     # Reset headline and title
     document.title = "The work & play of Mig Reyes"
     $('body.portfolio h1').text 'Work is play'
+    window.history.pushState('', '', '/makes')
 
     # Reset portfolio view
     $('div.project').show()

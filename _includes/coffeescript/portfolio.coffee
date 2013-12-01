@@ -1,9 +1,4 @@
-# loadProject = (url, headline, title) ->
-  # $('.projects').load (url + ' .project'), ->
-  #   console.log 'Loaded'
-
 $ ->
-  $('#time').text Date()
 
   $('[data-behavior~="project"]').click ->
     $headline = $(this).data 'headline'
@@ -29,6 +24,11 @@ $ ->
     false
 
   $('[data-behavior~="all-projects"]').click ->
+    # Reset headline and title
+    document.title = "The work & play of Mig Reyes"
+    $('body.portfolio h1').text 'Work is play'
+
+    # Reset portfolio view
     $('div.project').show()
     $('div.details').hide()
     $(this).hide()

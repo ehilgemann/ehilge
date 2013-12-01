@@ -40,6 +40,19 @@ body.portfolio {
   }
 }
 
+aside.projects-toggles {
+  position: relative;
+  height: 30px;
+  margin-top: -2em;
+
+  .all-projects {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -2em;
+  }
+}
+
 section.projects {
   min-height: 600px;
   width: 100%;
@@ -61,7 +74,7 @@ div.project {
 
 div.project#blogwars {
 
-  figure {
+  .thumbnail {
     top: 0;
     left: 0;
     max-width: 300px;
@@ -70,8 +83,9 @@ div.project#blogwars {
 
 div.project#aiga {
 
-  figure {
+  .thumbnail {
     left: 340px;
+    top: 0;
     max-width: 300px;
   }
 }

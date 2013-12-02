@@ -19,7 +19,8 @@ $ ->
 
   $('[data-project]').click ->
     # Update Headline
-    $headline.text $(this).data 'headline'
+    $projectName = $(this).data 'headline'
+    $headline.text $projectName
 
     # Hide every other project
     $(this).siblings().hide()
@@ -35,7 +36,7 @@ $ ->
       $(this).append $project
 
     # Change browser state
-    document.title = $(this).data 'title'
+    document.title = $projectName + ' by Mig Reyes'
     window.history.pushState('', '', $url)
 
     # Show close button

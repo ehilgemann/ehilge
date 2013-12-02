@@ -7,8 +7,6 @@ closeProject = ->
   # Reset portfolio view
   $('[data-project]').show()
   $('div.project-details').hide()
-
-  # Hide button
   $('[data-behavior="close"]').hide()
 
 $ ->

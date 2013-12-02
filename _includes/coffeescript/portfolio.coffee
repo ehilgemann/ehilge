@@ -1,43 +1,47 @@
-exitProject = ->
+closeProject = ->
   # Reset headline and title
   document.title = "The work & play of Mig Reyes"
-  $('body.portfolio h1').text 'Work is play'
+  $('[data-project-header]').text 'Work is play'
   window.history.pushState('', '', '/makes')
 
   # Reset portfolio view
-  $('[data-behavior~="all-projects"]').hide()
-  $('div.project').show()
+  $('[data-project]').show()
   $('div.project-details').hide()
 
-$ ->
+  # Hide button
+  $('[data-behavior="close"]').hide()
 
-  $('[data-behavior~="project"]').click ->
-    $headline = $(this).data 'headline'
-    $title = $(this).data 'title'
-    $url = $(this).find('a').attr 'href'
+$ ->
+  # Setup objects
+  $projects = $('[data-behavior="project"]')
+  $headline = $('[data-project-header]')
+  $closeButton = $('[data-behavior="close"]')
+
+  $('[data-project]').click ->
+    # Update Headline
+    $headline.text $(this).data 'headline'
+
+    # Hide every other project
+    $(this).siblings().hide()
+
+    # Reveal the entire project
     $details = $(this).find('.project-details')
 
-    # Update Headline
-    $('body.portfolio h1').text $headline
-
-    # Append entire project
     if $details.length
       $details.show()
-      console.log "Exists"
     else
+      $url = $(this).find('a').attr 'href'
       $project = $('<div class="project-details">').load($url + ' .details')
       $(this).append $project
 
-    window.history.pushState('project', '', $url)
-    document.title = $title
+    # Change browser state
+    document.title = $(this).data 'title'
+    window.history.pushState('', '', $url)
 
-    $('.projects-toggles button').show()
+    # Show close button
+    $closeButton.show()
 
-    $('[data-behavior~="all-projects"]').show()
-
-    $(this).siblings().hide()
-
+    # Don’t follow URL
     false
 
-  $('[data-behavior~="all-projects"]').click ->
-    exitProject()
+  $closeButton.click -> closeProject()

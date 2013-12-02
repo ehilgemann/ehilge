@@ -5,23 +5,26 @@ class: portfolio
 layout: portfolio
 ---
 
-<aside class="projects-toggles">
-  <button data-behavior="all-projects" class="all-projects">All projects</button>
+<aside class="toggles">
+  <button data-behavior="close">All projects</button>
 </aside>
 
-<section class="projects">
+<section class="projects" id="thing">
 
-  <div class="project poster" data-behavior="project" data-headline="Blog Wars" data-title="Mig makes Blog Wars" id="blogwars">
+  <div class="project poster" data-project="blogwars" data-headline="Blog Wars" data-title="Mig makes Blog Wars" id="blogwars">
     <figure class="thumbnail">
       <a href="/makes/blog-wars"><img src="/makes/blog-wars/blog_wars.gif"></a>
     </figure>
+
+    <div class="details"></div>
   </div>
 
-  <div class="project poster" data-behavior="project" data-headline="AIGA" data-title="Mig makes AIGA" id="aiga">
+  <div class="project poster" data-project="aiga" data-headline="AIGA" data-title="Mig makes AIGA" id="aiga">
     <figure class="thumbnail">
       <a href="/makes/aiga">
         <img src="/makes/aiga/AIGA.jpg">
       </a>
     </figure>
   </div>
+
 </section>

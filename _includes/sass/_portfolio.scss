@@ -1,5 +1,5 @@
 body.portfolio {
-  @include animate(fade-to-grey 1s both);
+  // @include animate(fade-to-grey 1s both);
   border-top-color: black;
   background: #999;
 
@@ -40,12 +40,12 @@ body.portfolio {
   }
 }
 
-aside.projects-toggles {
+aside.toggles {
   position: relative;
   height: 30px;
   margin-top: -2em;
 
-  .all-projects {
+  button {
     display: none;
     position: absolute;
     left: 0;

@@ -2,7 +2,7 @@
   <body{% if page.class %} class="{{ page.class }}" {% endif %}>
     {% include header.html %}
     <div class="content">
-      <h1>{{ page.headline }}</h1>
+      <h1 data-project-header>{{ page.headline }}</h1>
       {{ content }}
     </div>
 

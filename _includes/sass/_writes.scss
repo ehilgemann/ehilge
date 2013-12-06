@@ -8,7 +8,14 @@ body.writes {
     text-align: center;
   }
 
-  h2 { color: #666; }
+  h2 {
+    color: #F00;
+    font-size: .9rem;
+    letter-spacing: .3em;
+    line-height: 1em;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+  }
 
   p a:link {
     color: $color-link;
@@ -19,14 +26,7 @@ body.writes {
   aside.sidebar {
     display: none;
 
-    h2 {
-      line-height: 1em;
-      margin-bottom: .5em;
-    }
-
-    ul {
-      margin-bottom: 2em;
-    }
+    ul { margin-bottom: 3em; }
 
     li {
       line-height: 1.2em;
@@ -46,12 +46,15 @@ body.writes {
     text-align: center;
 
     li {
-      margin-bottom: 2em;
+      margin-bottom: 2.5em;
 
       a {
+        color: #444;
         display: block;
         font-size: 1.5em;
         margin-bottom: .25em;
+
+        &:hover { color: $color-link-hover; }
       }
 
       p {
@@ -100,12 +103,15 @@ body.writes {
       margin-top: .5em;
       margin-bottom: .75em;
       text-align: left;
+      margin-left: 33.333%;
+      width: 50%;
     }
 
     aside.sidebar {
       @include border-box;
       display: block;
       float: left;
+      margin-top: .5em;
       padding-right: 1.5em;
       width: 33.333%;
 
@@ -113,7 +119,7 @@ body.writes {
         position: relative;
       }
 
-      li:before {
+      ul.shortform li:before {
         color: #999;
         content: "•";
         position: absolute;

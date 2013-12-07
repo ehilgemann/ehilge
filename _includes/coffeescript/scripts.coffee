@@ -28,5 +28,5 @@ $ ->
         escapable()
         closeProject()
 
-  # responsivePSA()
+  responsivePSA()
   # responsiveTest()

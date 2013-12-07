@@ -40,6 +40,7 @@ $ ->
       $readingTime = Math.floor($readingTime / 60)
       $(this).find('[data-reading-time]').text $readingTime + ' minute read'
 
+
   # Fade each essay in
   $delay = 0
   $essayList.each ->
@@ -47,9 +48,15 @@ $ ->
     $(this).css opacity: 0
     $(this).delay($delay).fadeTo 500, 1
 
+
   # Essay filtering
   $('[data-essay-filter]').click ->
     filterEssays $(this).data('essay-filter')
+
+    if $(this).find('span').hasClass 'radio'
+      $(this).addClass 'selected'
+      $(this).siblings().removeClass 'selected'
+
 
   # Fade each thought in
   $thoughtList = $('[data-thought]')

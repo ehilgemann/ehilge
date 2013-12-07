@@ -9,17 +9,20 @@ layout: default
 <aside class="sidebar">
   <div class="toggles">
     <h2>Read by</h2>
-    <ul>
-      <li data-essay-filter="favorites">Just my favorites</li>
-      <li data-essay-filter="shortest">Shortest first</li>
-      <li data-essay-filter="recent">Recent first</li>
+    <ul class="checkboxes">
+      <li data-essay-filter="favorites"><span class="check"></span> Just my favorites</li>
+    </ul>
+
+    <ul class="radios">
+      <li data-essay-filter="recent" class="selected"><span class="radio"></span> Newest first</li>
+      <li data-essay-filter="shortest"><span class="radio"></span> Shortest first</li>
     </ul>
   </div>
 
   <h2>Shorter form</h2>
   <ul class="shortform">
     <li><a href="/thinks" title="Half-baked ideas">Stream of thoughts</a></li>
-    <li><a href="http://twitter.com/migreyes">Ideas shared on Twitter</a></li>
+    <li><a href="http://twitter.com/migreyes">Twitter</a></li>
   </ul>
 </aside>
 
@@ -45,5 +48,5 @@ layout: default
   {% endfor %}
   </ul>
 
-  <p>I also keep a <a href="/thinks">stream of thoughts</a> and share <a href="http://twitter.com/migreyes" title="Follow me on Twitter">some on Twitter</a>.</p>
+  <p>That’s it for now. I also keep a <a href="/thinks">stream of thoughts</a> and share <a href="http://twitter.com/migreyes" title="Follow me on Twitter">some on Twitter</a>.</p>
 </section>

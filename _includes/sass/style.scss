@@ -33,6 +33,15 @@ h1 {
   z-index: 1000;
 }
 
+h2 {
+  color: #444;
+  font-family: $font-tisa;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: -.04em;
+  margin-bottom: 1em;
+}
+
 h3 {
   color: #F00;
   font-size: .9rem;
@@ -237,6 +246,10 @@ footer {
 
   h1 {
     font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
   }
 
   header[role="banner"] {

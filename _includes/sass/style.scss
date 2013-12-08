@@ -3,7 +3,7 @@
 body {
   @include font-smoothing(antialiased);
   background-color: #FFF;
-  border-top: .5em solid $color-link;
+  border-top: .75em solid $color-link;
   color: #333;
   font-family: $font-tisa;
   font-size: 1rem; // 16px

@@ -9,7 +9,11 @@ body.bike {
   font-size: 18px;
   padding: 0;
 
-  h1, h2, h3 { font-family: Courier, sans-serif; }
+  h1, h2, h3 {
+    color: #333;
+    font-family: Courier, sans-serif;
+    font-weight: bold;
+  }
 
   a {
     color: $green;

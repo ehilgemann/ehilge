@@ -27,7 +27,6 @@ layout: default
 
   <article class="short">
     <h1>Designer at 37signals</h1>
-
     <p>I help make Basecamp better. Formerly Threadless, and an agency refugee. Beliefs: designers should code, humility > hubris, build your community.</p>
     <p>&hearts; Chicago.</p>
 
@@ -49,8 +48,8 @@ layout: default
 <section class="teaching">
   <article>
     <hgroup>
-      <h2>Teaching</h2>
-      <h3>Shaping beginners…</h3>
+      <h3>Teaching</h3>
+      <h4>Shaping beginners…</h4>
     </hgroup>
 
     <p>Since 2012, I’ve been teaching beginners the fundamentals design and visual patterns at The Starter League in Chicago. Prior, I spent three years teaching art direction, design, and professional practices at The Chicago Portfolio School.</p>
@@ -62,14 +61,14 @@ layout: default
 <section class="public">
   <article class="speaking">
     <hgroup>
-      <h2>Speaking</h2>
-      <h3>Sharing experiences at…</h3>
+      <h3>Speaking</h3>
+      <h4>Sharing experiences at…</h4>
     </hgroup>
 
     <ul>
       {% for talk in site.data.talks %}
         <li>
-          <h4>{{ talk.title }}</h4>
+          <h5>{{ talk.title }}</h5>
           <p>{{ talk.location }}</p>
           {% if talk.video %}<span><a href="{{ talk.video }}" target="_blank">View video</a></span>{% endif %}
           {% if talk.photos %}<span><a href="{{ talk.photos }}" target="_blank">View photos</a></span>{% endif %}
@@ -81,8 +80,8 @@ layout: default
 
   <article class="interviews">
     <hgroup>
-      <h2>Select interviews</h2>
-      <h3>On craft and culture…</h3>
+      <h3>Select interviews</h3>
+      <h4>On craft and culture…</h4>
     </hgroup>
 
     <ul>
@@ -94,8 +93,8 @@ layout: default
 
   <article class="press">
     <hgroup>
-      <h2>Press</h2>
-      <h3>As recognized with…</h3>
+      <h3>Press</h3>
+      <h4>As recognized with…</h4>
     </hgroup>
 
     <ul>
@@ -107,14 +106,14 @@ layout: default
 
   <article class="print">
     <hgroup>
-      <h2>Publications</h2>
-      <h3>Work printed in…</h3>
+      <h3>Publications</h3>
+      <h4>Work printed in…</h4>
     </hgroup>
 
     <ul>
       {% for publication in site.data.publications %}
         <li>
-          <h3><a href="{{ publication.url }}">{{ publication.title }}</a></h3>
+          <h4><a href="{{ publication.url }}">{{ publication.title }}</a></h4>
           {{ publication.publisher }}
         </li>
       {% endfor %}
@@ -128,8 +127,8 @@ layout: default
 
 <section class="colophon">
   <hgroup>
-    <h2>Colophon</h2>
-    <h3>About this site…</h3>
+    <h3>Colophon</h3>
+    <h4>About this site…</h4>
   </hgroup>
 
   <p>This site is designed with a basic six-column grid from <a href="http://37signals.com/svn/posts/1061-why-we-skip-photoshop" target="_blank">sketch to code</a>. Programmed with <a href="http://www.sublimetext.com/2" target="_blank">Sublime Text 2</a> using <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, Sass, jQuery paired with <a href="http://coffeescript.org" target="_blank">CoffeeScript</a>, and <a href="http://rake.rubyforge.org" target="_blank">Rake</a> tasks for compilation and deployment to Dreamhost. Version controlled with Git on <a href="http://github.com/migreyes">GitHub</a>. The body typeface is <a href="https://typekit.com/fonts/ff-tisa-web-pro" target="_blank">FF Tisa</a> served via Typekit, while the complimentary sans-serif is <a href="http://www.fontshop.com/fonts/family/alto/" target="_blank">Alto</a> by OurType. Photoshop and Illustrator fired up for imagery. No frameworks, get weird.</p>

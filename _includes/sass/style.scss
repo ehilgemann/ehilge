@@ -1,4 +1,4 @@
-@import "mixins", "reset", "animations", "fonts";
+@import 'mixins', 'reset', 'animations', 'fonts';
 
 body {
   @include font-smoothing(antialiased);
@@ -8,19 +8,44 @@ body {
   font-family: $font-tisa;
   font-size: 1rem; // 16px
   line-height: 1.5rem; // 24px
+}
 
-  a {
-    color: $color-link;
-    margin: -.2rem;
-    padding: .2rem;
-    text-decoration: none;
+a {
+  color: $color-link;
+  margin: -.2rem;
+  padding: .2rem;
+  text-decoration: none;
 
-    &:visited { color: $color-link-visited; }
-    &:hover { color: $color-link-hover; text-decoration: underline; }
-    &:active { color: black; }
-  }
+  &:visited { color: $color-link-visited; }
+  &:hover { color: $color-link-hover; text-decoration: underline; }
+  &:active { color: black; }
+}
 
-  li { list-style: none; }
+li { list-style: none; }
+
+h1 {
+  color: #F00;
+  font-size: 1.25rem;
+  letter-spacing: -.04em;
+  line-height: 1em;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1000;
+}
+
+h3 {
+  color: #F00;
+  font-size: .9rem;
+  letter-spacing: .3em;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+h4 {
+  color: #999;
+  font-family: $font-tisa;
+  font-style: italic;
+  font-weight: normal;
 }
 
 header[role="banner"] {
@@ -210,6 +235,10 @@ footer {
     padding-right: 2rem;
   }
 
+  h1 {
+    font-size: 3rem;
+  }
+
   header[role="banner"] {
     padding-top: 2rem;
   }
@@ -222,7 +251,7 @@ footer {
       @include clearfix;
       font-size: .95rem;
 
-      h4 { margin-bottom: .5rem; }
+      h5 { margin-bottom: .5rem; }
 
       div {
         display: inline-block;
@@ -347,4 +376,11 @@ aside.public-service-announcement {
   }
 }
 
-@import "about", "writes", "essays", "portfolio", "thinks", "bike";
+@import
+  'index',
+  'about',
+  'writes',
+  'essays',
+  'portfolio',
+  'thinks',
+  'bike';

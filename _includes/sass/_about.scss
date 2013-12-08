@@ -5,21 +5,6 @@ body.about section {
 
   hgroup { margin-bottom: .5rem; }
 
-  h2 {
-    color: #F00;
-    font-size: .9rem;
-    letter-spacing: .3em;
-    line-height: 1em;
-    text-transform: uppercase;
-  }
-
-  h3 {
-    color: #999;
-    font-family: $font-tisa;
-    font-style: italic;
-    font-weight: normal;
-  }
-
   .ephemera { display: none; }
 }
 
@@ -51,12 +36,6 @@ section.teaching {
 section.biography {
 
   article.short { display: none; }
-
-  h1 {
-    color: #F00;
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-  }
 
   p { margin: 0 0 1rem; }
 
@@ -114,13 +93,8 @@ section.public {
     margin: 8rem auto 0;
 
     h1 {
-      font-size: 3rem;
-      letter-spacing: -.04em;
-      line-height: 1em;
       margin-left: 16.667%;
-      position: relative;
       width: 83.335%;
-      z-index: 1000;
     }
 
     article.short {
@@ -293,11 +267,9 @@ section.public {
 }
 
 #give {
+  @include transform-origin(left top);
   right: -20em;
   top: 0;
-          transform-origin: left top;
-     -moz-transform-origin: left top;
-  -webkit-transform-origin: left top;
 }
 
 #slash {

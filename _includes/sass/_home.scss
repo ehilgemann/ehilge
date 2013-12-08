@@ -1,0 +1,82 @@
+body.home {
+
+}
+
+// Mobile Landscape ————————————————————————————————————— /
+@include responsive-break-point(480px) {
+  body.home {
+
+  }
+}
+
+// iPad ————————————————————————————————————— /
+@include responsive-break-point(640px) {
+  body.home {
+
+    section.introduction {
+
+      h1 {
+        margin-left: 16.667%;
+        width: 50%;
+      }
+
+      h2 {
+        margin-left: 33.333%;
+        width: 67.667%;
+      }
+
+      h2 a {
+        color: $color-link;
+        text-decoration: underline;
+      }
+
+      h2 a:visited { color: $color-link; }
+    }
+
+    section.latest {
+      margin-top: 4em;
+
+      a { text-decoration: underline; }
+
+      article {
+        display: inline-block;
+        margin-bottom: 4em;
+        vertical-align: top;
+        width: 31.333%;
+      }
+
+      article h3 { margin-bottom: .5em; }
+
+      article.believe a:visited,
+      article.make a:visited,
+      article.more a:visited { color: $color-link; }
+
+      article.write a { font-style: italic; }
+
+      article.believe,
+      article.write {
+        margin-left: 33.333%;
+        margin-right: 2%;
+      }
+
+      article.more {
+        margin-left: 16.667%;
+        margin-top: 4em;
+      }
+    }
+  }
+}
+
+// Tablet ————————————————————————————————————— /
+@include responsive-break-point(768px) {
+  body.home {
+
+  }
+}
+
+// Long Browser ————————————————————————————————————— /
+@include responsive-break-point(1280px) {
+  body.home {
+
+  }
+}

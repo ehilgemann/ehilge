@@ -39,6 +39,7 @@ h2 {
   font-size: 1rem;
   font-weight: normal;
   letter-spacing: -.04em;
+  line-height: 1.1em;
   margin-bottom: 1em;
 }
 
@@ -390,7 +391,7 @@ aside.public-service-announcement {
 }
 
 @import
-  'index',
+  'home',
   'about',
   'writes',
   'essays',

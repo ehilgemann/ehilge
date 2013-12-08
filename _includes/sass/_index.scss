@@ -1,0 +1,21 @@
+
+
+// Mobile Landscape ————————————————————————————————————— /
+@include responsive-break-point(480px) {
+
+}
+
+// iPad ————————————————————————————————————— /
+@include responsive-break-point(640px) {
+
+}
+
+// Tablet ————————————————————————————————————— /
+@include responsive-break-point(768px) {
+
+}
+
+// Long Browser ————————————————————————————————————— /
+@include responsive-break-point(1280px) {
+
+}

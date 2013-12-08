@@ -17,7 +17,7 @@ $ ->
 
   $('[data-project]').click ->
     # Update Headline
-    $projectName = $(this).data 'headline'
+    $projectName = $(this).find('h1').text()
     $headline.text $projectName
 
     # Hide every other project

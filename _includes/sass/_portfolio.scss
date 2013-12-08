@@ -54,39 +54,25 @@ aside.toggles {
 }
 
 section.projects {
-  min-height: 600px;
+  min-height: 1200px;
   width: 100%;
 }
 
 div.project {
   position: relative;
+  width: 100%;
 
-  .thumbnail,
-  .details {
-    position: absolute;
+  h1 { display: none; }
+
+  .thumbnail, h3, p, figure, .details {
+    display: inline-block;
   }
+
+  .details { width: 100%; }
 
   img {
     height: auto;
     width: 100%;
-  }
-}
-
-div.project#blogwars {
-
-  .thumbnail {
-    top: 0;
-    left: 0;
-    max-width: 300px;
-  }
-}
-
-div.project#aiga {
-
-  .thumbnail {
-    left: 340px;
-    top: 0;
-    max-width: 300px;
   }
 }
 
@@ -99,4 +85,19 @@ div.project#aiga {
       margin-top: 2rem;
     }
   }
+}
+
+// MOVE THIS SHIT OUT LATER
+
+// Blog Wars
+div.project.blog-wars {
+
+  h3, p { width: 30%; }
+
+  .thumbnail {
+    margin-left: 33.333%;
+    width: 31.333%;
+  }
+
+  .details figure { width: 30%; }
 }

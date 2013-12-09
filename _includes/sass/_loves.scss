@@ -1,0 +1,65 @@
+body.loves {
+
+  h2 { margin-bottom: .25em; }
+}
+
+// Mobile Landscape ————————————————————————————————————— /
+@include responsive-break-point(480px) {
+  body.loves {
+
+  }
+}
+
+// iPad ————————————————————————————————————— /
+@include responsive-break-point(640px) {
+  body.loves {
+
+    section.friends {
+      margin-bottom: 3em;
+
+      h2, p { margin-left: 33.333%; }
+
+      p {
+        margin-bottom: 2em;
+        width: 50%;
+      }
+
+      ul {
+        display: inline-block;
+        margin-right: 2%;
+        vertical-align: top;
+        width: 14.667%;
+
+        &:last-child { margin-right: 0; }
+
+        &.design { margin-left: 16.667%; }
+      }
+
+      h5 { margin-bottom: .5em; }
+
+      li {
+        border-bottom: 1px solid #EEE;
+        font-family: $font-alto;
+        line-height: 1.1em;
+        margin-bottom: .5em;
+        padding-bottom: .25em;
+
+        &:last-child { border: none; }
+      }
+    }
+  }
+}
+
+// Tablet ————————————————————————————————————— /
+@include responsive-break-point(768px) {
+  body.loves {
+
+  }
+}
+
+// Long Browser ————————————————————————————————————— /
+@include responsive-break-point(1280px) {
+  body.loves {
+
+  }
+}

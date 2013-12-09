@@ -1,0 +1,121 @@
+# Design
+#####################################
+
+- name: Bud Rodecker
+  url: budrodecker.com
+  location: Chicago
+  industry: design
+
+- name: Luke Williams
+  url: lukelukeluke.com
+  location: Brooklyn
+  industry: design
+
+- name: Katherine Walker
+  url: kkwalker.com
+  location: Chicago
+  industry: design
+
+- name: Plural
+  url: weareplural.com
+  location: Chicago
+  industry: design
+
+- name: UnderConsideration
+  url: underconsideration.com
+  location: Austin
+  industry: design
+
+
+# Product & Web
+#####################################
+
+- name: 37signals
+  url: 37signals.com
+  location: Chicago
+  industry: web
+
+- name: Jason James
+  url: jasonjam.es
+  location: Chicago
+  industry: web
+
+- name: Kunal Bhat
+  url: kunalbhat.com
+  location: Chicago
+  industry: web
+
+- name: Matt Born
+  url: mattborn.com
+  location: Chicago
+  industry: web
+
+- name: Oak Studios
+  url: oak.is
+  location: Brooklyn
+  industry: web
+
+- name: Ricky Salsberry
+  url: rickysalsberry.com
+  location: Chicago
+  industry: web
+
+# Typography & Lettering
+#####################################
+
+- name: Andy Luce
+  url: andyluce.com
+  location: Chicago
+  industry: type
+
+- name: Jackson Cavanaugh
+  url: okaytype.com
+  location: Chicago
+  industry: type
+
+- name: Jessica Hische
+  url: jessicahische.is
+  location: San Francisco
+  industry: type
+
+# Art & Illustration
+#####################################
+
+- name: Chuck Anderson
+  url: nopattern.com
+  location: Chicago
+  industry: illustration
+
+- name: Kate Bingaman-Burt
+  url: katebingamanburt.com
+  location: Portland
+  industry: illustration
+
+- name: MAKE
+  url: readysetmake.com
+  location: Chicago
+  industry: illustration
+
+- name: Mikey Burton
+  url: mikeyburton.com
+  location: Cleveland
+  industry: illustration
+
+- name: Will Bryant
+  url: willbryantplz.com
+  location: Portland
+  industry: illustration
+
+# Video & Photography
+#####################################
+
+- name: Lucy Hewett
+  url: lucyhewett.com
+  location: Chicago
+  industry: photo
+
+- name: Paul Octavious
+  url: pauloctavious.com
+  location: Chicago
+  industry: photo
+

@@ -4,6 +4,56 @@ class: loves
 layout: default
 ---
 
+<section class="friends">
+  <h2>Friends</h2>
+  <p>These amazingly talented people have influenced my work, thoughts, and career. I’m lucky enough to call them my colleagues, drinking partners, and friends.</p>
+
+  <ul class="design">
+    <h5>Design</h5>
+    {% for friend in site.data.friends %}
+      {% if friend.industry == "design" %}
+        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <ul class="illustration">
+    <h5>Illustration</h5>
+    {% for friend in site.data.friends %}
+      {% if friend.industry == "illustration" %}
+        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <ul class="photo">
+    <h5>Photo &amp; Video</h5>
+    {% for friend in site.data.friends %}
+      {% if friend.industry == "photo" %}
+        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <ul class="typography">
+    <h5>Type &amp; Lettering</h5>
+    {% for friend in site.data.friends %}
+      {% if friend.industry == "type" %}
+        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <ul class="web">
+    <h5>Web &amp; Product</h5>
+    {% for friend in site.data.friends %}
+      {% if friend.industry == "web" %}
+        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
 <h2>Chicago</h2>
 
 <h2>Books</h2>
@@ -14,8 +64,6 @@ layout: default
 {% for app in site.data.apps %}
   <p>{{ app.name }}<br>{{ app.code }}</p>
 {% endfor %}
-
-<h2>Friends</h2>
 
 <h2>Coffee Shops</h2>
 

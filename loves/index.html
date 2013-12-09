@@ -8,6 +8,10 @@ layout: default
   <h1>These are a few of my favorite things—and people, and places</h1>
 </section>
 
+<section class="chicago">
+  <h2>Chicago</h2>
+</section>
+
 <section class="friends">
   <h2>Friends</h2>
   <p>These are some of the amazingly talented people have influenced my work, thoughts, and career. I’m lucky enough to call them my colleagues, drinking partners, and friends.</p>
@@ -58,17 +62,24 @@ layout: default
   </ul>
 </section>
 
-<h2>Chicago</h2>
+<section class="books">
+  <h2>Books</h2>
 
-<h2>Books</h2>
+  <ul>
+  {% for book in site.data.books %}
+    <li>{{ book.name }}</li>
+  {% endfor %}
+  </ul>
 
-<h2>Education websites</h2>
+  Amazon: migrey0f-20
+</section>
 
-<h2>Apps</h2>
-{% for app in site.data.apps %}
-  <p>{{ app.name }}<br>{{ app.code }}</p>
-{% endfor %}
+<section class="apps">
+  <h2>Apps</h2>
 
-<h2>Coffee Shops</h2>
-
-Amazon: migrey0f-20
+  <ul>
+  {% for app in site.data.apps %}
+    <li>{{ app.name }}<br>{{ app.code }}</li>
+  {% endfor %}
+  </ul>
+</section>

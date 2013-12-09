@@ -11,9 +11,9 @@
   location: Chicago
   industry: design
 
-- name: Jason Santa Maria
-  url: jasonsantamaria.com
-  location: Brooklyn
+- name: Glenn Cochon
+  url: glenncochon.com
+  location: New York
   industry: design
 
 - name: Katherine Walker
@@ -26,9 +26,9 @@
   location: Chicago
   industry: design
 
-- name: Liz Danzico
-  url: bobulate.com
-  location: Brooklyn
+- name: Mike McQuade
+  url: mikemcquade.com
+  location: Chicago
   industry: design
 
 - name: Luke Williams
@@ -38,6 +38,11 @@
 
 - name: Plural
   url: weareplural.com
+  location: Chicago
+  industry: design
+
+- name: Sean Donohue
+  url: about.me/seandonohue
   location: Chicago
   industry: design
 
@@ -57,6 +62,11 @@
 
 - name: Coudal
   url: coudal.com
+  location: Chicago
+  industry: web
+
+- name: Jake Nickell
+  url: jakenickell.com
   location: Chicago
   industry: web
 
@@ -80,9 +90,19 @@
   location: Brooklyn
   industry: web
 
+- name: Randy Hunt
+  url: randyjhunt.com
+  location: Brooklyn
+  industry: web
+
 - name: Ricky Salsberry
   url: rickysalsberry.com
   location: Chicago
+  industry: web
+
+- name: Tina Roth Eisenberg
+  url: swiss-miss.com
+  location: Brooklyn
   industry: web
 
 # Art & Illustration
@@ -108,6 +128,11 @@
   location: San Francisco
   industry: illustration
 
+- name: Joe Van Wetering
+  url: joevw.com
+  location: Chicago
+  industry: illustration
+
 - name: Kate Bingaman-Burt
   url: katebingamanburt.com
   location: Portland
@@ -121,6 +146,11 @@
 - name: Mikey Burton
   url: mikeyburton.com
   location: Cleveland
+  industry: illustration
+
+- name: Ross Zietz
+  url: flickr.com/photos/arzie13/
+  location: Chicago
   industry: illustration
 
 - name: Tad Carpenter
@@ -170,5 +200,10 @@
 
 - name: Frank Chimero
   url: frankchimero.com
+  location: Brooklyn
+  industry: writing
+
+- name: Liz Danzico
+  url: bobulate.com
   location: Brooklyn
   industry: writing

@@ -1,262 +1,268 @@
-body.about section {
-  @include border-box;
+body.about {
 
-  article { margin-bottom: 2em; }
+  section {
+    @include border-box;
 
-  hgroup { margin-bottom: .5rem; }
+    article { margin-bottom: 2em; }
 
-  .ephemera { display: none; }
-}
+    hgroup { margin-bottom: .5rem; }
 
-section.portrait {
-  margin-bottom: 1em;
-  width: 100%;
-
-  figure {
-    margin: 0 auto;
-    width: 75%;
+    .ephemera { display: none; }
   }
 
-  figcaption { display: none; }
-
-  img {
-    @include border-radius(50%);
-    height: auto;
+  section.portrait {
+    margin-bottom: 1em;
     width: 100%;
-  }
-}
 
-section.biography,
-section.teaching {
+    figure {
+      margin: 0 auto;
+      width: 75%;
+    }
 
-  p a:link { text-decoration: underline; }
-  p a:hover { text-decoration: none; }
-}
+    figcaption { display: none; }
 
-section.biography {
-
-  article.short { display: none; }
-
-  p { margin: 0 0 1rem; }
-
-  [data-toggle="bio"] {
-    color: $color-link;
-    text-decoration: underline;
-
-    &:hover {
-      color: $color-link-hover;
-      cursor: pointer;
-      text-decoration: none;
+    img {
+      @include border-radius(50%);
+      height: auto;
+      width: 100%;
     }
   }
 
-  .portrait-thumbnails { display: none; }
-}
+  section.biography,
+  section.teaching {
 
-section.public {
+    p a:link { text-decoration: underline; }
+    p a:hover { text-decoration: none; }
+  }
 
-  article.speaking {
+  section.biography {
 
-    li {
-      line-height: 1.25em;
-      margin-bottom: 1rem;
+    article.short { display: none; }
+
+    p { margin: 0 0 1rem; }
+
+    [data-toggle="bio"] {
+      color: $color-link;
+      text-decoration: underline;
+
+      &:hover {
+        color: $color-link-hover;
+        cursor: pointer;
+        text-decoration: none;
+      }
     }
 
-    span + span:before { content: "/ "; }
+    .portrait-thumbnails { display: none; }
+  }
+
+  section.public {
+
+    article.speaking {
+
+      li {
+        line-height: 1.25em;
+        margin-bottom: 1rem;
+      }
+
+      span + span:before { content: "/ "; }
+    }
   }
 }
 
 // iPhone Landscape ————————————————————————————————————— /
 @include responsive-break-point(480px) {
+  body.about {
+    section {
+      padding-left: 2em;
+      padding-right: 2em;
+    }
 
-  body.about section {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
+    section.biography {
 
-  section.biography {
-
-    figure {
-      width: 50%;
+      figure {
+        width: 50%;
+      }
     }
   }
 }
 
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
-
-  body.about section {
-    padding: 0;
-  }
-
-  section.biography {
-    margin: 8rem auto 0;
-
-    h1 {
-      margin-left: 16.667%;
-      width: 83.335%;
+  body.about {
+    section {
+      padding: 0;
     }
 
-    article.short {
-      margin-bottom: 10em;
+    section.biography {
+      margin: 8rem auto 0;
 
       h1 {
+        margin-left: 16.667%;
+        width: 83.335%;
+      }
+
+      article.short {
+        margin-bottom: 10em;
+
+        h1 {
+          margin-left: 33.333%;
+          width: 66.667%;
+        }
+      }
+
+      article.long { margin-bottom: 8em; }
+
+      p {
         margin-left: 33.333%;
         width: 66.667%;
       }
-    }
-
-    article.long { margin-bottom: 8em; }
-
-    p {
-      margin-left: 33.333%;
-      width: 66.667%;
     }
   }
 }
 
 // Browser ————————————————————————————————————— /
 @include responsive-break-point(768px) {
-  body.about .content section {
-
-    .ephemera { display: block; }
-  }
-
-  section.portrait {
-    background-color: rgba(0,0,0,.8);
-    cursor: -webkit-zoom-out;
-    display: none;
-    height: 100%;
-    left: 0;
-    margin: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 5000;
-
-    figure {
-      @include animate(fade-in-up .5s both);
-      margin: 2em auto 0;
-      max-width: 45%;
-
-      img {
-        @include border-radius(5px 5px 0 0);
-        @include box-shadow(0 0 10px rgba(0,0,0,.5));
-        height: auto;
-        width: 100%;
-      }
-
-      figcaption {
-        @include border-radius(0 0 5px 5px);
-        background: rgba(0,0,0,.8);
-        color: white;
-        display: block;
-        font-size: .9em;
-        margin: -.5em 0 0;
-        padding: .5em 0;
-        text-align: center;
-      }
-    }
-  }
-
-  section.biography {
-    position: relative;
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.75em;
+  body.about {
+    .content section {
+      .ephemera { display: block; }
     }
 
-    .portrait-thumbnails {
-      display: block;
-      position: absolute;
-      top: -8em;
-      width: 30%;
+    section.portrait {
+      background-color: rgba(0,0,0,.8);
+      cursor: -webkit-zoom-out;
+      display: none;
+      height: 100%;
+      left: 0;
+      margin: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 5000;
 
-      img {
-        left: 0;
-        top: 0;
-        position: absolute;
-        width: 100%;
-      }
+      figure {
+        @include animate(fade-in-up .5s both);
+        margin: 2em auto 0;
+        max-width: 45%;
 
-      .portrait-toggle {
-        margin-top: 8em;
-        position: absolute;
-        width: 100%;
+        img {
+          @include border-radius(5px 5px 0 0);
+          @include box-shadow(0 0 10px rgba(0,0,0,.5));
+          height: auto;
+          width: 100%;
+        }
 
-        &:hover {
-          cursor: -webkit-zoom-in;
+        figcaption {
+          @include border-radius(0 0 5px 5px);
+          background: rgba(0,0,0,.8);
+          color: white;
+          display: block;
+          font-size: .9em;
+          margin: -.5em 0 0;
+          padding: .5em 0;
+          text-align: center;
         }
       }
+    }
 
-      figcaption {
-        color: #999;
-        font-size: .5em;
-        margin-left: 14%;
-        margin-top: 102%;
-        position: relative;
-        width: 100%;
-        z-index: 200;
+    section.biography {
+      position: relative;
 
-        a { color: #999; }
+      p {
+        font-size: 1.1rem;
+        line-height: 1.75em;
+      }
+
+      .portrait-thumbnails {
+        display: block;
+        position: absolute;
+        top: -8em;
+        width: 30%;
+
+        img {
+          left: 0;
+          top: 0;
+          position: absolute;
+          width: 100%;
+        }
+
+        .portrait-toggle {
+          margin-top: 8em;
+          position: absolute;
+          width: 100%;
+
+          &:hover {
+            cursor: -webkit-zoom-in;
+          }
+        }
+
+        figcaption {
+          color: #999;
+          font-size: .5em;
+          margin-left: 14%;
+          margin-top: 102%;
+          position: relative;
+          width: 100%;
+          z-index: 200;
+
+          a { color: #999; }
+        }
       }
     }
-  }
 
-  section.teaching {
-    margin-left: 16.667%;
-    position: relative;
-    width: 66.668%;
+    section.teaching {
+      margin-left: 16.667%;
+      position: relative;
+      width: 66.668%;
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.75em;
-    }
-  }
-
-  section.public {
-    @include clearfix;
-    position: relative;
-
-    li { font-family: $font-alto; }
-  }
-
-  article.speaking {
-    float: right;
-    margin: 8rem 0 0 2%;
-    width: 50%;
-
-    p {
-      color: #666;
+      p {
+        font-size: 1.1rem;
+        line-height: 1.75em;
+      }
     }
 
-    span {
-      color: #BBB;
-      font-family: $font-alto;
-      font-size: .9rem;
-      margin-top: .25rem;
+    section.public {
+      @include clearfix;
+      position: relative;
+
+      li { font-family: $font-alto; }
     }
-  }
 
-  article.interviews {
-    padding-top: 18rem;
-    width: 33.33%;
-  }
+    article.speaking {
+      float: right;
+      margin: 8rem 0 0 2%;
+      width: 50%;
 
-  article.press {
-    margin: 8rem 0 0 16.667%;
-    width: 33.33%;
-  }
+      p {
+        color: #666;
+      }
 
-  article.print {
-    margin: 8rem 0 0 16.667%;
-    width: 33.33%;
-  }
+      span {
+        color: #BBB;
+        font-family: $font-alto;
+        font-size: .9rem;
+        margin-top: .25rem;
+      }
+    }
 
-  section.colophon {
-    margin: 2rem 0 10rem 50%;
-    width: 50%;
+    article.interviews {
+      padding-top: 18rem;
+      width: 33.33%;
+    }
+
+    article.press {
+      margin: 8rem 0 0 16.667%;
+      width: 33.33%;
+    }
+
+    article.print {
+      margin: 8rem 0 0 16.667%;
+      width: 33.33%;
+    }
+
+    section.colophon {
+      margin: 2rem 0 10rem 50%;
+      width: 50%;
+    }
   }
 }
 

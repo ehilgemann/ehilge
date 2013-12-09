@@ -14,10 +14,14 @@ body.loves {
 @include responsive-break-point(640px) {
   body.loves {
 
+    section.introduction {
+      margin-bottom: 3em;
+    }
+
     section.friends {
       margin-bottom: 3em;
 
-      h2, p { margin-left: 33.333%; }
+      h2, p { margin-left: 16.667%; }
 
       p {
         margin-bottom: 2em;

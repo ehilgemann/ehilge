@@ -4,23 +4,18 @@ class: loves
 layout: default
 ---
 
+<section class="introduction">
+  <h1>These are a few of my favorite things—and people, and places</h1>
+</section>
+
 <section class="friends">
   <h2>Friends</h2>
-  <p>These amazingly talented people have influenced my work, thoughts, and career. I’m lucky enough to call them my colleagues, drinking partners, and friends.</p>
+  <p>These are some of the amazingly talented people have influenced my work, thoughts, and career. I’m lucky enough to call them my colleagues, drinking partners, and friends.</p>
 
   <ul class="design">
     <h5>Design</h5>
     {% for friend in site.data.friends %}
       {% if friend.industry == "design" %}
-        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-
-  <ul class="illustration">
-    <h5>Illustration</h5>
-    {% for friend in site.data.friends %}
-      {% if friend.industry == "illustration" %}
         <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
       {% endif %}
     {% endfor %}
@@ -35,10 +30,10 @@ layout: default
     {% endfor %}
   </ul>
 
-  <ul class="typography">
-    <h5>Type &amp; Lettering</h5>
+  <ul class="illustration">
+    <h5>Type &amp; Illustration</h5>
     {% for friend in site.data.friends %}
-      {% if friend.industry == "type" %}
+      {% if friend.industry == "illustration" %}
         <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
       {% endif %}
     {% endfor %}
@@ -48,6 +43,15 @@ layout: default
     <h5>Web &amp; Product</h5>
     {% for friend in site.data.friends %}
       {% if friend.industry == "web" %}
+        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <ul class="writing">
+    <h5>Writing</h5>
+    {% for friend in site.data.friends %}
+      {% if friend.industry == "writing" %}
         <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
       {% endif %}
     {% endfor %}

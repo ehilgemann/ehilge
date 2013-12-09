@@ -14,10 +14,19 @@ body.loves {
 @include responsive-break-point(640px) {
   body.loves {
 
-    section { margin-bottom: 4em; }
+    h1 {
+      width: 67.667%;
+    }
+
+    section { margin-bottom: 6em; }
 
     section.introduction {
       margin-bottom: 3em;
+    }
+
+    section.chicago {
+      margin-left: 16.667%;
+      width: 50%;
     }
 
     section.friends {
@@ -52,6 +61,10 @@ body.loves {
 
         &:last-child { border: none; }
       }
+    }
+
+    section.apps {
+      margin-left: 33.333%;
     }
   }
 }

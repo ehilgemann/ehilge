@@ -88,7 +88,9 @@ layout: default
 
   <ul>
   {% for app in site.data.apps %}
-    <li>{{ app.name }}<br>{{ app.code }}</li>
+    <li>
+      <a href="{{ app.url }}" target="_blank">{{ app.name }}</a> {{ app.info }}
+    </li>
   {% endfor %}
   </ul>
 </section>

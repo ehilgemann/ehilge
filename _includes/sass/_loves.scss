@@ -108,6 +108,19 @@ body.loves {
     section.apps {
       margin-bottom: 8em;
       margin-left: 33.333%;
+
+      ul { width: 67.667%; }
+
+      li {
+        line-height: 1.25em;
+        margin-bottom: 1em;
+      }
+
+      a {
+        font-family: $font-alto;
+        font-weight: bold;
+        text-decoration: underline;
+      }
     }
   }
 }

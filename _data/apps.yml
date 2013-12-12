@@ -1,10 +1,27 @@
 - name: 1password
-  url: url
+  url: https://agilebits.com/onepassword
+  info: is how I safely use one password for everything.
+
+- name: Fantastical
+  url: http://flexibits.com/fantastical
+  info: is how I stay on top of things.
+
+- name: iA Writer
+  url: http://www.iawriter.com/mac/
+  info: is where I write.
+
 - name: Moom
-  url: url
+  url: http://manytricks.com/moom/
+  info: is how I organize my application windows.
+
+- name: Sublime Text 2
+  url: http://www.sublimetext.com/2
+  info: is where I code.
+
 - name: Uber
-  url: url
-  code: UberMig
-- name: YNAB
+  url: https://www.uber.com
+  info: is my favorite way to get around. “UberMig” for $10!
+
+- name: You Need a Budget
   url: http://ynab.refr.cc/HWKB56Q
-  code: HWKB56Q
+  info: is how I save a lot of money.

@@ -1,0 +1,49 @@
+body.chicago {
+
+}
+
+// Mobile Landscape ————————————————————————————————————— /
+@include responsive-break-point(480px) {
+  body.chicago {
+
+  }
+}
+
+// iPad ————————————————————————————————————— /
+@include responsive-break-point(640px) {
+  body.chicago {
+
+    section.friends {
+      margin-left: 33.333%;
+
+      p { margin-bottom: 1em; }
+
+      li {
+        display: inline-block;
+        font-family: $font-alto;
+        margin-right: .1em;
+
+        &:after {
+          content: " /";
+          color: #CCC;
+        }
+
+        &:last-child:after { content: ""; }
+      }
+    }
+  }
+}
+
+// Tablet ————————————————————————————————————— /
+@include responsive-break-point(768px) {
+  body.chicago {
+
+  }
+}
+
+// Long Browser ————————————————————————————————————— /
+@include responsive-break-point(1280px) {
+  body.chicago {
+
+  }
+}

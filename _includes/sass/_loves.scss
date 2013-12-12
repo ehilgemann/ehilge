@@ -14,21 +14,23 @@ body.loves {
 @include responsive-break-point(640px) {
   body.loves {
 
-    h1 {
-      width: 67.667%;
-    }
+    h1 { width: 67.667%; }
+    h2 { margin-bottom: .75em; }
 
     section.introduction {
       margin-bottom: 3em;
     }
 
     section.chicago {
+      margin-bottom: 6em;
       margin-left: 16.667%;
       width: 50%;
+
+      a { text-decoration: underline; }
     }
 
     section.friends {
-      margin-bottom: 3em;
+      margin-bottom: 6em;
 
       h2, p { margin-left: 16.667%; }
 
@@ -61,7 +63,50 @@ body.loves {
       }
     }
 
+    section.books {
+      margin-bottom: 8em;
+
+      p {
+        margin-bottom: 2em;
+        width: 50%;
+      }
+
+      li {
+        display: inline-block;
+        line-height: 0;
+        margin-bottom: 2em;
+        margin-right: 2em;
+        max-width: 200px;
+        width: 20%;
+        vertical-align: bottom;
+      }
+
+      div {
+        height: 60px;
+        margin: 0;
+      }
+
+      h6 {
+        margin-bottom: .75em;
+        margin-top: 1em;
+        line-height: 1em;
+      }
+
+      img {
+        max-width: 200px;
+        width: 80%;
+      }
+
+      a:link h6 { color: #333; }
+      a:link em { color: #999; }
+
+      a:hover h6,
+      a:hover em,
+      a:hover p { color: $color-link; }
+    }
+
     section.apps {
+      margin-bottom: 8em;
       margin-left: 33.333%;
     }
   }

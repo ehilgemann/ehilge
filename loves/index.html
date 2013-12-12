@@ -10,7 +10,7 @@ layout: default
 
 <section class="chicago">
   <h2>My city guide to Chicago</h2>
-  <p>Sweet home, Chicago. If you ever swing through my city, be sure to <a href="/chicago" title="A collection of all of Mig’s favorite Chicago places">check out my favorite bars, coffee shops, and restaurants</a>.</p>
+  <p>Home to some of the most amazing talent I know, and good food to boot. If you ever swing through my city, be sure to <a href="/chicago" title="A collection of all of Mig’s favorite Chicago places">check out my favorite bars, coffee shops, and restaurants</a>.</p>
 </section>
 
 <section class="friends">
@@ -64,15 +64,23 @@ layout: default
 </section>
 
 <section class="books">
-  <h2>Books I keep around</h2>
+  <h2>Books worth reading</h2>
+  <p>From books that have shaped me as a designer since my college days, to recent discoveries recommended by friends and co-workers, this is my recommended reading list.</p>
 
   <ul>
   {% for book in site.data.books %}
-    <li>{{ book.name }}</li>
+    <li>
+      <a href="{{ book.url }}">
+        <img src="/assets/images/books/{{ book.name }}.jpg">
+
+        <div>
+          <h6>{{ book.name }}</h6>
+          <em>{{ book.author }}</em>
+        </div>
+      </a>
+    </li>
   {% endfor %}
   </ul>
-
-  Amazon: migrey0f-20
 </section>
 
 <section class="apps">

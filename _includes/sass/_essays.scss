@@ -40,3 +40,10 @@ body.essay {
     width: 110%;
   }
 }
+
+// iPad ————————————————————————————————————— /
+@include responsive-break-point(640px) {
+  body.essay {
+
+  }
+}

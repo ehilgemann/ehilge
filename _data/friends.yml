@@ -26,6 +26,11 @@
   location: Chicago
   industry: design
 
+- name: Kyle Stewart
+  url: therealkylestewart.com
+  location: Chicago
+  industry: design
+
 - name: Mike McQuade
   url: mikemcquade.com
   location: Chicago
@@ -57,6 +62,11 @@
 
 - name: 37signals
   url: 37signals.com
+  location: Chicago
+  industry: web
+
+- name: Adan Altamira
+  url: adanaltamira.com
   location: Chicago
   industry: web
 
@@ -168,6 +178,11 @@
 
 - name: Craig Shimala
   url: craigshimala.com
+  location: Chicago
+  industry: photo
+
+- name: Jason Esser
+  url: jasonesser.com
   location: Chicago
   industry: photo
 

@@ -27,6 +27,7 @@ body.loves {
       width: 50%;
 
       a { text-decoration: underline; }
+      a:visited { color: $color-link; }
     }
 
     section.friends {

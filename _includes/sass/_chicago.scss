@@ -1,5 +1,14 @@
 body.chicago {
 
+  .content > section {
+    position: relative;
+    margin-bottom: 4em;
+  }
+
+  section ul li { font-family: $font-alto; }
+  section ul { margin-top: 1em; }
+
+  .ephemera { display: none; }
 }
 
 // Mobile Landscape ————————————————————————————————————— /
@@ -12,6 +21,14 @@ body.chicago {
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
   body.chicago {
+
+    section h1 { margin: 2em 0 0 33.333%;}
+    section h2 { margin-bottom: .5em; }
+
+    section.work {
+      margin-left: 16.667%;
+      width: 50%;
+    }
 
     section.friends {
       margin-left: 33.333%;
@@ -30,6 +47,15 @@ body.chicago {
 
         &:last-child:after { content: ""; }
       }
+    }
+
+    .ephemera { display: block; }
+
+    .ephemera.caffeine {
+      @include backface-visibility;
+      @include transform-origin(left top);
+      right: -10em;
+      bottom: -2em;
     }
   }
 }

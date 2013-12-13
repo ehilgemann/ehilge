@@ -1,7 +1,7 @@
 closeProject = ->
   # Reset headline and title
   document.title = "The work & play of Mig Reyes"
-  $('[data-project-header]').text 'Work is play'
+  $('[data-project-header]').text 'Work and play'
   window.history.pushState('', '', '/makes')
 
   # Reset portfolio view

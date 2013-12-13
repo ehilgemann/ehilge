@@ -5,11 +5,11 @@ layout: default
 ---
 
 <section class="thoughts">
-  <h2>These are seeds of <a href="/writes" title="Short essays by Mig Reyes">short essays</a>. An ethos, of sorts.</h2>
+  <h2>These are things I often think about. Seeds of <a href="/writes" title="Short essays by Mig Reyes">short essays</a>. An ethos, of sorts.</h2>
 
   <ul>
   {% for thought in site.data.thoughts %}
-    <li data-thought><a href="#{{ forloop.index }}" id="{{ forloop.index }}" title="Click for a permalink for this little quip.">{{ thought.idea }}</a></li>
+    <li data-thought id="{{ forloop.rindex }}"><a href="#{{ forloop.rindex }}" title="Click for a permalink for this little quip.">{{ thought.idea }}</a></li>
   {% endfor %}
   </ul>
 </section>

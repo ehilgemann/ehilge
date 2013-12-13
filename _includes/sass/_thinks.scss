@@ -22,7 +22,6 @@ body.thinks {
     li {
       @include transition(color 2s .5s ease);
       display: block;
-      font-size: 1.75em;
       letter-spacing: -1px;
       margin-left: 0%;
       margin-bottom: 1em;
@@ -32,6 +31,7 @@ body.thinks {
       a {
         color: #333;
         display: block;
+        line-height: 1.2em;
         padding-top: 6em;
         text-decoration: none;
       }
@@ -47,17 +47,21 @@ body.thinks {
     }
 
 
-    :target {
+    :target a {
       @include animate(thought-attention 5s both);
       outline: none;
     }
   }
-}
 
-// Mobile Landscape ————————————————————————————————————— /
-@include responsive-break-point(480px) {
-  body.thinks {
+  footer a { color: #368ac1; }
+  footer a:hover { color: $color-link; }
 
+  footer .chicago p { border: none; }
+  footer .chicago:hover p { border: none; }
+
+  footer .chicago .flag {
+    border-bottom-color: #89c5f0;
+    border-top-color: #89c5f0;
   }
 }
 
@@ -65,22 +69,8 @@ body.thinks {
 @include responsive-break-point(640px) {
   body.thinks {
 
-  }
-}
-
-// Tablet ————————————————————————————————————— /
-@include responsive-break-point(768px) {
-  body.thinks {
-
-    section.thoughts {
-
+    section.thoughts li {
+      font-size: 1.5em;
     }
-  }
-}
-
-// Long Browser ————————————————————————————————————— /
-@include responsive-break-point(1280px) {
-  body.thinks {
-
   }
 }

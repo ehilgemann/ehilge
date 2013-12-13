@@ -15,14 +15,14 @@ layout: default
   <span class="ephemera slant caffeine">Caffeinate properly</span>
 
   <ul>
-    <li>Buzz</li>
-    <li>Caffe Streets</li>
-    <li>Filter</li>
-    <li>Gaslight</li>
-    <li>Heritage Bicycles</li>
-    <li>Star Lounge</li>
-    <li>Swim Cafe</li>
-    <li>Wormhole</li>
+    <li><a href="#">Buzz</a></li>
+    <li><a href="#">Caffe Streets</a></li>
+    <li><a href="#">Filter</a></li>
+    <li><a href="#">Gaslight</a></li>
+    <li><a href="#">Heritage Bicycles</a></li>
+    <li><a href="#">Star Lounge</a></li>
+    <li><a href="#">Swim Cafe</a></li>
+    <li><a href="#">Wormhole</a></li>
   </ul>
 </section>
 
@@ -33,15 +33,15 @@ layout: default
   <span class="ephemera make">Make wrecklessly, drink responsibly-ish</span>
 
   <ul>
-    <li>Bangers and Lace</li>
-    <li>Bar Deville</li>
-    <li>Blind Robin</li>
-    <li>Chip Inn</li>
-    <li>Longman and Eagle</li>
-    <li>Maudes Liquor Bar</li>
-    <li>Revolution Brewing</li>
-    <li>The Violet Hour</li>
-    <li>The Whistler</li>
+    <li><a href="#">Bangers and Lace</a></li>
+    <li><a href="#">Bar Deville</a></li>
+    <li><a href="#">Blind Robin</a></li>
+    <li><a href="#">Chip Inn</a></li>
+    <li><a href="#">Longman and Eagle</a></li>
+    <li><a href="#">Maudes Liquor Bar</a></li>
+    <li><a href="#">Revolution Brewing</a></li>
+    <li><a href="#">The Violet Hour</a></li>
+    <li><a href="#">The Whistler</a></li>
   </ul>
 </section>
 
@@ -50,17 +50,17 @@ layout: default
   <p>Mostly pizza, because pizza. Also, brunch.</p>
 
   <ul>
-    <li>Au Cheval</li>
-    <li>Bistro Dre</li>
-    <li>Boiler Room</li>
-    <li>Coalfire</li>
-    <li>Flo</li>
-    <li>Old Oak Tap</li>
-    <li>Piece</li>
-    <li>Peaquod’s</li>
-    <li>Red Door</li>
-    <li>Ruxbin</li>
-    <li>Via Carducci La Sorella</li>
+    <li><a href="#">Au Cheval</a></li>
+    <li><a href="#">Bistro Dre</a></li>
+    <li><a href="#">Boiler Room</a></li>
+    <li><a href="#">Coalfire</a></li>
+    <li><a href="#">Flo</a></li>
+    <li><a href="#">Old Oak Tap</a></li>
+    <li><a href="#">Piece</a></li>
+    <li><a href="#">Peaquod’s</a></li>
+    <li><a href="#">Red Door</a></li>
+    <li><a href="#">Ruxbin</a></li>
+    <li><a href="#">Via Carducci La Sorella</a></li>
   </ul>
 </section>
 
@@ -71,13 +71,13 @@ layout: default
   <span class="ephemera counter-clockwise look">Look nice today</span>
 
   <ul>
-    <li>Apartment No. 9</li>
-    <li>Independence</li>
-    <li>Museum of Contemporary Art Gift Shop</li>
-    <li>Quimby’s</li>
-    <li>Threadless</li>
-    <li>Trunk Club</li>
-    <li>Una Maes</li>
+    <li><a href="#">Apartment No. 9</a></li>
+    <li><a href="#">Independence</a></li>
+    <li><a href="#">Museum of Contemporary Art Gift Shop</a></li>
+    <li><a href="#">Quimby’s</a></li>
+    <li><a href="#">Threadless</a></li>
+    <li><a href="#">Trunk Club</a></li>
+    <li><a href="#">Una Maes</a></li>
   </ul>
 </section>
 
@@ -88,7 +88,7 @@ layout: default
   <ul>
     {% for friend in site.data.friends %}
       {% if friend.location == "Chicago" %}
-        <li><a href="{{ friend.url }}">{{ friend.name }}</a></li>
+        <li><a href="#"><a href="{{ friend.url }}">{{ friend.name }}</a</a>></li>
       {% endif %}
     {% endfor %}
   </ul>

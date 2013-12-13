@@ -26,6 +26,19 @@ body.chicago {
     section h2 { margin-bottom: .5em; }
 
     section.work {
+      margin-left: 33.333%;
+      width: 50%;
+    }
+
+    section.bars {
+      margin-bottom: 8em;
+      width: 50%;
+    }
+
+    section.restaurants { margin-left: 50%; }
+
+    section.stores {
+      margin-bottom: 10em;
       margin-left: 16.667%;
       width: 50%;
     }
@@ -55,6 +68,17 @@ body.chicago {
       @include backface-visibility;
       @include transform-origin(left top);
       right: -10em;
+      bottom: -2em;
+    }
+
+    .ephemera.make {
+      bottom: -4em;
+      right: 0;
+      width: 180px;
+    }
+
+    .ephemera.look {
+      right: 5%;
       bottom: -2em;
     }
   }

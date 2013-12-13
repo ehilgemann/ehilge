@@ -125,6 +125,29 @@ body.about {
   body.about {
     .content section {
       .ephemera { display: block; }
+
+      .midwest {
+        bottom: 15em;
+        left: 15%;
+      }
+
+      .give {
+        @include transform-origin(left top);
+        right: -20em;
+        top: 0;
+      }
+
+      .slash {
+        left: 30%;
+        top: 5%;
+      }
+
+      .nice {
+        bottom: 12%;
+        left: 55%;
+      }
+
+      .est { bottom: 5em; }
     }
 
     section.portrait {
@@ -265,27 +288,3 @@ body.about {
     }
   }
 }
-
-// Ephemera ————————————————————————————————————— /
-#midwest {
-  bottom: 15em;
-  left: 15%;
-}
-
-#give {
-  @include transform-origin(left top);
-  right: -20em;
-  top: 0;
-}
-
-#slash {
-  left: 30%;
-  top: 5%;
-}
-
-#nice {
-  bottom: 12%;
-  left: 55%;
-}
-
-#est { bottom: 5em; }

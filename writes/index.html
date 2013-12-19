@@ -31,23 +31,27 @@ layout: default
   {% for essay in site.categories.writes %}
     {% if essay.svn %}
       <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
-        <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a>
-        {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
-        <p>
-          <small data-reading-time></small>
-          <small class="svn mobile">SvN</small>
-          <small class="svn desktop">Written on Signal vs. Noise</small>
-          <small>{{ essay.date | date: "%B %Y" }}</small>
-        </p>
+        <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">
+          <h2>{{ essay.title }}</h2>
+          <p>{{ essay.preview }}</p>
+          <p>
+            <small data-reading-time></small>
+            <small class="svn mobile">SvN</small>
+            <small class="svn desktop">Written on Signal vs. Noise</small>
+            <small>{{ essay.date | date: "%B %Y" }}</small>
+          </p>
+        </a>
       </li>
     {% else %}
       <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
-        <a href="{{ essay.url }}">{{ essay.title }}</a>
-        {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
-        <p>
-          <small data-reading-time></small>
-          <small>{{ essay.date | date: "%B %Y" }}</small>
-        </p>
+        <a href="{{ essay.url }}">
+          <h2>{{ essay.title }}</h2>
+          <p>{{ essay.preview }}</p>
+          <p>
+            <small data-reading-time></small>
+            <small>{{ essay.date | date: "%B %Y" }}</small>
+          </p>
+        </a>
       </li>
     {% endif %}
   {% endfor %}

@@ -1,10 +1,5 @@
 body.writes {
 
-  h1 {
-    @include border-box;
-    padding: 0 .35em;
-  }
-
   p a:link {
     color: $color-link;
     text-decoration: underline;
@@ -14,32 +9,36 @@ body.writes {
   aside.sidebar { display: none; }
 
   section.essays {
-    @include border-box;
-    padding: 0 .5em;
+
+    ul { margin-top: 2em; }
 
     li {
-      margin-bottom: 2.5em;
+      margin-bottom: 2em;
 
       a {
-        color: #333;
-        display: block;
-        font-size: 1.25em;
-        margin-bottom: .1em;
+        margin: 0;
+        padding: 0;
         text-decoration: none;
 
         &:visited { color: #888; }
-        &:hover {
-          color: $color-link-hover;
-          text-decoration: underline;
-        }
+        &:hover { color: $color-link-hover; }
       }
 
-      p {
+      a h2 {
+        color: #333;
+        display: inline-block;
+        font-size: 1.25em;
+        margin-bottom: .35em;
+        text-decoration: underline;
+      }
+
+      a p {
+        color: #666;
         line-height: 1.2em;
         margin-bottom: .25em;
       }
 
-      small {
+      a small {
         color: #999;
         display: inline-block;
         font-family: $font-sans;
@@ -49,14 +48,14 @@ body.writes {
         &:last-child:after { content: ""; }
       }
 
-      small.svn {
+      a small.svn {
         background: url('/assets/images/icons/signals.png') 0 0 no-repeat;
         background-size: 16px 16px;
         padding-bottom: .25em;
         padding-left: 1.5em;
       }
 
-      small.desktop { display: none; }
+      a small.desktop { display: none; }
     }
   }
 }
@@ -68,7 +67,6 @@ body.writes {
     h1 {
       margin-bottom: 1em;
       margin-left: 33.333%;
-      padding: 0;
       width: 50%;
     }
 
@@ -144,20 +142,26 @@ body.writes {
       width: 66.668%;
 
       ul {
-        margin-top: -.5em;
+        margin-top: -.35em;
       }
 
-      li a {
-        font-size: 1.75em;
+      li a h2 {
+        font-size: 1.5em;
         letter-spacing: -1px;
         line-height: 1.1em;
+        text-decoration: none;
       }
 
-      li p { margin: 0 0 .25em; }
+      a p { margin: 0 0 .25em; }
 
-      li small.mobile { display: none; }
-      li small.desktop { display: inline; }
-      li small.svn {
+      a:hover h2,
+      a:hover p {
+        color: $color-link-hover;
+      }
+
+      li a small.mobile { display: none; }
+      li a small.desktop { display: inline; }
+      li a small.svn {
         padding-top: .2em;
       }
     }

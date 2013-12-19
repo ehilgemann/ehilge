@@ -16,13 +16,12 @@ body.about {
 
     figure {
       margin: 0 auto;
-      width: 75%;
+      width: 100%;
     }
 
     figcaption { display: none; }
 
     img {
-      @include border-radius(50%);
       height: auto;
       width: 100%;
     }
@@ -65,6 +64,10 @@ body.about {
       }
 
       span + span:before { content: "/ "; }
+    }
+
+    article.print li {
+      margin-bottom: .5em;
     }
   }
 }

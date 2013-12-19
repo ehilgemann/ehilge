@@ -1,38 +1,31 @@
 body.essay {
 
-  .content {
-    @include animate(fade-in-up .5s both);
-  }
+  .content { @include animate(fade-in-up .5s both); }
 
-  article {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 30px;
-    max-width: 580px;
-    width: 100%;
+  h1 { color: #333; }
 
-    h1 {
-      font-size: 2.5em;
-      letter-spacing: -2px;
-      line-height: 36px;
-      margin-bottom: 20px;
-    }
+  article li {
+    padding-left: 1em;
+    margin-bottom: 1em;
+    position: relative;
 
-    h2 {
-      font-size: 1.75em;
-      margin-bottom: .25em;
-    }
-
-    p {
+    &:before {
+      content: "•";
       color: #333;
-      margin-bottom: 15px;
-    }
-
-    li {
-      list-style: disc;
-      margin-bottom: 1em;
+      position: absolute;
+      left: 0;
     }
   }
+
+  article img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  article p {
+    margin-bottom: 1.5em;
+  }
+
 
   .twitter-tweet {
     position: relative;
@@ -45,5 +38,14 @@ body.essay {
 @include responsive-break-point(640px) {
   body.essay {
 
+    article {
+      margin-left: 16.667%;
+      width: 66.667%;
+    }
+
+    article p, article li {
+      font-size: 1.1em;
+      line-height: 1.75em;
+    }
   }
 }

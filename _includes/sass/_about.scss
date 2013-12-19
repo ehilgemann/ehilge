@@ -101,6 +101,11 @@ body.about {
         width: 83.335%;
       }
 
+      p {
+        font-size: 1.1em;
+        line-height: 1.75em;
+      }
+
       article.short {
         margin-bottom: 10em;
 
@@ -133,7 +138,7 @@ body.about {
 
       .give {
         @include transform-origin(left top);
-        right: -20em;
+        right: -30em;
         top: 0;
       }
 
@@ -190,11 +195,6 @@ body.about {
     section.biography {
       position: relative;
 
-      p {
-        font-size: 1.1rem;
-        line-height: 1.75em;
-      }
-
       .portrait-thumbnails {
         display: block;
         position: absolute;
@@ -235,12 +235,7 @@ body.about {
     section.teaching {
       margin-left: 16.667%;
       position: relative;
-      width: 66.668%;
-
-      p {
-        font-size: 1.1rem;
-        line-height: 1.75em;
-      }
+      width: 50%;
     }
 
     section.public {

@@ -242,7 +242,7 @@ body.about {
       @include clearfix;
       position: relative;
 
-      li { font-family: $font-alto; }
+      li { font-family: $font-sans; }
     }
 
     article.speaking {
@@ -256,7 +256,7 @@ body.about {
 
       span {
         color: #BBB;
-        font-family: $font-alto;
+        font-family: $font-sans;
         font-size: .9rem;
         margin-top: .25rem;
       }

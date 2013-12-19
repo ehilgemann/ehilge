@@ -1,6 +1,9 @@
 body.writes {
 
-  h1 { text-align: center; }
+  h1 {
+    @include border-box;
+    padding: 0 .35em;
+  }
 
   p a:link {
     color: $color-link;
@@ -12,21 +15,23 @@ body.writes {
 
   section.essays {
     @include border-box;
-    padding: 0 1em;
-    text-align: center;
+    padding: 0 .5em;
 
     li {
       margin-bottom: 2.5em;
 
       a {
-        color: #444;
+        color: #333;
         display: block;
-        font-size: 1.5em;
-        margin-bottom: .25em;
-        text-decoration: underline;
+        font-size: 1.25em;
+        margin-bottom: .1em;
+        text-decoration: none;
 
         &:visited { color: #888; }
-        &:hover { color: $color-link-hover; }
+        &:hover {
+          color: $color-link-hover;
+          text-decoration: underline;
+        }
       }
 
       p {
@@ -37,31 +42,22 @@ body.writes {
       small {
         color: #999;
         display: inline-block;
-        font-family: $font-alto;
+        font-family: $font-sans;
         font-size: .8em;
-        margin-right: .5em;
+
+        &:after { content: " — "; }
+        &:last-child:after { content: ""; }
       }
 
       small.svn {
-        background: url('/assets/images/icons/signals.png') 0 2px no-repeat;
+        background: url('/assets/images/icons/signals.png') 0 0 no-repeat;
         background-size: 16px 16px;
+        padding-bottom: .25em;
         padding-left: 1.5em;
       }
+
+      small.desktop { display: none; }
     }
-  }
-}
-
-// Mobile Landscape ————————————————————————————————————— /
-@include responsive-break-point(480px) {
-  body.writes {
-
-  }
-}
-
-// iPad ————————————————————————————————————— /
-@include responsive-break-point(640px) {
-  body.writes {
-
   }
 }
 
@@ -72,7 +68,7 @@ body.writes {
     h1 {
       margin-bottom: 1em;
       margin-left: 33.333%;
-      text-align: left;
+      padding: 0;
       width: 50%;
     }
 
@@ -109,16 +105,14 @@ body.writes {
       }
 
       div.toggles {
-        font-family: $font-alto;
+        font-family: $font-sans;
         margin-bottom: 3em;
 
-        ul.checkboxes li {
+        ul.radios {
           border-bottom: 1px solid #CCC;
-          display: inline-block;
-          margin-top: .5em;
+          margin-top: 1em;
           margin-bottom: .75em;
-          padding-bottom: .5em;
-          min-width: 140px;
+          width: 140px;
         }
 
         li {
@@ -147,7 +141,6 @@ body.writes {
     section.essays {
       float: right;
       padding: 0;
-      text-align: left;
       width: 66.668%;
 
       ul {
@@ -155,30 +148,18 @@ body.writes {
       }
 
       li a {
-        font-size: 2em;
-        letter-spacing: -2px;
+        font-size: 1.75em;
+        letter-spacing: -1px;
         line-height: 1.1em;
-        margin-bottom: .1em;
       }
 
       li p { margin: 0 0 .25em; }
 
-      p a:link { text-decoration: underline; }
+      li small.mobile { display: none; }
+      li small.desktop { display: inline; }
+      li small.svn {
+        padding-top: .2em;
+      }
     }
-  }
-}
-
-// Long Browser ————————————————————————————————————— /
-@include responsive-break-point(1000px) {
-  body.writes {
-
-    section.essays li a { font-size: 2.5em; }
-  }
-}
-
-// Longer Browser ————————————————————————————————————— /
-@include responsive-break-point(1280px) {
-  body.writes {
-
   }
 }

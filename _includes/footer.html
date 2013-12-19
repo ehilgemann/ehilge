@@ -50,7 +50,7 @@
       <li{% if page.class == "portfolio" %} class="active"{% endif %}><a href="/makes">Work</a></li>
       <li{% if page.class == "writes" %} class="active"{% endif %}><a href="/writes">Writing</a></li>
       <li{% if page.class == "thinks" %} class="active"{% endif %}><a href="/thinks">Thoughts</a></li>
-      <li{% if page.class == "loves" %} class="active"{% endif %}><a href="/loves">Resources</a></li>
+      <li class="hide-from-mobile{% if page.class == "loves" %} active{% endif %}"><a href="/loves">Resources</a></li>
     </ul>
 
     <a href="/loves/chicago" class="chicago">

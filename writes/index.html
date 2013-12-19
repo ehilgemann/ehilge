@@ -9,17 +9,17 @@ layout: default
 <aside class="sidebar">
   <div class="toggles">
     <h3>Read by</h3>
-    <ul class="checkboxes">
-      <li data-essay-filter="favorites"><span class="check"></span> Just my favorites</li>
-    </ul>
-
     <ul class="radios">
       <li data-essay-filter="recent" class="selected"><span class="radio"></span> Newest first</li>
       <li data-essay-filter="shortest"><span class="radio"></span> Shortest first</li>
     </ul>
+
+    <ul class="checkboxes">
+      <li data-essay-filter="favorites"><span class="check"></span> Most popular</li>
+    </ul>
   </div>
 
-  <h3>Shorter form</h3>
+  <h3>Short form</h3>
   <ul class="shortform">
     <li><a href="/thinks" title="Half-baked ideas">Stream of thoughts</a></li>
     <li><a href="http://twitter.com/migreyes">Twitter</a></li>
@@ -35,18 +35,23 @@ layout: default
         {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
         <p>
           <small data-reading-time></small>
-          <small class="svn">Written on Signal vs. Noise</small>
+          <small class="svn mobile">SvN</small>
+          <small class="svn desktop">Written on Signal vs. Noise</small>
+          <small>{{ essay.date | date: "%B %Y" }}</small>
         </p>
       </li>
     {% else %}
       <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
         <a href="{{ essay.url }}">{{ essay.title }}</a>
         {% if essay.preview %}<p>{{ essay.preview }}</p>{% endif %}
-        <p><small data-reading-time></small></p>
+        <p>
+          <small data-reading-time></small>
+          <small>{{ essay.date | date: "%B %Y" }}</small>
+        </p>
       </li>
     {% endif %}
   {% endfor %}
   </ul>
 
-  <p>That’s it for now. I also keep a <a href="/thinks">stream of thoughts</a> and share <a href="http://twitter.com/migreyes" title="Follow me on Twitter">think out loud on Twitter</a>.</p>
+  <p>That’s it for now. I also keep a <a href="/thinks">stream of thoughts</a> and <a href="http://twitter.com/migreyes" title="Follow me on Twitter">think out loud on Twitter</a>.</p>
 </section>

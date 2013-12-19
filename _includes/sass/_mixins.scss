@@ -100,9 +100,8 @@ $color-link-visited: #bbc9d4;
   -webkit-font-smoothing: $attr;
 }
 
-$font-alto: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
-$font-tisa: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
-$font-chronicle: 'Chronicle SSm A', 'Chronicle SSm B', Georgia, Times, serif;
+$font-sans: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
+$font-serif: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
 
 // Media Queries ------------------------------------- *
 @mixin responsive-break-point($media) {

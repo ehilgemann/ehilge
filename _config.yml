@@ -4,7 +4,7 @@ author: Mig Reyes
 description: Mig is a designer at 37signals focused on making good things for good people.
 
 
-source: .
+source: ./_source
 destination: public
 exclude: [_drafts, _site, public, Gemfile, Gemfile.lock, Rakefile, README.md]
 

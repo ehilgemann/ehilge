@@ -10,12 +10,12 @@ layout: default
   <div class="toggles">
     <h3>Read by</h3>
     <ul class="radios">
-      <li data-essay-filter="recent" class="selected"><span class="radio"></span> Newest first</li>
-      <li data-essay-filter="shortest"><span class="radio"></span> Shortest first</li>
+      <li data-essay-filter="recent" class="selected"><span class="radio">&nbsp;</span> Newest first</li>
+      <li data-essay-filter="shortest"><span class="radio">&nbsp;</span> Shortest first</li>
     </ul>
 
     <ul class="checkboxes">
-      <li data-essay-filter="favorites"><span class="check"></span> Most popular</li>
+      <li data-essay-filter="favorites"><span class="check">&nbsp;</span> Most popular</li>
     </ul>
   </div>
 
@@ -35,7 +35,7 @@ layout: default
           <h2>{{ essay.title }}</h2>
           <p>{{ essay.preview }}</p>
           <p>
-            <small data-reading-time></small>
+            <small data-reading-time>&nbsp;</small>
             <small class="svn mobile">SvN</small>
             <small class="svn desktop">Written on Signal vs. Noise</small>
             <small>{{ essay.date | date: "%B %Y" }}</small>
@@ -48,7 +48,7 @@ layout: default
           <h2>{{ essay.title }}</h2>
           <p>{{ essay.preview }}</p>
           <p>
-            <small data-reading-time></small>
+            <small data-reading-time>&nbsp;</small>
             <small>{{ essay.date | date: "%B %Y" }}</small>
           </p>
         </a>

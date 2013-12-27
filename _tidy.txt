@@ -8,7 +8,7 @@ new-empty-tags: cfelse, span
 new-inline-tags: cfif, cfelse, math, mroot,
   mrow, mi, mn, mo, msqrt, mfrac, msubsup, munderover,
   munder, mover, mmultiscripts, msup, msub, mtext,
-  mprescripts, mtable, mtr, mtd, mth
+  mprescripts, mtable, mtr, mtd, mth, span
 output-html: yes
 output-xml: no
 tidy-mark: no

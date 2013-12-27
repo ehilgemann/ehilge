@@ -72,17 +72,3 @@ body.home {
     }
   }
 }
-
-// Tablet ————————————————————————————————————— /
-@include responsive-break-point(768px) {
-  body.home {
-
-  }
-}
-
-// Long Browser ————————————————————————————————————— /
-@include responsive-break-point(1280px) {
-  body.home {
-
-  }
-}

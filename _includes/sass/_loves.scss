@@ -146,17 +146,3 @@ body.loves {
     }
   }
 }
-
-// Tablet ————————————————————————————————————— /
-@include responsive-break-point(768px) {
-  body.loves {
-
-  }
-}
-
-// Long Browser ————————————————————————————————————— /
-@include responsive-break-point(1280px) {
-  body.loves {
-
-  }
-}

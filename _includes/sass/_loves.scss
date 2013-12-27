@@ -5,13 +5,6 @@ body.loves {
   .ephemera { display: none; }
 }
 
-// Mobile Landscape ————————————————————————————————————— /
-@include responsive-break-point(480px) {
-  body.loves {
-
-  }
-}
-
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
   body.loves {
@@ -26,6 +19,7 @@ body.loves {
     section.chicago {
       margin-bottom: 8em;
       margin-left: 16.667%;
+      position: relative;
       width: 50%;
 
       a { text-decoration: underline; }
@@ -133,6 +127,11 @@ body.loves {
 
     // Ephemera
     .ephemera { display: block; }
+
+    span.chicago {
+      bottom: -10%;
+      right: -50%;
+    }
 
     span.company {
       bottom: -12em;

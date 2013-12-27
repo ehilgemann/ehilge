@@ -7,13 +7,6 @@ body.home {
   article a:visited { color: $color-link; }
 }
 
-// Mobile Landscape ————————————————————————————————————— /
-@include responsive-break-point(480px) {
-  body.home {
-
-  }
-}
-
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
   body.home {
@@ -56,8 +49,8 @@ body.home {
 
       article.write a { font-style: italic; }
 
-      article.believe,
-      article.write {
+      article.make,
+      article.believe {
         margin-left: 33.333%;
         margin-right: 2%;
       }

@@ -4,7 +4,7 @@ doctype: html5
 input-xml: no
 literal-attributes: yes
 new-blocklevel-tags: cfoutput, cfquery
-new-empty-tags: cfelse
+new-empty-tags: cfelse, span
 new-inline-tags: cfif, cfelse, math, mroot,
   mrow, mi, mn, mo, msqrt, mfrac, msubsup, munderover,
   munder, mover, mmultiscripts, msup, msub, mtext,
@@ -28,4 +28,6 @@ wrap: 0
 wrap-attributes: 0
 
 // Diagnostics
-show-warnings: yes
+quiet: yes
+show-info: no
+show-warnings: no

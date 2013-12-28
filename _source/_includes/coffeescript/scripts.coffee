@@ -35,5 +35,4 @@ $ ->
         escapable()
         closeProject()
 
-  # responsivePSA()
-  # responsiveTest()
+  responsivePSA()

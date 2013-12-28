@@ -833,6 +833,10 @@ body.portfolio {
         margin-bottom: -1em; }
     body.portfolio div.project.lyt figure {
       width: 31.333%; }
+    body.portfolio div.project.tshirt {
+      width: 50%; }
+    body.portfolio div.project.promo {
+      width: 66.667%; }
     body.portfolio div.project .details {
       width: 100%; }
     body.portfolio div.project img {

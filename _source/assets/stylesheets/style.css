@@ -769,101 +769,83 @@ body.about section.public article.print li {
   body.about section.colophon {
     margin: 2rem 0 10rem 50%;
     width: 50%; } }
-body.portfolio {
-  -webkit-animation: fade-to-grey 1s both;
-  -moz-animation: fade-to-grey 1s both;
-  -ms-animation: fade-to-grey 1s both;
-  -o-animation: fade-to-grey 1s both;
-  animation: fade-to-grey 1s both;
-  border-top-color: black;
-  background: #999; }
-  body.portfolio header#top a {
-    color: black; }
-  body.portfolio h1 {
-    color: black;
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: -.05em; }
-  body.portfolio aside.toggles {
-    position: relative;
-    height: 30px;
-    margin-top: -2em; }
-    body.portfolio aside.toggles button {
-      display: none;
-      position: absolute;
-      left: 0;
-      top: -2em; }
-  body.portfolio section.projects {
-    min-height: 1200px;
+body.portfolio h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: -.05em; }
+body.portfolio aside.toggles {
+  position: relative;
+  height: 30px;
+  margin-top: -2em; }
+  body.portfolio aside.toggles button {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: -2em; }
+body.portfolio section.projects {
+  min-height: 1200px;
+  width: 100%; }
+body.portfolio div.project {
+  display: inline-block;
+  margin-bottom: 4em;
+  position: relative;
+  vertical-align: top; }
+  body.portfolio div.project h1 {
+    display: none; }
+  body.portfolio div.project .thumbnail, body.portfolio div.project h3, body.portfolio div.project p, body.portfolio div.project figure, body.portfolio div.project .details {
+    display: inline-block; }
+  body.portfolio div.project.poster {
+    width: 30%; }
+  body.portfolio div.project.website {
+    width: 30%; }
+  body.portfolio div.project span.chrome-title {
+    -webkit-border-radius: 3px 3px 0 0;
+    -moz-border-radius: 3px 3px 0 0;
+    -o-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    border: 1px solid #CCC;
+    border-bottom: none;
+    background: #CCC;
+    display: block;
+    font-family: "Lucida Grande", Helvetica;
+    font-size: .8em;
+    height: 25px;
+    text-align: center;
+    text-shadow: 0 1px 1px white; }
+  body.portfolio div.project figure.chrome {
+    border: 1px solid #666;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative; }
+    body.portfolio div.project figure.chrome img {
+      margin-bottom: -1em; }
+  body.portfolio div.project.lyt figure {
+    width: 45%; }
+  body.portfolio div.project.tshirt {
+    width: 50%; }
+  body.portfolio div.project.promo {
     width: 100%; }
-  body.portfolio div.project {
-    display: inline-block;
-    margin-bottom: 2em;
-    position: relative;
-    vertical-align: top; }
-    body.portfolio div.project h1 {
-      display: none; }
-    body.portfolio div.project .thumbnail, body.portfolio div.project h3, body.portfolio div.project p, body.portfolio div.project figure, body.portfolio div.project .details {
-      display: inline-block; }
-    body.portfolio div.project.poster {
-      width: 30%; }
-    body.portfolio div.project.website {
-      width: 30%; }
-    body.portfolio div.project span.chrome-title {
-      -webkit-border-radius: 3px 3px 0 0;
-      -moz-border-radius: 3px 3px 0 0;
-      -o-border-radius: 3px 3px 0 0;
-      border-radius: 3px 3px 0 0;
-      border: 1px solid #CCC;
-      border-bottom: none;
-      background: #CCC;
+  body.portfolio div.project .details {
+    width: 100%; }
+  body.portfolio div.project img {
+    height: auto;
+    width: 100%; }
+body.portfolio footer {
+  margin-bottom: 0;
+  padding-bottom: 3em; }
+  body.portfolio footer .contact-inline {
+    text-align: center; }
+    body.portfolio footer .contact-inline p {
+      display: inline;
+      margin: 0 1rem; }
+    body.portfolio footer .contact-inline small {
       display: block;
-      font-family: "Lucida Grande", Helvetica;
-      font-size: .8em;
-      height: 25px;
-      text-align: center;
-      text-shadow: 0 1px 1px white; }
-    body.portfolio div.project figure.chrome {
-      border: 1px solid #666;
-      height: 200px;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      position: relative; }
-      body.portfolio div.project figure.chrome img {
-        margin-bottom: -1em; }
-    body.portfolio div.project.lyt figure {
-      width: 31.333%; }
-    body.portfolio div.project.tshirt {
-      width: 50%; }
-    body.portfolio div.project.promo {
-      width: 100%; }
-    body.portfolio div.project .details {
-      width: 100%; }
-    body.portfolio div.project img {
-      height: auto;
-      width: 100%; }
-  body.portfolio footer {
-    margin-bottom: 0;
-    padding-bottom: 3em; }
-    body.portfolio footer a {
-      color: white; }
-    body.portfolio footer .contact-inline {
-      text-align: center; }
-      body.portfolio footer .contact-inline p {
-        display: inline;
-        margin: 0 1rem; }
-      body.portfolio footer .contact-inline small {
-        color: #666;
-        display: block;
-        font-size: .65rem;
-        font-weight: bold;
-        letter-spacing: .2rem;
-        margin-top: .5rem;
-        text-transform: uppercase; }
-    body.portfolio footer .chicago p {
-      border-bottom-color: #999; }
-    body.portfolio footer .chicago:hover p {
-      color: #EEE; }
+      font-size: .65rem;
+      font-weight: bold;
+      letter-spacing: .2rem;
+      margin-top: .5rem;
+      text-transform: uppercase; }
 
 @media only screen and (min-width: 640px) {
   body.portfolio h1 {

@@ -14,7 +14,7 @@ $ ->
   $headline = $('[data-project-header]')
   $closeButton = $('[data-behavior="close"]')
 
-  $('[data-project]').click ->
+  $('[data-project-DISABLED]').click ->
     # Update Headline
     $projectName = $(this).find('h1').text()
     $headline.text $projectName

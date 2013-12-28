@@ -157,7 +157,7 @@ $(function() {
   var $closeButton, $headline;
   $headline = $('[data-project-header]');
   $closeButton = $('[data-behavior="close"]');
-  $('[data-project]').click(function() {
+  $('[data-project-DISABLED]').click(function() {
     var $details, $project, $projectName, $url;
     $projectName = $(this).find('h1').text();
     $headline.text($projectName);

@@ -792,42 +792,70 @@ body.portfolio div.project {
   vertical-align: top; }
   body.portfolio div.project h1 {
     display: none; }
-  body.portfolio div.project .thumbnail, body.portfolio div.project h3, body.portfolio div.project p, body.portfolio div.project figure, body.portfolio div.project .details {
+  body.portfolio div.project figure {
     display: inline-block; }
   body.portfolio div.project.poster {
     width: 30%; }
-  body.portfolio div.project.website {
-    width: 30%; }
-  body.portfolio div.project span.chrome-title {
-    -webkit-border-radius: 3px 3px 0 0;
-    -moz-border-radius: 3px 3px 0 0;
-    -o-border-radius: 3px 3px 0 0;
-    border-radius: 3px 3px 0 0;
-    border: 1px solid #CCC;
-    border-bottom: none;
-    background: #CCC;
-    display: block;
-    font-family: "Lucida Grande", Helvetica;
-    font-size: .8em;
-    height: 25px;
-    text-align: center;
-    text-shadow: 0 1px 1px white; }
-  body.portfolio div.project figure.chrome {
-    border: 1px solid #666;
-    height: 200px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    position: relative; }
-    body.portfolio div.project figure.chrome img {
-      margin-bottom: -1em; }
   body.portfolio div.project.lyt figure {
     width: 45%; }
   body.portfolio div.project.tshirt {
     width: 50%; }
   body.portfolio div.project.promo {
     width: 100%; }
-  body.portfolio div.project .details {
-    width: 100%; }
+  body.portfolio div.project.website {
+    width: 50%; }
+    body.portfolio div.project.website span.chrome-title {
+      -webkit-border-radius: 3px 3px 0 0;
+      -moz-border-radius: 3px 3px 0 0;
+      -o-border-radius: 3px 3px 0 0;
+      border-radius: 3px 3px 0 0;
+      background: #eeeeee;
+      background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+      background: -webkit-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+      background: -o-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+      background: -ms-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+      background: linear-gradient(to bottom, #eeeeee 0%, #cccccc 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+      border: 1px solid #CCC;
+      border-bottom-color: #999;
+      display: block;
+      font-family: "Lucida Grande", Helvetica;
+      font-size: .7em;
+      height: 25px;
+      position: relative;
+      text-align: center;
+      text-shadow: 0 1px 1px white;
+      z-index: 1000; }
+    body.portfolio div.project.website figure.chrome {
+      -webkit-border-radius: 0 0 3px 3px;
+      -moz-border-radius: 0 0 3px 3px;
+      -o-border-radius: 0 0 3px 3px;
+      border-radius: 0 0 3px 3px;
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+      -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+      -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
+      border: 1px solid #CCC;
+      height: 400px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: relative; }
+      body.portfolio div.project.website figure.chrome img {
+        margin-bottom: -1em; }
+    body.portfolio div.project.website b {
+      font-size: 1.25em;
+      position: absolute;
+      text-align: left; }
+      body.portfolio div.project.website b.red {
+        color: #ea4d45;
+        left: .25em; }
+      body.portfolio div.project.website b.yellow {
+        color: #f5b958;
+        left: 1em; }
+      body.portfolio div.project.website b.green {
+        color: #7fb15e;
+        left: 1.75em; }
   body.portfolio div.project img {
     height: auto;
     width: 100%; }

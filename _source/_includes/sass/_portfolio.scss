@@ -57,41 +57,12 @@ body.portfolio {
       display: none;
     }
 
-    .thumbnail, h3, p, figure, .details {
+    figure {
       display: inline-block;
     }
 
     &.poster {
       width: 30%;
-    }
-
-    &.website {
-      width: 30%;
-    }
-
-    span.chrome-title {
-      @include border-radius(3px 3px 0 0);
-      border: 1px solid #CCC;
-      border-bottom: none;
-      background: #CCC;
-      display: block;
-      font-family: "Lucida Grande", Helvetica;
-      font-size: .8em;
-      height: 25px;
-      text-align: center;
-      text-shadow: 0 1px 1px white;
-    }
-
-    figure.chrome {
-      border: 1px solid #666;
-      height: 200px;
-      overflow-x: hidden;
-      overflow-y: scroll;
-      position: relative;
-
-      img {
-        margin-bottom: -1em;
-      }
     }
 
     &.lyt figure {
@@ -106,7 +77,66 @@ body.portfolio {
       width: 100%;
     }
 
-    .details { width: 100%; }
+    &.website {
+      width: 50%;
+
+      span.chrome-title {
+        @include border-radius(3px 3px 0 0);
+        background: #eeeeee;
+        background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
+        background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+        background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+        background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+        background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+        border: 1px solid #CCC;
+        border-bottom-color: #999;
+        display: block;
+        font-family: "Lucida Grande", Helvetica;
+        font-size: .7em;
+        height: 25px;
+        position: relative;
+        text-align: center;
+        text-shadow: 0 1px 1px white;
+        z-index: 1000;
+      }
+
+      figure.chrome {
+        @include border-radius(0 0 3px 3px);
+        @include box-shadow(0 0 5px rgba(0,0,0,.35));
+        border: 1px solid #CCC;
+        height: 400px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        position: relative;
+
+        img {
+          margin-bottom: -1em;
+        }
+      }
+
+      b {
+        font-size: 1.25em;
+        position: absolute;
+        text-align: left;
+
+        &.red {
+          color: #ea4d45;
+          left: .25em;
+        }
+
+        &.yellow {
+          color: #f5b958;
+          left: 1em;
+        }
+
+        &.green {
+          color: #7fb15e;
+          left: 1.75em;
+        }
+      }
+    }
 
     img {
       height: auto;

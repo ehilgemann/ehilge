@@ -12,6 +12,83 @@ body.portfolio {
     letter-spacing: -.05em;
   }
 
+  aside.toggles {
+    position: relative;
+    height: 30px;
+    margin-top: -2em;
+
+    button {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: -2em;
+    }
+  }
+
+  section.projects {
+    min-height: 1200px;
+    width: 100%;
+  }
+
+  div.project {
+    display: inline-block;
+    margin-bottom: 2em;
+    position: relative;
+    vertical-align: top;
+
+    h1 {
+      display: none;
+    }
+
+    .thumbnail, h3, p, figure, .details {
+      display: inline-block;
+    }
+
+    &.poster {
+      width: 30%;
+    }
+
+    &.website {
+      width: 30%;
+    }
+
+    span.chrome-title {
+      @include border-radius(3px 3px 0 0);
+      border: 1px solid #CCC;
+      border-bottom: none;
+      background: #CCC;
+      display: block;
+      font-family: "Lucida Grande", Helvetica;
+      font-size: .8em;
+      height: 25px;
+      text-align: center;
+      text-shadow: 0 1px 1px white;
+    }
+
+    figure.chrome {
+      border: 1px solid #666;
+      height: 200px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: relative;
+
+      img {
+        margin-bottom: -1em;
+      }
+    }
+
+    &.lyt figure {
+      width: 31.333%;
+    }
+
+    .details { width: 100%; }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
   footer {
     margin-bottom: 0;
     padding-bottom: 3em;
@@ -42,41 +119,6 @@ body.portfolio {
   }
 }
 
-aside.toggles {
-  position: relative;
-  height: 30px;
-  margin-top: -2em;
-
-  button {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: -2em;
-  }
-}
-
-section.projects {
-  min-height: 1200px;
-  width: 100%;
-}
-
-div.project {
-  position: relative;
-  width: 100%;
-
-  h1 { display: none; }
-
-  .thumbnail, h3, p, figure, .details {
-    display: inline-block;
-  }
-
-  .details { width: 100%; }
-
-  img {
-    height: auto;
-    width: 100%;
-  }
-}
 
 // iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
@@ -87,19 +129,4 @@ div.project {
       margin-top: 2rem;
     }
   }
-}
-
-// MOVE THIS SHIT OUT LATER
-
-// Blog Wars
-div.project.blog-wars {
-
-  h3, p { width: 30%; }
-
-  .thumbnail {
-    margin-left: 33.333%;
-    width: 31.333%;
-  }
-
-  .details figure { width: 30%; }
 }

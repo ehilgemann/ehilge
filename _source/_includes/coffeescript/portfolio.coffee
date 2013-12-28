@@ -11,7 +11,6 @@ closeProject = ->
 
 $ ->
   # Setup objects
-  $projects = $('[data-behavior="project"]')
   $headline = $('[data-project-header]')
   $closeButton = $('[data-behavior="close"]')
 

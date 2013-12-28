@@ -1,10 +1,3 @@
-parallax = (element, direction, start, stop, rate) ->
-  $(window).on 'scroll', ->
-    position = document.body.scrollTop
-
-    if position >= start and position <= stop
-      element.css direction, ($(window).scrollTop() * rate)
-
 swapBio = (bio) ->
   $bio = $('section.biography')
   $bio.find('article:not(bio)').fadeOut ->

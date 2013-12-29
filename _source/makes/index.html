@@ -5,26 +5,31 @@ class: portfolio
 layout: portfolio
 ---
 
-<aside class="toggles">
-  <button data-behavior="close">All projects</button>
-</aside>
-
 <section class="projects">
 
-  <div class="project tshirt chicago" data-project>
-    <h1>Google Test Project</h1>
-    <figure class="thumbnail">
-      <img src="/makes/united-pixelworkers/chicago.jpg">
+  <article class="project tshirt united-pixelworkers" data-project="united-pixelworkers">
+    <figure>
+      <img src="/makes/united-pixelworkers/pizza.jpg">
     </figure>
-  </div>
 
-  <div class="project poster blog-wars" data-project>
-    <h1>Blog Wars</h1>
-    <figure class="thumbnail">
+    <blockquote>
+      <h3>United Pixelworkers T-Shirt</h3>
+      <p>United Pixelworkers asked me to <a href="http://www.unitedpixelworkers.com/products/chicago-mig-reyes" target="_blank">contribute a design</a> to their Local 312 series. An homage to my home town and the world’s most perfect food.</p>
+    </blockquote>
+  </article>
+
+  <article class="project poster blog-wars" data-project="blog-wars">
+    <figure>
       <img src="/makes/blog-wars/blog_wars.gif">
     </figure>
-  </div>
 
+    <blockquote>
+      <h3>Blog Wars</h3>
+      <p>Experimental type as part of a series of posters for a monthly DJ event.</p>
+    </blockquote>
+  </article>
+
+{% comment %}
   <div class="project promo threadless-comics" data-project>
     <h1>Blog Wars</h1>
     <figure class="thumbnail">
@@ -370,5 +375,5 @@ layout: portfolio
     <figure><img src="/makes/layer-tennis/lyt-noper-4.jpg"></figure>
     <figure><img src="/makes/layer-tennis/lyt-noper-5.jpg"></figure>
   </div>
-
+{% endcomment %}
 </section>

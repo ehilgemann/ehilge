@@ -1,146 +1,88 @@
-// Color changes
-
-// body.portfolio {
-//   @include animate(fade-to-grey 1s both);
-//   border-top-color: black;
-//   background: #999;
-
-//   header#top a, h1 {
-//     color: black;
-//   }
-
-//   footer {
-//     a { color: white; }
-
-//     small {
-//      color: #666;
-//     }
-
-//     .chicago p { border-bottom-color: #999; }
-//     .chicago:hover { p { color: #EEE; } }
-//   }
-// }
-
 body.portfolio {
-
-  h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: -.05em;
-  }
-
-  aside.toggles {
-    position: relative;
-    height: 30px;
-    margin-top: -2em;
-
-    button {
-      display: none;
-      position: absolute;
-      left: 0;
-      top: -2em;
-    }
-  }
 
   section.projects {
     min-height: 1200px;
     width: 100%;
   }
 
-  div.project {
+  article.project {
     display: inline-block;
-    margin-bottom: 4em;
     position: relative;
     vertical-align: top;
 
-    h1 {
+    blockquote {
       display: none;
     }
 
     figure {
-      display: inline-block;
-    }
-
-    &.poster {
-      width: 30%;
-    }
-
-    &.lyt figure {
-      width: 45%;
-    }
-
-    &.tshirt {
-      width: 50%;
-    }
-
-    &.promo {
+      margin-bottom: 2em;
       width: 100%;
-    }
-
-    &.website {
-      width: 50%;
-
-      span.chrome-title {
-        @include border-radius(3px 3px 0 0);
-        background: #eeeeee;
-        background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
-        background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-        background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-        background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-        background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
-        border: 1px solid #CCC;
-        border-bottom-color: #999;
-        display: block;
-        font-family: "Lucida Grande", Helvetica;
-        font-size: .7em;
-        height: 25px;
-        position: relative;
-        text-align: center;
-        text-shadow: 0 1px 1px white;
-        z-index: 1000;
-      }
-
-      figure.chrome {
-        @include border-radius(0 0 3px 3px);
-        @include box-shadow(0 0 5px rgba(0,0,0,.35));
-        border: 1px solid #CCC;
-        height: 400px;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        position: relative;
-
-        img {
-          margin-bottom: -1em;
-        }
-      }
-
-      b {
-        font-size: 1.25em;
-        position: absolute;
-        text-align: left;
-
-        &.red {
-          color: #ea4d45;
-          left: .25em;
-        }
-
-        &.yellow {
-          color: #f5b958;
-          left: 1em;
-        }
-
-        &.green {
-          color: #7fb15e;
-          left: 1.75em;
-        }
-      }
     }
 
     img {
       height: auto;
-      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  article.website {
+    width: 50%;
+
+    span.chrome-title {
+      @include border-radius(3px 3px 0 0);
+      background: #eeeeee;
+      background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
+      background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+      background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+      background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+      background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+      border: 1px solid #CCC;
+      border-bottom-color: #999;
+      display: block;
+      font-family: "Lucida Grande", Helvetica;
+      font-size: .7em;
+      height: 25px;
+      position: relative;
+      text-align: center;
+      text-shadow: 0 1px 1px white;
+      z-index: 1000;
+    }
+
+    figure.chrome {
+      @include border-radius(0 0 3px 3px);
+      @include box-shadow(0 0 5px rgba(0,0,0,.35));
+      border: 1px solid #CCC;
+      height: 400px;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      position: relative;
+
+      img {
+        margin-bottom: -1em;
+      }
+    }
+
+    b {
+      font-size: 1.25em;
+      position: absolute;
+      text-align: left;
+
+      &.red {
+        color: #ea4d45;
+        left: .25em;
+      }
+
+      &.yellow {
+        color: #f5b958;
+        left: 1em;
+      }
+
+      &.green {
+        color: #7fb15e;
+        left: 1.75em;
+      }
     }
   }
 
@@ -176,6 +118,56 @@ body.portfolio {
     h1 {
       margin-bottom: 1em;
       margin-top: 2rem;
+    }
+
+    [data-behavior="zoomable"]:hover {
+      cursor: -webkit-zoom-in;
+    }
+
+    article.project {
+      margin-bottom: 6em;
+
+      blockquote.active {
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+
+    article.united-pixelworkers {
+
+      blockquote {
+        margin-left: 33.333%;
+        width: 33.333%;
+      }
+
+      figure {
+        margin-left: 16.667%;
+        width: 33.333%;
+
+        &.active {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+    }
+
+    article.blog-wars {
+
+      blockquote {
+        width: 33.333%;
+      }
+
+      figure {
+        display: inline-block;
+        margin-left: 16.667%;
+        margin-right: 2%;
+        width: 31.333%;
+
+        &.active {
+          margin-left: 0;
+          width: 48%;
+        }
+      }
     }
   }
 }

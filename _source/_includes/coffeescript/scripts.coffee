@@ -10,7 +10,7 @@ responsiveTest = ->
      document.title = $(window).width()
 
 responsivePSA = ->
-  $message = $('aside.public-service-announcement')
+  $message = $('[data-psa]')
   resizeTimer = undefined
 
   $(window).resize ->
@@ -35,4 +35,4 @@ $ ->
         escapable()
         closeProject()
 
-  responsivePSA()
+  # responsivePSA()

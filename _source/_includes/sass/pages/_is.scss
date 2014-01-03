@@ -1,3 +1,6 @@
+// About ————————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 body.about {
 
   section {
@@ -72,7 +75,9 @@ body.about {
   }
 }
 
-// iPhone Landscape ————————————————————————————————————— /
+// About: Mobile Landscape ——————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(480px) {
   body.about {
     section {
@@ -89,9 +94,12 @@ body.about {
   }
 }
 
-// iPad ————————————————————————————————————— /
+// About: Tablet ————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(640px) {
   body.about {
+
     section {
       padding: 0;
     }
@@ -105,8 +113,8 @@ body.about {
       }
 
       p {
-        font-size: 1.1em;
         line-height: 1.75em;
+        max-width: 600px;
       }
 
       article.short {
@@ -128,7 +136,9 @@ body.about {
   }
 }
 
-// Browser ————————————————————————————————————— /
+// About: Desktop ———————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(768px) {
   body.about {
     .content section {
@@ -143,11 +153,6 @@ body.about {
         @include transform-origin(left top);
         right: -30em;
         top: 0;
-      }
-
-      .slash {
-        left: 30%;
-        top: 5%;
       }
 
       .nice {

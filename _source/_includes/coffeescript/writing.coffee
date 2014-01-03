@@ -1,5 +1,5 @@
 filterEssays = (essayType) ->
-  $essays = $('section.essays ul')
+  $essays = $('section.essays > ul')
   $essayList = $essays.find('li')
   $nonfavorites = $essays.find('li:not([data-favorite])')
   $favoriteToggle = $('[data-essay-filter~="favorites"]')

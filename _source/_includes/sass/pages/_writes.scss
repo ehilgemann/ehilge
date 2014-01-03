@@ -1,3 +1,6 @@
+// Writes ———————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 body.writes {
 
   p a:link {
@@ -29,20 +32,19 @@ body.writes {
         display: inline-block;
         font-size: 1.25em;
         font-weight: normal;
-        margin-bottom: .35em;
+        margin-bottom: .4em;
         text-decoration: underline;
       }
 
       a p {
-        color: #666;
+        color: #777;
+        font-family: $font-sans;
         line-height: 1.2em;
         margin-bottom: .25em;
       }
 
       a small {
-        color: #999;
         display: inline-block;
-        font-family: $font-sans;
         font-size: .8em;
 
         &:after { content: " — "; }
@@ -61,89 +63,29 @@ body.writes {
   }
 }
 
-// Tablet ————————————————————————————————————— /
+// Writes: Desktop ——————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(768px) {
   body.writes {
 
     h1 {
       margin-bottom: 1em;
       margin-left: 33.333%;
+      padding-top: 2em;
       width: 50%;
     }
 
-    aside.sidebar {
-      @include border-box;
-      display: block;
-      float: left;
-      margin-top: .5em;
-      padding-right: 1.5em;
-      width: 33.333%;
-
-      h3 {
-        margin-bottom: .5em;
-      }
-
-      li {
-        line-height: 1.2em;
-        margin-bottom: .5em;
-        position: relative;
-      }
-
-      ul.shortform {
-
-        li { margin-left: 1em; }
-        li:before {
-          color: #999;
-          content: "•";
-          position: absolute;
-          left: -1em;
-          top: -.125em;
-        }
-
-        li a:visited { color: $color-link; }
-      }
-
-      div.toggles {
-        font-family: $font-sans;
-        margin-bottom: 3em;
-
-        ul.radios {
-          border-bottom: 1px solid #CCC;
-          margin-top: 1em;
-          margin-bottom: .75em;
-          width: 140px;
-        }
-
-        li {
-          cursor: pointer;
-          display: block;
-        }
-
-        li span {
-          background: url('/assets/images/icons/toggles.png') no-repeat;
-          background-size: 34px 28px;
-          display: inline-block;
-          height: 14px;
-          width: 17px;
-        }
-
-        li span.check { background-position: 0 0; }
-        li.selected span.check { background-position: -17px 0; }
-
-        li span.radio { background-position: 0 -14px; }
-        li.selected span.radio { background-position: -17px -14px; }
-      }
-
-      .selected { font-weight: bold; }
-    }
-
     section.essays {
-      float: right;
+      margin-bottom: 6em;
+      margin-left: 33.333%;
       padding: 0;
-      width: 66.668%;
+      position: relative;
+      width: 50%;
 
       ul {
         margin-top: -.35em;
+        margin-bottom: 5em;
       }
 
       li a h2 {
@@ -165,6 +107,49 @@ body.writes {
       li a small.svn {
         padding-top: .2em;
       }
+    }
+
+    aside {
+      display: block;
+      position: absolute;
+      left: -10em;
+      top: -.6em;
+
+      ul.radios {
+        border-bottom: 1px solid #DDD;
+        margin-top: 1em;
+        margin-bottom: .75em;
+        padding-bottom: .25em;
+        width: 110px;
+
+        li { margin-bottom: 0; }
+      }
+
+      li {
+        cursor: pointer;
+        display: block;
+        font-family: $font-sans;
+        font-size: .9rem;
+        position: relative;
+        vertical-align: top;
+      }
+
+      li span {
+        background: url('/assets/images/icons/toggles.png') no-repeat;
+        background-size: 34px 28px;
+        display: inline-block;
+        height: 14px;
+        margin-bottom: -2px;
+        width: 17px;
+      }
+
+      li span.radio { background-position: 0 -14px; }
+      li.selected span.radio { background-position: -17px -14px; }
+
+      li span.check { background-position: 0 0; }
+      li.selected span.check { background-position: -17px 0; }
+
+      .selected { font-weight: bold; }
     }
   }
 }

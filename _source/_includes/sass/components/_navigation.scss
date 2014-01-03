@@ -5,8 +5,8 @@ nav {
   @include sans-serif;
 
   a.home {
-    color: black;
-    font-weight: 600;
+    color: #333;
+    font-weight: bold;
 
     &:visited,
     &:hover,

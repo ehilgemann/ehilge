@@ -1,21 +1,23 @@
 body.portfolio {
 
+  .content {
+    padding-left: 7em;
+    max-width: 100%;
+  }
+
   section.projects {
-    min-height: 1200px;
+    text-align: center;
     width: 100%;
   }
 
-  article.project {
+  article {
     display: inline-block;
-    position: relative;
+    margin-bottom: 2em;
     vertical-align: top;
-
-    blockquote {
-      display: none;
-    }
+    width: 16.667%;
 
     figure {
-      margin-bottom: 2em;
+      margin: 0 auto;
       width: 100%;
     }
 
@@ -23,6 +25,33 @@ body.portfolio {
       height: auto;
       max-width: 100%;
     }
+  }
+
+  article.full,
+  article.two-thirds {
+    display: block;
+  }
+
+  article.quarter {
+    width: 25%;
+  }
+
+  article.third {
+    width: 33.333%;
+  }
+
+  article.half {
+    width: 50%;
+  }
+
+  article.two-thirds {
+    width: 67.667%;
+  }
+
+  article.full {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
 
   article.website {
@@ -124,50 +153,12 @@ body.portfolio {
       cursor: -webkit-zoom-in;
     }
 
-    article.project {
-      margin-bottom: 6em;
-
-      blockquote.active {
-        display: inline-block;
-        vertical-align: top;
-      }
-    }
-
     article.united-pixelworkers {
 
-      blockquote {
-        margin-left: 33.333%;
-        width: 33.333%;
-      }
-
-      figure {
-        margin-left: 16.667%;
-        width: 33.333%;
-
-        &.active {
-          margin-left: 0;
-          width: 100%;
-        }
-      }
     }
 
     article.blog-wars {
 
-      blockquote {
-        width: 33.333%;
-      }
-
-      figure {
-        display: inline-block;
-        margin-left: 16.667%;
-        margin-right: 2%;
-        width: 31.333%;
-
-        &.active {
-          margin-left: 0;
-          width: 48%;
-        }
-      }
     }
   }
 }

@@ -84,6 +84,11 @@ div.content {
     font-size: 1.25rem;
   }
 
+  div.content {
+    @include border-box;
+    padding: 0 2em;
+  }
+
   .hide-from-mobile { display: inline !important; }
 }
 

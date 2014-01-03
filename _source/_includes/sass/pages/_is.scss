@@ -80,10 +80,6 @@ body.about {
 
 @include responsive-break-point(480px) {
   body.about {
-    section {
-      padding-left: 2em;
-      padding-right: 2em;
-    }
 
     section.biography {
 
@@ -99,10 +95,6 @@ body.about {
 
 @include responsive-break-point(640px) {
   body.about {
-
-    section {
-      padding: 0;
-    }
 
     section.biography {
       margin: 8rem auto 0;
@@ -141,6 +133,7 @@ body.about {
 
 @include responsive-break-point(768px) {
   body.about {
+
     .content section {
       .ephemera { display: block; }
 
@@ -205,6 +198,7 @@ body.about {
 
       .portrait-thumbnails {
         display: block;
+        left: -1em;
         position: absolute;
         top: -8em;
         width: 30%;

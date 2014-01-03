@@ -71,17 +71,14 @@ body.writes {
 
     h1 {
       margin-bottom: 1em;
-      margin-left: 33.333%;
+      margin-left: 16.667%;
       padding-top: 2em;
-      width: 50%;
     }
 
     section.essays {
       margin-bottom: 6em;
       margin-left: 33.333%;
-      padding: 0;
       position: relative;
-      width: 50%;
 
       ul {
         margin-top: -.35em;
@@ -112,12 +109,11 @@ body.writes {
     aside {
       display: block;
       position: absolute;
-      left: -10em;
-      top: -.6em;
+      margin-left: 1.25em;
+      left: 16.667%;
 
       ul.radios {
         border-bottom: 1px solid #DDD;
-        margin-top: 1em;
         margin-bottom: .75em;
         padding-bottom: .25em;
         width: 110px;

@@ -50,6 +50,10 @@ nav {
     width: 15%;
     z-index: 1986;
 
+    &:hover {
+      cursor: default;
+    }
+
     a.home {
       display: inline-block;
     }

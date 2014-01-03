@@ -67,7 +67,7 @@ div.content {
   @include animate(fade-in .5s both);
   @include border-box;
   @include clearfix;
-  padding: 1rem;
+  padding: 0 1rem;
   position: relative;
   width: 100%;
 }

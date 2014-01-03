@@ -2,10 +2,14 @@
 // ——————————————————————————————————————————— •
 
 nav {
-  @include sans-serif;
+  @include border-box;
+  font-family: $font-sans;
+  padding: .5em;
+  position: relative;
 
   a.home {
     color: #333;
+    display: inline-block;
     font-weight: bold;
 
     &:visited,
@@ -21,13 +25,31 @@ nav {
 
   section {
 
-    a:link,
-    a:visited {
-      color: $color-link;
+    &.links {
+      position: absolute;
+      right: .5em;
+      top: .5em;
+
+      li {
+        display: inline-block;
+        margin-left: 1em;
+      }
+
+      li:nth-child(4){
+        display: none;
+      }
     }
 
+    &.title,
+    &.contact {
+      display: none;
+    }
+
+    a:link,
+    a:visited { color: $color-link; }
     a:hover { color: $color-link-hover; }
   }
+
 
   body.about & a.about,
   body.portfolio & a.portfolio,
@@ -62,6 +84,26 @@ nav {
 
     section {
       margin-top: 2em;
+
+      &.links {
+        position: relative;
+        left: 0;
+        top: 0;
+
+        li {
+          display: block;
+          margin: 0;
+        }
+
+        li:nth-child(4){
+          display: block;
+        }
+      }
+
+      &.title,
+      &.contact {
+        display: block;
+      }
     }
 
     h5 {

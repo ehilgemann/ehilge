@@ -1,13 +1,23 @@
-@import 'mixins', 'reset', 'animations', 'fonts';
+// Reset & Mixins ———————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@import
+  'globals/mixins',
+  'globals/animations',
+  'globals/reset';
+
+
+// Base Styles ——————————————————————————————— •
+// ——————————————————————————————————————————— •
 
 body {
   @include font-smoothing(antialiased);
   background-color: #FFF;
-  border-top: .75em solid $color-link;
   color: #333;
   font-family: $font-serif;
   font-size: 1rem;
   line-height: 1.5rem;
+  position: relative;
 }
 
 a {
@@ -26,6 +36,7 @@ li { list-style: none; }
 h1 {
   color: #F00;
   font-size: 1.5em;
+  font-weight: 600;
   letter-spacing: -.04em;
   line-height: 1em;
   margin-bottom: 1rem;
@@ -36,6 +47,7 @@ h1 {
 h2 {
   color: #333;
   font-family: $font-serif;
+  font-weight: 600;
   letter-spacing: -.04em;
   line-height: 1.1em;
   margin-bottom: 1em;
@@ -44,184 +56,30 @@ h2 {
 h3 {
   color: #F00;
   font-size: .9rem;
+  font-weight: 600;
   letter-spacing: .3em;
   line-height: 1em;
   text-transform: uppercase;
 }
 
-header[role="banner"] {
-  @include border-box;
-  @include clearfix;
-  font-family: $font-sans;
-  font-size: 1rem;
-  margin: 0 auto;
-  padding: 1rem;
-  vertical-align: bottom;
-  width: 100%;
-
-  .active { text-decoration: underline; }
-
-  > a {
-    float: left;
-    font-weight: bold;
-    color: #333;
-  }
-
-  ul { float: right; }
-
-  li { display: inline-block; }
-  li:not(:first-child) { margin-left: .5rem; }
-  li a:visited { color: $color-link; }
-}
-
-.content {
+div.content {
   @include animate(fade-in .5s both);
   @include border-box;
   @include clearfix;
-  margin: 0 auto;
   padding: 1rem;
   position: relative;
-  max-width: 1000px;
   width: 100%;
-}
-
-footer {
-  @include border-box;
-  font-family: $font-sans;
-  margin: 0 auto 2em;
-  padding: 1rem;
-  max-width: 1000px;
-  width: 100%;
-
-  a:visited { color: $color-link; }
-
-  .active {
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  small {
-    color: #999;
-    display: block;
-    font-family: $font-sans;
-    font-size: .8em;
-    margin-top: .5rem;
-  }
-
-  section.explore {
-
-    div { margin-bottom: 2em; }
-
-    li {
-      line-height: 1.25em;
-      margin-bottom: .5rem;
-    }
-
-    .contact {
-
-      address {
-        line-height: 1.25em;
-        margin-bottom: 1em;
-      }
-    }
-
-    .elsewhere { display: none; }
-  }
-
-  section.browse {
-    text-align: center;
-    width: 100%;
-
-    .chicago {
-      &:hover {
-        text-decoration: none;
-
-        p {
-          border-bottom: 1px solid #B3DDF2;
-          color: #FF0000;
-        }
-      }
-
-      p {
-        border-bottom: 1px solid white;
-        color: #666;
-        display: inline-block;
-        font-family: $font-sans;
-        font-size: .65rem;
-        font-weight: bold;
-        letter-spacing: .2rem;
-        line-height: 1.25em;
-        margin-bottom: .5rem;
-        text-transform: uppercase;
-      }
-
-      .flag {
-        background: white;
-        border-bottom: .55em solid #B3DDF2;
-        border-top: .55em solid #B3DDF2;
-        color: #FF0000;
-        display: inline-block;
-        font-size: .6rem;
-        letter-spacing: 2px;
-        line-height: 1.5em;
-        margin: 0 auto;
-        padding: .3em .7em;
-        text-align: center;
-      }
-    }
-  }
 }
 
 .hide-from-mobile { display: none !important; }
 
-.ephemera {
-  color: rgba(94, 172, 238, .85);
-  display: block;
-  font-family: $font-sans;
-  font-size: .75em;
-  font-weight: bold;
-  letter-spacing: 2px;
-  line-height: 1.25em;
-  text-transform: uppercase;
-  position: absolute;
 
-  &.clockwise {
-    -webkit-transform: rotate(-90deg);
-       -moz-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-  }
+// Base Styles: Tablets —————————————————————— •
+// ——————————————————————————————————————————— •
 
-  &.counter-clockwise {
-    -webkit-transform: rotate(90deg);
-       -moz-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
-
-  &.slant {
-    -webkit-transform: rotate(45deg);
-       -moz-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-
-  &.counter-slant {
-    -webkit-transform: rotate(-45deg);
-       -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-
-  &.large {
-    font-size: 10em;
-    font-weight: normal;
-  }
-}
-
-// iPad ————————————————————————————————————— /
 @include responsive-break-point(640px) {
   body {
+    @include border-box;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -234,136 +92,30 @@ footer {
     font-size: 1.25rem;
   }
 
-  header[role="banner"] {
-    padding-top: 2rem;
-  }
-
-  footer {
-    @include clearfix;
-    margin-top: 3rem;
-
-    section.explore {
-      @include clearfix;
-      font-size: .95rem;
-
-      h5 { margin-bottom: .5rem; }
-
-      div {
-        display: inline-block;
-        float: left;
-        margin-bottom: 0;
-      }
-
-      .contact {
-        margin-right: 2%;
-        width: 31.333%;
-
-
-        address { font-style: normal; }
-
-        p { line-height: 1.5em; }
-      }
-
-      .elsewhere {
-        display: block;
-        margin-right: 2%;
-        width: 14.667%;
-
-        a:visited { color: $color-link; }
-      }
-
-      .written {
-        float: right;
-        max-width: 22rem;
-        width: 50%;
-      }
-    }
-
-    section.browse {
-      margin-top: 3rem;
-
-      li {
-        display: inline-block;
-        margin: .5em;
-      }
-    }
-  }
-
   .hide-from-mobile { display: inline !important; }
 }
 
-// Long Browser ————————————————————————————————————— /
+// Base Styles: Desktop —————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(800px) {
+  div.content {
+    width: 85%;
+  }
+}
+
+
+// Base Styles: Long Desktop ————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(1280px) {
-  header[role="banner"] {
 
-    > a { position: fixed; }
-  }
 }
 
-// Window Resize Finger Bang ————————————————————————————————————— /
-aside.public-service-announcement {
-  @include clearfix;
-  @include border-box;
-  background: rgba(0,0,0,1);
-  display: none;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
 
-  p {
-    color: #EEE;
-    text-align: center;
-    margin-bottom: 5em;
-    margin-top: 6em;
-    width: 100%;
-  }
+// Fix: iOS Font Sizing —————————————————————— •
+// ——————————————————————————————————————————— •
 
-  figure {
-    position: relative;
-  }
-
-  img {
-    position: absolute;
-  }
-
-  .finger {
-    left: 32%;
-
-    img { z-index: 750; }
-  }
-
-  .hole {
-    right: 35%;
-
-    .a {
-      right: 0;
-      z-index: 500;
-    }
-
-    .ok {
-      right: 0;
-      z-index: 1000;
-    }
-  }
-
-  .poop {
-    @include animate(fade-in-up .2s both);
-    display: block;
-    left: 33%;
-    top: 150px;
-  }
-}
-
-@include responsive-break-point(401px) {
-  aside.public-service-announcement {
-    .poop { display: none; }
-  }
-}
-
-// Disable iOS font sizing ————————————————————————————————————— /
 @media screen and (max-device-width: 480px) {
   html {
     -webkit-text-size-adjust: 100%;
@@ -371,13 +123,26 @@ aside.public-service-announcement {
   }
 }
 
+// Components ———————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @import
-  'home',
-  'about',
-  'portfolio',
-  'writes',
-  'essays',
-  'loves',
-  'thinks',
-  'chicago',
-  'bike';
+  'components/navigation',
+  'components/footer',
+  'components/ephemera',
+  'components/essays',
+  'components/psa';
+
+
+// Pages ————————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@import
+  'pages/home',
+  'pages/is',
+  'pages/makes',
+  'pages/writes',
+  'pages/thinks',
+  'pages/loves',
+  'pages/loves-chicago',
+  'pages/sells-a-bike';

@@ -1,0 +1,146 @@
+// Footer ———————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+footer {
+  @include border-box;
+  font-family: $font-sans;
+  margin: 0 auto 2em;
+  padding: 1rem;
+  max-width: 1000px;
+  width: 100%;
+
+  a:visited { color: $color-link; }
+
+  .active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  small {
+    color: #999;
+    display: block;
+    font-family: $font-sans;
+    font-size: .8em;
+    margin-top: .5rem;
+  }
+
+  section.explore {
+
+    div { margin-bottom: 2em; }
+
+    li {
+      line-height: 1.25em;
+      margin-bottom: .5rem;
+    }
+
+    .contact {
+
+      address {
+        line-height: 1.25em;
+        margin-bottom: 1em;
+      }
+    }
+
+    .elsewhere { display: none; }
+  }
+
+  section.browse {
+    text-align: center;
+    width: 100%;
+
+    .chicago {
+      &:hover {
+        text-decoration: none;
+
+        p {
+          border-bottom: 1px solid #B3DDF2;
+          color: #FF0000;
+        }
+      }
+
+      p {
+        border-bottom: 1px solid white;
+        color: #666;
+        display: inline-block;
+        font-family: $font-sans;
+        font-size: .65rem;
+        font-weight: bold;
+        letter-spacing: .2rem;
+        line-height: 1.25em;
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+      }
+
+      .flag {
+        background: white;
+        border-bottom: .55em solid #B3DDF2;
+        border-top: .55em solid #B3DDF2;
+        color: #FF0000;
+        display: inline-block;
+        font-size: .6rem;
+        letter-spacing: 2px;
+        line-height: 1.5em;
+        margin: 0 auto;
+        padding: .3em .7em;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+// Footer: Desktop ——————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(640px) {
+  footer {
+    @include clearfix;
+    margin-top: 3rem;
+
+    section.explore {
+      @include clearfix;
+      font-size: .95rem;
+
+      h5 { margin-bottom: .5rem; }
+
+      div {
+        display: inline-block;
+        float: left;
+        margin-bottom: 0;
+      }
+
+      .contact {
+        margin-right: 2%;
+        width: 31.333%;
+
+
+        address { font-style: normal; }
+
+        p { line-height: 1.5em; }
+      }
+
+      .elsewhere {
+        display: block;
+        margin-right: 2%;
+        width: 14.667%;
+
+        a:visited { color: $color-link; }
+      }
+
+      .written {
+        float: right;
+        max-width: 22rem;
+        width: 50%;
+      }
+    }
+
+    section.browse {
+      margin-top: 3rem;
+
+      li {
+        display: inline-block;
+        margin: .5em;
+      }
+    }
+  }
+}

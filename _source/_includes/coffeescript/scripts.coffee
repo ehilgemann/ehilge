@@ -36,3 +36,4 @@ $ ->
         closeProject()
 
   # responsivePSA()
+  responsiveTest()

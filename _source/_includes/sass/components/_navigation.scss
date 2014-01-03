@@ -1,0 +1,25 @@
+// Navigation ———————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+nav {
+  font-family: $font-sans;
+
+  a:link,
+  a:visited {
+    color: $color-link;
+  }
+}
+
+
+// Navigation: Desktop ——————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(800px) {
+  nav {
+    position: fixed;
+    right: 1.5em;
+    top: 1.5em;
+    width: 10%;
+    z-index: 1986;
+  }
+}

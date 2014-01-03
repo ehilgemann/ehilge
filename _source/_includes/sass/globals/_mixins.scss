@@ -1,9 +1,27 @@
-// Colors ------------------------------------- *
+// Typography ———————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@charset "UTF-8";
+
+@mixin font-smoothing($attr) {
+  -webkit-font-smoothing: $attr;
+          font-smoothing: $attr;
+}
+
+$font-sans: "freight-sans-pro-1", "freight-sans-pro-2", "Lucida Grand", Helvetica, Arial, sans-serif;
+$font-serif: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
+
+
+// Colors ———————————————————————————————————— •
+// ——————————————————————————————————————————— •
 $color-link: #5EACEE;
 $color-link-hover: #008aff;
 $color-link-visited: #bbc9d4;
 
-// Effects ------------------------------------ *
+
+// Effects ——————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @mixin animate($args...) {
   -webkit-animation: $args;
      -moz-animation: $args;
@@ -68,19 +86,25 @@ $color-link-visited: #bbc9d4;
 }
 
 @mixin transform-origin($args) {
-          transform-origin: $args;
-       -o-transform-origin: $args;
-      -ms-transform-origin: $args;
-     -moz-transform-origin: $args;
   -webkit-transform-origin: $args;
+     -moz-transform-origin: $args;
+      -ms-transform-origin: $args;
+       -o-transform-origin: $args;
+          transform-origin: $args;
 }
 
-// Development ------------------------------------- *
+
+// Development ——————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @mixin debug { background: #FFFFEE; outline: 1px solid red !important; }
 @mixin hide { display: none; }
 @mixin unsized { img:not([width]):not([height]) { outline: 2px solid red !important; } }
 
-// Hacks ------------------------------------- *
+
+// Hacks ————————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @mixin clearfix {
   &:after {
     content: ".";
@@ -92,23 +116,16 @@ $color-link-visited: #bbc9d4;
   zoom: 1;
 }
 
-// Typography ------------------------------------- *
-@charset "UTF-8";
 
-@mixin font-smoothing($attr) {
-          font-smoothing: $attr;
-  -webkit-font-smoothing: $attr;
-}
-
-$font-sans: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
-$font-serif: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
-
-// Media Queries ------------------------------------- *
+// Responsive ———————————————————————————————— •
+// ——————————————————————————————————————————— •
 @mixin responsive-break-point($media) {
   @media only screen and (min-width: $media) { @content; }
 }
 
-// Retina ------------------------------------- *
+
+// Retina ———————————————————————————————————— •
+// ——————————————————————————————————————————— •
 
 @mixin retinafy($image, $width, $height) {
   @media (min--moz-device-pixel-ratio: 1.3),

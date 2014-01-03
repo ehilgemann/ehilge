@@ -1,20 +1,5 @@
 <footer>
-  {% comment %}
   <section class="explore">
-    <div class="contact">
-      <h5>Get in touch</h5>
-
-      <address>
-        Mig Reyes c/o 37signals<br>
-        30 N. Racine Ave. Suite 200<br>
-        Chicago, IL 60607
-      </address>
-
-      <p>Follow me on Twitter, <a href="http://twitter.com/migreyes" title="@migreyes">@migreyes</a></p>
-      <p>Email, <script src="/assets/javascript/email.js"></script></p>
-      <small>(I’m happy at 37signals. No recruiters, please.)</small>
-    </div>
-
     <div class="elsewhere">
       <h5>Elsewhere</h5>
 
@@ -28,7 +13,7 @@
       </ul>
     </div>
 
-    <div class="written">
+    <div class="essays">
       <h5>Recently written</h5>
 
       <ul>
@@ -44,15 +29,14 @@
       </ul>
     </div>
   </section>
-  {% endcomment %}
 
   <section class="browse">
     <ul>
-      <li{% if page.class == "about" %} class="active"{% endif %}><a href="/is">About</a></li>
-      <li{% if page.class == "portfolio" %} class="active"{% endif %}><a href="/makes">Work</a></li>
-      <li{% if page.class == "writes" %} class="active"{% endif %}><a href="/writes">Writing</a></li>
-      <li{% if page.class == "thinks" %} class="active"{% endif %}><a href="/thinks">Thoughts</a></li>
-      <li class="hide-from-mobile{% if page.class == "loves" %} active{% endif %}"><a href="/loves">Resources</a></li>
+      <li><a href="/is">About</a></li>
+      <li><a href="/makes">Work</a></li>
+      <li><a href="/writes">Writing</a></li>
+      <li><a href="/thinks">Thoughts</a></li>
+      <li><a href="/loves">Resources</a></li>
     </ul>
 
     <a href="/loves/chicago" class="chicago">
@@ -61,14 +45,3 @@
     </a>
   </section>
 </footer>
-
-<aside class="public-service-announcement" data-psa="responsive">
-  <p>The web was meant to be read, not squished.</p>
-
-  <figure class="finger"><img src="/assets/images/responsive/finger.png"></figure>
-  <figure class="hole">
-    <img class="a" src="/assets/images/responsive/hole-a.png">
-    <img class="ok" src="/assets/images/responsive/hole-ok.png">
-  </figure>
-  <figure class="poop"><img class="a" src="/assets/images/responsive/poop.png"></figure>
-</aside>

@@ -1,7 +1,7 @@
 // Responsive PSA ———————————————————————————— •
 // ——————————————————————————————————————————— •
 
-aside.public-service-announcement {
+div.public-service-announcement {
   @include clearfix;
   @include border-box;
   background: rgba(0,0,0,1);
@@ -58,7 +58,7 @@ aside.public-service-announcement {
 }
 
 @include responsive-break-point(401px) {
-  aside.public-service-announcement {
+  div.public-service-announcement {
     .poop { display: none; }
   }
 }

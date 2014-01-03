@@ -35,9 +35,7 @@ a {
 li { list-style: none; }
 
 h1 {
-  color: #F00;
   font-size: 1.5em;
-  font-weight: 600;
   letter-spacing: -.04em;
   line-height: 1em;
   margin-bottom: 1rem;
@@ -46,9 +44,7 @@ h1 {
 }
 
 h2 {
-  color: #333;
   font-family: $font-serif;
-  font-weight: 600;
   letter-spacing: -.04em;
   line-height: 1.1em;
   margin-bottom: 1em;
@@ -57,7 +53,6 @@ h2 {
 h3 {
   color: #F00;
   font-size: .9rem;
-  font-weight: 600;
   letter-spacing: .3em;
   line-height: 1em;
   text-transform: uppercase;
@@ -67,7 +62,6 @@ div.content {
   @include animate(fade-in .5s both);
   @include border-box;
   @include clearfix;
-  padding: 0 1rem;
   position: relative;
   width: 100%;
 }
@@ -79,11 +73,6 @@ div.content {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
-  body {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   h1 {
     font-size: 2.5rem;
   }

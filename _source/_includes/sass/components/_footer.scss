@@ -2,6 +2,13 @@
 // ——————————————————————————————————————————— •
 
 footer {
+  @include hide;
+
+
+
+
+
+
   @include border-box;
   font-family: $font-sans;
   margin: 0 auto 2em;

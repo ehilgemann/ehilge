@@ -11,7 +11,7 @@ nav {
     &:visited,
     &:hover,
     &:active {
-      color: black;
+      color: #333;
     }
 
     &:hover {
@@ -19,12 +19,14 @@ nav {
     }
   }
 
-  ul {
+  section {
 
     a:link,
     a:visited {
       color: $color-link;
     }
+
+    a:hover { color: $color-link-hover; }
   }
 
   body.about & a.about,

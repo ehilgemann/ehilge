@@ -4,6 +4,7 @@
 @import
   'globals/mixins',
   'globals/animations',
+  'globals/fonts',
   'globals/reset';
 
 
@@ -79,7 +80,6 @@ div.content {
 
 @include responsive-break-point(640px) {
   body {
-    @include border-box;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -100,7 +100,7 @@ div.content {
 
 @include responsive-break-point(800px) {
   div.content {
-    width: 85%;
+    width: 80%;
   }
 }
 

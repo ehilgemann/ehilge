@@ -1,10 +1,33 @@
 <nav role="navigation">
-  <a href="/index-mocha.html">Mig Reyes</a>
+  <a class="home" href="/index-mocha.html">Mig Reyes</a>
 
-  <ul>
-    <li{% if page.class == "about" %} class="active"{% endif %}><a href="/is">About</a></li>
-    <li{% if page.class == "portfolio" %} class="active"{% endif %}><a href="/makes">Work</a></li>
-    <li{% if page.class == "writes" %} class="active"{% endif %}><a href="/writes">Writing</a></li>
-    <li class="hide-from-mobile{% if page.class == "loves" %} active{% endif %}"><a href="/loves">Resources</a></li>
-  </ul>
+  <section class="links">
+    <ul>
+      <li><a class="about" href="/is">About</a></li>
+      <li><a class="portfolio" href="/makes">Work</a></li>
+      <li><a class="writes" href="/writes">Writing</a></li>
+      <li><a class="loves" href="/loves">Resources</a></li>
+    </ul>
+  </section>
+
+  <section class="title">
+    <p>Designer, 37signals</p>
+    <p>Chicago, IL</p>
+  </section>
+
+  <section class="contact">
+    <h5>Mail</h5>
+    <address>
+      Mig Reyes c/o 37signals<br>
+      30 N. Racine Ave.<br>
+      Suite 200<br>
+      Chicago, IL 60607
+    </address>
+
+    <h5>Twitter</h5>
+    <a href="http://twitter.com/migreyes" title="@migreyes">@migreyes</a>
+
+    <h5>Email</h5>
+    <script src="/assets/javascript/email.js"></script>
+  </section>
 </nav>

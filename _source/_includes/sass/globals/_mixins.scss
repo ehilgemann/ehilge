@@ -3,12 +3,17 @@
 
 @charset "UTF-8";
 
+@mixin sans-serif {
+  font-family: $font-sans;
+  font-weight: 500;
+}
+
 @mixin font-smoothing($attr) {
   -webkit-font-smoothing: $attr;
           font-smoothing: $attr;
 }
 
-$font-sans: "freight-sans-pro-1", "freight-sans-pro-2", "Lucida Grand", Helvetica, Arial, sans-serif;
+$font-sans: "Alto", "Lucida Grand", Helvetica, Arial, sans-serif;
 $font-serif: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", Georgia, Times, serif;
 
 

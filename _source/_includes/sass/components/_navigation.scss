@@ -2,11 +2,36 @@
 // ——————————————————————————————————————————— •
 
 nav {
-  font-family: $font-sans;
+  @include sans-serif;
 
-  a:link,
-  a:visited {
-    color: $color-link;
+  a.home {
+    color: black;
+    font-weight: 600;
+
+    &:visited,
+    &:hover,
+    &:active {
+      color: black;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+
+    a:link,
+    a:visited {
+      color: $color-link;
+    }
+  }
+
+  body.about & a.about,
+  body.portfolio & a.portfolio,
+  body.writes & a.writes,
+  body.loves & a.loves {
+    text-decoration: underline;
   }
 }
 
@@ -16,10 +41,29 @@ nav {
 
 @include responsive-break-point(800px) {
   nav {
+    font-size: .9rem;
+    line-height: 1.2em;
+    padding-right: 1em;
     position: fixed;
-    right: 1.5em;
-    top: 1.5em;
-    width: 10%;
+    right: 0;
+    top: 2em;
+    width: 15%;
     z-index: 1986;
+
+    a.home {
+      display: inline-block;
+    }
+
+    section {
+      margin-top: 2em;
+    }
+
+    h5 {
+      margin-top: 1em;
+    }
+
+    address {
+      font-style: normal;
+    }
   }
 }

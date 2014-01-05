@@ -235,6 +235,7 @@ body.about {
     }
 
     section.colophon {
+      position: relative;
       margin: 2rem 0 10rem 50%;
       width: 50%;
     }
@@ -259,6 +260,6 @@ body.about {
       left: 55%;
     }
 
-    .ephemera.est { bottom: 5em; }
+    .ephemera.est { bottom: -5em; }
   }
 }

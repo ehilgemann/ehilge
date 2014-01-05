@@ -2,58 +2,18 @@
 // ——————————————————————————————————————————— •
 
 footer {
-  @include hide;
-
-
-
-
-
-
   @include border-box;
   font-family: $font-sans;
-  margin: 0 auto 2em;
-  padding: 1rem;
-  max-width: 1000px;
-  width: 100%;
 
-  a:visited { color: $color-link; }
-
-  .active {
-    font-weight: bold;
-    text-decoration: underline;
+  ul {
+    margin-bottom: 2em;
   }
 
-  small {
-    color: #999;
-    display: block;
-    font-family: $font-sans;
-    font-size: .8em;
-    margin-top: .5rem;
-  }
+  li.loves { display: none; }
 
-  section.explore {
-
-    div { margin-bottom: 2em; }
-
-    li {
-      line-height: 1.25em;
-      margin-bottom: .5rem;
-    }
-
-    .contact {
-
-      address {
-        line-height: 1.25em;
-        margin-bottom: 1em;
-      }
-    }
-
-    .elsewhere { display: none; }
-  }
-
-  section.browse {
+  section.chicago {
+    margin-bottom: 4em;
     text-align: center;
-    width: 100%;
   }
 }
 
@@ -70,7 +30,7 @@ a.chicago {
 
   p {
     border-bottom: 1px solid white;
-    color: #666;
+    color: #999;
     display: inline-block;
     font-family: $font-sans;
     font-size: .65rem;
@@ -102,53 +62,31 @@ a.chicago {
 
 @include responsive-break-point(640px) {
   footer {
-    @include clearfix;
-    margin-top: 3rem;
+    font-size: .9rem;
 
-    section.explore {
-      @include clearfix;
-      font-size: .95rem;
+    ul {
+      display: inline-block;
+      vertical-align: top;
 
-      h5 { margin-bottom: .5rem; }
-
-      div {
-        display: inline-block;
-        float: left;
-        margin-bottom: 0;
-      }
-
-      .contact {
-        margin-right: 2%;
-        width: 31.333%;
-
-
-        address { font-style: normal; }
-
-        p { line-height: 1.5em; }
-      }
-
-      .elsewhere {
-        display: block;
+      &.here {
+        margin-left: 16.667%;
         margin-right: 2%;
         width: 14.667%;
 
-        a:visited { color: $color-link; }
+        li a:visited { color: $color-link; }
       }
 
-      .written {
-        float: right;
-        max-width: 22rem;
-        width: 50%;
+      &.elsewhere {
+        margin-right: 2%;
+        width: 31.333%;
       }
     }
 
-    section.browse {
-      margin-top: 3rem;
+    li.loves { display: block; }
 
-      li {
-        display: inline-block;
-        margin: .5em;
-      }
+    section.chicago {
+      margin: 8em 0 8em 33.333%;
+      text-align: left;
     }
   }
 }

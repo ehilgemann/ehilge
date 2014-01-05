@@ -1,23 +1,26 @@
 <footer>
-  <section class="explore">
-    <div class="elsewhere">
+  <section class="links">
+    <ul class="here">
+      <h5>Here</h5>
+      <li><a href="/is">About</a></li>
+      <li><a href="/makes">Work</a></li>
+      <li><a href="/writes">Writing</a></li>
+      <li><a href="/thinks">Thoughts</a></li>
+      <li class="loves"><a href="/loves">Resources</a></li>
+    </ul>
+
+    <ul class="elsewhere">
       <h5>Elsewhere</h5>
+      <li><a href="http://instagram.com/migreyes" target="_blank" title="Selfie-free, guaranteed.">Instagram</a></li>
+      <li><a href="https://rdio.com/people/migreyes" target="_blank">Rdio</a></li>
+      <li><a href="https://github.com/migreyes" target="_blank">GitHub</a></li>
+      <li><a href="http://dribbble.com/migreyes" target="_blank">Dribbble</a></li>
+      <li><a href="http://37signals.com/svn/writers/mig" target="_blank">Signal vs. Noise</a></li>
+    </ul>
 
-      <ul>
-        <li><a href="http://instagram.com/migreyes" target="_blank" title="Selfie-free, guaranteed.">Instagram</a></li>
-        <li><a href="https://rdio.com/people/migreyes" target="_blank">Rdio</a></li>
-        <li><a href="https://github.com/migreyes" target="_blank">GitHub</a></li>
-        <li><a href="http://dribbble.com/migreyes" target="_blank">Dribbble</a></li>
-        <li><a href="https://delicious.com/migreyes" target="_blank" title="Saving interesting internet finds.">Delicious</a></li>
-        <li><a href="http://37signals.com/svn/writers/mig" target="_blank">Signal vs. Noise</a></li>
-      </ul>
-    </div>
-
-    <div class="essays">
-      <h5>Recently written</h5>
-
-      <ul>
-      {% for essay in site.categories.writes limit:6 %}
+    <ul class="essays">
+      <h5>Recent essays</h5>
+      {% for essay in site.categories.writes limit:5 %}
         {% unless essay.title == page.title %}
           {% if essay.svn %}
             <li><a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a></li>
@@ -26,19 +29,10 @@
           {% endif %}
         {% endunless %}
       {% endfor %}
-      </ul>
-    </div>
+    </ul>
   </section>
 
-  <section class="browse">
-    <ul>
-      <li><a href="/is">About</a></li>
-      <li><a href="/makes">Work</a></li>
-      <li><a href="/writes">Writing</a></li>
-      <li><a href="/thinks">Thoughts</a></li>
-      <li><a href="/loves">Resources</a></li>
-    </ul>
-
+  <section class="chicago">
     <a href="/loves/chicago" class="chicago">
       <p>Made in Chicago</p><br>
       <span class="flag">✶✶✶✶</span>

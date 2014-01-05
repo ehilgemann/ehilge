@@ -3,6 +3,7 @@
 
 body.about {
 
+  section,
   article { margin-bottom: 2em; }
 
   h3 { margin-bottom: .5rem; }
@@ -76,7 +77,6 @@ body.about {
   body.about {
 
     section.biography {
-      margin: 8rem auto 0;
 
       h1 {
         margin-left: 16.667%;
@@ -148,6 +148,7 @@ body.about {
     }
 
     section.biography {
+      margin: 8rem auto 0;
       position: relative;
 
       div.portrait-thumbnails {

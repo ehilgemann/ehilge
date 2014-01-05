@@ -5,11 +5,13 @@ layout: default
 ---
 
 <section class="thoughts">
-  <h1>Things I’m thinking about. An ethos, of sorts.</h1>
+  <h1>Things I believe in. An ethos, of sorts.</h1>
 
   <ul>
   {% for thought in site.data.thoughts %}
-    <li data-thought id="{{ forloop.rindex }}"><a href="#{{ forloop.rindex }}" title="Click for a permalink for this little quip.">{{ thought.idea }}</a></li>
+    <li data-thought id="{{ forloop.rindex }}"><a href="#{{ forloop.rindex }}" title="Click for a permalink for this quip.">{{ thought.idea }}</a></li>
   {% endfor %}
   </ul>
+
+  <p>If you liked these, <a href="http://twitter.com/migreyes" title="More thoughts like this on Twitter">you can follow me on Twitter</a>.</p>
 </section>

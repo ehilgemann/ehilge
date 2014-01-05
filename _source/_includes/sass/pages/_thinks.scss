@@ -1,3 +1,6 @@
+// Thinks ———————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 body.thinks {
   background: #fdffff;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iI2U2ZjhmZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU0JSIgc3RvcC1jb2xvcj0iI2M4ZWVmYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iI2JlZTRmOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiMWQ4ZjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -24,9 +27,9 @@ body.thinks {
       display: block;
       letter-spacing: -1px;
       margin-left: 0%;
-      margin-bottom: 1em;
+      margin-top: 1em;
       line-height: 1em;
-      max-width: 83.335%;
+      max-width: 640px;
 
       a {
         color: #333;
@@ -53,7 +56,8 @@ body.thinks {
     }
   }
 
-  footer a { color: #368ac1; }
+  footer a,
+  section a { color: #368ac1; }
   footer a:hover { color: $color-link; }
 
   footer .chicago p { border: none; }
@@ -65,7 +69,10 @@ body.thinks {
   }
 }
 
-// iPad ————————————————————————————————————— /
+
+// Thinks: Tablet ———————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(640px) {
   body.thinks {
 

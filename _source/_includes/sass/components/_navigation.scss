@@ -4,8 +4,9 @@
 nav {
   @include border-box;
   font-family: $font-sans;
-  padding: .5em;
+  padding: 1em;
   position: relative;
+  width: 100%;
 
   a.home {
     color: #333;
@@ -27,8 +28,8 @@ nav {
 
     &.links {
       position: absolute;
-      right: .5em;
-      top: .5em;
+      right: 1em;
+      top: 1em;
 
       li {
         display: inline-block;

@@ -3,13 +3,7 @@
 
 body.writes {
 
-  p a:link {
-    color: $color-link;
-    text-decoration: underline;
-  }
-  p a:visited { color: $color-link; }
-
-  aside.sidebar { display: none; }
+  aside { display: none; }
 
   section.essays {
 
@@ -40,7 +34,7 @@ body.writes {
         color: #777;
         font-family: $font-sans;
         line-height: 1.2em;
-        margin-bottom: .25em;
+        margin-bottom: 0;
       }
 
       a small {
@@ -60,6 +54,8 @@ body.writes {
 
       a small.desktop { display: none; }
     }
+
+    p a:visited { color: $color-link; }
   }
 }
 
@@ -92,7 +88,10 @@ body.writes {
         text-decoration: none;
       }
 
-      a p { margin: 0 0 .25em; }
+      a p {
+        line-height: 1em;
+        margin: 0;
+      }
 
       a:hover h2,
       a:hover p {

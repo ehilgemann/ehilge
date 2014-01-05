@@ -106,14 +106,13 @@ nav {
       &.contact {
         display: block;
       }
+
+      p { margin-bottom: 0; }
     }
 
-    h5 {
-      margin-top: 1em;
-    }
+    h5 { margin-top: 1em; }
 
-    address {
-      font-style: normal;
-    }
+
+    address { font-style: normal; }
   }
 }

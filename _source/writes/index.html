@@ -6,18 +6,18 @@ layout: default
 
 <h1>Brief essays on design, craft, and culture</h1>
 
-<aside>
-  <ul class="radios">
-    <li data-essay-filter="recent" class="selected"><span class="radio">&nbsp;</span> Newest first</li>
-    <li data-essay-filter="shortest"><span class="radio">&nbsp;</span> Shortest first</li>
-  </ul>
-
-  <ul class="checkboxes">
-    <li data-essay-filter="favorites"><span class="check">&nbsp;</span> My favorites</li>
-  </ul>
-</aside>
-
 <section class="essays">
+  <aside>
+    <ul class="radios">
+      <li data-essay-filter="recent" class="selected"><span class="radio">&nbsp;</span> Newest first</li>
+      <li data-essay-filter="shortest"><span class="radio">&nbsp;</span> Shortest first</li>
+    </ul>
+
+    <ul class="checkboxes">
+      <li data-essay-filter="favorites"><span class="check">&nbsp;</span> My favorites</li>
+    </ul>
+  </aside>
+
   <ul>
   {% for essay in site.categories.writes %}
     {% if essay.svn %}

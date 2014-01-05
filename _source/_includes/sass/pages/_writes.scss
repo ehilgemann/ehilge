@@ -59,10 +59,10 @@ body.writes {
   }
 }
 
-// Writes: Desktop ——————————————————————————— •
+// Writes: Tablet ±——————————————————————————— •
 // ——————————————————————————————————————————— •
 
-@include responsive-break-point(768px) {
+@include responsive-break-point(640px) {
   body.writes {
 
     h1 {
@@ -73,7 +73,7 @@ body.writes {
 
     section.essays {
       margin-bottom: 6em;
-      margin-left: 33.333%;
+      margin-left: 16.667%;
       position: relative;
 
       ul {
@@ -107,15 +107,15 @@ body.writes {
 
     aside {
       display: block;
+      left: -8em;
+      margin-top: .4em;
       position: absolute;
-      margin-left: 1.25em;
-      left: 16.667%;
 
       ul.radios {
         border-bottom: 1px solid #DDD;
         margin-bottom: .75em;
         padding-bottom: .25em;
-        width: 110px;
+        width: 100px;
 
         li { margin-bottom: 0; }
       }

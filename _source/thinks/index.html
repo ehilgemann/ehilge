@@ -4,14 +4,14 @@ class: thinks
 layout: default
 ---
 
-<section class="thoughts">
-  <h1>Things I believe in. An ethos, of sorts.</h1>
+<h1>Things I believe in. An ethos, of sorts.</h1>
 
+<section class="thoughts">
   <ul>
   {% for thought in site.data.thoughts %}
     <li data-thought id="{{ forloop.rindex }}"><a href="#{{ forloop.rindex }}" title="Click for a permalink for this quip.">{{ thought.idea }}</a></li>
   {% endfor %}
   </ul>
 
-  <p>If you liked these, <a href="http://twitter.com/migreyes" title="More thoughts like this on Twitter">you can follow me on Twitter</a>.</p>
+  <p>Liked these? <a href="http://twitter.com/migreyes" title="More thoughts like this on Twitter">You can follow me on Twitter</a>.</p>
 </section>

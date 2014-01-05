@@ -3,10 +3,13 @@
 
 body.home {
 
+  h1 { margin-bottom: 2em; }
+
   article { margin-bottom: 2em; }
 
   article a:visited { color: $color-link; }
 }
+
 
 // Home: Tablet —————————————————————————————— •
 // ——————————————————————————————————————————— •
@@ -50,7 +53,6 @@ body.home {
 
     // Ephemera ————————————————————————————————————— /
     .ephemera { display: block; }
-
     .ephemera.meet {
       @include transform-origin(left top);
       top: 30em;

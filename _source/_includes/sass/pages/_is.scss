@@ -3,15 +3,10 @@
 
 body.about {
 
-  section {
-    @include border-box;
+  article { margin-bottom: 2em; }
 
-    article { margin-bottom: 2em; }
+  h3 { margin-bottom: .5rem; }
 
-    hgroup { margin-bottom: .5rem; }
-
-    .ephemera { display: none; }
-  }
 
   section.portrait {
     margin-bottom: 1em;
@@ -30,20 +25,12 @@ body.about {
     }
   }
 
-  section.biography,
-  section.teaching {
-
-    p a:link { text-decoration: underline; }
-    p a:hover { text-decoration: none; }
-  }
-
   section.biography {
 
-    article.short { display: none; }
+    article.short,
+    div.portrait-thumbnails { display: none; }
 
-    p { margin: 0 0 1rem; }
-
-    [data-toggle="bio"] {
+    [data-bio] {
       color: $color-link;
       text-decoration: underline;
 
@@ -53,25 +40,22 @@ body.about {
         text-decoration: none;
       }
     }
-
-    .portrait-thumbnails { display: none; }
   }
 
-  section.public {
+  article.speaking {
 
-    article.speaking {
-
-      li {
-        line-height: 1.25em;
-        margin-bottom: 1rem;
-      }
-
-      span + span:before { content: "/ "; }
+    li {
+      line-height: 1.25em;
+      margin-bottom: 1rem;
     }
 
-    article.print li {
-      margin-bottom: .5em;
-    }
+    p { margin-bottom: 0; }
+
+    span + span:before { content: "/ "; }
+  }
+
+  article.print li {
+    margin-bottom: .5em;
   }
 }
 
@@ -81,12 +65,7 @@ body.about {
 @include responsive-break-point(480px) {
   body.about {
 
-    section.biography {
-
-      figure {
-        width: 50%;
-      }
-    }
+    section.biography figure { width: 50%; }
   }
 }
 
@@ -106,7 +85,9 @@ body.about {
 
       p {
         line-height: 1.75em;
+        margin-left: 33.333%;
         max-width: 600px;
+        width: 66.667%;
       }
 
       article.short {
@@ -119,11 +100,6 @@ body.about {
       }
 
       article.long { margin-bottom: 8em; }
-
-      p {
-        margin-left: 33.333%;
-        width: 66.667%;
-      }
     }
   }
 }
@@ -133,28 +109,6 @@ body.about {
 
 @include responsive-break-point(768px) {
   body.about {
-
-    .content section {
-      .ephemera { display: block; }
-
-      .midwest {
-        bottom: 15em;
-        left: 15%;
-      }
-
-      .give {
-        @include transform-origin(left top);
-        right: -30em;
-        top: 0;
-      }
-
-      .nice {
-        bottom: 12%;
-        left: 55%;
-      }
-
-      .est { bottom: 5em; }
-    }
 
     section.portrait {
       background-color: rgba(0,0,0,.8);
@@ -196,9 +150,9 @@ body.about {
     section.biography {
       position: relative;
 
-      .portrait-thumbnails {
+      div.portrait-thumbnails {
         display: block;
-        left: -1em;
+        left: -2em;
         position: absolute;
         top: -8em;
         width: 30%;
@@ -210,7 +164,7 @@ body.about {
           width: 100%;
         }
 
-        .portrait-toggle {
+        figure.portrait-toggle {
           margin-top: 8em;
           position: absolute;
           width: 100%;
@@ -283,5 +237,27 @@ body.about {
       margin: 2rem 0 10rem 50%;
       width: 50%;
     }
+
+    // Ephemera ————————————————————————————————————— •
+
+    .ephemera { display: block; }
+
+    .ephemera.midwest {
+      bottom: 15em;
+      left: 15%;
+    }
+
+    .ephemera.give {
+      @include transform-origin(left top);
+      right: -30em;
+      top: 0;
+    }
+
+    .ephemera.nice {
+      bottom: 12%;
+      left: 55%;
+    }
+
+    .ephemera.est { bottom: 5em; }
   }
 }

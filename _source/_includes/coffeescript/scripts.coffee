@@ -5,19 +5,18 @@ parallax = (element, direction, start, stop, rate) ->
     if position >= start and position <= stop
       element.css direction, ($(window).scrollTop() * rate)
 
-responsiveTest = ->
-  $(window).resize ->
-     document.title = $(window).width()
 
-responsivePSA = ->
+publicServiceAnnouncement = ->
   $message = $('[data-psa]')
   resizeTimer = undefined
+  mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
   $(window).resize ->
-    unless /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+    unless mobile
+      # Show the message
       $message.fadeIn()
 
-      # Reset any old countdowns
+      # Reset old countdowns
       clearTimeout resizeTimer if resizeTimer
 
       # Start a new countdown
@@ -26,14 +25,18 @@ responsivePSA = ->
         $message.fadeOut()
       , 1200)
 
-escapable = -> $('[data-behavior~="escapable"]').fadeOut()
+
+showWindowWidth = ->
+  $(window).resize -> document.title = $(window).width()
+
+
+escapable = ->
+  $('[data-behavior="escapable"]').fadeOut()
 
 $ ->
   $(window).bind 'keydown', (event) ->
     switch event.keyCode
       when 27 # Escape
         escapable()
-        closeProject()
 
-  # responsivePSA()
-  responsiveTest()
+  # publicServiceAnnouncement()

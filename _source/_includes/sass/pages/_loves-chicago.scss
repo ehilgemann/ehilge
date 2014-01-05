@@ -1,3 +1,6 @@
+// Chicago ——————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 body.chicago {
 
   .content > section {
@@ -13,7 +16,10 @@ body.chicago {
   .ephemera { display: none; }
 }
 
-// iPad ————————————————————————————————————— /
+
+// Chicago: Tablet ——————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(640px) {
   body.chicago {
 
@@ -78,19 +84,5 @@ body.chicago {
       right: 5%;
       bottom: -2em;
     }
-  }
-}
-
-// Tablet ————————————————————————————————————— /
-@include responsive-break-point(768px) {
-  body.chicago {
-
-  }
-}
-
-// Long Browser ————————————————————————————————————— /
-@include responsive-break-point(1280px) {
-  body.chicago {
-
   }
 }

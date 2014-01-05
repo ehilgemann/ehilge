@@ -59,6 +59,10 @@ h3 {
   text-transform: uppercase;
 }
 
+p { margin-bottom: 1em; }
+p a { text-decoration: underline; }
+p a:hover { text-decoration: none; }
+
 div.content {
   @include animate(fade-in .5s both);
   @include border-box;

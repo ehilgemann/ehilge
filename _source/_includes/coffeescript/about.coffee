@@ -1,20 +1,16 @@
-swapBio = (bio) ->
-  $bio = $('section.biography')
-  $bio.find('article:not(bio)').fadeOut ->
-    $bio.find(bio).fadeIn()
-
 toggleBio = (bio) ->
-  position = document.body.scrollTop
+  swap = (bio) ->
+    $bio = $('section.biography')
+    $bio.find('article').fadeOut -> $bio.find(bio).fadeIn()
 
+  position = document.body.scrollTop
   if position > 200
-    $('body').animate
-      scrollTop: 0
-    ,
+    $('body').animate scrollTop: 0,
       duration: 500
-      complete: ->
-        swapBio bio
+      complete: -> swap bio
   else
-    swapBio bio
+    swap bio
+
 
 $ ->
   $portraitToggle = $('.portrait-toggle')
@@ -29,8 +25,7 @@ $ ->
       $(this).fadeOut()
 
   # Toggle long versus short biographies.
-  $('[data-toggle~="bio"]').on 'click', -> toggleBio $(this).data('bio')
+  $('[data-bio]').on 'click', -> toggleBio $(this).data('bio')
 
   # Visual effect: slide toggle up when scrolling down.
   parallax $portraitToggle, 'top', -40, 250, -1.5
-

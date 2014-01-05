@@ -85,7 +85,8 @@ a.chicago {
     li.loves { display: block; }
 
     section.chicago {
-      margin: 8em 0 8em 33.333%;
+      margin: 8em 0 0 33.333%;
+      padding-bottom: 4em;
       text-align: left;
     }
   }

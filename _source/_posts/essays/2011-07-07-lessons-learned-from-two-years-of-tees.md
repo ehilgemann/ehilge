@@ -7,7 +7,7 @@ favorite: true
 preview: Nine (or so) memorable take-aways from two years of building Threadless
 ---
 
-![Glory days.](http://media.threadless.com/media/2011/07/07/290890_Shirt-Small.jpg "Lessons learned.")
+[![Glory days.](/assets/images/posts/threadless-lessons.jpg "Lessons learned.")](http://www.threadless.com/product/4685/Open_for_New_Ideas)
 
 Today marks my second full year working as a designer at Threadless. I’ve loved every minute of it. I’ve been able to work on really amazing projects that millions of people see. I’ve been able to work with people that kick my ass in so many respects. It’s an honor, a thrill and totally rad.
 

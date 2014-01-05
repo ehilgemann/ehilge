@@ -1,8 +1,18 @@
+// Essays ———————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 body.essay {
 
   .content { @include animate(fade-in-up .5s both); }
 
-  h1 { color: #333; }
+  h1 {
+    color: #333;
+    font-family: $font-serif;
+  }
+
+  h2 {
+    margin-top: 2em;
+  }
 
   article li {
     padding-left: 1em;
@@ -22,10 +32,12 @@ body.essay {
     max-width: 100%;
   }
 
-  article p {
-    margin-bottom: 1.5em;
-  }
 
+  aside {
+    font-family: $font-sans;
+
+    a:visited { color: $color-link; }
+  }
 
   .twitter-tweet {
     position: relative;
@@ -34,18 +46,41 @@ body.essay {
   }
 }
 
-// iPad ————————————————————————————————————— /
+
+// Essays: Tablet ———————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(640px) {
   body.essay {
 
     article {
-      margin-left: 16.667%;
-      width: 66.667%;
+      padding: 0 2em;
     }
 
     article p, article li {
       font-size: 1.1em;
       line-height: 1.75em;
+    }
+  }
+}
+
+
+// Essays: Desktop ——————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(800px) {
+  body.essay {
+
+    article {
+      margin-left: 16.667%;
+      margin-top: 4em;
+      padding: 0;
+      max-width: 680px;
+      width: 83.333%;
+    }
+
+    aside {
+      margin: 4em 0 4em 16.667%;
     }
   }
 }

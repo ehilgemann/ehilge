@@ -9,9 +9,10 @@
         </article>
 
         <aside>
-          <ul>
-            <li><a href="/writes">&larr; all {{ site.posts | size }} essays</a></li>
-          </ul>
+          <h5>About Mig</h5>
+          <p>I’m a designer from Chicago working at 37signals. I like to write about design, craft, and culture.</p>
+          <p>Written on {{ page.date | date: "%B %d, %Y" }}</p>
+          <p><a href="/writes">&larr; See all {{ site.posts | size }} essays</a></p>
         </aside>
 
         {% include footer.html %}

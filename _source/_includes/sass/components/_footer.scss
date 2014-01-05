@@ -57,7 +57,7 @@ a.chicago {
 }
 
 
-// Footer: Desktop ——————————————————————————— •
+// Footer: Tablet ———————————————————————————— •
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
@@ -69,7 +69,6 @@ a.chicago {
       vertical-align: top;
 
       &.here {
-        margin-left: 16.667%;
         margin-right: 2%;
         width: 14.667%;
 
@@ -78,6 +77,10 @@ a.chicago {
 
       &.elsewhere {
         margin-right: 2%;
+        width: 31.333%;
+      }
+
+      &.essays {
         width: 31.333%;
       }
     }
@@ -89,5 +92,15 @@ a.chicago {
       padding-bottom: 4em;
       text-align: left;
     }
+  }
+}
+
+// Footer: Desktop ——————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(768px) {
+  footer {
+
+    ul.here { margin-left: 16.667%; }
   }
 }

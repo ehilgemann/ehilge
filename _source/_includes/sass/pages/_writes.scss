@@ -3,7 +3,7 @@
 
 body.writes {
 
-  aside { display: none; }
+  aside, figure { display: none; }
 
   section.essays {
 
@@ -68,7 +68,6 @@ body.writes {
     h1 {
       margin-bottom: 1em;
       margin-left: 16.667%;
-      padding-top: 2em;
     }
 
     section.essays {
@@ -151,6 +150,25 @@ body.writes {
 
 
 // Writes: Desktop ———————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(800px) {
+  body.writes {
+
+    figure {
+      display: block;
+      width: 33.333%;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+
+// Writes: Wide Desktop —————————————————————— •
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(1200px) {

@@ -5,7 +5,9 @@
     <div class="content">
       {{ content }}
 
-      {% include footer.html %}
+      {% unless page.footer == false %}
+        {% include footer.html %}
+      {% endunless %}
     </div>
 
     {% include public-service-announcement.html %}

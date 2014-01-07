@@ -220,7 +220,7 @@ body.about {
     }
 
     article.interviews {
-      padding-top: 18rem;
+      padding-top: 14rem;
       width: 33.33%;
     }
 
@@ -232,6 +232,12 @@ body.about {
     article.print {
       margin: 8rem 0 0 16.667%;
       width: 33.33%;
+    }
+
+    section.availability {
+      position: relative;
+      margin: 10rem 0 10rem 16.667%;
+      width: 33.333%;
     }
 
     section.colophon {
@@ -258,6 +264,11 @@ body.about {
     .ephemera.nice {
       bottom: 12%;
       left: 55%;
+    }
+
+    .ephemera.hello {
+      left: -8em;
+      top: -5em;
     }
 
     .ephemera.est { bottom: -5em; }

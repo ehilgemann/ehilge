@@ -6,6 +6,11 @@
   location: Portland
   industry: design
 
+- name: Alison Yard Medland
+  url: alisonyard.com
+  location: Chicago
+  industry: design
+
 - name: Bud Rodecker
   url: budrodecker.com
   location: Chicago
@@ -201,13 +206,18 @@
   location: Chicago
   industry: photo
 
+- name: Nick Campbell
+  url: greyscalegorilla.com
+  location: Chicago
+  industry: photo
+
 - name: Paul Octavious
   url: pauloctavious.com
   location: Chicago
   industry: photo
 
-- name: Nick Campbell
-  url: greyscalegorilla.com
+- name: Rubbish
+  url: rubbishisgold.com
   location: Chicago
   industry: photo
 

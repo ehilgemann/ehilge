@@ -7,6 +7,22 @@ body.portfolio {
     width: 100%;
   }
 
+  section.lyt {
+    margin-bottom: 5em;
+
+    figure {
+      display: inline-block;
+      margin-bottom: 1em;
+      margin-right: 1em;
+      width: 31%;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
   article {
     display: inline-block;
     margin-right: 2%;
@@ -56,7 +72,7 @@ body.portfolio {
   // }
 
   article.website {
-    width: 16%;
+    width: 31%;
     // width: 47%;
 
     span.chrome-title {
@@ -83,8 +99,8 @@ body.portfolio {
 
     figure.chrome {
       @include border-radius(0 0 3px 3px);
-      // @include box-shadow(0 0 5px rgba(0,0,0,.35));
-      border: 1px solid #CCC;
+      @include box-shadow(0 0 5px rgba(0,0,0,.35));
+      // border: 1px solid #CCC;
       height: 200px;
       overflow-x: hidden;
       overflow-y: scroll;
@@ -117,37 +133,37 @@ body.portfolio {
     }
   }
 
-  footer {
-    margin-bottom: 0;
-    padding-bottom: 3em;
+  // footer {
+  //   margin-bottom: 0;
+  //   padding-bottom: 3em;
 
-    section.contact {
-      text-align: center;
+  //   section.contact {
+  //     text-align: center;
 
-      p {
-        display: inline;
-        margin: 0 1rem;
-      }
+  //     p {
+  //       display: inline;
+  //       margin: 0 1rem;
+  //     }
 
-      small {
-        color: #999;
-        display: block;
-        font-size: .65rem;
-        font-weight: bold;
-        letter-spacing: .2rem;
-        margin-top: .5rem;
-        text-transform: uppercase;
-      }
-    }
+  //     small {
+  //       color: #999;
+  //       display: block;
+  //       font-size: .65rem;
+  //       font-weight: bold;
+  //       letter-spacing: .2rem;
+  //       margin-top: .5rem;
+  //       text-transform: uppercase;
+  //     }
+  //   }
 
-    section.links {
-      text-align: center;
+  //   section.links {
+  //     text-align: center;
 
-      a:visited { color: $color-link; }
+  //     a:visited { color: $color-link; }
 
-      a.chicago { display: block; }
-    }
-  }
+  //     a.chicago { display: block; }
+  //   }
+  // }
 }
 
 
@@ -158,7 +174,6 @@ body.portfolio {
   body.portfolio {
 
     h1 {
-      margin-bottom: 1em;
       margin-top: 4rem;
     }
 
@@ -166,12 +181,11 @@ body.portfolio {
       cursor: -webkit-zoom-in;
     }
 
-    article.united-pixelworkers {
+    .full {
+      display: block !important;
+      width: 100% !important;
 
-    }
-
-    article.blog-wars {
-
+      img { max-width: 100%; }
     }
   }
 }

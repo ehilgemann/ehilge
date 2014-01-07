@@ -1,20 +1,18 @@
+// Portfolio ————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
 body.portfolio {
 
-  .content {
-    padding-left: 7em;
-    max-width: 100%;
-  }
-
   section.projects {
-    text-align: center;
     width: 100%;
   }
 
   article {
     display: inline-block;
+    margin-right: 2%;
     margin-bottom: 2em;
-    vertical-align: top;
-    width: 16.667%;
+    vertical-align: bottom;
+    width: 14%;
 
     figure {
       margin: 0 auto;
@@ -27,35 +25,39 @@ body.portfolio {
     }
   }
 
-  article.full,
-  article.two-thirds {
-    display: block;
-  }
+  // article.full,
+  // article.two-thirds {
+  //   display: block;
+  // }
 
-  article.quarter {
-    width: 25%;
-  }
+  // article.quarter {
+  //   margin-right: 2%;
+  //   width: 23%;
+  // }
 
-  article.third {
-    width: 33.333%;
-  }
+  // article.third {
+  //   margin-right: 2%;
+  //   width: 30%;
+  // }
 
-  article.half {
-    width: 50%;
-  }
+  // article.half {
+  //   margin-right: 2%;
+  //   width: 47%;
+  // }
 
-  article.two-thirds {
-    width: 67.667%;
-  }
+  // article.two-thirds {
+  //   width: 67.667%;
+  // }
 
-  article.full {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-  }
+  // article.full {
+  //   margin-left: auto;
+  //   margin-right: auto;
+  //   width: 100%;
+  // }
 
   article.website {
-    width: 50%;
+    width: 16%;
+    // width: 47%;
 
     span.chrome-title {
       @include border-radius(3px 3px 0 0);
@@ -81,9 +83,9 @@ body.portfolio {
 
     figure.chrome {
       @include border-radius(0 0 3px 3px);
-      @include box-shadow(0 0 5px rgba(0,0,0,.35));
+      // @include box-shadow(0 0 5px rgba(0,0,0,.35));
       border: 1px solid #CCC;
-      height: 400px;
+      height: 200px;
       overflow-x: hidden;
       overflow-y: scroll;
       position: relative;
@@ -119,7 +121,7 @@ body.portfolio {
     margin-bottom: 0;
     padding-bottom: 3em;
 
-    .contact-inline {
+    section.contact {
       text-align: center;
 
       p {
@@ -128,6 +130,7 @@ body.portfolio {
       }
 
       small {
+        color: #999;
         display: block;
         font-size: .65rem;
         font-weight: bold;
@@ -136,17 +139,27 @@ body.portfolio {
         text-transform: uppercase;
       }
     }
+
+    section.links {
+      text-align: center;
+
+      a:visited { color: $color-link; }
+
+      a.chicago { display: block; }
+    }
   }
 }
 
 
-// iPad ————————————————————————————————————— /
+// Portfolio: Tablet ————————————————————————— •
+// ——————————————————————————————————————————— •
+
 @include responsive-break-point(640px) {
   body.portfolio {
 
     h1 {
       margin-bottom: 1em;
-      margin-top: 2rem;
+      margin-top: 4rem;
     }
 
     [data-behavior="zoomable"]:hover {

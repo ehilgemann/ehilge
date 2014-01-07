@@ -3,7 +3,21 @@
 
 body.home {
 
-  h1 { margin-bottom: 2em; }
+  h1 {
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
+
+  figure {
+    width: 100%;
+  }
+
+  figcaption { display: none; }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
 
   article { margin-bottom: 2em; }
 
@@ -13,50 +27,62 @@ body.home {
 
 // Home: Tablet —————————————————————————————— •
 // ——————————————————————————————————————————— •
+
 @include responsive-break-point(640px) {
   body.home {
 
-    h1 {
-      margin-top: 2em;
-      margin-left: 16.667%;
+    section.introduction {
+
+      h1 {
+        margin-left: 16.667%;
+      }
+
+      figure {
+        display: inline-block;
+        margin-left: 16.667%;
+        width: 50%;
+      }
+
+      figcaption {
+        color: #999;
+        display: block;
+        font-size: .5em;
+
+        a { color: #999; }
+      }
     }
 
-    section.latest {
-      margin-top: 3em;
-      position: relative;
+    a { text-decoration: underline; }
 
-      a { text-decoration: underline; }
+    article {
+      display: inline-block;
+      margin-bottom: 3em;
+      vertical-align: top;
+      width: 31.333%;
+    }
 
-      article {
-        display: inline-block;
-        margin-bottom: 4em;
-        vertical-align: top;
-        width: 28.333%;
-      }
+    article h3 { margin-bottom: .5em; }
 
-      article h3 { margin-bottom: .5em; }
+    article.write a { font-style: italic; }
 
-      article.write a { font-style: italic; }
+    article.make,
+    article.believe {
+      margin-left: 33.333%;
+      margin-right: 2%;
+    }
 
-      article.make,
-      article.believe {
-        margin-left: 33.333%;
-        margin-right: 2%;
-      }
-
-      article.more {
-        margin-bottom: 4em;
-        margin-left: 16.667%;
-        margin-top: 6em;
-      }
+    article.more {
+      margin-bottom: 4em;
+      margin-left: 16.667%;
+      margin-top: 6em;
     }
 
     // Ephemera ————————————————————————————————————— /
     .ephemera { display: block; }
     .ephemera.meet {
       @include transform-origin(left top);
-      top: 30em;
-      left: 16.667%;
+      top: 60em;
+      left: 19%;
     }
   }
 }

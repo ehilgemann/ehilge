@@ -1,19 +1,22 @@
 {% include head.html %}
   <body{% if page.class %} class="{{ page.class }}" {% endif %}>
     {% include navigation.html %}
+
     <div class="content">
-      <h1 data-project-header>{{ page.headline }}</h1>
+      <h1>{{ page.headline }}</h1>
+
       {{ content }}
     </div>
 
+    {% comment %}
     <footer>
-      <section class="contact-inline">
+      <section class="contact">
         <p>Follow me on Twitter, <a href="http://twitter.com/migreyes" title="@migreyes">@migreyes</a></p>
         <p>Email, <script src="/assets/javascript/email.js"></script></p>
         <small>I’m happy at 37signals. No recruiters, please.</small>
       </section>
 
-      <section class="browse">
+      <section class="links">
         <ul>
           <li><a href="/is">About</a></li>
           <li class="active"><a href="/makes">Work</a></li>
@@ -28,16 +31,8 @@
         </a>
       </section>
     </footer>
+    {% endcomment %}
 
-    <div class="public-service-announcement">
-      <p>The web was meant to be read, not squished.</p>
-
-      <figure class="finger"><img src="/assets/images/responsive/finger.png"></figure>
-      <figure class="hole">
-        <img class="a" src="/assets/images/responsive/hole-a.png">
-        <img class="ok" src="/assets/images/responsive/hole-ok.png">
-      </figure>
-      <figure class="poop"><img class="a" src="/assets/images/responsive/poop.png"></figure>
-    </div>
+    {% include public-service-announcement.html %}
   </body>
 </html>

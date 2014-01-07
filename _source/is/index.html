@@ -73,7 +73,7 @@ layout: default
 
     <ul>
       {% for interview in site.data.interviews %}
-        <li><a href="{{ interview.url }}">{{ interview.title }}</a></li>
+        <li><a href="{{ interview.url }}" target="_blank">{{ interview.title }}</a></li>
       {% endfor %}
     </ul>
   </article>
@@ -94,7 +94,7 @@ layout: default
     <ul>
       {% for publication in site.data.publications %}
         <li>
-          <h4><a href="{{ publication.url }}">{{ publication.title }}</a></h4>
+          <h4><a href="{{ publication.url }}" target="_blank">{{ publication.title }}</a></h4>
           {{ publication.publisher }}
         </li>
       {% endfor %}

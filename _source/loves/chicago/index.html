@@ -5,6 +5,7 @@ layout: default
 ---
 
 <section class="introduction">
+  <figure><img src="/assets/images/chicago/dog.jpg"></figure>
   <h1>A short list of my favorite places in the Windy City</h1>
 </section>
 
@@ -90,7 +91,7 @@ layout: default
   <ul>
     {% for friend in site.data.friends %}
       {% if friend.location == "Chicago" %}
-        <li><a href="{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
+        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
       {% endif %}
     {% endfor %}
   </ul>

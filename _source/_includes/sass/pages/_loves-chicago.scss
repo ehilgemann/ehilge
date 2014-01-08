@@ -6,12 +6,14 @@ body.chicago {
   .content > section {
     position: relative;
     margin-bottom: 4em;
+
+    ul li { font-family: $font-sans; }
+    ul { margin-top: 1em; }
+
+    h3 { margin-bottom: .5em; }
   }
 
-  section ul li { font-family: $font-sans; }
-  section ul { margin-top: 1em; }
-
-  section h3 { margin-bottom: .5em; }
+  figure { display: none; }
 
   .ephemera { display: none; }
 }
@@ -23,12 +25,17 @@ body.chicago {
 @include responsive-break-point(640px) {
   body.chicago {
 
-    section h1 {
-      margin: 2em 0 0 33.333%;
-      width: 50%;
+    section.introduction {
+
+      h1 {
+        margin-left: 33.333%;
+        padding-top: 4em;
+        width: 50%;
+      }
     }
 
     section.coffee {
+      margin-top: 4em;
       margin-left: 33.333%;
       width: 50%;
     }
@@ -83,6 +90,28 @@ body.chicago {
     .ephemera.look {
       right: 5%;
       bottom: -2em;
+    }
+  }
+}
+
+
+// Chicago: Desktop —————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(800px) {
+  body.chicago {
+
+    figure {
+      display: block;
+      position: absolute;
+      left: 12%;
+      width: 15%;
+      z-index: -1986;
+
+      img {
+        height: auto;
+        width: 100%;
+      }
     }
   }
 }

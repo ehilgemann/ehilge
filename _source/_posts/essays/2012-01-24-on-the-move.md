@@ -1,5 +1,6 @@
 ---
 title: "On the Move"
+category: writes
 layout: essay
 preview: A thank you to Threadless as I move from one great team to the next
 bio: I can’t wait to see what the Threadless team does next.

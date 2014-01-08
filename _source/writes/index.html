@@ -21,7 +21,7 @@ layout: default
   </aside>
 
   <ul>
-  {% for essay in site.posts %}
+  {% for essay in site.categories.writes %}
     {% if essay.svn %}
       <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
         <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">

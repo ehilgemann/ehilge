@@ -1,5 +1,6 @@
 ---
 title: "When culture turns into policy"
+category: writes
 svn: 3450
 favorite: true
 preview: Are "lunch and learns" part of your culture, or part of the rules?

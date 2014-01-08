@@ -1,5 +1,6 @@
 ---
 title: Try, try again
+category: writes
 svn: 3646
 layout: essay
 preview: What if we approached our work the way scientists did?

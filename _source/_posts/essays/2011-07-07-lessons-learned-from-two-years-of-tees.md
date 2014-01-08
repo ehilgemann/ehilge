@@ -1,6 +1,7 @@
 ---
 title: "Lessons from Two Years of Tees"
-layout: essay
+layout: essays
+category: writes
 favorite: true
 preview: Nine (or so) memorable take-aways from two years of building Threadless
 bio: I’m still working on my basketball shot.

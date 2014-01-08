@@ -1,5 +1,6 @@
 ---
 title: "A case for clarity in feedback"
+category: writes
 svn: 3297
 preview: I made something a programmer thought "looked terrible." But did I?
 ---

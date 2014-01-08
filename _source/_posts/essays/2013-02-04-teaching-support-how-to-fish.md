@@ -1,5 +1,6 @@
 ---
 title: "Teaching the Support team how to fish"
+category: writes
 svn: 3418
 preview: Redesigning the Basecamp Help site to become a living, breathing project
 ---

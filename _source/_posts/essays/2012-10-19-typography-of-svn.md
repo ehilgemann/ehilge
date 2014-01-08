@@ -1,5 +1,6 @@
 ---
 title: "The Typography behind the Signal vs. Noise redesign"
+category: writes
 svn: 3285
 preview: Dissecting my typography-first redesign I did for the 37signals blog
 ---

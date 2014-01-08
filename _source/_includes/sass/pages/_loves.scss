@@ -4,6 +4,8 @@
 body.loves {
 
   h2 { margin-bottom: .25em; }
+
+  section.introduction figure { display: none; }
 }
 
 // Resources: Tablet ————————————————————————— •
@@ -14,7 +16,7 @@ body.loves {
 
     h1 {
       margin-left: 16.667%;
-      margin-top: 2em;
+      padding-top: 5em;
       width: 66.667%;
     }
 
@@ -23,7 +25,7 @@ body.loves {
     section.guide {
       margin-bottom: 8em;
       margin-left: 16.667%;
-      margin-top: 10em;
+      margin-top: 5em;
       position: relative;
       width: 50%;
 
@@ -147,6 +149,32 @@ body.loves {
     span.share {
       left: -40%;
       top: -2em;
+    }
+  }
+}
+
+
+// Resources: Desktop ———————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(800px) {
+  body.loves {
+
+    section.introduction {
+      position: relative;
+
+      figure {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 33.333%;
+        z-index: -1986;
+
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
     }
   }
 }

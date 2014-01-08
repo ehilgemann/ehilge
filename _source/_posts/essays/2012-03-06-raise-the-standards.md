@@ -1,7 +1,5 @@
 ---
 title: "Raise the Standards"
-date: 2012-03-06 12:00
-category: writes
 layout: essay
 preview: A plea to HOW Design Conference to raise their graphic standards
 ---

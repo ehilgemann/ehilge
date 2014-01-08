@@ -1,7 +1,6 @@
 ---
 title: "Reminder: Design is still about words"
 svn: 3404
-category: writes
 favorite: true
 preview: Proof that design starts with having something to say, not draw
 ---

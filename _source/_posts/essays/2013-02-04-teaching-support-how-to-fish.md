@@ -1,7 +1,6 @@
 ---
 title: "Teaching the Support team how to fish"
 svn: 3418
-category: writes
 preview: Redesigning the Basecamp Help site to become a living, breathing project
 ---
 ## Since its launch, the all new Basecamp hadn’t had a dedicated Help site that was actually, well… helpful. Last month, the Support team and I changed all of that.

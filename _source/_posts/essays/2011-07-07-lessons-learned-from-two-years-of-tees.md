@@ -1,10 +1,9 @@
 ---
 title: "Lessons from Two Years of Tees"
-date: 2011-07-07 12:00
-category: writes
 layout: essay
 favorite: true
 preview: Nine (or so) memorable take-aways from two years of building Threadless
+bio: I’m still working on my basketball shot.
 ---
 
 [![Glory days.](/assets/images/posts/threadless-lessons.jpg "Lessons learned.")](http://www.threadless.com/product/4685/Open_for_New_Ideas)

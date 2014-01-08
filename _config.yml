@@ -9,6 +9,6 @@ source: ./_source
 destination: public
 exclude: [_drafts, _site, public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
-permalink: /:categories/:title
+permalink: /writes/:categories/:title
 markdown: rdiscount
 pygments: true

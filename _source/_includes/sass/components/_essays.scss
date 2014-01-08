@@ -34,9 +34,32 @@ body.essay {
 
 
   aside {
+    border-bottom: 2px solid #DDD;
+    border-top: 2px solid #DDD;
     font-family: $font-sans;
+    margin: 2em auto;
+    padding: 2em 0 1em;
+    text-align: center;
 
     a:visited { color: $color-link; }
+
+    figure {
+      @include border-radius(50%);
+      display: inline-block;
+      vertical-align: middle;
+      width: 20%;
+    }
+
+    img {
+      @include border-radius(50%);
+      height: auto;
+      width: 100%;
+    }
+
+    div {
+      display: inline-block;
+      vertical-align: top;
+    }
   }
 
   .twitter-tweet {
@@ -61,6 +84,21 @@ body.essay {
       font-size: 1.1em;
       line-height: 1.75em;
     }
+
+    aside {
+      padding-top: 2em;
+      text-align: left;
+
+      figure {
+        margin-left: -2%;
+        margin-right: 5%;
+        width: 18%;
+      }
+
+      div {
+        width: 78%;
+      }
+    }
   }
 }
 
@@ -81,6 +119,7 @@ body.essay {
 
     aside {
       margin: 4em 0 4em 16.667%;
+      max-width: 680px;
     }
   }
 }

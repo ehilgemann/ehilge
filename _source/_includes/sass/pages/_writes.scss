@@ -3,7 +3,7 @@
 
 body.writes {
 
-  aside, figure { display: none; }
+  aside, section.introduction figure { display: none; }
 
   section.essays {
 
@@ -155,12 +155,12 @@ body.writes {
 @include responsive-break-point(800px) {
   body.writes {
 
-    figure {
+    section.introduction figure {
       display: block;
       width: 33.333%;
     }
 
-    img {
+    section.introduction  img {
       height: auto;
       width: 100%;
     }

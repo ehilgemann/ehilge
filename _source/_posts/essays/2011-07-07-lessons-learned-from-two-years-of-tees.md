@@ -1,6 +1,6 @@
 ---
 title: "Lessons from Two Years of Tees"
-layout: essays
+layout: essay
 category: writes
 favorite: true
 preview: Nine (or so) memorable take-aways from two years of building Threadless

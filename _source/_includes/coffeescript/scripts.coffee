@@ -39,4 +39,4 @@ $ ->
       when 27 # Escape
         escapable()
 
-  # publicServiceAnnouncement()
+  publicServiceAnnouncement()

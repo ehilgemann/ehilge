@@ -8,15 +8,15 @@ body.home {
     margin-top: 1em;
   }
 
-  figure {
-    width: 100%;
-  }
+  section.introduction {
 
-  figcaption { display: none; }
+    figure { width: 100%; }
+    figcaption { display: none; }
 
-  img {
-    height: auto;
-    width: 100%;
+    img {
+      height: auto;
+      width: 100%;
+    }
   }
 
   article { margin-bottom: 2em; }
@@ -40,7 +40,7 @@ body.home {
       figure {
         display: inline-block;
         margin-left: 16.667%;
-        width: 50%;
+        width: 48%;
       }
 
       figcaption {

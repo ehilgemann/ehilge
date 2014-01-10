@@ -15,7 +15,7 @@ body {
   @include border-box;
   @include font-smoothing(antialiased);
   background-color: $color-background;
-  border-top: 5px solid #333;
+  border-top: 5px solid $color-link;
   color: #333;
   font-family: $font-serif;
   font-size: 1rem;
@@ -37,7 +37,7 @@ a {
 li { list-style: none; }
 
 h1 {
-  color: #F00;
+  color: $color-spot;
   font-size: 1.35em;
   font-weight: normal;
   letter-spacing: -.04em;
@@ -55,7 +55,7 @@ h2 {
 }
 
 h3 {
-  color: #F00;
+  color: $color-spot;
   font-size: .75rem;
   letter-spacing: .3em;
   line-height: 1em;

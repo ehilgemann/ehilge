@@ -1,7 +1,7 @@
 // Missing ——————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-body.missing div.content {
+body.missing .content {
 
   figure {
     margin-bottom: 2em;
@@ -13,6 +13,10 @@ body.missing div.content {
     height: auto;
     width: 100%;
   }
+
+  footer {
+    display: none;
+  }
 }
 
 
@@ -20,11 +24,11 @@ body.missing div.content {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
-  body.missing div.content {
+  body.missing .content {
 
     h1 {
+      margin-left: 33.333%;
       margin-top: 1em;
-      margin-left: 16.667%;
     }
 
     figure {

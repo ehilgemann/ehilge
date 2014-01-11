@@ -1,7 +1,7 @@
 // Navigation ———————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-nav {
+.nav {
   @include border-box;
   font-family: $font-sans;
   padding: 1em;
@@ -65,7 +65,7 @@ nav {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(800px) {
-  nav {
+  .nav {
     @include border-box;
     font-size: .9rem;
     line-height: 1.2em;
@@ -113,7 +113,6 @@ nav {
     }
 
     h5 { margin-top: 1em; }
-
 
     address { font-style: normal; }
   }

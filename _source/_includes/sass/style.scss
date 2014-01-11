@@ -5,6 +5,7 @@
   'globals/mixins',
   'globals/animations',
   'globals/fonts',
+  'globals/print',
   'globals/reset';
 
 
@@ -34,8 +35,6 @@ a {
   &:active { color: black; }
 }
 
-li { list-style: none; }
-
 h1 {
   color: $color-spot;
   font-size: 1.35em;
@@ -62,11 +61,16 @@ h3 {
   text-transform: uppercase;
 }
 
-p { margin-bottom: 1em; }
-p a { text-decoration: underline; }
-p a:hover { text-decoration: none; }
+p {
+  margin-bottom: 1em;
 
-div.content {
+  a { text-decoration: underline; }
+  a:hover { text-decoration: none; }
+}
+
+li { list-style: none; }
+
+.content {
   @include animate(fade-in .5s both);
   @include border-box;
   @include clearfix;
@@ -87,14 +91,9 @@ div.content {
     line-height: 1em;
   }
 
-  h2 {
-    font-size: 1.25rem;
-  }
+  h2 { font-size: 1.25rem; }
 
-  div.content {
-    @include border-box;
-    padding: 0 2em;
-  }
+  .content { padding: 0 2em; }
 
   .hide-from-mobile { display: inline !important; }
 }
@@ -103,9 +102,7 @@ div.content {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(800px) {
-  div.content {
-    width: 80%;
-  }
+  .content { width: 80%; }
 }
 
 

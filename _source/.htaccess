@@ -11,6 +11,9 @@ Options -Indexes
 # RedirectMatch 301 /portfolio /makes$1
 # RedirectMatch 301 /design /makes$1
 
+# Projects
+# RedirectMatch 301 /37signals /makes/37signals$1
+
 # Writing
 # RedirectMatch 301 /writing /writes$1
 # RedirectMatch 301 /thoughts /writes$1

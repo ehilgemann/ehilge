@@ -7,13 +7,9 @@
   padding: 1em;
   position: relative;
   width: 100%;
-
-  a:link,
-  a:visited { color: $color-link; }
-  a:hover { color: $color-link-hover; }
 }
 
-a.nav-home {
+.nav-home {
   color: #333;
   display: inline-block;
   font-weight: bold;
@@ -32,6 +28,10 @@ a.nav-home {
   right: 1em;
   top: 1em;
 
+  a:link,
+  a:visited { color: $color-link; }
+  a:hover { color: $color-link-hover; }
+
   li {
     display: inline-block;
     margin-left: 1em;
@@ -44,6 +44,10 @@ a.nav-home {
 .nav-contact {
   display: none;
 }
+
+
+// Navigation: Current Page —————————————————— •
+// ——————————————————————————————————————————— •
 
 body.about .nav-link-about,
 body.portfolio .nav-link-portfolio,
@@ -72,7 +76,7 @@ body.loves .nav-link-loves {
 
     &:hover { cursor: default; }
 
-    section { margin-top: 2em; }
+    div { margin-top: 2em; }
     h5 { margin-top: 1em; }
     p { margin-bottom: 0; }
     address { font-style: normal; }

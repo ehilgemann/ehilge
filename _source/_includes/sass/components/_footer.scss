@@ -1,23 +1,68 @@
 // Footer ———————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-footer {
+.footer {
   @include border-box;
   font-family: $font-sans;
 
-  ul {
-    margin-bottom: 2em;
+  ul { margin-bottom: 2em; }
+}
+
+.footer-nav-here a:visited { color: $color-link; }
+.footer-nav-here-loves { display: none; }
+
+.footer-chicago {
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+
+// Footer: Tablet ———————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(640px) {
+  .footer {
+    font-size: .9rem;
+
+    ul {
+      display: inline-block;
+      vertical-align: top;
+    }
   }
 
-  li.loves { display: none; }
+  .footer-nav-here {
+    margin-right: 2%;
+    width: 14.667%;
+  }
+  .footer-nav-here-loves { display: block; }
 
-  section.chicago {
-    margin-bottom: 4em;
-    text-align: center;
+  .footer-nav-elsewhere {
+    margin-right: 2%;
+    width: 31.333%;
+  }
+
+  .footer-nav-essays { width: 31.333%; }
+
+  .footer-chicago {
+    margin: 8em 0 0 33.333%;
+    padding-bottom: 4em;
+    text-align: left;
   }
 }
 
-a.chicago {
+
+// Footer: Desktop ——————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(768px) {
+  .footer-nav-here { margin-left: 16.667%; }
+}
+
+
+// Chicago ——————————————————————————————————— •
+// ——————————————————————————————————————————— •
+
+.chicago-flag {
 
   &:hover {
     text-decoration: none;
@@ -53,54 +98,5 @@ a.chicago {
     margin: 0 auto;
     padding: .3em .7em;
     text-align: center;
-  }
-}
-
-
-// Footer: Tablet ———————————————————————————— •
-// ——————————————————————————————————————————— •
-
-@include responsive-break-point(640px) {
-  footer {
-    font-size: .9rem;
-
-    ul {
-      display: inline-block;
-      vertical-align: top;
-
-      &.here {
-        margin-right: 2%;
-        width: 14.667%;
-
-        li a:visited { color: $color-link; }
-      }
-
-      &.elsewhere {
-        margin-right: 2%;
-        width: 31.333%;
-      }
-
-      &.essays {
-        width: 31.333%;
-      }
-    }
-
-    li.loves { display: block; }
-
-    section.chicago {
-      margin: 8em 0 0 33.333%;
-      padding-bottom: 4em;
-      text-align: left;
-    }
-  }
-}
-
-// Footer: Desktop ——————————————————————————— •
-// ——————————————————————————————————————————— •
-
-@include responsive-break-point(768px) {
-  footer {
-
-    ul.here { margin-left: 16.667%; }
   }
 }

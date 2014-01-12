@@ -1,27 +1,26 @@
 // Home —————————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-body.home {
+.home {
+
+  article { margin-bottom: 2em; }
+  article a:visited { color: $color-link; }
+}
+
+.home-introduction {
+
+  figure { width: 100%; }
+  figcaption { display: none; }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
 
   h1 {
     margin-bottom: 1em;
     margin-top: 1em;
   }
-
-  section.introduction {
-
-    figure { width: 100%; }
-    figcaption { display: none; }
-
-    img {
-      height: auto;
-      width: 100%;
-    }
-  }
-
-  article { margin-bottom: 2em; }
-
-  article a:visited { color: $color-link; }
 }
 
 
@@ -29,28 +28,7 @@ body.home {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
-  body.home {
-
-    section.introduction {
-
-      h1 {
-        margin-left: 16.667%;
-      }
-
-      figure {
-        display: inline-block;
-        margin-left: 16.667%;
-        width: 48%;
-      }
-
-      figcaption {
-        color: #999;
-        display: block;
-        font-size: .5em;
-
-        a { color: #999; }
-      }
-    }
+  .home {
 
     article {
       display: inline-block;
@@ -60,27 +38,50 @@ body.home {
     }
 
     article h3 { margin-bottom: .5em; }
+  }
 
-    article.write a { font-style: italic; }
+  .home-introduction {
 
-    article.make,
-    article.believe {
-      margin-left: 33.333%;
-      margin-right: 2%;
-    }
-
-    article.more {
-      margin-bottom: 4em;
+    h1 {
       margin-left: 16.667%;
-      margin-top: 6em;
     }
 
-    // Ephemera ————————————————————————————————————— /
-    .ephemera { display: block; }
-    .ephemera.meet {
-      @include transform-origin(left top);
-      top: 60em;
-      left: 19%;
+    figure {
+      display: inline-block;
+      margin-left: 16.667%;
+      width: 48%;
+    }
+
+    figcaption {
+      color: #999;
+      display: block;
+      font-size: .5em;
+
+      a { color: #999; }
     }
   }
+
+  .home-write a { font-style: italic; }
+
+  .home-make,
+  .home-believe {
+    margin-left: 33.333%;
+    margin-right: 2%;
+  }
+
+  .home-more {
+    margin-bottom: 4em;
+    margin-left: 16.667%;
+    margin-top: 6em;
+  }
+}
+
+
+// Home: Ephemera ———————————————————————————— •
+// ——————————————————————————————————————————— •
+
+.ephemera.meet {
+  @include transform-origin(left top);
+  top: 60em;
+  left: 19%;
 }

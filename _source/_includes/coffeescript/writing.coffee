@@ -1,5 +1,5 @@
 filterEssays = (essayType) ->
-  $essays = $('section.essays > ul')
+  $essays = $('.writes-essays-list')
   $essayList = $essays.find('li')
   $nonfavorites = $essays.find('li:not([data-favorite])')
   $favoriteToggle = $('[data-essay-filter~="favorites"]')
@@ -26,7 +26,7 @@ oldestFirst = (a, b) ->
   if ($(b).data('date')) > ($(a).data('date')) then 1 else -1
 
 $ ->
-  $essays = $('section.essays ul')
+  $essays = $('.writes-essays-list')
   $essayList = $essays.find('li')
 
   # Estimated reading time
@@ -53,7 +53,7 @@ $ ->
   $('[data-essay-filter]').click ->
     filterEssays $(this).data('essay-filter')
 
-    if $(this).find('span').hasClass 'radio'
+    if $(this).find('span').hasClass 'essay-ui-radio'
       $(this).addClass 'selected'
       $(this).siblings().removeClass 'selected'
 

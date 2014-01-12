@@ -1,150 +1,135 @@
 // Writes ———————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-body.writes {
+.writes-introduction figure,
+.essay-toggles { display: none; }
 
-  aside, section.introduction figure { display: none; }
+.writes-essays {
+  margin-bottom: 2em;
 
-  section.essays {
+  p a:visited { color: $color-link; }
+}
 
-    ul { margin-top: 2em; }
+.writes-essays-list { margin-top: 2em; }
 
-    li {
-      margin-bottom: 2em;
+.writes-essay { margin-bottom: 1em; }
 
-      a {
-        margin: 0;
-        padding: 0;
-        text-decoration: none;
+.writes-essay a {
+  text-decoration: none;
 
-        &:visited { color: #888; }
-        &:hover { color: $color-link-hover; }
-      }
+  &:visited h2 { color: #888; }
 
-      a h2 {
-        color: #333;
-        display: inline-block;
-        font-size: 1.25em;
-        font-weight: normal;
-        margin-bottom: .4em;
-        text-decoration: underline;
-      }
+  &:hover h2,
+  &:hover p { color: $color-link-hover; }
 
-      a p {
-        color: #777;
-        font-family: $font-sans;
-        line-height: 1.2em;
-        margin-bottom: 0;
-      }
-
-      a small {
-        display: inline-block;
-        font-size: .8em;
-
-        &:after { content: " — "; }
-        &:last-child:after { content: ""; }
-      }
-
-      a small.svn {
-        background: url('/assets/images/icons/signals.png') 0 0 no-repeat;
-        background-size: 16px 16px;
-        padding-bottom: .25em;
-        padding-left: 1.5em;
-      }
-
-      a small.desktop { display: none; }
-    }
-
-    p a:visited { color: $color-link; }
+  h2 {
+    color: #333;
+    display: inline-block;
+    font-size: 1.25em;
+    font-weight: normal;
+    margin-bottom: .4em;
+    text-decoration: underline;
   }
+
+  p {
+    color: #777;
+    font-family: $font-sans;
+    line-height: 1.2em;
+    margin-bottom: .25em;
+  }
+
+  small {
+    display: inline-block;
+    font-size: .8em;
+
+    &:after { content: " — "; }
+    &:last-child:after { content: ""; }
+  }
+
+  .essay-svn {
+    background: url('/assets/images/icons/signals.png') 0 0 no-repeat;
+    background-size: 16px 16px;
+    padding-bottom: .25em;
+    padding-left: 1.5em;
+  }
+
+  .desktop { display: none; }
 }
 
 // Writes: Tablet ———————————————————————————— •
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
-  body.writes {
+  .writes-introduction h1 {
+    margin-bottom: 1em;
+    margin-left: 16.667%;
+  }
 
-    h1 {
-      margin-bottom: 1em;
-      margin-left: 16.667%;
+  .essay-toggles {
+    display: block;
+    left: -8.25em;
+    margin-top: .4em;
+    position: absolute;
+  }
+
+  .essay-toggle {
+    cursor: pointer;
+    display: block;
+    font-family: $font-sans;
+    font-size: .9rem;
+    position: relative;
+    vertical-align: top;
+
+    span {
+      background-image: url('/assets/images/icons/toggles.png');
+      background-size: 34px 28px;
+      display: inline-block;
+      height: 14px;
+      margin-bottom: -2px;
+      width: 17px;
+    }
+  }
+
+  .essay-ui-radio { background-position: 0 -14px; }
+  .essay-ui-check { background-position: 0 0; }
+
+  .selected { font-weight: bold; }
+  .selected .essay-ui-radio { background-position: -17px -14px; }
+  .selected .essay-ui-check { background-position: -17px 0; }
+
+  .essay-toggles-radios {
+    border-bottom: 1px solid #DDD;
+    margin-bottom: .5em;
+    padding-bottom: .5em;
+    width: 110px;
+  }
+
+  .writes-essays {
+    margin-bottom: 6em;
+    margin-left: 16.667%;
+    position: relative;
+  }
+
+  .writes-essays-list {
+    margin-top: -.35em;
+    margin-bottom: 5em;
+  }
+
+  .writes-essay { margin-bottom: 2em; }
+  .writes-essay a {
+
+    h2 {
+      font-size: 1.5em;
+      letter-spacing: -1px;
+      line-height: 1.1em;
+      text-decoration: none;
     }
 
-    section.essays {
-      margin-bottom: 6em;
-      margin-left: 16.667%;
-      position: relative;
+    p { line-height: 1em; }
 
-      ul {
-        margin-top: -.35em;
-        margin-bottom: 5em;
-      }
-
-      li a h2 {
-        font-size: 1.5em;
-        letter-spacing: -1px;
-        line-height: 1.1em;
-        text-decoration: none;
-      }
-
-      a p {
-        line-height: 1em;
-        margin: 0;
-      }
-
-      a:hover h2,
-      a:hover p {
-        color: $color-link-hover;
-      }
-
-      li a small.mobile { display: none; }
-      li a small.desktop { display: inline; }
-      li a small.svn {
-        padding-top: .2em;
-      }
-    }
-
-    aside {
-      display: block;
-      left: -8.25em;
-      margin-top: .4em;
-      position: absolute;
-
-      ul.radios {
-        border-bottom: 1px solid #DDD;
-        margin-bottom: .75em;
-        padding-bottom: .25em;
-        width: 110px;
-
-        li { margin-bottom: 0; }
-      }
-
-      li {
-        cursor: pointer;
-        display: block;
-        font-family: $font-sans;
-        font-size: .9rem;
-        position: relative;
-        vertical-align: top;
-      }
-
-      li span {
-        background: url('/assets/images/icons/toggles.png') no-repeat;
-        background-size: 34px 28px;
-        display: inline-block;
-        height: 14px;
-        margin-bottom: -2px;
-        width: 17px;
-      }
-
-      li span.radio { background-position: 0 -14px; }
-      li.selected span.radio { background-position: -17px -14px; }
-
-      li span.check { background-position: 0 0; }
-      li.selected span.check { background-position: -17px 0; }
-
-      .selected { font-weight: bold; }
-    }
+    .mobile { display: none; }
+    .desktop { display: inline; }
+    .essay-svn { padding-top: .2em; }
   }
 }
 
@@ -153,14 +138,14 @@ body.writes {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(800px) {
-  body.writes {
+  .writes-introduction {
 
-    section.introduction figure {
+    figure {
       display: block;
       width: 33.333%;
     }
 
-    section.introduction  img {
+    img {
       height: auto;
       width: 100%;
     }
@@ -172,9 +157,6 @@ body.writes {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(1200px) {
-  body.writes {
-
-    h1,
-    section.essays { margin-left: 33.333%; }
-  }
+  .writes-introduction h1,
+  .writes-essays { margin-left: 33.333%; }
 }

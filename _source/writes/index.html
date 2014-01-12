@@ -4,50 +4,43 @@ class: writes
 layout: default
 ---
 
-<section class="introduction">
+<section class="writes-introduction">
   <figure><img src="/assets/images/writes/brain.jpg"></figure>
   <h1>Brief essays on design, craft, and culture</h1>
 </section>
 
-<section class="essays">
-  <aside>
-    <ul class="radios">
-      <li data-essay-filter="recent" class="selected"><span class="radio">&nbsp;</span> Newest first</li>
-      <li data-essay-filter="shortest"><span class="radio">&nbsp;</span> Shortest first</li>
+<section class="writes-essays">
+  <aside class="essay-toggles">
+    <ul class="essay-toggles-radios">
+      <li data-essay-filter="recent" class="essay-toggle selected"><span class="essay-ui-radio">&nbsp;</span> Newest first</li>
+      <li data-essay-filter="shortest" class="essay-toggle"><span class="essay-ui-radio">&nbsp;</span> Shortest first</li>
     </ul>
 
-    <ul class="checkboxes">
-      <li data-essay-filter="favorites"><span class="check">&nbsp;</span> My favorites</li>
+    <ul class="essay-toggles-checkboxes">
+      <li data-essay-filter="favorites" class="essay-toggle"><span class="essay-ui-check">&nbsp;</span> My favorites</li>
     </ul>
   </aside>
 
-  <ul>
+  <ul class="writes-essays-list">
   {% for essay in site.categories.writes %}
+    <li class="writes-essay"{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
     {% if essay.svn %}
-      <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
-        <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">
-          <h2>{{ essay.title }}</h2>
-          <p>{{ essay.preview }}</p>
-          <p>
-            <small data-reading-time>&nbsp;</small>
-            <small class="svn mobile">SvN</small>
-            <small class="svn desktop">Written on Signal vs. Noise</small>
-            <small>{{ essay.date | date: "%B %Y" }}</small>
-          </p>
-        </a>
-      </li>
+      <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">
     {% else %}
-      <li{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
-        <a href="{{ essay.url }}">
-          <h2>{{ essay.title }}</h2>
-          <p>{{ essay.preview }}</p>
-          <p>
-            <small data-reading-time>&nbsp;</small>
-            <small>{{ essay.date | date: "%B %Y" }}</small>
-          </p>
-        </a>
-      </li>
+      <a href="{{ essay.url }}">
     {% endif %}
+        <h2>{{ essay.title }}</h2>
+        <p>{{ essay.preview }}</p>
+        <p>
+          <small data-reading-time>&nbsp;</small>
+          {% if essay.svn %}
+            <small class="essay-svn mobile">SvN</small>
+            <small class="essay-svn desktop">Written on Signal vs. Noise</small>
+          {% endif %}
+          <small>{{ essay.date | date: "%B %Y" }}</small>
+        </p>
+      </a>
+    </li>
   {% endfor %}
   </ul>
 

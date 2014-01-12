@@ -1,4 +1,4 @@
-## The website and portfolio of [Mig Reyes](http://mig.io), designer at Basecamp.
+## The website and portfolio of [Mig Reyes](http://mig.io)
 
 ### About Mig:
 I’m a graphic and web designer from Chicago. I help make [Basecamp](http://basecamp.com) better, teach at The Starter League, and occasionally interview some of the smartest people in the world on [Humble Pied](http://humblepied.com).

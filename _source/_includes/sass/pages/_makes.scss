@@ -1,21 +1,48 @@
 // Portfolio ————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-body.portfolio {
+.portfolio {
 
-  section.projects {
+  img {
+    height: auto;
     width: 100%;
   }
+}
 
-  section.lyt {
-    margin-bottom: 5em;
+.project-website {
+  @include border-radius(3px);
+  @include box-shadow(0 0 4px rgba(0,0,0,.25));
 
-    figure {
-      display: inline-block;
-      margin-bottom: 1em;
-      margin-right: 1em;
-      width: 31%;
-    }
+  .chrome-titlebar {
+    @include border-radius(3px 3px 0 0);
+    background: #eeeeee;
+    background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
+    background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+    background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+    background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+    background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+    border: 1px solid #CCC;
+    border-bottom-color: #999;
+    display: block;
+    font-family: "Lucida Grande", Helvetica;
+    font-size: .7em;
+    height: 25px;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 1px 1px white;
+    z-index: 1000;
+  }
+
+  .chrome-window {
+    @include border-radius(0 0 3px 3px);
+    border: 1px solid #DDD;
+    border-top: none;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
 
     img {
       height: auto;
@@ -23,112 +50,60 @@ body.portfolio {
     }
   }
 
-  article {
-    display: inline-block;
-    margin-right: 2%;
-    margin-bottom: 2em;
-    vertical-align: bottom;
-    width: 14%;
-
-    figure {
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    img {
-      height: auto;
-      max-width: 100%;
-    }
+  .chrome-titlebar b {
+    font-size: 1.25em;
+    position: absolute;
+    text-align: left;
   }
 
+  .chrome-red {
+    color: #ea4d45;
+    left: .25em;
+  }
 
-  article.website {
-    width: 31%;
+  .chrome-yellow {
+    color: #f5b958;
+    left: 1em;
+  }
 
-    span.chrome-title {
-      @include border-radius(3px 3px 0 0);
-      background: #eeeeee;
-      background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
-      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
-      background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-      background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-      background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-      background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
-      border: 1px solid #CCC;
-      border-bottom-color: #999;
-      display: block;
-      font-family: "Lucida Grande", Helvetica;
-      font-size: .7em;
-      height: 25px;
-      position: relative;
-      text-align: center;
-      text-shadow: 0 1px 1px white;
-      z-index: 1000;
-    }
-
-    figure.chrome {
-      @include border-radius(0 0 3px 3px);
-      @include box-shadow(0 0 5px rgba(0,0,0,.35));
-      height: 200px;
-      overflow-x: hidden;
-      overflow-y: hidden;
-      // overflow-y: scroll;
-      position: relative;
-
-      img {
-        margin-bottom: -1em;
-      }
-    }
-
-    b {
-      font-size: 1.25em;
-      position: absolute;
-      text-align: left;
-
-      &.red {
-        color: #ea4d45;
-        left: .25em;
-      }
-
-      &.yellow {
-        color: #f5b958;
-        left: 1em;
-      }
-
-      &.green {
-        color: #7fb15e;
-        left: 1.75em;
-      }
-    }
+  .chrome-green {
+    color: #7fb15e;
+    left: 1.75em;
   }
 }
+
+.portfolio .footer-nav { display: none; }
 
 
 // Portfolio: Tablet ————————————————————————— •
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
-  body.portfolio {
+  .portfolio h1 {
+    margin-left: 16.667%;
+    margin-top: 4rem;
+    width: 67.667%;
+  }
 
-    h1 {
-      margin-left: 16.667%;
-      margin-top: 4rem;
-      width: 67.667%;
-    }
+  .projects { width: 100%; }
 
-    .full {
-      display: block !important;
-      width: 100% !important;
+  .full {
+    display: block !important;
+    width: 100% !important;
 
-      img { max-width: 100%; }
-    }
+    img { max-width: 100%; }
+  }
 
-    section.posters {
+  .portfolio .project-website {
+    width: 33.333%;
+  }
 
-      header {
-        width: 50%;
-      }
-    }
+  .project .project-website {
+    margin-bottom: 3em;
+    margin-left: 16.667%;
+    width: 50%;
+
+    .chrome { overflow-y: hidden; }
+    .chrome img { margin-bottom: -5%; }
   }
 }

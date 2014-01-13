@@ -4,25 +4,25 @@ class: loves
 layout: default
 ---
 
-<section class="introduction">
+<header class="loves-introduction">
   <figure><img src="/assets/images/loves/laptop.jpg"></figure>
   <h1>These are a few of my favorite things… and people, and places</h1>
-</section>
+</header>
 
-<section class="guide">
+<section class="loves-chicago-guide">
   <h3>Chicago City Guide</h3>
   <p>Home to some of the most amazing creatives I know, and great food to boot. If you’re ever here for a visit, for a conference, or just rolling through the Midwest, be sure to <a href="/loves/chicago" title="A collection of all of Mig’s favorite Chicago places">check out my favorite bars, cafes, restaurants, and shops in Chicago</a>.</p>
   <span class="ephemera clockwise chicago">Don’t call it Chi-city</span>
 </section>
 
-<section class="friends">
+<section class="loves-friends">
   <h3>Friends</h3>
   <p>These are some of the incredibly talented people that have inluenced my work, thoughts, and career. I’m lucky enough to call them my colleagues, drinking partners, and friends.</p>
 
   <span class="ephemera counter-clockwise company">You’re known by the company you keep</span>
 
-  <ul class="design">
-    <h5>Design</h5>
+  <ul class="loves-friends-design">
+    <li>Design</li>
     {% for friend in site.data.friends %}
       {% if friend.industry == "design" %}
         <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
@@ -30,8 +30,8 @@ layout: default
     {% endfor %}
   </ul>
 
-  <ul class="photo">
-    <h5>Photo &amp; Video</h5>
+  <ul class="loves-friends-photo">
+    <li>Photo &amp; Video</li>
     {% for friend in site.data.friends %}
       {% if friend.industry == "photo" %}
         <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
@@ -39,8 +39,8 @@ layout: default
     {% endfor %}
   </ul>
 
-  <ul class="illustration">
-    <h5>Type &amp; Illustration</h5>
+  <ul class="loves-friends-illustration">
+    <li>Type &amp; Illustration</li>
     {% for friend in site.data.friends %}
       {% if friend.industry == "illustration" %}
         <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
@@ -48,8 +48,8 @@ layout: default
     {% endfor %}
   </ul>
 
-  <ul class="web">
-    <h5>Web &amp; Product</h5>
+  <ul class="loves-friends-web">
+    <li>Web &amp; Product</li>
     {% for friend in site.data.friends %}
       {% if friend.industry == "web" %}
         <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
@@ -57,8 +57,8 @@ layout: default
     {% endfor %}
   </ul>
 
-  <ul class="writing">
-    <h5>Writing</h5>
+  <ul class="loves-friends-writing">
+    <li>Writing</li>
     {% for friend in site.data.friends %}
       {% if friend.industry == "writing" %}
         <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
@@ -67,7 +67,7 @@ layout: default
   </ul>
 </section>
 
-<section class="books">
+<section class="loves-books">
   <h3>Books worth reading</h3>
   <p>From books that have shaped me as a designer since my college days, to recent discoveries suggested by friends and co-workers, this is my recommended reading list.</p>
 
@@ -87,7 +87,7 @@ layout: default
   </ul>
 </section>
 
-<section class="apps">
+<section class="loves-apps">
   <h3>Software I Can’t Live Without</h3>
 
   <span class="ephemera clockwise share">Share everything</span>

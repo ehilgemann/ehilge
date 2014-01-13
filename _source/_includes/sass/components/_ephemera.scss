@@ -43,3 +43,10 @@
     font-weight: normal;
   }
 }
+
+// Ephemera: Tablet —————————————————————————— •
+// ——————————————————————————————————————————— •
+
+@include responsive-break-point(640px) {
+  .ephemera { display: block; }
+}

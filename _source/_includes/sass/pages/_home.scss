@@ -34,7 +34,6 @@
       display: inline-block;
       margin-bottom: 3em;
       vertical-align: top;
-      width: 31.333%;
     }
 
     article h3 { margin-bottom: .5em; }
@@ -61,10 +60,15 @@
     }
   }
 
-  .home-write a { font-style: italic; }
+  .home-making,
+  .home-doing,
+  .home-writing,
+  .home-speaking { width: 31.333%; }
 
-  .home-make,
-  .home-believe {
+  .home-writing a { font-style: italic; }
+
+  .home-making,
+  .home-writing {
     margin-left: 33.333%;
     margin-right: 2%;
   }

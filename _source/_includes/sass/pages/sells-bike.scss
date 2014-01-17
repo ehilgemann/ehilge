@@ -112,7 +112,7 @@ body.bike {
       margin-bottom: .25em;
     }
 
-    div[data-behavior~="photo-nav"] { display: none; }
+    .gallery-navigation { display: none; }
   }
 
   .gallery {
@@ -260,7 +260,7 @@ body.bike {
       margin-left: 33.333333332%;
       width: 50%;
 
-      div[data-behavior~="photo-nav"] {
+      .gallery-navigation {
         display: block;
         margin-top: 10%;
 

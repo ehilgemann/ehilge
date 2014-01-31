@@ -1,96 +1,86 @@
 // Chicago ——————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-body.chicago {
+.loves-chicago section {
+  position: relative;
 
-  .content > section {
-    position: relative;
-    margin-bottom: 4em;
-
-    ul li { font-family: $font-sans; }
-    ul { margin-top: 1em; }
-
-    h3 { margin-bottom: .5em; }
-  }
-
-  figure { display: none; }
-
-  .ephemera { display: none; }
+  h3 { margin-bottom: .5em; }
+  ul { margin-top: 1em; }
+  li { font-family: $font-sans; }
 }
+
+.chicago-introduciton figure { display: none; }
 
 
 // Chicago: Tablet ——————————————————————————— •
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
-  body.chicago {
+  .chicago-introduction h1 {
+    margin-left: 33.333%;
+    padding-top: 4em;
+    width: 50%;
+  }
 
-    section.introduction {
+  .chicago-coffee {
+    margin-bottom: 6em;
+    margin-top: 5em;
+    margin-left: 33.333%;
+    width: 50%;
+  }
 
-      h1 {
-        margin-left: 33.333%;
-        padding-top: 4em;
-        width: 50%;
+  .chicago-bars {
+    margin-bottom: 8em;
+    width: 50%;
+  }
+
+  .chicago-restaurants {
+    margin-bottom: 8em;
+    margin-left: 50%;
+  }
+
+  .chicago-stores {
+    margin-bottom: 10em;
+    margin-left: 16.667%;
+    width: 50%;
+  }
+
+  .chicago-friends {
+    margin-left: 33.333%;
+    margin-bottom: 8em;
+
+    p { margin-bottom: 1em; }
+
+    li {
+      display: inline-block;
+      font-family: $font-sans;
+      margin-right: .1em;
+
+      &:after {
+        content: " /";
+        color: #CCC;
       }
+
+      &:last-child:after { content: ""; }
     }
+  }
 
-    section.coffee {
-      margin-top: 4em;
-      margin-left: 33.333%;
-      width: 50%;
-    }
+  .ephemera.caffeine {
+    @include backface-visibility;
+    @include transform-origin(left top);
+    right: -10em;
+    bottom: -2em;
+  }
 
-    section.bars {
-      margin-bottom: 8em;
-      width: 50%;
-    }
+  .ephemera.make {
+    bottom: -4em;
+    right: 0;
+    width: 180px;
+  }
 
-    section.restaurants { margin-left: 50%; }
-
-    section.stores {
-      margin-bottom: 10em;
-      margin-left: 16.667%;
-      width: 50%;
-    }
-
-    section.friends {
-      margin-left: 33.333%;
-
-      p { margin-bottom: 1em; }
-
-      li {
-        display: inline-block;
-        font-family: $font-sans;
-        margin-right: .1em;
-
-        &:after {
-          content: " /";
-          color: #CCC;
-        }
-
-        &:last-child:after { content: ""; }
-      }
-    }
-
-    .ephemera { display: block; }
-
-    .ephemera.caffeine {
-      @include backface-visibility;
-      @include transform-origin(left top);
-      right: -10em;
-      bottom: -2em;
-    }
-
-    .ephemera.make {
-      bottom: -4em;
-      right: 0;
-      width: 180px;
-    }
-
-    .ephemera.look {
-      right: 5%;
-      bottom: -2em;
-    }
+  .ephemera.look {
+    right: 5%;
+    bottom: -2em;
   }
 }
 
@@ -99,19 +89,16 @@ body.chicago {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(800px) {
-  body.chicago {
+  .chicago-introduction figure {
+    display: block;
+    position: absolute;
+    left: 12%;
+    width: 15%;
+    z-index: -1986;
 
-    figure {
-      display: block;
-      position: absolute;
-      left: 12%;
-      width: 15%;
-      z-index: -1986;
-
-      img {
-        height: auto;
-        width: 100%;
-      }
+    img {
+      height: auto;
+      width: 100%;
     }
   }
 }

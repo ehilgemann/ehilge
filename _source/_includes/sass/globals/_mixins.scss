@@ -1,8 +1,6 @@
 // Typography ———————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-@charset "UTF-8";
-
 @mixin font-smoothing($attr) {
   -webkit-font-smoothing: $attr;
           font-smoothing: $attr;

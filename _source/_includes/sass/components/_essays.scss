@@ -1,20 +1,27 @@
 // Essays ———————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-body.essay {
-
-  .content { @include animate(fade-in-up .5s both); }
+.essay-content {
+  @include animate(fade-in-up .5s both);
+  @include border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 460px;
 
   h1 {
     color: #333;
     font-family: $font-serif;
+    font-size: 1.75em;
   }
 
-  h2 {
-    margin-top: 2em;
+  h2 { margin-top: 2em; }
+
+  img {
+    height: auto;
+    max-width: 100%;
   }
 
-  article li {
+  li {
     padding-left: 1em;
     margin-bottom: 1em;
     position: relative;
@@ -26,48 +33,42 @@ body.essay {
       left: 0;
     }
   }
+}
 
-  article img {
+.essay-info {
+  border-bottom: 2px solid #DDD;
+  border-top: 2px solid #DDD;
+  font-family: $font-sans;
+  margin: 2em auto;
+  padding: 2em 0 1em;
+  text-align: center;
+
+  a:visited { color: $color-link; }
+}
+
+.essay-info-avatar {
+  @include border-radius(50%);
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+
+  img {
+    @include border-radius(50%);
     height: auto;
-    max-width: 100%;
+    width: 100%;
   }
+}
 
+.essay-info-biography {
+  display: inline-block;
+  vertical-align: top;
+}
 
-  aside {
-    border-bottom: 2px solid #DDD;
-    border-top: 2px solid #DDD;
-    font-family: $font-sans;
-    margin: 2em auto;
-    padding: 2em 0 1em;
-    text-align: center;
-
-    a:visited { color: $color-link; }
-
-    figure {
-      @include border-radius(50%);
-      display: inline-block;
-      vertical-align: middle;
-      width: 20%;
-    }
-
-    img {
-      @include border-radius(50%);
-      height: auto;
-      width: 100%;
-    }
-
-    div {
-      display: inline-block;
-      vertical-align: top;
-    }
-  }
-
-  .twitter-tweet {
-    left: -1rem;
-    margin-bottom: 1em !important;
-    position: relative;
-    width: 110%;
-  }
+.twitter-tweet {
+  left: -1rem;
+  margin-bottom: 1em !important;
+  position: relative;
+  width: 110%;
 }
 
 
@@ -75,52 +76,48 @@ body.essay {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
-  body.essay {
+  .essay-content {
+    margin-top: 3em;
+    padding: 0;
+    max-width: 680px;
 
-    article {
-      padding: 0 2em;
+    h1 {
+      font-size: 4.5em;
+      margin-bottom: .5em;
     }
 
-    article p, article li {
+    p, li {
       font-size: 1.1em;
       line-height: 1.75em;
     }
-
-    aside {
-      padding-top: 2em;
-      text-align: left;
-
-      figure {
-        margin-left: -2%;
-        margin-right: 5%;
-        width: 18%;
-      }
-
-      div {
-        width: 78%;
-      }
-    }
   }
+
+  .essay-info {
+    padding-top: 2em;
+    text-align: left;
+  }
+
+  .essay-info-avatar {
+    margin-left: -2%;
+    margin-right: 5%;
+    width: 18%;
+  }
+
+  .essay-info-biography { width: 78%; }
 }
 
 
 // Essays: Desktop ——————————————————————————— •
 // ——————————————————————————————————————————— •
 
-@include responsive-break-point(800px) {
-  body.essay {
+@include responsive-break-point(1000px) {
+  .essay-content {
+    margin-left: 16.667%;
+    width: 680px;
+  }
 
-    article {
-      margin-left: 16.667%;
-      margin-top: 4em;
-      padding: 0;
-      max-width: 680px;
-      width: 83.333%;
-    }
-
-    aside {
-      margin: 4em 0 4em 16.667%;
-      max-width: 680px;
-    }
+  .essay-info {
+    margin: 4em 0 4em 16.667%;
+    max-width: 680px;
   }
 }

@@ -3,23 +3,21 @@
     {% include navigation.html %}
 
       <div class="content">
-        <article>
+        <article class="essay-content">
           <h1>{{ page.title }}</h1>
-
           {{ content }}
         </article>
 
-        <aside>
-          <figure><img src="/assets/images/home/avatar.jpg" title="Hello, nice to meet you. Photo at Brooklyn Beta captured by Maykel Loomans."></figure>
+        <aside class="essay-info">
+          <figure class="essay-info-avatar"><img src="/assets/images/home/avatar.jpg" title="Hello, nice to meet you. Photo at Brooklyn Beta captured by Maykel Loomans."></figure>
 
-          <div>
+          <div class="essay-info-biography">
             <h5>About Mig</h5>
             <p>I’m a designer from Chicago working at Basecamp. I like to write about design, craft, and culture.{% if page.bio %} {{ page.bio }}{% endif %} You can follow <a href="{{ site.twitter }}">me on Twitter</a>, or learn <a href="/is" title="More about Mig">more about me</a>.</p>
             <p>This was written on {{ page.date | date: "%B %d, %Y" }}.</p>
 
             <p><a href="/writes">&larr; Read all {{ site.posts | size }} essays</a></p>
           </div>
-
         </aside>
 
         {% include footer.html %}

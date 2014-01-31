@@ -3,6 +3,7 @@ title: "Raise the Standards"
 category: writes
 layout: essay
 preview: A plea to HOW Design Conference to raise their graphic standards
+bio: I’m excited to see where tomorrow’s design conferences go.
 ---
 I try my hardest never to bite the hand that feeds me, but when we’re free to voice our opinion to a community that’s willing to listen, sometimes you’ve gotta.
 

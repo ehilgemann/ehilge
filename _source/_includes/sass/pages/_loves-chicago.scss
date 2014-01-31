@@ -9,7 +9,22 @@
   li { font-family: $font-sans; }
 }
 
-.chicago-introduciton figure { display: none; }
+.chicago-introduction figure {
+  margin: 0 auto 1em;
+  width: 25%;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.chicago-introduction,
+.chicago-coffee,
+.chicago-bars,
+.chicago-restaurants,
+.chicago-stores,
+.chicago-friends { margin-bottom: 3em; }
 
 
 // Chicago: Tablet ——————————————————————————— •
@@ -93,12 +108,8 @@
     display: block;
     position: absolute;
     left: 12%;
+    margin: 0;
     width: 15%;
     z-index: -1986;
-
-    img {
-      height: auto;
-      width: 100%;
-    }
   }
 }

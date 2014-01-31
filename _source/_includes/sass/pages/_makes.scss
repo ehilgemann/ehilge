@@ -1,7 +1,47 @@
 // Portfolio ————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-.portfolio {
+.portfolio h3 { margin-bottom: .5em; }
+.portfolio .footer-nav { display: none; }
+
+.project-description { display: none; }
+
+.website {
+  @include border-radius(3px);
+  @include box-shadow(0 0 4px rgba(0,0,0,.1));
+}
+
+.website-titlebar {
+  @include border-radius(3px 3px 0 0);
+  background: #eeeeee;
+  background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
+  background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+  background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+  background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
+  background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
+  border: 1px solid #CCC;
+  border-bottom-color: #999;
+  display: block;
+  font-family: "Lucida Grande", Helvetica;
+  font-size: .7em;
+  height: 25px;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 1px 1px white;
+  z-index: 1000;
+}
+
+.website-window {
+  @include border-radius(0 0 3px 3px);
+  border: 1px solid #DDD;
+  border-top: none;
+  max-height: 200px;
+  margin-bottom: 1.5em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
 
   img {
     height: auto;
@@ -9,70 +49,26 @@
   }
 }
 
-.project-website {
-  @include border-radius(3px);
-  @include box-shadow(0 0 4px rgba(0,0,0,.25));
-
-  .chrome-titlebar {
-    @include border-radius(3px 3px 0 0);
-    background: #eeeeee;
-    background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
-    background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-    background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-    background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-    background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
-    border: 1px solid #CCC;
-    border-bottom-color: #999;
-    display: block;
-    font-family: "Lucida Grande", Helvetica;
-    font-size: .7em;
-    height: 25px;
-    position: relative;
-    text-align: center;
-    text-shadow: 0 1px 1px white;
-    z-index: 1000;
-  }
-
-  .chrome-window {
-    @include border-radius(0 0 3px 3px);
-    border: 1px solid #DDD;
-    border-top: none;
-    max-height: 250px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    position: relative;
-
-    img {
-      height: auto;
-      width: 100%;
-    }
-  }
-
-  .chrome-titlebar b {
-    font-size: 1.25em;
-    position: absolute;
-    text-align: left;
-  }
-
-  .chrome-red {
-    color: #ea4d45;
-    left: .25em;
-  }
-
-  .chrome-yellow {
-    color: #f5b958;
-    left: 1em;
-  }
-
-  .chrome-green {
-    color: #7fb15e;
-    left: 1.75em;
-  }
+.website-titlebar b {
+  font-size: 1.25em;
+  position: absolute;
+  text-align: left;
 }
 
-.portfolio .footer-nav { display: none; }
+.website-red {
+  color: #ea4d45;
+  left: .25em;
+}
+
+.website-yellow {
+  color: #f5b958;
+  left: 1em;
+}
+
+.website-green {
+  color: #7fb15e;
+  left: 1.75em;
+}
 
 
 // Portfolio: Tablet ————————————————————————— •
@@ -80,6 +76,7 @@
 
 @include responsive-break-point(640px) {
   .portfolio h1 {
+    margin-bottom: 1em;
     margin-left: 16.667%;
     margin-top: 4rem;
     width: 67.667%;
@@ -87,23 +84,16 @@
 
   .projects { width: 100%; }
 
-  .full {
-    display: block !important;
-    width: 100% !important;
+  .website-window { max-height: 300px; }
 
-    img { max-width: 100%; }
-  }
+  .spacing-fifth { margin-left: 16.667%; }
+  .spacing-quarter { margin-left: 25%; }
+  .spacing-third { margin-left: 33.333%; }
+  .spacing-half { margin-left: 50%; }
 
-  .portfolio .project-website {
-    width: 33.333%;
-  }
-
-  .project .project-website {
-    margin-bottom: 3em;
-    margin-left: 16.667%;
-    width: 50%;
-
-    .chrome { overflow-y: hidden; }
-    .chrome img { margin-bottom: -5%; }
-  }
+  .width-quarter { width: 25%; }
+  .width-third { width: 33.333%; }
+  .width-half { width: 50%; }
+  .width-twothirds { width: 67.667%; }
+  .width-full { width: 100%; }
 }

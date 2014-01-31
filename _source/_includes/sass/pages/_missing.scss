@@ -1,7 +1,11 @@
 // Missing ——————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-body.missing .content {
+.error .footer { display: none; }
+
+.missing {
+  margin: 4em auto;
+  max-width: 480px;
 
   figure {
     margin-bottom: 2em;
@@ -12,33 +16,5 @@ body.missing .content {
   img {
     height: auto;
     width: 100%;
-  }
-
-  footer {
-    display: none;
-  }
-}
-
-
-// Missing: Tablet ——————————————————————————— •
-// ——————————————————————————————————————————— •
-
-@include responsive-break-point(640px) {
-  body.missing .content {
-
-    h1 {
-      margin-left: 33.333%;
-      margin-top: 1em;
-    }
-
-    figure {
-      margin: 3em 0 0 33.333%;
-      width: 3em;
-    }
-
-    p {
-      margin-left: 33.333%;
-      width: 50%;
-    }
   }
 }

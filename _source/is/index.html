@@ -4,7 +4,7 @@ class: about
 layout: default
 ---
 
-<section class="presentation about-portrait" data-presentation="portrait" data-escapable>
+<section class="about-portrait presentation" data-presentation="portrait" data-escapable>
   <figure class="presentation-content about-portrait-photo">
     <img src="/assets/images/is/mig.jpg">
     <figcaption>Photo by <a href="http://instagram.com/miekd" target="_blank">Maykel Loomans</a> at Brooklyn Beta 2013.</figcaption>
@@ -44,17 +44,16 @@ layout: default
   <span class="ephemera clockwise midwest">Roll your sleeves up,<br>Midwest pride</span>
 </section>
 
-<section class="teaching">
+<section class="about-teaching">
   <h3>Teaching</h3>
   <p>Since 2012, I’ve been teaching beginners the fundamentals of design and visual patterns at The Starter League in Chicago. Prior, I spent three years teaching art direction, design, and professional practices at The Chicago Portfolio School.</p>
 
   <span class="ephemera counter-clockwise give">Give more than you take</span>
 </section>
 
-<section class="public">
-  <article class="speaking">
+<section class="about-public">
+  <article class="about-public-speaking">
     <h3>Speaking</h3>
-
     <ul>
       {% for talk in site.data.talks %}
         <li>
@@ -68,9 +67,8 @@ layout: default
     </ul>
   </article>
 
-  <article class="interviews">
+  <article class="about-public-interviews">
     <h3>Interviews</h3>
-
     <ul>
       {% for interview in site.data.interviews %}
         <li><a href="{{ interview.url }}" target="_blank">{{ interview.title }}</a></li>
@@ -78,9 +76,8 @@ layout: default
     </ul>
   </article>
 
-  <article class="press">
+  <article class="about-public-press">
     <h3>Press</h3>
-
     <ul>
       {% for press in site.data.press %}
         <li>{{ press.title }}</li>
@@ -88,9 +85,8 @@ layout: default
     </ul>
   </article>
 
-  <article class="print">
+  <article class="about-public-print">
     <h3>Publications</h3>
-
     <ul>
       {% for publication in site.data.publications %}
         <li>
@@ -104,7 +100,7 @@ layout: default
   <span class="ephemera slant nice">Be human, be nice</span>
 </section>
 
-<section class="availability">
+<section class="about-availability">
   <h3>Contact</h3>
 
   <p>I’m easily reachable on Twitter. You can follow me at <a href="{{ site.twitter }}">@migreyes</a>. The second-best way to reach out is through email. I’m occasionally available for speaking, but I’m quite happy at Basecamp, so I’m not interested in work. You can email me at <script src="/assets/javascript/email.js"></script></p>
@@ -112,7 +108,7 @@ layout: default
   <span class="ephemera clockwise hello">Hello</span>
 </section>
 
-<section class="colophon">
+<section class="about-colophon">
   <h3>Colophon</h3>
 
   <p>This site is designed with a six-column grid from <a href="http://Basecamp.com/svn/posts/1061-why-we-skip-photoshop" target="_blank">sketch to code</a>. Programmed with <a href="http://www.sublimetext.com/2" target="_blank">Sublime Text 2</a> using <a href="http://jekyllrb.com" target="_blank">Jekyll</a>, Sass, jQuery paired with <a href="http://coffeescript.org" target="_blank">CoffeeScript</a>, and <a href="http://rake.rubyforge.org" target="_blank">Rake</a> tasks for compilation and deployment to Dreamhost. Version controlled with Git on <a href="http://github.com/migreyes">GitHub</a>. The body typeface is <a href="https://typekit.com/fonts/ff-tisa-web-pro" target="_blank">FF Tisa</a> served via Typekit, while the complimentary sans-serif is <a href="http://www.fontshop.com/fonts/family/alto/" target="_blank">Alto</a> by OurType. Photoshop and Illustrator fired up for imagery. Get weird.</p>

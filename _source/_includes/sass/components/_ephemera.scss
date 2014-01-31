@@ -47,6 +47,6 @@
 // Ephemera: Tablet —————————————————————————— •
 // ——————————————————————————————————————————— •
 
-@include responsive-break-point(640px) {
+@include responsive-break-point(768px) {
   .ephemera { display: block; }
 }

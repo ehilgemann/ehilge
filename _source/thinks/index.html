@@ -9,7 +9,7 @@ layout: default
 <section class="thoughts">
   <ul>
   {% for thought in site.data.thoughts %}
-    <li data-thought id="{{ forloop.rindex }}"><a href="#{{ forloop.rindex }}" title="Click for a permalink for this quip.">{{ thought.idea }}</a></li>
+    <li class="thought" data-thought id="{{ forloop.rindex }}"><a href="#{{ forloop.rindex }}" title="Click for a permalink for this quip.">{{ thought.idea }}</a></li>
   {% endfor %}
   </ul>
 

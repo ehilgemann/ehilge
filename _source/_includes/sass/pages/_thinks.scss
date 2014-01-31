@@ -1,57 +1,35 @@
 // Thinks ———————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-body.thinks {
-  // background: #fdffff;
-  // background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZkZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjMwJSIgc3RvcC1jb2xvcj0iI2U2ZjhmZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjU0JSIgc3RvcC1jb2xvcj0iI2M4ZWVmYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc1JSIgc3RvcC1jb2xvcj0iI2JlZTRmOCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNiMWQ4ZjUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  // background: -moz-linear-gradient(top,  #fdffff 0%, #e6f8fd 30%, #c8eefb 54%, #bee4f8 75%, #b1d8f5 100%);
-  // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdffff), color-stop(30%,#e6f8fd), color-stop(54%,#c8eefb), color-stop(75%,#bee4f8), color-stop(100%,#b1d8f5));
-  // background: -webkit-linear-gradient(top,  #fdffff 0%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
-  // background: -o-linear-gradient(top,  #fdffff 0%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
-  // background: -ms-linear-gradient(top,  #fdffff 0%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
-  // background: linear-gradient(to bottom,  #fdffff 0%,#e6f8fd 30%,#c8eefb 54%,#bee4f8 75%,#b1d8f5 100%);
-  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdffff', endColorstr='#b1d8f5',GradientType=0 );
+.thoughts {
 
-  section.thoughts {
+  p { margin: 6em 0; }
 
-    h2 {
-      color: #F00;
-      margin-bottom: 4em;
-    }
+  :target a {
+    @include animate(thought-attention 5s both);
+    outline: none;
+  }
+}
 
-    h2 a:link { text-decoration: underline; }
-    h2 a:visited { color: $color-link; }
+.thought {
+  @include transition(color 2s .5s ease);
+  display: block;
+  margin-left: 0%;
+  margin-top: 1em;
+  line-height: 1em;
 
-    li {
-      @include transition(color 2s .5s ease);
-      display: block;
-      margin-left: 0%;
-      margin-top: 1em;
-      line-height: 1em;
+  &:hover {
+    @include transition(color 2s ease);
+    color: red;
+    cursor: default;
+  }
 
-      a {
-        color: #333;
-        display: block;
-        line-height: 1.2em;
-        padding-top: 6em;
-        text-decoration: none;
-      }
-    }
-
-    li:hover {
-      @include transition(color 2s ease);
-      color: red;
-      cursor: default;
-    }
-
-    p {
-      margin: 6em 0;
-    }
-
-    :target a {
-      @include animate(thought-attention 5s both);
-      outline: none;
-    }
+  a {
+    color: #333;
+    display: block;
+    line-height: 1.2em;
+    padding-top: 6em;
+    text-decoration: none;
   }
 }
 
@@ -60,25 +38,21 @@ body.thinks {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
-  body.thinks {
+  .thinks h1 {
+    margin-left: 16.667%;
+    margin-top: 2em;
+  }
 
-    h1 {
-      margin-left: 16.667%;
-      margin-top: 2em;
-    }
+  .thoughts {
+    margin-left: 16.667%;
+    width: 66.667%;
+  }
 
-    section.thoughts {
-      margin-left: 16.667%;
-      // max-width: 500px;
-      width: 66.667%;
-    }
+  .thought {
+    font-size: 1.5em;
+    letter-spacing: -1px;
 
-    section.thoughts li {
-      font-size: 1.5em;
-      letter-spacing: -1px;
-
-      &:nth-child(2n+2) { margin-left: 16.667%; }
-      &:nth-child(3n+3) { margin-left: 33.333%; }
-    }
+    &:nth-child(2n+2) { margin-left: 16.667%; }
+    &:nth-child(3n+3) { margin-left: 33.333%; }
   }
 }

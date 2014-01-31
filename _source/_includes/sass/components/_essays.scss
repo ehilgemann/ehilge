@@ -11,6 +11,8 @@
   h1 {
     font-family: $font-serif;
     font-size: 1.75em;
+    line-height: 1em;
+    margin-bottom: 1em;
   }
 
   h2 { margin-top: 2em; }
@@ -32,6 +34,13 @@
       left: 0;
     }
   }
+}
+
+.essay-author {
+  color: #BBB;
+  display: block;
+  font-size: .75em;
+  font-style: italic;
 }
 
 .essay-info {
@@ -82,6 +91,7 @@
 
     h1 {
       font-size: 4.5em;
+      line-height: .95em;
       margin-bottom: .5em;
     }
 
@@ -89,6 +99,10 @@
       font-size: 1.1em;
       line-height: 1.75em;
     }
+  }
+
+  .essay-author {
+    font-size: .4em;
   }
 
   .essay-info {

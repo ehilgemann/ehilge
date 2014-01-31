@@ -3,21 +3,24 @@
 
 .nav {
   @include border-box;
+  background-color: $color-link;
   font-family: $font-sans;
-  padding: 1em;
+  margin-bottom: 1em;
+  margin-top: -5px;
+  padding: .5em 1em;
   position: relative;
   width: 100%;
 }
 
 .nav-home {
-  color: #333;
+  color: white;
   display: inline-block;
   font-weight: bold;
 
   &:visited,
   &:hover,
   &:active {
-    color: #333;
+    color: white;
   }
 
   &:hover { text-decoration: underline; }
@@ -25,20 +28,21 @@
 
 .nav-links {
   position: absolute;
-  right: 1em;
-  top: 1em;
+  right: 0;
+  top: .5em;
 
   a:link,
-  a:visited { color: $color-link; }
+  a:visited { color: white; }
   a:hover { color: $color-link-hover; }
 
   li {
     display: inline-block;
-    margin-left: 1em;
+    margin-left: .25em;
   }
-
-  .nav-link-loves { display: none; }
 }
+
+.nav-link-loves,
+.nav-link-portfolio { display: none; }
 
 .nav-title,
 .nav-contact {
@@ -63,6 +67,7 @@ body.loves .nav-link-loves {
 @include responsive-break-point(800px) {
   .nav {
     @include border-box;
+    background-color: transparent;
     font-size: .9rem;
     line-height: 1.2em;
     margin-bottom: 1em;
@@ -82,20 +87,34 @@ body.loves .nav-link-loves {
     address { font-style: normal; }
   }
 
-  .nav-home { display: inline-block; }
+  .nav-home {
+    color: #333;
+    display: inline-block;
+
+    &:visited,
+    &:active {
+      color: #333;
+    }
+
+    &:hover { color: $color-link; }
+  }
 
   .nav-links {
     position: relative;
     left: 0;
     top: 0;
 
+    a:link,
+    a:visited { color: $color-link; }
+
     li {
       display: block;
       margin: 0;
     }
-
-    .nav-link-loves { display: block; }
   }
+
+  .nav-link-portfolio,
+  .nav-link-loves { display: block; }
 
   .nav-title,
   .nav-contact {

@@ -4,15 +4,15 @@ class: about
 layout: default
 ---
 
-<section class="presentation about-portrait" data-behavior="escapable" data-presentation="portrait">
-  <figure class="portrait-overlay">
+<section class="presentation about-portrait" data-presentation="portrait" data-escapable>
+  <figure class="presentation-content about-portrait-photo">
     <img src="/assets/images/is/mig.jpg">
     <figcaption>Photo by <a href="http://instagram.com/miekd" target="_blank">Maykel Loomans</a> at Brooklyn Beta 2013.</figcaption>
   </figure>
 </section>
 
-<section class="biography">
-  <article class="long">
+<section class="about-biography">
+  <article class="about-biography-long">
     <h1>I’m a designer exploring the intersection of art and technology on the web at Basecamp.</h1>
 
     <p>I live, work, and teach in Chicago. Like my co-workers, I also enjoy working <a href="http://Basecamp.com/remote" target="_blank">remotely</a>, turning local coffee shops from my favorite cities into my office.</p>
@@ -21,21 +21,21 @@ layout: default
     <p>Teaching, mentoring, and community outreach make up the latter half of my time. I’ve been maintaining the frequently-visited design inspiration site <a href="http://humblepied.com" target="_blank">Humble Pied</a> since 2009. That lead me to do even bigger community projects, such as starting and managing the <a href="http://creativemornings.com/cities/chi" target="_blank">CreativeMornings Chicago</a> chapter for two years, and ultimately passing the reigns to my friends Kim and Kyle at <a href="http://www.knoed.com" target="_blank">Knoed</a>. I also serve as a mentor within design, tech, and startup organizations.</p>
     <p>I prefer start my day with a straight black pour over and end my night with a smooth bourbon and a hoppy IPA.</p>
 
-    <p data-bio=".short">Too long, didn’t read?</p>
+    <p class="link" data-toggle-bio=".about-biography-short">Too long, didn’t read?</p>
   </article>
 
-  <article class="short">
+  <article class="about-biography-short">
     <h1>Designer at Basecamp</h1>
     <p>I help make Basecamp better. Formerly Threadless, and an agency refugee. Beliefs: designers should code, humility > hubris, build your community.</p>
     <p>&hearts; <a href="/loves/chicago">Chicago</a>.</p>
 
-    <p data-bio=".long">More?</p>
+    <p class="link" data-toggle-bio=".about-biography-long">More?</p>
   </article>
 
-  <div class="portrait-thumbnails">
+  <div class="about-biography-photos">
     <img src="/assets/images/is/mig-blue.png">
 
-    <figure class="portrait-toggle" data-show="portrait">
+    <figure class="about-biography-photos-slider" data-show="portrait" data-parallax data-parallax-direction="top" data-parallax-start="-40" data-parallax-stop="250" data-parallax-rate="-1.5">
       <img src="/assets/images/is/mig-black.png">
       <figcaption>Photo by <a href="http://instagram.com/miekd" target="_blank">Maykel Loomans</a></figcaption>
     </figure>

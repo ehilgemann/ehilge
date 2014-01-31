@@ -1,30 +1,29 @@
 // About ————————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
+.about-portrait {
+  margin-bottom: 1em;
+  width: 100%;
+
+  figure {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  figcaption { display: none; }
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
 body.about {
 
   section,
   article { margin-bottom: 2em; }
 
   h3 { margin-bottom: .5rem; }
-
-
-  section.portrait {
-    margin-bottom: 1em;
-    width: 100%;
-
-    figure {
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    figcaption { display: none; }
-
-    img {
-      height: auto;
-      width: 100%;
-    }
-  }
 
   section.biography {
 
@@ -108,44 +107,44 @@ body.about {
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(768px) {
-  body.about {
+  .about-portrait {
+    background-color: rgba(0,0,0,.8);
+    cursor: -webkit-zoom-out;
+    display: none;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5000;
 
-    section.portrait {
-      background-color: rgba(0,0,0,.8);
-      cursor: -webkit-zoom-out;
-      display: none;
-      height: 100%;
-      left: 0;
-      margin: 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 5000;
+    figure {
+      @include animate(fade-in-up .5s both);
+      margin: 2em auto 0;
+      max-width: 45%;
 
-      figure {
-        @include animate(fade-in-up .5s both);
-        margin: 2em auto 0;
-        max-width: 45%;
+      img {
+        @include border-radius(5px 5px 0 0);
+        @include box-shadow(0 0 10px rgba(0,0,0,.5));
+        height: auto;
+        width: 100%;
+      }
 
-        img {
-          @include border-radius(5px 5px 0 0);
-          @include box-shadow(0 0 10px rgba(0,0,0,.5));
-          height: auto;
-          width: 100%;
-        }
-
-        figcaption {
-          @include border-radius(0 0 5px 5px);
-          background: rgba(0,0,0,.8);
-          color: white;
-          display: block;
-          font-size: .9em;
-          margin: -.5em 0 0;
-          padding: .5em 0;
-          text-align: center;
-        }
+      figcaption {
+        @include border-radius(0 0 5px 5px);
+        background: rgba(0,0,0,.8);
+        color: white;
+        display: block;
+        font-size: .9em;
+        margin: -.5em 0 0;
+        padding: .5em 0;
+        text-align: center;
       }
     }
+  }
+
+  body.about {
 
     section.biography {
       margin: 8rem auto 0;

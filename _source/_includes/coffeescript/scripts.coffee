@@ -33,10 +33,10 @@ showWindowWidth = ->
 escapable = ->
   $('[data-behavior="escapable"]').fadeOut()
 
+
 $ ->
   $(window).bind 'keydown', (event) ->
     switch event.keyCode
-      when 27 # Escape
-        escapable()
+      when 27 then escapable()
 
   # publicServiceAnnouncement()

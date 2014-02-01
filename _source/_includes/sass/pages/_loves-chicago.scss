@@ -4,7 +4,11 @@
 .loves-chicago section {
   position: relative;
 
-  h3 { margin-bottom: .5em; }
+  h3 {
+    color: $color-spot;
+    margin-bottom: .5em;
+  }
+
   ul { margin-top: 1em; }
   li { font-family: $font-sans; }
 }

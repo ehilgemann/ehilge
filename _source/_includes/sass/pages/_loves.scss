@@ -4,7 +4,8 @@
 .loves section { margin-bottom: 2em; }
 
 .loves-introduction h1 { margin-bottom: 2em; }
-.loves-introduction figure { display: none; }
+.loves-introduction-shop,
+.loves-introduction-laptop { display: none; }
 
 .loves-friends ul { margin-bottom: 1em; }
 
@@ -171,18 +172,22 @@
       padding-top: 4em;
       width: 50%;
     }
+  }
 
-    figure {
-      display: block;
-      position: absolute;
-      right: 0;
-      width: 31.333%;
-      z-index: -1986;
-    }
+  .loves-introduction-laptop {
+    display: block;
+    position: absolute;
+    right: 2em;
+    margin-top: 2.5em;
+    width: 18%;
+    z-index: 0;
+  }
 
-    img {
-      height: auto;
-      width: 100%;
-    }
+  .loves-introduction-shop {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 25%;
+    z-index: 0;
   }
 }

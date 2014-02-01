@@ -30,4 +30,4 @@ $ ->
     parallax $this, $direction, $start, $stop, $rate
 
 
-  $("#wanker").wanker(duration: 1000)
+  $('[data-wanker]').wanker()

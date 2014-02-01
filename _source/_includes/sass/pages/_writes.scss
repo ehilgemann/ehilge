@@ -1,8 +1,11 @@
 // Writes ———————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-.writes-introduction figure,
+.writes-introduction-brain,
+.writes-introduction-notebook,
 .essay-toggles { display: none; }
+
+.writes-introduction h1 { padding-top: 1em; }
 
 .writes-essays {
   margin-bottom: 2em;
@@ -139,16 +142,28 @@
 
 @include responsive-break-point(800px) {
   .writes-introduction {
+    padding-top: 2em;
+    position: relative;
+  }
 
-    figure {
-      display: block;
-      width: 33.333%;
-    }
+  .writes-introduction-brain {
+    display: block;
+    height: auto;
+    position: absolute;
+    top: 0;
+    max-width: 200px;
+    width: 25%;
+    z-index: 1986;
+  }
 
-    img {
-      height: auto;
-      width: 100%;
-    }
+  .writes-introduction-notebook {
+    display: block;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    width: 30%;
+    max-width: 250px;
+    z-index: -1986;
   }
 }
 

@@ -15,7 +15,7 @@ escapable = ->
 
 
 $ ->
-  $(window).bind 'keydown', (event) ->
+  $(window).keydown (event) ->
     switch event.keyCode
       when 27 then escapable()
 
@@ -30,4 +30,4 @@ $ ->
     parallax $this, $direction, $start, $stop, $rate
 
 
-  $('[data-wanker]').wanker()
+  # $('[data-wanker]').wanker()

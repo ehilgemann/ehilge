@@ -1,36 +1,36 @@
-filterEssays = (essayType) ->
-  $essays = $('.writes-essays-list')
-  $essayList = $essays.find('li')
-  $nonfavorites = $essays.find('li:not([data-favorite])')
-  $favoriteToggle = $('[data-essay-filter~="favorites"]')
-
-  switch essayType
-    when 'favorites'
-      if $favoriteToggle.hasClass 'selected' then $nonfavorites.show() else $nonfavorites.hide()
-      $favoriteToggle.toggleClass 'selected'
-    when 'recent'
-      $essayList.sort(newestFirst).appendTo $essays
-    when 'shortest'
-      $essayList.sort(shortestFirst).appendTo $essays
-
-shortestFirst = (a, b) ->
-  if ($(b).data('words')) < ($(a).data('words')) then 1 else -1
-
-longestFirst = (a, b) ->
-  if ($(b).data('words')) > ($(a).data('words')) then 1 else -1
-
-newestFirst = (a, b) ->
-  if ($(b).data('date')) < ($(a).data('date')) then 1 else -1
-
-oldestFirst = (a, b) ->
-  if ($(b).data('date')) > ($(a).data('date')) then 1 else -1
-
 $ ->
-  $essays = $('.writes-essays-list')
-  $essayList = $essays.find('li')
+  filterEssays = (essayType) ->
+    $essays = $('.writes-essays-list')
+    $essaysList = $essays.find('li')
+    $nonfavorites = $essays.find('li:not([data-favorite])')
+    $favoriteToggle = $('[data-essay-filter~="favorites"]')
+
+    switch essayType
+      when 'favorites'
+        if $favoriteToggle.hasClass 'selected' then $nonfavorites.show() else $nonfavorites.hide()
+        $favoriteToggle.toggleClass 'selected'
+      when 'recent'
+        $essaysList.sort(newestFirst).appendTo $essays
+      when 'shortest'
+        $essaysList.sort(shortestFirst).appendTo $essays
+
+  shortestFirst = (a, b) ->
+    if ($(b).data('words')) < ($(a).data('words')) then 1 else -1
+
+  longestFirst = (a, b) ->
+    if ($(b).data('words')) > ($(a).data('words')) then 1 else -1
+
+  newestFirst = (a, b) ->
+    if ($(b).data('date')) < ($(a).data('date')) then 1 else -1
+
+  oldestFirst = (a, b) ->
+    if ($(b).data('date')) > ($(a).data('date')) then 1 else -1
+
+  $essays = $('[data-essays]')
+  $essaysList = $essays.find('li')
 
   # Estimated reading time
-  $essayList.each ->
+  $essaysList.each ->
     $words = $(this).data('words')
     $readingTime = Math.floor($words / 3)
 
@@ -43,7 +43,7 @@ $ ->
 
   # Fade each essay in
   $delay = 0
-  $essayList.each ->
+  $essaysList.each ->
     $delay += 50
     $(this).css opacity: 0
     $(this).delay($delay).fadeTo 500, 1

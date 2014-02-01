@@ -52,7 +52,8 @@
   @include animate(fade-in-up .2s both);
   display: block;
   left: 33%;
-  top: 150px;
+  top: 15em;
+  z-index: 573;
 }
 
 @include responsive-break-point(401px) {

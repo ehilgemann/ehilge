@@ -18,7 +18,7 @@ Options -Indexes
 # RedirectMatch 301 /writing /writes$1
 # RedirectMatch 301 /thoughts /writes$1
 # RedirectMatch 301 /essays /writes$1
-# RedirectMatch 301 /blog /writes$1
+# RedirectMatch 301 /blog /shares$1
 
 # Resources
 # RedirectMatch 301 /resources /loves$1
@@ -35,5 +35,3 @@ RedirectMatch 301 /work /$1
 RedirectMatch 301 /portfolio /$1
 RedirectMatch 301 /writing /$1
 RedirectMatch 301 /thoughts /$1
-RedirectMatch 301 /resources /$1
-RedirectMatch 301 /recommends /$1

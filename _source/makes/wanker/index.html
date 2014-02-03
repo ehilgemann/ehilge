@@ -1,5 +1,6 @@
 ---
 title: jquery.wanker.js by Mig Reyes
+class: wanker-marketing
 layout: blank
 stylesheet: pages/makes-wanker
 comment: "
@@ -15,10 +16,95 @@ Twitter: @migreyes
 
 "
 ---
-Download on GitHub: <a href="https://github.com/migreyes/jquery.wanker">github.com/migreyes/jquery.wanker</a>.
+<div class="content">
+  <section class="wanker-introduction">
+    <h1>jquery.wanker.js</h1>
+    <h2>A jQuery plugin by Mig Reyes</h2>
+  </section>
 
-<div class="wanker-example">
-  <a href="/makes/wanker/example" target="_blank" title="View a live example of Wanker.">View a live example.</a>
+  <section class="wanker-about">
+    <h3>About the plugin</h3>
+    <p>Wanker helps people focus on content.</p>
+  </section>
+
+  <section class="wanker-example">
+    <h3>See it in action</h3>
+    <p>Resize your browser for more than one second. You can also <a href="/makes/wanker/example" target="_blank" title="View a live example of Wanker.">see another live example.</a>
+  </section>
+
+  <section class="wanker-usage">
+    <h3>Setup, design, and usage</h3>
+
+    <p>Include jQuery</p>
+{% highlight html %}
+<head>
+  <script src="/assets/javascript/jquery.min.js"></script>
+  <script src="/assets/javascript/jquery.wanker.min.js"></script>
+</head>
+{% endhighlight %}
+
+    <p>Write your public service announcement</p>
+{% highlight html %}
+<div class="wanker" data-wanker>
+  <div class="wanker-content">
+    <h1>The web was meant to be read, not squished.</h1>
+    <p>Prevent browser wanking and get people back to reading.</p>
+    <p>Download <a href="https://github.com/migreyes/jquery.wanker">jquery.wanker.js on GitHub</a>.</p>
+  </div>
 </div>
+{% endhighlight %}
 
+    <p>Give it design love, and be sure to hide it by default</p>
+{% highlight css %}
+.wanker {
+  /* Full-screen takeover… */
+  background: #000;
+  color: #FFF;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2014;
+}
+
+.wanker-content {
+  /* Additional design… */
+}
+{% endhighlight %}
+
+    <p>Call the wanker() function on your design</p>
+{% highlight javascript %}
+$(function() {
+  $('[data-wanker]').wanker({delay: 200, duration: 1000});
+});
+{% endhighlight %}
+  </section>
+
+  <section class="wanker-download">
+    <h3>Get it now</h3>
+    <p>
+      <img src="images/emoji-fork.png">
+      <a href="https://github.com/migreyes/jquery.wanker" target="_blank">Fork me on GitHub</a>, or get the <a href="https://github.com/migreyes/jquery.wanker/raw/master/jquery.wanker.min.js" target="_blank">minified version now.</a>
+    </p>
+  </section>
+
+  <div class="wanker-emojis spacing-one">
+    <span class="wanker-emojis-reflection">&nbsp;</span>
+    <img src="images/emoji-computer.png">
+    <img src="images/emoji-fist.png">
+    <img src="images/emoji-left.png">
+    <img src="images/emoji-right.png">
+    <img src="images/emoji-fist.png">
+    <img src="images/emoji-no.png">
+  </div>
+
+  <div class="footer-chicago">
+    <a href="/loves/chicago" class="chicago-flag" title="My favorite places in Chicago">
+      <p>Made in Chicago</p><br>
+      <span class="flag">✶✶✶✶</span>
+    </a>
+  </div>
+</div>
 {% include wanker.html %}

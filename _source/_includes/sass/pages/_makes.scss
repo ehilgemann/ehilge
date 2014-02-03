@@ -3,10 +3,14 @@
 
 .portfolio .footer-nav { display: none; }
 
-.projects { margin-top: 2em; }
+.portfolio-introduction {
+  margin-bottom: 4em;
+  margin-top: 2em;
 
-.projects h1 {
-  line-height: 1.25em;
+  h1 {
+    line-height: 1.25em;
+    margin-bottom: .75em;
+  }
 }
 
 .project {

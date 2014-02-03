@@ -73,7 +73,15 @@ Twitter: @migreyes
     <p>Last, just call the wanker() function on your design.</p>
 {% highlight javascript %}
 $(function() {
-  $('[data-wanker]').wanker({delay: 200, duration: 1000});
+  $('[data-wanker]').wanker();
+});
+{% endhighlight %}
+
+    <p>Want the message to start sooner and last longer?</p>
+{% highlight javascript %}
+$(function() {
+  // Customize the delay or duration defined in milliseconds
+  $('[data-wanker]').wanker({delay: 0, duration: 5000});
 });
 {% endhighlight %}
   </section>

@@ -95,6 +95,11 @@
   location: Chicago
   industry: web
 
+- name: Jason Fried
+  url: twitter.com/jasonfried
+  location: Chicago
+  industry: web
+
 - name: Jason James
   url: jasonjam.es
   location: Chicago
@@ -102,6 +107,11 @@
 
 - name: John Schlemmer
   url: johnschlemmer.com
+  location: Chicago
+  industry: web
+
+- name: Josh Peek
+  url: github.com/josh
   location: Chicago
   industry: web
 

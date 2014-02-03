@@ -15,7 +15,7 @@
   $.fn.wanker = (options) ->
 
     settings = $.extend(
-      delay: 1000
+      delay: 500
       duration: 1200
     , options)
 

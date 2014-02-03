@@ -20,6 +20,18 @@
   margin-top: 2em;
 }
 
+.wanker-marketing-logo {
+  height: auto;
+  margin-bottom: .5em;
+  max-width: 200px;
+}
+
+.wanker-marketing-emoji {
+  height: auto;
+  margin-bottom: .5em;
+  width: 24px;
+}
+
 .wanker-marketing-download {
 
   img {
@@ -30,7 +42,7 @@
   }
 }
 
-.wanker-marketing-emojis {
+.wanker-marketing-text {
   @include border-box;
   @include border-radius(15px);
   @include box-shadow(0 2px 3px rgba(0,0,0,.1));
@@ -48,7 +60,7 @@
   }
 }
 
-.wanker-marketing-emojis-reflection {
+.wanker-marketing-text-reflection {
   @include border-radius(12px);
   background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.76) 100%) rgba(255, 255, 255, 0);
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0.76))) rgba(255, 255, 255, 0);
@@ -152,12 +164,17 @@
     margin-top: 5em;
   }
 
+  .wanker-marketing-share {
+    margin-left: 33.333%;
+    margin-top: 7em;
+  }
+
   .wanker-marketing-colophon {
     margin: 10em 0 5em 33.333%;
     width: 50%;
   }
 
-  .wanker-marketing-emojis {
+  .wanker-marketing-text {
     margin: 10em 0 5em 32.333%;
   }
 }

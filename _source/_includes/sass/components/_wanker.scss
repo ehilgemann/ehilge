@@ -18,11 +18,13 @@
   position: relative;
 
   p {
+    font-family: $font-sans;
     color: #EEE;
-    margin-bottom: 5em;
-    margin-top: 6em;
+    font-size: 2em;
+    line-height: 1em;
+    margin: 2em auto;
     text-align: center;
-    width: 100%;
+    width: 90%;
   }
 
   img { position: absolute; }
@@ -51,7 +53,7 @@
 .wanker-poop {
   @include animate(fade-in-up .2s both);
   display: block;
-  left: 33%;
+  left: 35%;
   top: 15em;
   z-index: 573;
 }

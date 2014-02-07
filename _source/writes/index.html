@@ -27,7 +27,7 @@ layout: default
   {% for essay in site.categories.writes %}
     <li class="writes-essay"{% if essay.favorite %} data-favorite{% endif %} data-words="{{ essay.content | number_of_words }}" data-date="{{ forloop.index }}">
     {% if essay.svn %}
-      <a href="http://37svn.com/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">
+      <a href="http://signalvnoise.com/posts/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">
     {% else %}
       <a href="{{ essay.url }}">
     {% endif %}

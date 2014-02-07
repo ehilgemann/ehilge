@@ -6,12 +6,6 @@
 .portfolio-introduction {
   margin-bottom: 4em;
   margin-top: 2em;
-
-  h1 {
-    font-size: 2em;
-    line-height: 1.25em;
-    margin-bottom: .75em;
-  }
 }
 
 .project {
@@ -57,6 +51,21 @@
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
+  .portfolio-introduction {
+
+    h1 {
+      margin-bottom: 1em;
+      margin-left: 16.667%;
+      margin-top: 2em;
+      width: 67.667%;
+    }
+
+    p {
+      margin-left: 16.667%;
+      width: 50%;
+    }
+  }
+
   .projects { @include clearfix; }
 
   .project {

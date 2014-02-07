@@ -21,7 +21,7 @@ layout: default
 </section>
 
 <section class="projects">
-  <div class="project website spacing-two width-two">
+  {% comment %}<div class="project website spacing-two width-two">
     {% project bike/bike %}
   </div>
 
@@ -35,7 +35,7 @@ layout: default
 
   <div class="project device spacing-one width-two">
     {% project basecamp/basecamp-marketing device %}
-  </div>
+  </div>{% endcomment %}
 
-  {% project thing thang %}
+  {% project basecamp/plans, website width-one %}
 </section>

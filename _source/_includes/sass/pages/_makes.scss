@@ -15,7 +15,9 @@
 }
 
 .project {
-  display: inline-block;
+  display: block;
+  margin: 0 auto 1.5em;
+  max-width: 550px;
 
   img {
     height: auto;
@@ -23,7 +25,7 @@
   }
 }
 
-.website {
+.project-website {
   @include border-radius(3px);
   @include box-shadow(0 0 4px rgba(0,0,0,.1));
   border: 1px solid #CCC;
@@ -36,89 +38,18 @@
   }
 }
 
-.device {
-  @include border-radius(30px);
-  @include box-shadow(0 0 4px rgba(0,0,0,.1));
+.project-phone {
+  @include border-radius(15px);
+  @include box-shadow(0 2px 4px rgba(0,0,0,.5));
   background-color: black;
-  overflow: hidden;
-  padding: 4em 0;
+  padding: 3% 0 3.5%;
   text-align: center;
 
   img {
-    @include border-radius(1px);
+    @include border-radius(2px);
     display: inline-block;
     width: 95%;
   }
-
-  &:before {
-    background: 0;
-    position: absolute;
-    top: 0;
-  }
-}
-
-.browser {
-  @include border-radius(3px);
-  @include box-shadow(0 0 4px rgba(0,0,0,.1));
-}
-
-.browser-titlebar {
-  @include border-radius(3px 3px 0 0);
-  background: #eeeeee;
-  background: -moz-linear-gradient(top,  #eeeeee 0%, #cccccc 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
-  background: -webkit-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-  background: -o-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-  background: -ms-linear-gradient(top,  #eeeeee 0%,#cccccc 100%);
-  background: linear-gradient(to bottom,  #eeeeee 0%,#cccccc 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
-  border: 1px solid #CCC;
-  border-bottom-color: #999;
-  display: block;
-  font-family: "Lucida Grande", Helvetica;
-  font-size: .7em;
-  height: 25px;
-  position: relative;
-  text-align: center;
-  text-shadow: 0 1px 1px white;
-  z-index: 1000;
-}
-
-.browser-window {
-  @include border-radius(0 0 3px 3px);
-  border: 1px solid #DDD;
-  border-top: none;
-  max-height: 200px;
-  margin-bottom: 1.5em;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  position: relative;
-
-  img {
-    height: auto;
-    width: 100%;
-  }
-}
-
-.browser-titlebar b {
-  font-size: 1.25em;
-  position: absolute;
-  text-align: left;
-}
-
-.browser-red {
-  color: #ea4d45;
-  left: .25em;
-}
-
-.browser-yellow {
-  color: #f5b958;
-  left: 1em;
-}
-
-.browser-green {
-  color: #7fb15e;
-  left: 1.75em;
 }
 
 
@@ -126,15 +57,35 @@
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
+  .projects { @include clearfix; }
+
+  .project {
+    display: inline-block;
+    float: left;
+    position: relative;
+    vertical-align: top;
+  }
+
+  .project-bike-mobile { margin-top: 10%; }
+  .project-breeze { margin-top: -22%; }
+  .project-svn-mobile { margin-top: 10%; }
+  .project-basecamp { margin-top: -10%; }
+  .project-basecamp-help-mobile { margin-top: 10%; }
+  .project-humblepied-mobile { margin-top: -10%; }
+  // .project-basecamp-help { margin-top: -45%; }
+
+  .clear-left { clear: left; }
+  .fit-right { margin-right: 0 !important; }
+
   .spacing-one { margin-left: 16.667%; }
   .spacing-two { margin-left: 33.333%; }
   .spacing-three { margin-left: 50%; }
   .spacing-four { margin-left: 67.667%; }
 
-  .width-one { margin-right: 2%; width: 16.667%; }
-  .width-two { margin-right: 2%; width: 33.333%; }
-  .width-three { margin-right: 2%; width: 50%; }
-  .width-four { margin-right: 2%; width: 67.667%; }
-  .width-five { margin-right: 2%; width: 83.333%; }
+  .width-one { margin-right: 2%; width: 14.667%; }
+  .width-two { margin-right: 2%; width: 31.333%; }
+  .width-three { margin-right: 2%; width: 48%; }
+  .width-four { margin-right: 2%; width: 65.667%; }
+  .width-five { margin-right: 2%; width: 81.333%; }
   .width-six { margin-right: 0; width: 100%; }
 }

@@ -4,15 +4,15 @@ class: portfolio
 layout: default
 ---
 
-<section class="portfolio-introduction">
+<section class="portfolio-introduction spacing-one">
   <h1>Recent projects include
-    the design and framework for the new <a href="http://basecamp.com">basecamp.com marketing site</a>,
-    designing and building the <a href="http://basecamp.com/help">Basecamp Help site</a>,
-    the <a href="http://signalvnoise.com">redesign of Signal vs. Noise</a>,
-    redesigning Basecamp’s <a href="https://basecamp.com/1679267/announcements/37" target="_blank">Account Plan</a> selection,
-    Basecamp’s <a href="https://basecamp.com/help/guides/account/cancel" target="_blank">Account Pause</a> feature,
-    Basecamp’s <a href="https://basecamp.com/help/guides/account/adding-storage" target="_blank">storage upgrades feature</a>,
-    and writing <a href="/makes/wanker">jquery.wanker.js</a>.
+    designing and building the frameworks for the new <a href="http://basecamp.com">Basecamp.com marketing</a> and
+    <a href="http://signalvnoise.com/posts/3418">Basecamp Help</a> sites,
+    redesigning <a href="http://signalvnoise.com/posts/3285">Signal vs. Noise</a> and
+    Basecamp’s <a href="https://basecamp.com/1679267/announcements/37" target="_blank">account plan selection</a>,
+    designing Basecamp’s <a href="https://basecamp.com/help/guides/account/cancel" target="_blank">account pause</a> and
+    <a href="https://basecamp.com/help/guides/account/adding-storage" target="_blank">storage upgrades features</a>,
+    as well as writing <a href="/makes/wanker">jquery.wanker.js</a>.
   </h1>
 
   <h1>
@@ -21,19 +21,51 @@ layout: default
 </section>
 
 <section class="projects">
-  <div class="project website spacing-two width-two">
+  <div class="project project-website project-bike spacing-one width-two">
     {% project bike, website %}
   </div>
 
-  <div class="project website spacing-two width-two">
-    {% project basecamp, breeze %}
+  <div class="project project-phone project-bike-mobile width-one">
+    {% project bike, website-mobile %}
   </div>
 
-  <div class="project website spacing-two width-two">
+  <div class="project project-website width-three">
     {% project basecamp, plans %}
   </div>
 
-  <div class="project website spacing-two width-two">
-    {% project basecamp, marketing-phone %}
+  <div class="project project-website project-breeze width-two">
+    {% project basecamp, breeze %}
+  </div>
+
+  <div class="project project-phone project-svn-mobile spacing-two width-one">
+    {% project basecamp, svn-mobile %}
+  </div>
+
+  <div class="project project-website fit-right width-three">
+    {% project basecamp, svn %}
+  </div>
+
+  <div class="project project-website project-basecamp spacing-one width-two">
+    {% project basecamp, basecamp %}
+  </div>
+
+  <div class="project project-phone project-basecamp-mobile width-one">
+    {% project basecamp, basecamp-mobile %}
+  </div>
+
+  <div class="project project-phone project-basecamp-help-mobile width-one">
+    {% project basecamp, basecamp-help-mobile %}
+  </div>
+
+  <div class="project project-website project-humblepied width-three">
+    {% project humblepied, website %}
+  </div>
+
+  <div class="project project-phone project-humblepied-mobile width-one">
+    {% project humblepied, website-mobile %}
+  </div>
+
+  <div class="project project-website project-basecamp-help fit-right width-two">
+    {% project basecamp, basecamp-help %}
   </div>
 </section>

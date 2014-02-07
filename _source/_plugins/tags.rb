@@ -3,16 +3,12 @@ module Jekyll
     def initialize(tag_name, project, tokens)
       super
       arguments = project.split(",")
-      @project = arguments[0]
-      @classes = arguments[1]
+      @path    = arguments[0].strip
+      @project = arguments[1].strip
     end
 
     def render(context)
-      %|
-        <div class="project #{@classes}">
-          <img src="/assets/images/makes/#{@project}.jpg" retina="/assets/images/makes/#{@project}@2x.jpg">
-        </div>
-       |
+      %|<img src="/assets/images/makes/#{@path}/#{@project}.jpg" retina="/assets/images/makes/#{@path}/#{@project}@2x.jpg">|
     end
 
     Liquid::Template.register_tag "project", self

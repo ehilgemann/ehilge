@@ -17,6 +17,10 @@
 .wanker-content {
   position: relative;
 
+  a {
+    color: $color-link;
+  }
+
   p {
     font-family: $font-sans;
     color: #EEE;

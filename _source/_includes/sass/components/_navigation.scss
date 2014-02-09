@@ -120,5 +120,8 @@ body.loves .nav-link-loves {
   .nav-title,
   .nav-contact {
     display: block;
+
+    a:link,
+    a:visited { color: $color-link; }
   }
 }

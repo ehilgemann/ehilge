@@ -9,6 +9,7 @@
   line-height: 1.25em;
   position: absolute;
   text-transform: uppercase;
+  z-index: 1986;
 
   &.clockwise {
     -webkit-transform: rotate(-90deg);

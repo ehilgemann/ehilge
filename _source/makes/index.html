@@ -16,22 +16,23 @@ layout: default
     ————————————————————————————————————— ★
 
   {% endcomment %}
-  <div class="project project-website project-svn fit-right width-three">
-    <a href="http://signalvnoise.com/posts/3285" target="_blank">
-      {% project basecamp, svn, gif %}
-    </a>
-  </div>
-
   <div class="project project-phone project-svn-mobile clear-left spacing-two width-one">
     <a href="http://signalvnoise.com/posts/3285" target="_blank">
       {% project basecamp, svn-mobile %}
     </a>
   </div>
 
-  <div class="project-description project-description-svn spacing-one width-two">
+  <div class="project project-website project-svn fit-right width-three">
+    <a href="http://signalvnoise.com/posts/3285" target="_blank">
+      {% project basecamp, svn, gif %}
+    </a>
+  </div>
+
+  <div class="project-description project-description-svn clear-left spacing-one width-two">
     <h3>Signal vs. Noise</h3>
     <p>In 2006, 37signals <a href="http://signalvnoise.com/posts/37-the-newish-signal-vs-noise" target="_blank">released</a> an all new version of the popular Signal vs. Noise blog as an internal Ruby on Rails app. In 2012, I gave it <a href="http://signalvnoise.com/posts/3285-the-typography-and-layout-behind-the-new-signal-vs-noise-redesign">its first redesign</a>. It was my first foray into Rails, responsive design, and Sass.</p>
   </div>
+
 
 
   {% comment %}
@@ -40,7 +41,7 @@ layout: default
     ————————————————————————————————————— ★
 
   {% endcomment %}
-  <div class="project project-website project-bike clear-left width-two">
+  <div class="project project-website project-bike clear-left width-three">
     <a href="http://mig.io/sells/bike">
       {% project bike, website %}
     </a>
@@ -52,22 +53,35 @@ layout: default
     </a>
   </div>
 
-  <div class="project-description project-description-bike width-two">
+  <div class="project-description project-description-bike clear-left fit-right spacing-four width-two">
     <h3>Bike Sale</h3>
-    <p>As a weekend project, I built <a href="/sells/bike">a website to sell my first city bike</a>. Using the same writing, I also put up a Craigslist ad. Craiglist ad: Up for 7 days, 0 offers. Website: Up for 1 day, 5 offers, sold the next day.</p>
+    <p>As a weekend project, I built <a href="/sells/bike">a website to sell my first city bike</a>. Using the same writing, I also put up a Craigslist ad. Craiglist ad: up for 7 days, 0 offers. Website: up for 1 day, 5 offers, sold the next day.</p>
+
+    <span class="ephemera counter-clockwise designing-is-selling">designing is selling</span>
   </div>
 
 
   {% comment %}
 
-    Basecamp: Plans
+    Basecamp.com
     ————————————————————————————————————— ★
 
   {% endcomment %}
-  <div class="project project-website width-three">
+  <div class="project project-website project-basecamp spacing-three width-three">
     <a href="http://basecamp.com" target="_blank">
-      {% project basecamp, plans %}
+      {% project basecamp, basecamp %}
     </a>
+  </div>
+
+  <div class="project project-phone project-basecamp-mobile spacing-two width-one">
+    <a href="http://basecamp.com" target="_blank">
+      {% project basecamp, basecamp-mobile %}
+    </a>
+  </div>
+
+  <div class="project-description project-description-basecamp width-three">
+    <h3>basecamp.com</h3>
+    <p>I designed and built the framework for the new <a href="http://basecamp.com" target="_blank">basecamp.com marketing site</a>, featuring the fantastic illustrations by <a href="http://nateotto.com/home.html" target="_blank">Nate Otto</a>. After focusing a lot of time on learning JavaScript, I sprinkled in a lot of easter eggs, including the live-updating statistics and character interactions on the <a href="http://basecamp.com/start" target="_blank">signup page</a>.</p>
   </div>
 
 
@@ -77,67 +91,223 @@ layout: default
     ————————————————————————————————————— ★
 
   {% endcomment %}
-  <div class="project project-website project-breeze width-two">
+  <div class="project project-website project-breeze spacing-one width-two">
     {% project basecamp, breeze %}
   </div>
 
-  <div class="project project-website project-basecamp width-three">
-    <a href="http://basecamp.com" target="_blank">{% project basecamp, basecamp %}</a>
+  <div class="project-description project-description-breeze width-two">
+    <h3>Breeze For Designers</h3>
+    <p>For a short while, Basecamp had a group email product <a href="http://basecamp.com/breeze" target="_blank">called Breeze</a>. I spent a couple days designing and building a page specifically to sell to designers.</p>
   </div>
 
-  <div class="project project-phone project-basecamp-mobile width-one">
-    <a href="http://basecamp.com" target="_blank">{% project basecamp, basecamp-mobile %}</a>
+
+  {% comment %}
+
+    Basecamp: Pause
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-basecamp-pause clear-left fit-right spacing-four width-two">
+    <a href="http://basecamp.com" target="_blank">
+      <a href="https://basecamp.com/help/guides/account/cancel" target="_blank">
+        {% project basecamp, pause %}
+      </a>
+    </a>
+  </div>
+
+
+  {% comment %}
+
+    Basecamp: Annual
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-basecamp-annual clear-left fit-right spacing-four width-two">
+    <a href="https://basecamp.com/1679267/announcements/27" target="_blank">
+      {% project basecamp, annual %}
+    </a>
+  </div>
+
+
+  {% comment %}
+
+    Basecamp: Plans
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-basecamp-plans clear-left fit-right spacing-four width-two">
+    <a href="https://basecamp.com/1679267/announcements/37" target="_blank">
+      {% project basecamp, plans %}
+    </a>
+  </div>
+
+  <div class="project-description project-description-plans clear-left spacing-one width-three">
+    <h3>Basecamp Account Features</h3>
+    <p>On the product side of Basecamp, I worked with <a href="http://twitter.com/javan" target="_blank">@javan</a> on bringing our customers the <a href="https://basecamp.com/1679267/announcements/27" target="_blank">Annual Subscription</a> package, as well as the ability to <a href="https://basecamp.com/help/guides/account/cancel">Pause their Basecamp subscription</a>. Later, I worked with <a href="http://twitter.com/trevorturk" target="_blank">@trevorturk</a> on the all new <a href="https://basecamp.com/help/guides/account/adding-storage" target="_blank">Storage Upgrades feature</a>, giving the Basecamp account <a href="https://basecamp.com/1679267/announcements/37" target="_blank">plan selection a redesign</a> along the way.</p>
+  </div>
+
+
+  {% comment %}
+
+    Basecamp Help
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-basecamp-help clear-left width-two">
+    <a href="http://basecamp.com/help">
+      {% project basecamp, basecamp-help %}
+    </a>
   </div>
 
   <div class="project project-phone project-basecamp-help-mobile width-one">
-    <a href="http://basecamp/help" target="_blank">{% project basecamp, basecamp-help-mobile %}</a>
+    <a href="http://basecamp/help" target="_blank">
+      {% project basecamp, basecamp-help-mobile %}
+    </a>
   </div>
 
-  <div class="project project-website project-humblepied width-three">
-    <a href="http://humblepied.com" target="_blank">{% project humblepied, website %}</a>
+  <div class="project-description project-description-basecamp-help spacing-one width-three">
+    <h3>Basecamp Help</h3>
+    <p>Customers choose Basecamp not only for how simple and easy it is, but for its world-class support. I teamed up with the <a href="http://basecamp.com/support" target="_blank">Basecamp Support team</a> to design and build them a Help site they can self-manage, using it as <a href="http://signalvnoise.com/posts/3418-teaching-the-support-team-how-to-fish" target="_blank">an opportunity to teach them the tools</a> of our company.</p>
+
+    <span class="ephemera clockwise teach-others">teach others</span>
   </div>
 
-  <div class="project project-phone project-humblepied-mobile width-one">
-    <a href="http://humblepied.com">{% project humblepied, website-mobile %}</a>
+
+  {% comment %}
+
+    Humble Pied
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-phone project-humblepied-mobile clear-left spacing-two width-one">
+    <a href="http://humblepied.com">
+      {% project humblepied, website-mobile %}
+    </a>
   </div>
 
-  <div class="project project-website project-basecamp-help fit-right width-two">
-    <a href="http://basecamp.com/help">{% project basecamp, basecamp-help %}</a>
+  <div class="project project-website project-humblepied fit-right width-three">
+    <a href="http://humblepied.com">
+      {% project humblepied, website %}
+    </a>
   </div>
 
-  <div class="project project-logo project-logo-hive spacing-three width-one">
-    <a href="http://dribbble.com/shots/641363-Hive" target="_blank">{% project basecamp, hive, png %}</a>
+  <div class="project-description project-description-humblepied spacing-two width-three">
+    <h3>Humble Pied</h3>
+    <p>In 2009, I did super-short video interviews with my friends, colleagues, former bosses, and industry heroes about advice for young designers. I recently gave it a facelift, making the site snappy moving it from WordPress to Jekyll. You can watch <a href="http://humblepied.com">all of the interviews</a>, or take a look at the <a href="https://github.com/migreyes/humblepied" target="_blank">code on GitHub</a>.</p>
+
+    <span class="ephemera slant ask-your-heroes">ask your heroes</span>
   </div>
 
-  <div class="project project-logo project-logo-chestnut spacing-two width-one">
+
+  {% comment %}
+
+    Basecamp Logos
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-logo project-logo-help clear-left width-one">
+    <a href="http://basecamp.com/help" target="_blank">
+      {% project basecamp, help, png %}
+    </a>
+  </div>
+
+  <div class="project project-logo project-logo-hive clear-left spacing-one width-one">
+    <a href="http://dribbble.com/shots/641363-Hive" target="_blank">
+      {% project basecamp, hive, png %}
+    </a>
+  </div>
+
+  <div class="project project-logo project-logo-dash clear-left spacing-two width-one">
+    <a href="http://dribbble.com/shots/641362-Dash" target="_blank">
+      {% project basecamp, dash, png %}
+    </a>
+  </div>
+
+  <div class="project project-logo project-logo-chestnut clear-left spacing-three width-one">
     {% project basecamp, chestnut, png %}
   </div>
 
-  <div class="project project-logo project-logo-dash spacing-three width-one">
-    <a href="http://dribbble.com/shots/641362-Dash" target="_blank">{% project basecamp, dash, png %}</a>
+  <div class="project-description project-description-basecamp-logos spacing-three width-two">
+    <h3>Basecamp Logos</h3>
+    <p>I started my career doing traditional graphic design, and that always included branding and identity work. Every now and again at Basecamp, I’ll have some fun dipping into app logos.</p>
   </div>
 
-  <div class="project project-logo project-logo-help spacing-three width-one">
-    <a href="http://basecamp.com/help" target="_blank">{% project basecamp, help, png %}</a>
-  </div>
 
-  <div class="project project-website project-incoming-transmission width-two">
-    {% project basecamp, incoming-transmission %}
+  {% comment %}
+
+    Incoming Transmission
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-incoming-transmission clear-left width-two">
+    <a href="http://37signals.com/incoming-transmission/" target="_blank">
+      {% project basecamp, incoming-transmission %}
+    </a>
   </div>
 
   <div class="project project-phone project-incoming-transmission-mobile width-one">
-    {% project basecamp, incoming-transmission-mobile %}
+    <a href="http://37signals.com/incoming-transmission/07">
+      {% project basecamp, incoming-transmission-mobile %}
+    </a>
   </div>
 
-  <div class="project project-website project-design-test fit-right width-three">
-    <a href="/makes/37signals">{% project basecamp, design-test %}</a>
+  <div class="project-description project-description-basecamp-logos clear-left spacing-two width-two">
+    <h3>Incoming Transmission</h3>
+    <p>Curious about Ruby and hooking into the Campfire API, I wrote a script to gather every link shared in the Basecamp company chat room and later <a href="http://signalvnoise.com/posts/3400-incoming-transmission-a-monthly-newsletter-from-37signals" target="_blank">curated them into a monthly newsletter</a> featuring the best reads of the web.</p>
+
+    <span class="ephemera slant read-every-day">read every day</span>
   </div>
 
-  <div class="project project-website project-google-city width-three">
+  {% comment %}
+
+    37signals Design Test
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-design-test clear-left fit-right spacing-three width-three">
+    <a href="/makes/37signals">
+      {% project basecamp, design-test %}
+    </a>
+  </div>
+
+  <div class="project-description project-description-design-test clear-left spacing-one width-two">
+    <h3>37signals Design Test</h3>
+    <p>Every employee considered for a job at Basecamp goes through a paid design, writing, or programming challenge. This was my test that ultimately helped me <a href="https://signalvnoise.com/posts/3116-welcome-mig-reyes-to-37signals" target="_blank">land my job at Basecamp</a>.</p>
+
+    <span class="ephemera writing-is-designing">Writing is designing</span>
+  </div>
+
+
+  {% comment %}
+
+    Google City
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-google-city clear-left width-three">
     {% project google, city %}
   </div>
 
-  <div class="project project-website project-threadless-redesign spacing-one width-three">
+  <div class="project-description project-description-google-city fit-right width-two">
+    <h3>Google City Navigator</h3>
+    <p>Google invited me to design a website to help tourists discover one of my favorite cities. In case you were wondering, <a href="/loves/chicago">Chicago is my favorite city</a>.</p>
+  </div>
+
+
+  {% comment %}
+
+    Threadless Profiles Redesign
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-threadless-redesign clear-left spacing-one width-three">
     {% project threadless, redesign %}
+  </div>
+
+  <div class="project-description project-description-threadless-redesign width-two">
+    <h3>Threadless Profiles Redesign</h3>
+    <p>I worked with Threadless Creative Director Sean Donohue to revamp the user profiles, which included a better way to connect with other fans and artis on Threadless.</p>
+
+    <span class="ephemera counter-clockwise help-your-community">help your community be awesome</span>
   </div>
 </section>

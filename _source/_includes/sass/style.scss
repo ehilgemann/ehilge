@@ -106,6 +106,7 @@ li { list-style: none; }
   .align-right { text-align: right; }
 
   .clear-left { clear: left; }
+  .clear-right { clear: right; }
 
   .fit-right { margin-right: 0 !important; }
 
@@ -147,6 +148,7 @@ li { list-style: none; }
   'components/navigation',
   'components/footer',
   'components/ephemera',
+  'components/presentation',
   'components/essays',
   'components/wanker';
 

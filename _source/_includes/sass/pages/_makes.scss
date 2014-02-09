@@ -44,7 +44,10 @@
 .project-description {
   display: none;
 
-  h3 { margin-bottom: 1em; }
+  h3 {
+    line-height: 1.25em;
+    margin-bottom: 1em;
+  }
 }
 
 
@@ -79,30 +82,85 @@
   .project-description {
     display: inline-block;
     float: left;
+    position: relative;
   }
 
-  .project-svn { margin-top: 5%; }
-  .project-svn-mobile { margin-top: -80%; }
-  .project-description-svn { margin-top: -45%; }
+  // .project-svn { margin-top: 0; }
+  .project-svn-mobile { margin-top: 20%; }
+  .project-description-svn { margin-top: -40%; }
 
-  .project-bike { margin-top: -20%; }
+  .project-bike { margin-top: 20%; }
   .project-bike-mobile { margin-top: 10%; }
-  .project-description-bike { margin-top: 15%; }
+  .project-description-bike { margin-top: -90%; }
 
-  // .project-breeze { margin-top: -22%; }
-  // .project-basecamp { margin-top: -10%; }
-  // .project-basecamp-help-mobile { margin-top: 10%; }
-  // .project-humblepied-mobile { margin-top: -10%; }
-  // .project-logo-chestnut { margin-top: -32%; }
-  // .project-logo-hive { margin-top: -32%; }
-  // .project-logo-dash { margin-top: -17%; }
-  // .project-logo-help { margin-top: -45%; }
-  // .project-incoming-transmission { margin-top: -11%; }
-  // .project-google-city { margin-top: -60%; }
+  .project-basecamp { margin-top: -10%; }
+  .project-basecamp-mobile { margin-top: -20%; }
+  .project-description-basecamp { margin-top: 2%; }
+
+  .project-breeze { margin-top: 10%; }
+  .project-description-breeze { margin-top: 15%; }
+
+  .project-basecamp-pause { margin-top: -10%; }
+  // .project-basecamp-plans { margin-top: 0%; }
+  .project-description-plans { margin-top: -40%; }
+
+  .project-basecamp-help { margin-top: 10%; }
+  // .project-basecamp-help-mobile { margin-top: -10%; }
+  .project-description-basecamp-help { margin-top: 10%; }
+
+  .project-humblepied-mobile { margin-top: 10%; }
+  .project-description-humblepied { margin-top: 5%; }
+
+  .project-description-basecamp-logos { margin-top: 2%; }
+
+  .project-incoming-transmission { margin-top: -5%; }
+  .project-incoming-transmission-mobile { margin-top: 10%; }
+
+  .project-design-test { margin-top: 10%; }
+  .project-description-design-test { margin-top: -50%; }
+
+  .project-google-city { margin-top: 10%; }
+  .project-description-google-city { margin-top: 20%; }
+
+  .project-threadless-redesign { margin-top: 10%; }
+  .project-description-threadless-redesign { margin-top: 40%; }
 
   // Ephemera
   .design-code {
     left: 0;
     top: 8em;
+  }
+
+  .designing-is-selling {
+    @include transform-origin(left top);
+    left: -10%;
+    bottom: -10%;
+  }
+
+  .teach-others {
+    @include transform-origin(left top);
+    right: -5%;
+    top: -30%;
+  }
+
+  .ask-your-heroes {
+    left: -50%;
+    top: -50%;
+  }
+
+  .read-every-day {
+    right: -25%;
+    top: -50%;
+  }
+
+  .writing-is-designing {
+    left: -33.333%;
+    top: -70%;
+  }
+
+  .help-your-community {
+    @include transform-origin(left bottom);
+    left: 10%;
+    bottom: -45%;
   }
 }

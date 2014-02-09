@@ -151,10 +151,12 @@
   .project-threadless-promo-threadless-u { margin-top: 3%; }
   // .project-threadless-loves-maxtopia { margin-top: -3%; }
 
+  .project-wanker { margin-top: 20%; }
+
   // Ephemera
   .design-code {
     left: 0;
-    top: 8em;
+    bottom: -200%;
   }
 
   .designing-is-selling {
@@ -208,5 +210,11 @@
   .try-new-things {
     bottom: 30%;
     right: -50%;
+  }
+
+  .designers-should-code {
+    @include transform-origin(left top);
+    top: -50%;
+    right: -80%;
   }
 }

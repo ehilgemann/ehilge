@@ -4,50 +4,81 @@ class: portfolio
 layout: default
 ---
 
-<section class="portfolio-introduction">
-  <h1>Explorations from Basecamp, Threadless, and other personal experiments</h1>
-
-  <p>
-    At Basecamp, I’m responsible for
-    designing and building the frameworks for the new <a href="http://basecamp.com">Basecamp.com marketing</a> and
-    <a href="http://signalvnoise.com/posts/3418">Basecamp Help</a> sites in addition to
-    redesigning the <a href="http://signalvnoise.com/posts/3285">Signal vs. Noise blog</a>.
-    On the product side, I recently redesigned Basecamp’s <a href="https://basecamp.com/1679267/announcements/37" target="_blank">account plan selection</a>,
-    as well as designed Basecamp’s <a href="https://basecamp.com/help/guides/account/cancel" target="_blank">account pause</a> and
-    <a href="https://basecamp.com/help/guides/account/adding-storage" target="_blank">storage upgrades features</a>.
-  </p>
-
-  <p>
-    Other live projects include writing my first jQuery plugin, <a href="/makes/wanker">jquery.wanker.js</a>,
-    a <a href="/sells/bike">website I made to sell my bike</a>, and
-    <a href="http://humblepied.com" target="_blank">Humble Pied</a>, a video blog interviewing inspirational people.
-    Graphically speaking…
-  </p>
+<section class="portfolio-introduction spacing-one width-two">
+  <h1>work/play</h1>
+  <span class="ephemera slant design-code">design/code</span>
 </section>
 
 <section class="projects">
-  <div class="project project-website project-bike spacing-one width-two">
-    <a href="http://mig.io/sells/bike">{% project bike, website %}</a>
+  {% comment %}
+
+    Signal vs. Noise
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-svn fit-right width-three">
+    <a href="http://signalvnoise.com/posts/3285" target="_blank">
+      {% project basecamp, svn, gif %}
+    </a>
+  </div>
+
+  <div class="project project-phone project-svn-mobile clear-left spacing-two width-one">
+    <a href="http://signalvnoise.com/posts/3285" target="_blank">
+      {% project basecamp, svn-mobile %}
+    </a>
+  </div>
+
+  <div class="project-description project-description-svn spacing-one width-two">
+    <h3>Signal vs. Noise</h3>
+    <p>In 2006, 37signals <a href="http://signalvnoise.com/posts/37-the-newish-signal-vs-noise" target="_blank">released</a> an all new version of the popular Signal vs. Noise blog as an internal Ruby on Rails app. In 2012, I gave it <a href="http://signalvnoise.com/posts/3285-the-typography-and-layout-behind-the-new-signal-vs-noise-redesign">its first redesign</a>. It was my first foray into Rails, responsive design, and Sass.</p>
+  </div>
+
+
+  {% comment %}
+
+    Bike Sale
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
+  <div class="project project-website project-bike clear-left width-two">
+    <a href="http://mig.io/sells/bike">
+      {% project bike, website %}
+    </a>
   </div>
 
   <div class="project project-phone project-bike-mobile width-one">
-    <a href="http://mig.io/sells/bike">{% project bike, website-mobile %}</a>
+    <a href="http://mig.io/sells/bike">
+      {% project bike, website-mobile %}
+    </a>
   </div>
 
+  <div class="project-description project-description-bike width-two">
+    <h3>Bike Sale</h3>
+    <p>As a weekend project, I built <a href="/sells/bike">a website to sell my first city bike</a>. Using the same writing, I also put up a Craigslist ad. Craiglist ad: Up for 7 days, 0 offers. Website: Up for 1 day, 5 offers, sold the next day.</p>
+  </div>
+
+
+  {% comment %}
+
+    Basecamp: Plans
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
   <div class="project project-website width-three">
-    <a href="http://basecamp.com" target="_blank">{% project basecamp, plans %}</a>
+    <a href="http://basecamp.com" target="_blank">
+      {% project basecamp, plans %}
+    </a>
   </div>
 
+
+  {% comment %}
+
+    Breeze
+    ————————————————————————————————————— ★
+
+  {% endcomment %}
   <div class="project project-website project-breeze width-two">
     {% project basecamp, breeze %}
-  </div>
-
-  <div class="project project-phone project-svn-mobile spacing-two width-one">
-    <a href="http://signalvnoise.com/posts/3285" target="_blank">{% project basecamp, svn-mobile %}</a>
-  </div>
-
-  <div class="project project-website fit-right width-three">
-    <a href="http://signalvnoise.com/posts/3285" target="_blank">{% project basecamp, svn %}</a>
   </div>
 
   <div class="project project-website project-basecamp width-three">

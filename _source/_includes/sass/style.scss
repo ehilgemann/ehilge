@@ -4,10 +4,10 @@
 
 @import
   'globals/mixins',
-  'globals/animations',
+  'globals/reset',
   'globals/fonts',
-  'globals/print',
-  'globals/reset';
+  'globals/animations',
+  'globals/print';
 
 
 // Base Styles ——————————————————————————————— •
@@ -78,7 +78,13 @@ li { list-style: none; }
   width: 100%;
 }
 
-.hide-from-mobile { display: none !important; }
+.hide-mobile { display: none !important; }
+
+.width-one {
+  margin-left: auto;
+  margin-right: auto;
+  width: 33.333%;
+}
 
 
 // Base Styles: Tablets —————————————————————— •
@@ -94,8 +100,26 @@ li { list-style: none; }
 
   .content { padding: 0 2em; }
 
-  .hide-from-mobile { display: inline !important; }
-  .hide-from-desktop { display: none !important; }
+  .hide-mobile { display: inline !important; }
+  .hide-desktop { display: none !important; }
+
+  .align-right { text-align: right; }
+
+  .clear-left { clear: left; }
+
+  .fit-right { margin-right: 0 !important; }
+
+  .spacing-one { margin-left: 16.667%; }
+  .spacing-two { margin-left: 33.333%; }
+  .spacing-three { margin-left: 50%; }
+  .spacing-four { margin-left: 67.667%; }
+
+  .width-one { margin-right: 2%; width: 14.667%; }
+  .width-two { margin-right: 2%; width: 31.333%; }
+  .width-three { margin-right: 2%; width: 48%; }
+  .width-four { margin-right: 2%; width: 65.667%; }
+  .width-five { margin-right: 2%; width: 81.333%; }
+  .width-six { margin-right: 0; width: 100%; }
 }
 
 // Base Styles: Desktop —————————————————————— •
@@ -124,7 +148,6 @@ li { list-style: none; }
   'components/footer',
   'components/ephemera',
   'components/essays',
-  'components/presentation',
   'components/wanker';
 
 

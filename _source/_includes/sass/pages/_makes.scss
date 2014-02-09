@@ -3,14 +3,9 @@
 
 .portfolio .footer-nav { display: none; }
 
-.portfolio-introduction {
-  margin-bottom: 4em;
-  margin-top: 2em;
-}
-
 .project {
   display: block;
-  margin: 0 auto 1.5em;
+  margin-bottom: 1em;
   max-width: 550px;
 
   img {
@@ -46,24 +41,30 @@
   }
 }
 
+.project-description {
+  display: none;
+
+  h3 { margin-bottom: 1em; }
+}
+
 
 // Portfolio: Tablet ————————————————————————— •
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
+  .portfolio-dark {
+    background-color: #999;
+    border-top-color: #333;
+
+    a,
+    .ephemera { color: #FFF; }
+  }
+
   .portfolio-introduction {
-
-    h1 {
-      margin-bottom: 1em;
-      margin-left: 16.667%;
-      margin-top: 2em;
-      width: 67.667%;
-    }
-
-    p {
-      margin-left: 16.667%;
-      width: 50%;
-    }
+    display: inline-block;
+    float: left;
+    margin-top: 10%;
+    position: relative;
   }
 
   .projects { @include clearfix; }
@@ -75,31 +76,33 @@
     vertical-align: top;
   }
 
+  .project-description {
+    display: inline-block;
+    float: left;
+  }
+
+  .project-svn { margin-top: 5%; }
+  .project-svn-mobile { margin-top: -80%; }
+  .project-description-svn { margin-top: -45%; }
+
+  .project-bike { margin-top: -20%; }
   .project-bike-mobile { margin-top: 10%; }
-  .project-breeze { margin-top: -22%; }
-  .project-svn-mobile { margin-top: 10%; }
-  .project-basecamp { margin-top: -10%; }
-  .project-basecamp-help-mobile { margin-top: 10%; }
-  .project-humblepied-mobile { margin-top: -10%; }
-  .project-logo-chestnut { margin-top: -32%; }
-  .project-logo-hive { margin-top: -32%; }
-  .project-logo-dash { margin-top: -17%; }
-  .project-logo-help { margin-top: -45%; }
-  .project-incoming-transmission { margin-top: -11%; }
-  .project-google-city { margin-top: -60%; }
+  .project-description-bike { margin-top: 15%; }
 
-  .clear-left { clear: left; }
-  .fit-right { margin-right: 0 !important; }
+  // .project-breeze { margin-top: -22%; }
+  // .project-basecamp { margin-top: -10%; }
+  // .project-basecamp-help-mobile { margin-top: 10%; }
+  // .project-humblepied-mobile { margin-top: -10%; }
+  // .project-logo-chestnut { margin-top: -32%; }
+  // .project-logo-hive { margin-top: -32%; }
+  // .project-logo-dash { margin-top: -17%; }
+  // .project-logo-help { margin-top: -45%; }
+  // .project-incoming-transmission { margin-top: -11%; }
+  // .project-google-city { margin-top: -60%; }
 
-  .spacing-one { margin-left: 16.667%; }
-  .spacing-two { margin-left: 33.333%; }
-  .spacing-three { margin-left: 50%; }
-  .spacing-four { margin-left: 67.667%; }
-
-  .width-one { margin-right: 2%; width: 14.667%; }
-  .width-two { margin-right: 2%; width: 31.333%; }
-  .width-three { margin-right: 2%; width: 48%; }
-  .width-four { margin-right: 2%; width: 65.667%; }
-  .width-five { margin-right: 2%; width: 81.333%; }
-  .width-six { margin-right: 0; width: 100%; }
+  // Ephemera
+  .design-code {
+    left: 0;
+    top: 8em;
+  }
 }

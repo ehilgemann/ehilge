@@ -50,14 +50,22 @@
   }
 }
 
+.portfolio-copyright {
+  color: #999;
+  font-family: $font-sans;
+  font-size: .8em;
+  margin-top: 2em;
+}
+
 
 // Portfolio: Tablet ————————————————————————— •
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
   .portfolio-dark {
-    background-color: #999;
+    background-color: #666;
     border-top-color: #333;
+    color: #999;
 
     a,
     .ephemera { color: #FFF; }
@@ -70,6 +78,8 @@
     position: relative;
   }
 
+  .portfolio-copyright { margin-top: 8em; }
+
   .projects { @include clearfix; }
 
   .project {
@@ -77,6 +87,7 @@
     float: left;
     position: relative;
     vertical-align: top;
+    max-width: 100%;
   }
 
   .project-description {
@@ -125,6 +136,21 @@
   .project-threadless-redesign { margin-top: 10%; }
   .project-description-threadless-redesign { margin-top: 40%; }
 
+  .project-description-threadless-promos { margin-top: 15%; }
+  .project-threadless-loves-kids { margin-top: 10%; }
+  // .project-threadless-sale-hitz { margin-top: 3%; }
+  // .project-threadless-loves-comics { margin-top: 10%; }
+  // .project-threadless-sale-valentines { margin-top: -7%; }
+  // .project-threadless-loves-shutterstock { margin-top: -6.75%; }
+  // .project-threadless-loves-vevo { margin-top: 8%; }
+  .project-threadless-sale-comics { margin-top: 3%; }
+  // .project-threadless-sale-beach { margin-top: 3%; }
+  .project-threadless-sale-classics { margin-top: 3%; }
+  // .project-threadless-sale-oldskool { margin-top: 3%; }
+  .project-threadless-sale-holiday { margin-top: 5%; }
+  .project-threadless-promo-threadless-u { margin-top: 3%; }
+  // .project-threadless-loves-maxtopia { margin-top: -3%; }
+
   // Ephemera
   .design-code {
     left: 0;
@@ -162,5 +188,25 @@
     @include transform-origin(left bottom);
     left: 20%;
     top: -300%;
+  }
+
+  .have-fun {
+    left: -50%;
+    top: -50%;
+  }
+
+  .get-weird {
+    bottom: 20%;
+    right: -50%;
+  }
+
+  .make-mistakes {
+    bottom: 20%;
+    left: -30%;
+  }
+
+  .try-new-things {
+    bottom: 30%;
+    right: -50%;
   }
 }

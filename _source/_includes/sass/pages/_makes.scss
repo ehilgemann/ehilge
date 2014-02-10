@@ -59,6 +59,7 @@
   font-family: $font-sans;
   font-size: .8em;
   margin-top: 2em;
+  position: relative;
 }
 
 
@@ -157,7 +158,8 @@
 
   .project-wanker { margin-top: 20%; }
 
-  .project-pizza { margin-top: -10%; }
+  .project-pizza { margin-top: 10%; }
+  .project-description-pizza { margin-top: -30%; }
 
   .project-skateboard-cookie { margin-top: 10%; }
   .project-description-skateboard { margin-top: 3%; }
@@ -168,6 +170,8 @@
   .project-poster-japandroids { margin-top: -10%; }
   .project-poster-smd-B { margin-top: 10%; }
   .project-poster-smd-C {margin-top: -21.75%; }
+
+  .project-lyt-weaver-A { margin-top: 10%; }
 
   // Ephemera
   .design-code {
@@ -238,5 +242,14 @@
     @include transform-origin(right top);
     right: -50%;
     top: -10%;
+  }
+
+  .have-a-sense-of-humor {
+    right: -40%;
+    top: -150%;
+  }
+
+  .thanks-for-looking {
+    bottom: -20%;
   }
 }

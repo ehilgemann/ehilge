@@ -1,8 +1,12 @@
 title: Mig Reyes
-subtitle: "Designer, 37signals"
 author: Mig Reyes
-description: Mig is a designer at 37signals focused on making good things for good people.
+subtitle: "Designer, Basecamp"
+description: Mig is a designer at Basecamp focused on making good things for good people.
+
+github: http://github.com/migreyes
 twitter: http://twitter.com/migreyes
+dribbble: http://dribbble.com/migreyes
+instagram: http://instagram.com/migreyes
 
 source: ./_source
 destination: public

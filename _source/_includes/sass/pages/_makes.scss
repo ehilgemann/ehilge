@@ -3,6 +3,10 @@
 
 .portfolio .footer-nav { display: none; }
 
+.portfolio .content {
+  @include animate(fade-in .75s .25s both);
+}
+
 .project {
   display: block;
   margin-bottom: 1em;

@@ -5,6 +5,7 @@ Options -Indexes
 Redirect 301 /info /is
 Redirect 301 /about /is
 Redirect 301 /profile /is
+Redirect 301 /MigReyes-Resume.pdf /is
 
 # Portfolio
 Redirect 301 /work /makes

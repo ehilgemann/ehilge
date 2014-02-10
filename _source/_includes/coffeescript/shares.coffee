@@ -22,10 +22,27 @@ niceTime = (->
 )()
 
 $ ->
-  # Instagram
-  $.getJSON "https://api.instagram.com/v1/users/self/feed?client_id=66dc56b3318e4c9c8c4ce5283507b947&callback=?",
-    (data) ->
-      console.log data
+  # Instagram Profile
+  $.getJSON "https://api.instagram.com/v1/users/4706860/?client_id=66dc56b3318e4c9c8c4ce5283507b947&callback=?",
+    (response) ->
+      name = response.data.username
+      avatar = response.data.profile_picture
+      followers = response.data.counts.followed_by
+      $(".shares-instagram-profile").append "#{name} is followed by #{followers} people."
+
+  # Instagram Photos
+  $.getJSON "https://api.instagram.com/v1/users/4706860/media/recent/?client_id=66dc56b3318e4c9c8c4ce5283507b947&callback=?",
+    (response) ->
+      photos = response.data
+
+      for photo in photos
+        url = photo.images.standard_resolution.url
+        caption = photo.caption.text
+        html = """
+               <img src="#{url}">
+               <p>#{caption}</p>
+               """
+        $(".shares-instagram").append html
 
   # Instapaper
   # "http://www.instapaper.com/rss/1400362/oFKQiPVwEaQ7gP44mX3Vu5rqxE8?callback=?",
@@ -39,9 +56,9 @@ $ ->
         date = niceTime item.dt
         comment = item.n
         html = """
-               <li>
-                 <span class="shares-delicious-link"><a href='#{url}'>#{title}</a></span>
-                 <em>#{comment} — <time>#{date}</time></em>
+               <li class="shares-delicious-link">
+                 <span><a href='#{url}'>#{title}</a></span>
+                 <em>#{comment} <time>#{date}</time></em>
                </li>
                """
         $(".shares-delicious-links").append html

@@ -2,31 +2,31 @@ ErrorDocument 404 /404.html
 Options -Indexes
 
 # About
-RedirectMatch 301 /about /is$1
-RedirectMatch 301 /profile /is$1
-RedirectMatch 301 /info /is$1
+Redirect 301 /info /is
+Redirect 301 /about /is
+Redirect 301 /profile /is
 
 # Portfolio
-RedirectMatch 301 /work /makes$1
-RedirectMatch 301 /portfolio /makes$1
-RedirectMatch 301 /design /makes$1
+Redirect 301 /work /makes
+Redirect 301 /design /makes
+Redirect 301 /portfolio /makes
 
 # Projects
-# RedirectMatch 301 /37signals /makes/37signals$1
-# RedirectMatch 301 /wanker /makes/wanker$1
+Redirect 301 /wanker /makes/wanker
+Redirect 301 /37signals /makes/37signals
 
 # Writing
-RedirectMatch 301 /thoughts /thinks$1
-RedirectMatch 301 /articles /writes$1
-RedirectMatch 301 /writing /writes$1
-RedirectMatch 301 /essays /writes$1
-RedirectMatch 301 /blog /$1
+Redirect 301 /blog /
+Redirect 301 /essays /writes
+Redirect 301 /writing /writes
+Redirect 301 /articles /writes
+Redirect 301 /thoughts /thinks
 
 # Resources
-RedirectMatch 301 /resources /loves$1
-RedirectMatch 301 /recommends /loves$1
-RedirectMatch 301 /chicago /loves/chicago$1
+Redirect 301 /chicago /loves/chicago
+Redirect 301 /resources /loves
+Redirect 301 /recommends /loves
 
 # Sell
-RedirectMatch 301 /sells-a-bike /sells/bike$1
-RedirectMatch 301 /macbook /sells/macbook$1
+Redirect 301 /sells-a-bike /sells/bike
+Redirect 301 /macbook /sells/macbook

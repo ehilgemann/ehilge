@@ -86,6 +86,16 @@ li { list-style: none; }
   width: 33.333%;
 }
 
+::-moz-selection {
+  background-color: $color-link;
+  color: #fff;
+}
+
+::selection {
+  background-color: $color-link;
+  color: #fff;
+}
+
 
 // Base Styles: Tablets —————————————————————— •
 // ——————————————————————————————————————————— •

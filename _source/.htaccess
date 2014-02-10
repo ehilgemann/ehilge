@@ -12,8 +12,8 @@ RedirectMatch 301 /portfolio /makes$1
 RedirectMatch 301 /design /makes$1
 
 # Projects
-RedirectMatch 301 /37signals /makes/37signals$1
-RedirectMatch 301 /wanker /makes/wanker$1
+# RedirectMatch 301 /37signals /makes/37signals$1
+# RedirectMatch 301 /wanker /makes/wanker$1
 
 # Writing
 RedirectMatch 301 /thoughts /thinks$1

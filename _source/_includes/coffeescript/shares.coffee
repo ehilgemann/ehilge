@@ -47,7 +47,10 @@ $ ->
         $(".shares-instagram").append html
 
   # Instapaper
-  # "http://www.instapaper.com/rss/1400362/oFKQiPVwEaQ7gP44mX3Vu5rqxE8?callback=?",
+  $.getJSON "https://www.instapaper.com/api/1/migreyes?callback=?",
+    (response) ->
+      console.log response
+
 
   # Delicious
   $.getJSON "http://feeds.delicious.com/v2/json/migreyes?callback=?",

@@ -39,8 +39,10 @@ $ ->
         url = photo.images.standard_resolution.url
         caption = photo.caption.text
         html = """
-               <img src="#{url}">
-               <p>#{caption}</p>
+               <div class="shares-instagram-photo">
+                <img src="#{url}">
+                <p>#{caption}</p>
+               </div>
                """
         $(".shares-instagram").append html
 

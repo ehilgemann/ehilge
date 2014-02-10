@@ -1,6 +1,10 @@
 // Blog —————————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
+.shares-content {
+  @include clearfix;
+}
+
 .shares-delicious-links em {
   display: block;
   margin-bottom: 1em;
@@ -33,6 +37,27 @@
 }
 
 
-// Blog: Ephemera ———————————————————————————— •
+// Blog: Desktop ————————————————————————————— •
 // ——————————————————————————————————————————— •
 
+@include responsive-break-point(768px) {
+  .shares-instagram {
+    float: left;
+    margin-right: 2%;
+    width: 48%;
+  }
+
+  .shares-instagram-photo {
+    width: 100%;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .shares-delicious {
+    float: left;
+    width: 33.333%;
+  }
+}

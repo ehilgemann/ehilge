@@ -124,12 +124,7 @@
     a:hover p { color: $color-link; }
   }
 
-  .loves-apps {
-    margin-left: 33.333%;
-    padding-bottom: 8em;
-    position: relative;
-
-    ul { width: 83.333%; }
+  .loves-links {
 
     li {
       line-height: 1.25em;
@@ -141,6 +136,34 @@
       font-weight: bold;
       text-decoration: underline;
     }
+
+    span {
+      display: block;
+    }
+  }
+
+  .loves-web {
+    padding-bottom: 4em;
+
+    h3, p {
+      margin-left: 33.333%;
+      width: 33.333%;
+    }
+
+    p { margin-bottom: 1.5em; }
+
+    ul {
+      margin-left: 33.333%;
+      width: 50%;
+    }
+  }
+
+  .loves-apps {
+    margin-left: 33.333%;
+    padding-bottom: 8em;
+    position: relative;
+
+    ul { width: 83.333%; }
   }
 
   .ephemera.chicago {
@@ -156,7 +179,7 @@
 
   .ephemera.share {
     left: -40%;
-    top: -2em;
+    top: -5em;
   }
 }
 

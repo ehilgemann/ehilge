@@ -89,7 +89,21 @@ layout: default
   </ul>
 </section>
 
-<section class="loves-apps">
+<section class="loves-links loves-web">
+  <h3>Good web reads</h3>
+  <p>I send people to these places whenever they have questions about learning design, programming, or being generally awesome.</p>
+
+  <ul>
+  {% for link in site.data.links %}
+    <li>
+      <a href="{{ link.url }}" title="{{ link.info }}">{{ link.title }}</a>
+      <span>{{ link.info }}</span>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+
+<section class="loves-links loves-apps">
   <h3>Software I Can’t Live Without</h3>
 
   <span class="ephemera clockwise share">Share everything</span>

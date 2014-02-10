@@ -4,12 +4,14 @@ class: shares
 layout: default
 ---
 
-<ul>
-  <li>Short updates</li>
-  <li>One-off quips</li>
-  <li>Photos</li>
-  <li>Delicious</li>
-  <li>Instagram</li>
-</ul>
+<div class="shares-blog">
+  {% for post in site.categories.shares %}
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  {% endfor %}
+</div>
 
-<div id="delicious-bookmarks"></div>
+<div class="shares-delicious spacing-two width-two">
+  <h4>Delicious Links</h4>
+  <ul class="shares-delicious-links">
+  </ul>
+</div>

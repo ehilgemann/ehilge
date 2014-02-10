@@ -27,13 +27,21 @@ $ ->
     (data) ->
       console.log data
 
+  # Instapaper
+  # "http://www.instapaper.com/rss/1400362/oFKQiPVwEaQ7gP44mX3Vu5rqxE8?callback=?",
+
   # Delicious
   $.getJSON "http://feeds.delicious.com/v2/json/migreyes?callback=?",
-    count: "5"
-  , (data) ->
-    $.each data, (i, item) ->
-      title = item.d
-      url = item.u
-      date = niceTime(item.dt)
-      comment = item.n
-      $("#delicious-bookmarks").append "<li><a href='#{url}'>#{title}</a>, #{comment}, <time>#{date}</time></li>"
+    count: "10", (data) ->
+      $.each data, (i, item) ->
+        title = item.d
+        url = item.u
+        date = niceTime item.dt
+        comment = item.n
+        html = """
+               <li>
+                 <span class="shares-delicious-link"><a href='#{url}'>#{title}</a></span>
+                 <em>#{comment} — <time>#{date}</time></em>
+               </li>
+               """
+        $(".shares-delicious-links").append html

@@ -17,11 +17,12 @@ Redirect 301 /wanker /makes/wanker
 Redirect 301 /37signals /makes/37signals
 
 # Writing
-Redirect 301 /blog /
+Redirect 301 /blog /shares
+Redirect 301 /stream /shares
 Redirect 301 /essays /writes
 Redirect 301 /writing /writes
 Redirect 301 /articles /writes
-Redirect 301 /thoughts /thinks
+Redirect 301 /thoughts /writes
 
 # Resources
 Redirect 301 /chicago /loves/chicago

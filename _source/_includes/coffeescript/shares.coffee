@@ -34,22 +34,31 @@ $ ->
   $.getJSON "https://api.instagram.com/v1/users/4706860/media/recent/?client_id=66dc56b3318e4c9c8c4ce5283507b947&callback=?",
     (response) ->
       photos = response.data
-
       for photo in photos
-        url = photo.images.standard_resolution.url
-        caption = photo.caption.text
-        html = """
-               <div class="shares-instagram-photo">
-                <img src="#{url}">
-                <p>#{caption}</p>
-               </div>
-               """
+        date     = niceTime new Date parseInt(photo.created_time) * 1000
+        link     = photo.link
+        likes    = photo.likes.count
+        source   = photo.images.standard_resolution.url
+        caption  = photo.caption.text
+        location = photo.location.name
+        html     = """
+                   <div class="shares-instagram-photo" style="background-image: url('#{source}');">
+                     <img src="/assets/images/shares/instagram.gif">
+                     <a href="#{link}" target="_blank">
+                       <div class="shares-instagram-photo-info">
+                         <p>#{caption}</p>
+                         <em>#{date} at #{location}</em>
+                         <span>&hearts; #{likes}</span>
+                       </div>
+                     </a>
+                   </div>
+                   """
         $(".shares-instagram").append html
 
   # Instapaper
-  $.getJSON "https://www.instapaper.com/api/1/migreyes?callback=?",
-    (response) ->
-      console.log response
+  # $.getJSON "https://www.instapaper.com/api/1/migreyes?callback=?",
+  #   (response) ->
+  #     console.log response
 
 
   # Delicious

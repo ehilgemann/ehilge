@@ -54,20 +54,9 @@ $ ->
         $(".shares-instagram").append html
 
 
-  # Twitter
-  $.getJSON "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2?callback=?",
-    (response) ->
-      console.log response
-
-  # Instapaper
-  # $.getJSON "https://www.instapaper.com/api/1/migreyes?callback=?",
-  #   (response) ->
-  #     console.log response
-
-
   # Delicious
   $.getJSON "http://feeds.delicious.com/v2/json/migreyes?callback=?",
-    count: "10", (data) ->
+    count: "15", (data) ->
       $.each data, (i, item) ->
         title = item.d
         url = item.u

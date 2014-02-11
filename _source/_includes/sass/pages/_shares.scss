@@ -3,12 +3,15 @@
 
 .shares-content {
   @include clearfix;
+
+  p a:visited { color: $color-link; }
 }
 
 .shares-instagram-photo {
   background-size: 100%;
+  display: inline-block;
   height: 0;
-  margin-bottom: 1em;
+  margin-top: 1em;
   padding: 100% 0 0;
   position: relative;
   width: 100%;
@@ -17,18 +20,14 @@
     height: auto;
     width: 100%;
   }
-
-  &:hover {
-    .shares-instagram-photo-info { display: block; }
-  }
 }
 
 .shares-instagram-photo-info {
-  @include animate(fade-in .5s both);
   @include border-box;
+  @include opacity(0);
+  @include transition(all .5s ease);
   background-color: rgba(0,0,0,.75);
   color: #FFF;
-  display: none;
   height: 100%;
   left: 0;
   padding: 10% 1.5em 0;
@@ -36,6 +35,10 @@
   text-align: center;
   top: 0;
   width: 100%;
+
+  &:hover {
+    @include opacity(1);
+  }
 
   p {
     font-size: 1.25em;
@@ -45,6 +48,7 @@
   span {
     display: block;
     font-size: 2.5em;
+    letter-spacing: -1px;
     margin-top: 1em;
   }
 }
@@ -54,7 +58,8 @@
   margin-bottom: 1em;
 }
 
-.shares-delicious-link {
+.shares-delicious-link,
+.shares-github-activity {
   display: block;
 
   span {
@@ -68,8 +73,24 @@
     color: #999;
     display: block;
     font-size: .9em;
+  }
+}
 
-    &:before { content: "— "; }
+.shares-github-activity {
+  line-height: 1em;
+  margin-bottom: 1.5em;
+
+  a:visited { color: $color-link; }
+
+  em {
+    color: #666;
+    font-family: $font-sans;
+    font-size: .9em;
+  }
+
+  time {
+    display: inline;
+    font-family: $font-sans;
   }
 }
 
@@ -85,28 +106,51 @@
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(768px) {
+  .shares-content h1 {
+    margin-left: 16.667%;
+    margin-top: 3em;
+  }
+
   .shares-instagram {
     display: inline-block;
     margin-bottom: 8em;
     margin-left: 16.667%;
-    margin-right: 2%;
-    width: 48%;
+  }
+
+  .shares-instagram-photo {
+    display: inline-block;
+    margin-bottom: -.35em;
+    margin-top: 0;
+    padding-top: 50%;
+    width: 50%;
   }
 
   .shares-twitter {
     display: inline-block;
-    margin: 3em auto 6em;
-    width: 100%;
+    margin: 3em 0 6em 16.667%;
+    width: 83.333%;
 
     iframe {
       width: 100%;
     }
   }
 
-  .shares-delicious {
+  .shares-delicious,
+  .shares-github {
     display: inline-block;
-    margin-right: 2%;
+    margin-bottom: 4em;
     vertical-align: top;
-    width: 31%;
+    width: 31.333%;
+
+    p { margin-bottom: 2em; }
+  }
+
+  .shares-delicious {
+    margin-left: 16.667%;
+    margin-right: 2%;
+  }
+
+  .shares-github {
+
   }
 }

@@ -4,25 +4,20 @@ class: shares
 layout: default
 ---
 <section class="shares-content">
+
+  <h1>Blog and live stream</h1>
+
   {% comment %}
   <div class="shares-blog">
     {% for post in site.categories.shares %}
       <a href="{{ post.url }}">{{ post.title }}</a>
     {% endfor %}
   </div>
-
-  <div class="shares-github">
-  </div>
   {% endcomment %}
 
   <div class="shares-twitter">
-    <a class="twitter-timeline" href="https://twitter.com/migreyes" data-chrome="noborders noheader nofooter transparent" data-link-color="#5EACEE" data-tweet-limit="1" data-widget-id="433091280793387008">Tweets by @migreyes</a>
+    <a class="twitter-timeline" href="https://twitter.com/migreyes" data-chrome="noborders nofooter transparent" data-link-color="#5EACEE" data-tweet-limit="1" data-widget-id="433091280793387008">Tweets by @migreyes</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </div>
-
-  <div class="shares-instagram">
-    <h3>Instagram</h3>
-    <p><a href="http://instagram.com/migreyes">@migreyes</a> on Instagram, <span data-instagram-followers></span> followers. No selfies.</p>
   </div>
 
   <div class="shares-delicious">
@@ -30,5 +25,15 @@ layout: default
     <p><a href="https://delicious.com/migreyes" target="_blank">@migreyes</a> on Delicious. Good finds.</p>
     <ul class="shares-delicious-links">
     </ul>
+  </div>
+
+  <div class="shares-github">
+    <h3>GitHub</h3>
+    <p><a href="https://github.com/migreyes" target="_blank">@migreyes</a> on GitHub. Help me code.</p>
+  </div>
+
+  <div class="shares-instagram">
+    <h3>Instagram</h3>
+    <p><a href="http://instagram.com/migreyes">@migreyes</a> on Instagram, <span data-instagram-followers></span> followers. No selfies.</p>
   </div>
 </section>

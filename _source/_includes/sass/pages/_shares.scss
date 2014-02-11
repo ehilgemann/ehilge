@@ -5,6 +5,49 @@
   @include clearfix;
 }
 
+.shares-instagram-photo {
+  background-size: 100%;
+  padding: 100% 0 0;
+  height: 0;
+  position: relative;
+  width: 100%;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+
+  &:hover {
+    .shares-instagram-photo-info { display: block; }
+  }
+}
+
+.shares-instagram-photo-info {
+  @include animate(fade-in .5s both);
+  @include border-box;
+  background-color: rgba(0,0,0,.75);
+  color: #FFF;
+  display: none;
+  height: 100%;
+  left: 0;
+  padding: 5em 1.5em 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+
+  p {
+    font-size: 1.25em;
+    line-height: 1.3em;
+  }
+
+  span {
+    display: block;
+    font-size: 2.5em;
+    margin-top: 1em;
+  }
+}
+
 .shares-delicious-links em {
   display: block;
   margin-bottom: 1em;
@@ -45,49 +88,6 @@
     float: left;
     margin-right: 2%;
     width: 48%;
-  }
-
-  .shares-instagram-photo {
-    background-size: 100%;
-    padding: 100% 0 0;
-    height: 0;
-    position: relative;
-    width: 100%;
-
-    img {
-      height: auto;
-      width: 100%;
-    }
-
-    &:hover {
-      .shares-instagram-photo-info { display: block; }
-    }
-  }
-
-  .shares-instagram-photo-info {
-    @include animate(fade-in .5s both);
-    @include border-box;
-    background-color: rgba(0,0,0,.75);
-    color: #FFF;
-    display: none;
-    height: 100%;
-    left: 0;
-    padding: 5em 1.5em 0;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 100%;
-
-    p {
-      font-size: 1.25em;
-      line-height: 1.3em;
-    }
-
-    span {
-      display: block;
-      font-size: 2.5em;
-      margin-top: 1em;
-    }
   }
 
   .shares-delicious {

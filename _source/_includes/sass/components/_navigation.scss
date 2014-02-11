@@ -42,7 +42,8 @@
 }
 
 .nav-link-loves,
-.nav-link-portfolio { display: none; }
+.nav-link-portfolio,
+.nav-link-stream { display: none; }
 
 .nav-title,
 .nav-contact {
@@ -115,7 +116,8 @@ body.loves .nav-link-loves {
   }
 
   .nav-link-portfolio,
-  .nav-link-loves { display: block; }
+  .nav-link-loves,
+  .nav-link-stream { display: block; }
 
   .nav-title,
   .nav-contact {

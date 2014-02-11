@@ -25,10 +25,8 @@ $ ->
   # Instagram Profile
   $.getJSON "https://api.instagram.com/v1/users/4706860/?client_id=66dc56b3318e4c9c8c4ce5283507b947&callback=?",
     (response) ->
-      name = response.data.username
-      avatar = response.data.profile_picture
       followers = response.data.counts.followed_by
-      $(".shares-instagram-profile").append "#{name} is followed by #{followers} people."
+      $("[data-instagram-followers]").text followers
 
   # Instagram Photos
   $.getJSON "https://api.instagram.com/v1/users/4706860/media/recent/?client_id=66dc56b3318e4c9c8c4ce5283507b947&callback=?",

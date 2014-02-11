@@ -79,7 +79,7 @@ $ ->
     $.getJSON "https://api.instagram.com/v1/users/4706860/?client_id=66dc56b3318e4c9c8c4ce5283507b947&callback=?",
       (response) ->
         followers = response.data.counts.followed_by
-        $("[data-instagram-followers]").text followers
+        $("[data-instagram-followers]").text ", #{followers} followers"
 
     # Instagram Photos
     $.getJSON "https://api.instagram.com/v1/users/4706860/media/recent/?client_id=66dc56b3318e4c9c8c4ce5283507b947&callback=?",

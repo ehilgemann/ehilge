@@ -8,10 +8,12 @@
   ul { margin-bottom: 2em; }
 }
 
-.footer-nav-here a:visited { color: $color-link; }
+.footer-nav-here a:visited,
+.footer-nav-elsewhere a:visited { color: $color-link; }
 
 .footer-nav-here-portfolio,
-.footer-nav-here-loves { display: none; }
+.footer-nav-here-loves,
+.footer-nav-here-stream { display: none; }
 
 .footer-chicago {
   margin-bottom: 4em;
@@ -38,7 +40,8 @@
   }
 
   .footer-nav-here-portfolio,
-  .footer-nav-here-loves { display: block; }
+  .footer-nav-here-loves,
+  .footer-nav-here-stream { display: block; }
 
   .footer-nav-elsewhere {
     margin-right: 2%;

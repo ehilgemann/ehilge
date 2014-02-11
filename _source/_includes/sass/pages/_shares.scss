@@ -4,6 +4,8 @@
 .shares-content {
   @include clearfix;
 
+  h3 { margin-bottom: .75em; }
+
   p a:visited { color: $color-link; }
 }
 
@@ -132,6 +134,22 @@
 
     iframe {
       width: 100%;
+    }
+  }
+
+  .shares-beliefs {
+    margin-bottom: 8em;
+    margin-left: 33.333%;
+    position: relative;
+    width: 50%;
+    z-index: 2014;
+
+    li {
+      display: inline;
+      font-family: $font-sans;
+
+      &:before { color: #999; content: "— "; }
+      &:first-child:before { content: ""; }
     }
   }
 

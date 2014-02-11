@@ -63,7 +63,7 @@ $ ->
               when "PushEvent"
                 html = """
                        <div class="shares-github-activity">
-                         <span><a href="http://github.com/#{profile}">Mig</a> pushed to <a href="http://github.com/#{activity.repo.name}" target="_blank">#{activity.repo.name}</a></span>
+                         <span><a href="http://github.com/#{profile}">Mig</a> pushed to <a href="http://github.com/#{activity.repo.name} target="_blank">#{activity.repo.name}</a></span>
                          <em>#{activity.payload.commits[0].message},</em>
                          <time>#{date}</time>
                        </div>

@@ -36,4 +36,17 @@ layout: default
     <h3>Instagram</h3>
     <p><a href="http://instagram.com/migreyes">@migreyes</a> on Instagram, <span data-instagram-followers></span> followers. No selfies.</p>
   </div>
+
+  <div class="shares-beliefs">
+    <h3>Currently thinking…</h3>
+    <p>I jot down <a href="/thinks">short thoughts</a> before writing <a href="/writes">longer form essays</a>.</p>
+
+    <ul>
+      {% for thought in site.data.thoughts limit:3 %}
+        {% assign total = site.data.thoughts | size %}
+        <li class="shares-beliefs-thought"><a href="/thinks/#{{ total | minus: forloop.index0 }}">{{ thought.idea }}</a></li>
+      {% endfor %}
+      <li class="shares-beliefs-thought"><a href="/thinks">More…</a></li>
+    </ul>
+  </div>
 </section>

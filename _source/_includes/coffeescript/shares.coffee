@@ -106,3 +106,10 @@ $ ->
                        </div>
                        """
             $(".shares-instagram").append html
+
+
+    # Relative blog post time
+    $blogPostTimes = $("[data-post-date]")
+    $blogPostTimes.each ->
+      $(this).text relativeTime $(this).data("post-date")
+

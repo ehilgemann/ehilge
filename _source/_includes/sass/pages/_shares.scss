@@ -9,49 +9,23 @@
   p a:visited { color: $color-link; }
 }
 
-.shares-instagram-photo {
-  background-size: 100%;
-  display: inline-block;
-  height: 0;
-  margin-top: 1em;
-  padding: 100% 0 0;
-  position: relative;
-  width: 100%;
+.shares-twitter,
+.shares-blog,
+.shares-delicious,
+.shares-github,
+.shares-instagram,
+.shares-beliefs { margin-bottom: 3em; }
 
-  img {
-    height: auto;
-    width: 100%;
-  }
-}
-
-.shares-instagram-photo-info {
-  @include border-box;
-  @include opacity(0);
-  @include transition(all .5s ease);
-  background-color: rgba(0,0,0,.75);
-  color: #FFF;
-  height: 100%;
-  left: 0;
-  padding: 10% 1.5em 0;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 100%;
-
-  &:hover {
-    @include opacity(1);
-  }
+.shares-blog {
 
   p {
-    font-size: 1.25em;
-    line-height: 1.3em;
+    margin: 0;
   }
 
-  span {
+  time {
+    color: #999;
     display: block;
-    font-size: 2.5em;
-    letter-spacing: -1px;
-    margin-top: 1em;
+    font-family: $font-sans;
   }
 }
 
@@ -96,6 +70,54 @@
   }
 }
 
+.shares-instagram-photo {
+  background-size: 100%;
+  display: inline-block;
+  height: 0;
+  margin-top: 1em;
+  padding: 100% 0 0;
+  position: relative;
+  width: 100%;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.shares-instagram-photo-info {
+  @include border-box;
+  @include opacity(0);
+  @include transition(all .5s ease);
+  background-color: rgba(0,0,0,.75);
+  color: #FFF;
+  height: 100%;
+  left: 0;
+  padding: 15% 1.5em 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+
+  &:hover {
+    @include opacity(1);
+    padding-top: 10%;
+  }
+
+  p {
+    font-size: 1.25em;
+    line-height: 1.3em;
+  }
+
+  span {
+    display: block;
+    font-size: 2.5em;
+    letter-spacing: -1px;
+    margin-top: 1em;
+  }
+}
+
+
 // Blog: Tablet —————————————————————————————— •
 // ——————————————————————————————————————————— •
 
@@ -113,20 +135,6 @@
     margin-top: 3em;
   }
 
-  .shares-instagram {
-    display: inline-block;
-    margin-bottom: 8em;
-    margin-left: 16.667%;
-  }
-
-  .shares-instagram-photo {
-    display: inline-block;
-    margin-bottom: -.35em;
-    margin-top: 0;
-    padding-top: 50%;
-    width: 50%;
-  }
-
   .shares-twitter {
     display: inline-block;
     margin: 3em 0 6em 16.667%;
@@ -137,20 +145,9 @@
     }
   }
 
-  .shares-beliefs {
+  .shares-blog {
     margin-bottom: 8em;
-    margin-left: 33.333%;
-    position: relative;
-    width: 50%;
-    z-index: 2014;
-
-    li {
-      display: inline;
-      font-family: $font-sans;
-
-      &:before { color: #999; content: "— "; }
-      &:first-child:before { content: ""; }
-    }
+    margin-left: 50%;
   }
 
   .shares-delicious,
@@ -168,7 +165,33 @@
     margin-right: 2%;
   }
 
-  .shares-github {
+  .shares-instagram {
+    display: inline-block;
+    margin-bottom: 8em;
+    margin-left: 16.667%;
+  }
 
+  .shares-instagram-photo {
+    display: inline-block;
+    margin-bottom: -.35em;
+    margin-top: 0;
+    padding-top: 50%;
+    width: 50%;
+  }
+
+  .shares-beliefs {
+    margin-bottom: 8em;
+    margin-left: 33.333%;
+    position: relative;
+    width: 50%;
+    z-index: 2014;
+
+    li {
+      display: inline;
+      font-family: $font-sans;
+
+      &:before { color: #999; content: "— "; }
+      &:first-child:before { content: ""; }
+    }
   }
 }

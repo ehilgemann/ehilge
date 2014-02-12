@@ -39,7 +39,7 @@ layout: default
             <small class="essay-svn mobile">SvN</small>
             <small class="essay-svn desktop">Written on Signal vs. Noise</small>
           {% endif %}
-          <small>{{ essay.date | date: "%B %Y" }}</small>
+          <small data-essay-date="{{ essay.date | date_to_xmlschema }}">{{ essay.date | date: "%B %Y" }}</small>
         </p>
       </a>
     </li>

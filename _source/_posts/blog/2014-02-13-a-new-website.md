@@ -2,7 +2,7 @@
 title: A new site
 category: shares
 layout: blog
-preview: After four years of not having work or words online, I have a place on the web to call home again
+preview: After four years of not having a site online, I have a place on the web to call home again
 ---
 
 To celebrate my 2-year anniversary at Basecamp, I spent some time collecting the work and essays I’ve done in the last few years. Nothing fancy, mostly words arranged on a page. Which, I guess, is [what web design is anyway](http://ia.net/blog/the-web-is-all-about-typography-period/). I’ve had a lot of fun building it. If you’re curious, [you can pick apart the code on GitHub](https://github.com/migreyes/migreyes).

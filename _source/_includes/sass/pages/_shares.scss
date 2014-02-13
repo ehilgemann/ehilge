@@ -148,7 +148,7 @@
 
   .shares-twitter {
     display: inline-block;
-    margin: 3em 0 6em 16.667%;
+    margin: 3em 0 3em 16.667%;
     width: 83.333%;
 
     iframe {
@@ -157,8 +157,9 @@
   }
 
   .shares-blog {
-    margin-bottom: 8em;
+    margin-bottom: 7em;
     margin-left: 50%;
+    position: relative;
   }
 
   .shares-delicious,

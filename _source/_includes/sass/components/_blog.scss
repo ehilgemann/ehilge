@@ -1,10 +1,19 @@
 // Blog —————————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-.blog h2 {
+.blog h1,
+.blog-preview,
+.blog-stream {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 460px;
+}
+
+.blog-preview {
   color: #666;
   font-weight: normal;
   font-style: italic;
+  line-height: 1.25em;
 }
 
 .blog-content {
@@ -13,8 +22,6 @@
   margin-left: auto;
   margin-right: auto;
   max-width: 460px;
-
-  h2 { margin-top: 2em; }
 
   img {
     height: auto;
@@ -35,16 +42,31 @@
   }
 }
 
+.blog-date {
+  color: #999;
+  font-style: italic;
+  margin-top: 2em;
+}
+
 // Blog: Tablet —————————————————————————————— •
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
-  .blog h1 { margin: 3em 0 0 16.667%; }
-  .blog h2 { margin: 0 0 4em 16.667%; }
-  .blog h3 { margin-bottom: 1em; }
+  .blog h1 {
+    margin: 1em 0 .5em 16.667%;
+    max-width: 66.667%;
+  }
+
+  .blog-preview {
+    font-size: 1.5em;
+    margin: 0 0 2em 16.667%;
+    max-width: 66.667%;
+    width: 66.667%;
+  }
 
   .blog-content {
-    margin-bottom: 8em;
+    margin-bottom: 10em;
+    margin-left: 16.667%;
     margin-top: 3em;
     padding: 0;
     max-width: 680px;
@@ -63,7 +85,7 @@
 
   .blog-stream {
     margin-left: 16.667%;
-    margin-bottom: 6em;
+    margin-bottom: 8em;
 
     a:visited { color: $color-link; }
   }
@@ -74,9 +96,14 @@
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(1000px) {
+  .blog h1 { margin-top: 4em; }
+
+  .blog-preview { margin-bottom: 4em; }
+
   .blog-content,
   .blog-stream {
     margin-left: 33.333%;
-    width: 680px;
+    max-width: 680px;
+    width: 66.667%;
   }
 }

@@ -43,34 +43,47 @@ $ ->
     # GitHub
     $.getJSON "https://api.github.com/users/migreyes/events/public?per_page=3",
       (response) ->
+        activities = 0
+        template = (action, date) ->
+          return """
+                 <div class="shares-github-activity">
+                   <span><a href="http://github.com/migreyes">Mig</a> #{action}</span>
+                   <time>#{date}</time>
+                 </div>
+                 """
+
         for activity in response
           do (activity) ->
             date       = relativeTime activity.created_at
             type       = activity.type
-            profile    = activity.actor.login
+            html       = null
+            action     = null
 
-            switch type
-              # when "CommitCommentEvent"
-              #   html = "<p>Mig commit something. <span>#{date}</span></p>"
-              # when "CreateEvent"
-              #   html = "<p>Mig created something, #{activity.payload.ref_type}. <span>#{date}</span></p>"
-              # when "FollowEvent"
-              #   html = "<p>Mig followed #{activity.payload.target}. <span>#{date}</span></p>"
-              # when "GollumEvent"
-              #   html = "<p>Mig #{activity.payload.pages[0].action} <a href='#{activity.payload.pages[0].html_url}' target='_blank'>#{activity.payload.pages[0].page_name}</a>. <span>#{date}</span></p>"
-              # when "WatchEvent"
-              #   html = "<p>Mig starred <a href='http://github.com/#{activity.repo.name}'>#{activity.repo.name}</a>. <span>#{date}</span></p>"
-              when "PushEvent"
-                html = """
-                       <div class="shares-github-activity">
-                         <span><a href="http://github.com/#{profile}">Mig</a> pushed to <a href="http://github.com/#{activity.repo.name} target="_blank">#{activity.repo.name}</a></span>
-                         <em>#{activity.payload.commits[0].message},</em>
-                         <time>#{date}</time>
-                       </div>
-                       """
-              else
-                # html = "<p>#{type}.</p>"
-                html = ""
+            if activities < 9
+              switch type
+                when "GollumEvent"
+                  activities++
+                  action = "#{activity.payload.pages[0].action} the <a href='#{activity.payload.pages[0].html_url}' target='_blank'>#{activity.payload.pages[0].page_name}</a> wiki."
+                  html   = template action, date
+                when "IssuesEvent"
+                  activities++
+                  action = "created the issue <a href='#{activity.payload.issue.html_url}' target='_blank'>#{activity.payload.issue.title}</a> at <a href='http://github.com/#{activity.repo.name}' target='_blank'>#{activity.repo.name}</a>."
+                  html   = template action, date
+                when "IssueCommentEvent"
+                  activities++
+                  action = "commented on <a href='#{activity.payload.issue.html_url}' target='_blank'>#{activity.payload.issue.title}</a> at <a href='http://github.com/#{activity.repo.name}' target='_blank'>#{activity.repo.name}</a>."
+                  html   = template action, date
+                when "PushEvent"
+                  activities++
+                  html = """
+                           <div class="shares-github-activity">
+                             <span><a href="http://github.com/migreyes">Mig</a> pushed to <a href="http://github.com/#{activity.repo.name} target="_blank">#{activity.repo.name}</a></span>
+                             <em>#{activity.payload.commits[0].message}</em>
+                             <time>#{date}</time>
+                           </div>
+                           """
+                else
+                  html = ""
 
             $(".shares-github").append html
 
@@ -113,3 +126,9 @@ $ ->
     $blogPostTimes.each ->
       $(this).text relativeTime $(this).data("post-date")
 
+
+  if $(".blog").length
+    # Relative blog post time
+    $blogPostTimes = $("[data-post-date]")
+    $blogPostTimes.each ->
+      $(this).text relativeTime $(this).data("post-date")

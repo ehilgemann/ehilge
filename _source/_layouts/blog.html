@@ -4,15 +4,16 @@
 
       <div class="content">
         <h1>{{ page.title }}</h1>
-        <h2>{{ page.preview }}</h2>
+        <h2 class="blog-preview">{{ page.preview }}</h2>
 
         <article class="blog-content">
-          <h3>Shared <time data-post-date="{{ page.date | date_to_xmlschema }}">on {{ page.date | date: "%B %d, %Y" }}</time></h3>
+          <h3 class="blog-date"></h3>
           {{ content }}
         </article>
 
         <div class="blog-stream">
-          <a href="/shares">&larr; See all posts and activity by Mig.</a>
+          <p class="blog-date">Shared <time data-post-date="{{ page.date | date_to_xmlschema }}">on {{ page.date | date: "%B %d, %Y" }}</time></p>
+          <p><a href="/shares">&larr; See all blog posts and updates from Mig</a></p>
         </div>
 
         {% include footer.html %}

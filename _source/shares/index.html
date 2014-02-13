@@ -20,12 +20,14 @@ layout: default
         <li>
           <a href="{{ post.url }}">
             <p>{{ post.title }}</p>
+            <em>{{ post.preview }}</em>
             <time data-post-date="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
           </a>
         </li>
       {% endfor %}
-        <li><a href="/shares/updates">More…</a></li>
     </ul>
+
+    {% comment %}<p><a href="/shares/updates">More updates…</a></p>{% endcomment %}
   </div>
 
   <div class="shares-delicious">

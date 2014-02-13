@@ -1,0 +1,23 @@
+{% include head.html %}
+  <body class="blog{% if page.class %} {{ page.class }}{% endif %}">
+    {% include navigation.html %}
+
+      <div class="content">
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.preview }}</h2>
+
+        <article class="blog-content">
+          <h3>Shared <time data-post-date="{{ page.date | date_to_xmlschema }}">on {{ page.date | date: "%B %d, %Y" }}</time></h3>
+          {{ content }}
+        </article>
+
+        <div class="blog-stream">
+          <a href="/shares">&larr; See all posts and activity by Mig.</a>
+        </div>
+
+        {% include footer.html %}
+      </div>
+
+      {% include wanker.html %}
+  </body>
+</html>

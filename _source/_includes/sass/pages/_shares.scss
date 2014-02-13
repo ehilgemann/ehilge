@@ -18,8 +18,19 @@
 
 .shares-blog {
 
+  ul {
+    margin-bottom: .5em;
+  }
+
   p {
+    font-family: $font-sans;
     margin: 0;
+  }
+
+  em {
+    color: #666;
+    display: block;
+    font-style: normal;
   }
 
   time {

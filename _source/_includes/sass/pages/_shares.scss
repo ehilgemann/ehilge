@@ -149,7 +149,7 @@
 
   .shares-twitter {
     display: inline-block;
-    margin: 3em 0 3em 16.667%;
+    margin: 3em 0 5em 16.667%;
     width: 66.667%;
 
     iframe {
@@ -158,7 +158,7 @@
   }
 
   .shares-blog {
-    margin-bottom: 5em;
+    margin-bottom: 15em;
     margin-left: 50%;
     position: relative;
     width: 33.333%;
@@ -208,5 +208,12 @@
       &:before { color: #999; content: "— "; }
       &:first-child:before { content: ""; }
     }
+  }
+
+  // Ephemera
+  .whats-new {
+    @include transform-origin(bottom left);
+    left: -50%;
+    bottom: -20%;
   }
 }

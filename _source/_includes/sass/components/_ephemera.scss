@@ -1,5 +1,6 @@
 .ephemera {
   @include opacity(.75);
+  background-color: #FFF;
   color: $color-link;
   display: none;
   font-family: $font-sans;

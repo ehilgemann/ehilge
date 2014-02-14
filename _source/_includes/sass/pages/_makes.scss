@@ -179,8 +179,9 @@
 
   // Ephemera
   .design-code {
-    left: 0;
-    bottom: -200%;
+    @include transform-origin(left bottom);
+    left: 20%;
+    bottom: -320%;
   }
 
   .designing-is-selling {

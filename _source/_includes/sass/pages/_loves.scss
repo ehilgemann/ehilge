@@ -1,9 +1,13 @@
 // Resources ————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
-.loves section { margin-bottom: 2em; }
+.loves section { margin-bottom: 3em; }
 
-.loves-introduction h1 { margin-bottom: 2em; }
+.loves-introduction h1 {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
 .loves-introduction-shop,
 .loves-introduction-laptop { display: none; }
 
@@ -11,8 +15,21 @@
 
 .loves-books {
 
+  a:link h6 { color: #333; }
+  a:link em { color: #999; }
+
+  a:hover h6,
+  a:hover em,
+  a:hover p { color: $color-link; }
+
+  ul {
+    @include border-box;
+    padding: 1em;
+    text-align: center;
+  }
+
   li {
-    display: block;
+    display: inline-block;
     margin-bottom: 1em;
   }
 
@@ -21,6 +38,22 @@
     width: 80%;
   }
 }
+
+.loves-links {
+
+  li {
+    line-height: 1.25em;
+    margin-bottom: 1em;
+  }
+
+  a {
+    font-family: $font-sans;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.loves-web span { display: block; }
 
 
 // Resources: Tablet ————————————————————————— •
@@ -114,31 +147,6 @@
       margin-bottom: .75em;
       margin-top: 1em;
       line-height: 1em;
-    }
-
-    a:link h6 { color: #333; }
-    a:link em { color: #999; }
-
-    a:hover h6,
-    a:hover em,
-    a:hover p { color: $color-link; }
-  }
-
-  .loves-links {
-
-    li {
-      line-height: 1.25em;
-      margin-bottom: 1em;
-    }
-
-    a {
-      font-family: $font-sans;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    span {
-      display: block;
     }
   }
 

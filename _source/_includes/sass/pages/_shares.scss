@@ -1,6 +1,8 @@
 // Blog —————————————————————————————————————— •
 // ——————————————————————————————————————————— •
 
+.shares h1 { margin-top: 1em; }
+
 .shares-content {
   @include clearfix;
 
@@ -133,6 +135,8 @@
   }
 }
 
+.shares-beliefs li { margin-bottom: 1em; }
+
 
 // Blog: Desktop ————————————————————————————— •
 // ——————————————————————————————————————————— •
@@ -199,6 +203,7 @@
     li {
       display: inline;
       font-family: $font-sans;
+      margin: 0;
 
       &:before { color: #999; content: "— "; }
       &:first-child:before { content: ""; }

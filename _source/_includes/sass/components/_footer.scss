@@ -11,10 +11,6 @@
 .footer-nav-here a:visited,
 .footer-nav-elsewhere a:visited { color: $color-link; }
 
-.footer-nav-here-portfolio,
-.footer-nav-here-loves,
-.footer-nav-here-stream { display: none; }
-
 .footer-chicago {
   margin-bottom: 4em;
   text-align: center;
@@ -38,10 +34,6 @@
     margin-right: 2%;
     width: 14.667%;
   }
-
-  .footer-nav-here-portfolio,
-  .footer-nav-here-loves,
-  .footer-nav-here-stream { display: block; }
 
   .footer-nav-elsewhere {
     margin-right: 2%;

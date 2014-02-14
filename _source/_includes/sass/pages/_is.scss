@@ -13,6 +13,7 @@
 
 .about-portrait {
   margin-bottom: 1em;
+  margin-top: 3.25em;
   width: 100%;
 
   figcaption { display: none; }
@@ -80,6 +81,8 @@
 // ——————————————————————————————————————————— •
 
 @include responsive-break-point(640px) {
+  .about-portrait { margin-top: 0; }
+
   .about-portrait-photo {
     margin-left: 16.667%;
     width: 50%;

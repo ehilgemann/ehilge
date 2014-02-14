@@ -30,7 +30,7 @@
 
 .nav-links {
   position: absolute;
-  right: 1em;
+  right: 0;
   top: 0;
   z-index: 1986;
 
@@ -53,7 +53,7 @@
     &:first-child a { padding-top: 1.1em; }
 
     &:last-child a {
-      @include border-radius(0 0 3px 3px);
+      @include border-radius(0 0 0 3px);
       padding-bottom: 1.1em;
     }
   }
@@ -61,7 +61,6 @@
 
 .nav-links-trigger {
   @include border-box;
-  @include border-radius(3px 3px 0 0);
   background: none;
   border: none;
   color: white;
@@ -69,15 +68,13 @@
   font-family: $font-sans;
   font-size: 1em;
   margin: 0;
-  padding: .5em 1em .65em;
+  padding: .7em 1em .65em;
   position: absolute;
   right: 0;
-  top: .2em;
+  top: 0;
 }
 
 .nav-links-list {
-  @include border-box;
-  @include border-radius(3px 0 3px 3px);
   display: none;
   padding: 1em 0;
   position: absolute;
@@ -166,7 +163,7 @@ body.loves .nav-link-loves {
     li {
       margin: 0;
 
-      &:first-child a { padding-bottom: .1em; }
+      &:first-child a { padding-top: .1em; }
       &:last-child a { padding-bottom: .1em; }
     }
   }
@@ -176,6 +173,7 @@ body.loves .nav-link-loves {
   .nav-links-list {
     background-color: transparent;
     display: block;
+    margin: 0;
     padding: 0;
     position: relative;
     left: 0;

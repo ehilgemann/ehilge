@@ -54,7 +54,7 @@ layout: default
     <ul>
       {% for thought in site.data.thoughts limit:3 %}
         {% assign total = site.data.thoughts | size %}
-        <li class="shares-beliefs-thought"><a href="/thinks/#{{ total | minus: forloop.index0 }}">{{ thought.idea }}</a></li>
+        <li class="shares-beliefs-thought"><a href="/thinks/#{{ thought.anchor }}">{{ thought.text }}</a></li>
       {% endfor %}
       <li class="shares-beliefs-thought"><a href="/thinks">More…</a></li>
     </ul>

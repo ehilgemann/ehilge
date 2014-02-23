@@ -9,9 +9,9 @@ layout: default
 <section class="thoughts">
   <ul>
   {% for thought in site.data.thoughts %}
-    <li class="thought" data-thought id="{{ forloop.rindex }}"><a href="#{{ forloop.rindex }}" title="Click for a permalink for this quip.">{{ thought.idea }}</a></li>
+    <li class="thought" data-thought id="{{ thought.anchor }}"><a href="#{{ thought.anchor }}" title="Click for a permanent link for this thought.">{{ thought.text }}</a></li>
   {% endfor %}
   </ul>
 
-  <p>Do you think the same? You can read my <a href="/writes">longer form essays</a>, or you can <a href="http://twitter.com/migreyes" title="More thoughts like this on Twitter">follow me on Twitter</a>.</p>
+  <p>You can read my <a href="/writes">longer form essays</a>, or you can <a href="http://twitter.com/migreyes" title="More thoughts like this on Twitter">follow me on Twitter</a>.</p>
 </section>

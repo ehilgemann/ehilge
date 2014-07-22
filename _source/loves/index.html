@@ -16,6 +16,26 @@ class: loves
   <span class="ephemera clockwise chicago">Don’t call it Chi-city</span>
 </section>
 
+<section class="loves-books">
+  <h3>Books worth reading</h3>
+  <p>From books that have shaped me as a designer since my college days, to recent discoveries suggested by friends and co-workers, this is my recommended reading list.</p>
+
+  <ul>
+  {% for book in site.data.books %}
+    <li>
+      <a href="{{ book.url }}">
+        <img src="/assets/images/books/{{ book.name }}.jpg">
+
+        <div>
+          <h6>{{ book.name }}</h6>
+          <em>{{ book.author }}</em>
+        </div>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+</section>
+
 <section class="loves-friends">
   <h3>Friends</h3>
   <p>These are some of the incredibly talented people that have inluenced my work, thoughts, and career. I’m lucky enough to call them my colleagues, drinking partners, and friends.</p>
@@ -65,26 +85,6 @@ class: loves
         <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
       {% endif %}
     {% endfor %}
-  </ul>
-</section>
-
-<section class="loves-books">
-  <h3>Books worth reading</h3>
-  <p>From books that have shaped me as a designer since my college days, to recent discoveries suggested by friends and co-workers, this is my recommended reading list.</p>
-
-  <ul>
-  {% for book in site.data.books %}
-    <li>
-      <a href="{{ book.url }}">
-        <img src="/assets/images/books/{{ book.name }}.jpg">
-
-        <div>
-          <h6>{{ book.name }}</h6>
-          <em>{{ book.author }}</em>
-        </div>
-      </a>
-    </li>
-  {% endfor %}
   </ul>
 </section>
 

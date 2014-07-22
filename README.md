@@ -6,7 +6,7 @@ I’m a graphic and web designer from Chicago. I help make [Basecamp](http://bas
 =====
 
 ### About this site:
-This site is hand made with [Jekyll](http://jekyllrb.com), Sass, and CoffeeScript. These are my template files to build everything at http://mig.io. Feel free to poke around to get ideas for your next Jekyll project.
+This site is hand made with [Jekyll 2](http://jekyllrb.com) using Sass and CoffeeScript for assets. These are my template files to build everything at http://mig.io. Feel free to poke around to get ideas for your next Jekyll project.
 
 =====
 

@@ -32,4 +32,4 @@ defaults:
 
 sass:
   style:    :compressed
-  sass_dir: assets/styles
+  sass_dir: assets/stylesheets

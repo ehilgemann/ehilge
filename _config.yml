@@ -1,17 +1,35 @@
-title: Mig Reyes
-author: Mig Reyes
-subtitle: "Designer, Basecamp"
+title:       Mig Reyes
+subtitle:    "Designer, Basecamp"
 description: Mig is a designer at Basecamp focused on making good things for good people.
 
-github: http://github.com/migreyes
-twitter: http://twitter.com/migreyes
-dribbble: http://dribbble.com/migreyes
+author:    Mig Reyes
+github:    http://github.com/migreyes
+twitter:   http://twitter.com/migreyes
+dribbble:  http://dribbble.com/migreyes
 instagram: http://instagram.com/migreyes
 
-source: ./_source
+source:      _source
 destination: public
-exclude: [_drafts, _site, public, Gemfile, Gemfile.lock, Rakefile, README.md]
+exclude:     [public, Gemfile, Gemfile.lock, Rakefile, README.md]
 
+markdown:  rdiscount
 permalink: /:categories/:title
-markdown: rdiscount
-pygments: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "page"
+    values:
+      title: "Mig Reyes, Designer at Basecamp"
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "post"
+    values:
+      layout: "blog"
+
+sass:
+  style:    :compressed
+  sass_dir: assets/styles

@@ -1,7 +1,6 @@
 ---
 title: A new site, with a framework to boot
 category: shares
-layout: blog
 preview: After four years of not having a site online, I have a place on the web to call home again
 ---
 

@@ -1,3 +1,6 @@
+---
+---
+
 BikeGallery =
   install: (gallery) ->
     $gallery = $(gallery)

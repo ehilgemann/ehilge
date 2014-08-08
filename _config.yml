@@ -30,6 +30,7 @@ defaults:
       type: "post"
     values:
       layout: "blog"
+      category: shares
 
 sass:
   style:    :compressed

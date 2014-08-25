@@ -30,8 +30,12 @@ http://github.com/migreyes/hazelnut
     {% endif %}
 
     <script src="/assets/javascript/plugins/jquery.min.js"></script>
-    <script type="text/javascript" src="//use.typekit.net/ury5zcm.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+    {% unless page.dev == "local" %}
+      <script type="text/javascript" src="//use.typekit.net/ury5zcm.js"></script>
+      <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    {% endunless %}
+
     <script type="text/javascript" src="/assets/javascript/scripts.js"></script>
 
     {% if page.javascript %}

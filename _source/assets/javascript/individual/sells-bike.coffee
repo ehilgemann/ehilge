@@ -82,7 +82,3 @@ $ ->
       when 37 then previousPhoto()
       when 39 then nextPhoto()
 
-
-  # Visual effect: slide bike up when scrolling down.
-  $bike = $('[data-bike]')
-  parallax $bike, 'top', -100, 1000, .5

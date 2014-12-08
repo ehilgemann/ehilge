@@ -28,7 +28,7 @@ class: writes
     {% if essay.svn %}
       <a href="http://signalvnoise.com/posts/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">
     {% else %}
-      <a href="{{ essay.url }}">
+      <a href="{{ essay.url }}/">
     {% endif %}
         <h2>{{ essay.title }}</h2>
         <p>{{ essay.preview }}</p>

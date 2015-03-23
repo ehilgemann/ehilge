@@ -3,6 +3,7 @@
 
 @include responsive-break-point(768px) {
   .presentation {
+    @include debug;
     background-color: rgba(0,0,0,.8);
     cursor: -webkit-zoom-out;
     display: none;

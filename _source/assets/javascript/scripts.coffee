@@ -85,6 +85,12 @@ $ ->
       parallax $this, $direction, $start, $stop, $rate
 
 
+  # Presentations
+  $presentationToggles = $("[data-toggle-presentation]")
+  if $presentationToggles.length
+    $presentationToggles.each ->
+      presentation this
+
   # Swap retina-ready images
   Retina()
 

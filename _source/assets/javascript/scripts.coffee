@@ -18,6 +18,15 @@ parallax = (element, direction, start, stop, rate) ->
 escapable = -> $('[data-escapable]').fadeOut()
 
 
+presentation = (toggle) ->
+  $toggle = $(toggle)
+  $show   = $toggle.data("toggle-presentation")
+  $presentation = $("[data-presentation='#{$show}']")
+
+  $toggle.click -> $presentation.fadeIn()
+  $presentation.click -> $(this).fadeOut()
+
+
 Retina = ->
   pixelRatio = (if !!window.devicePixelRatio then window.devicePixelRatio else 1)
 

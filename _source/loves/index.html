@@ -44,46 +44,41 @@ class: loves
 
   <ul class="loves-friends-design">
     <li>Design</li>
-    {% for friend in site.data.friends %}
-      {% if friend.industry == "design" %}
-        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
-      {% endif %}
+    {% assign design = site.data.friends | where: "industry", "design" | sort: "name" %}
+    {% for friend in design %}
+      <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
     {% endfor %}
   </ul>
 
   <ul class="loves-friends-photo">
     <li>Photo &amp; Video</li>
-    {% for friend in site.data.friends %}
-      {% if friend.industry == "photo" %}
-        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
-      {% endif %}
+    {% assign photo = site.data.friends | where: "industry", "photo" | sort: "name" %}
+    {% for friend in photo %}
+      <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
     {% endfor %}
   </ul>
 
   <ul class="loves-friends-illustration">
     <li>Type &amp; Illustration</li>
-    {% for friend in site.data.friends %}
-      {% if friend.industry == "illustration" %}
-        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
-      {% endif %}
+    {% assign illustration = site.data.friends | where: "industry", "illustration" | sort: "name" %}
+    {% for friend in illustration %}
+      <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
     {% endfor %}
   </ul>
 
   <ul class="loves-friends-web">
     <li>Web &amp; Product</li>
-    {% for friend in site.data.friends %}
-      {% if friend.industry == "web" %}
-        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
-      {% endif %}
+    {% assign web = site.data.friends | where: "industry", "web" | sort: "name" %}
+    {% for friend in web %}
+      <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
     {% endfor %}
   </ul>
 
   <ul class="loves-friends-writing">
     <li>Writing</li>
-    {% for friend in site.data.friends %}
-      {% if friend.industry == "writing" %}
-        <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
-      {% endif %}
+    {% assign writing = site.data.friends | where: "industry", "writing" | sort: "name" %}
+    {% for friend in writing %}
+      <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
     {% endfor %}
   </ul>
 </section>

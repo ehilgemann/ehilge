@@ -20,14 +20,14 @@ defaults:
   -
     scope:
       path: ""
-      type: "page"
+      type: "pages"
     values:
       title: "Mig Reyes, Designer at Basecamp"
       layout: "default"
   -
     scope:
       path: ""
-      type: "post"
+      type: "posts"
     values:
       layout: "blog"
       category: shares

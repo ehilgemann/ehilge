@@ -38,7 +38,7 @@ class: loves
 
 <section class="loves-friends">
   <h3>Friends</h3>
-  <p>These are some of the incredibly talented people that have inluenced my work, thoughts, and career. I’m lucky enough to call them my colleagues, drinking partners, and friends.</p>
+  <p>These are some of the incredibly talented people that have inluenced my work, thoughts, and career. I’m lucky enough to call them my colleagues, drinking partners, and friends!</p>
 
   <span class="ephemera counter-clockwise company">You’re known by the company you keep</span>
 
@@ -70,6 +70,14 @@ class: loves
     <li>Web &amp; Product</li>
     {% assign web = site.data.friends | where: "industry", "web" | sort: "name" %}
     {% for friend in web %}
+      <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <ul class="loves-friends-interiors">
+    <li>Interior Design</li>
+    {% assign interiors = site.data.friends | where: "industry", "interiors" | sort: "name" %}
+    {% for friend in interiors %}
       <li><a href="http://{{ friend.url }}" target="_blank">{{ friend.name }}</a></li>
     {% endfor %}
   </ul>

@@ -21,6 +21,11 @@
   location: New York
   industry: design
 
+- name: Jason Esser
+  url: jasonesser.com
+  location: Chicago
+  industry: design
+
 - name: Joseph Delhommer
   url: alwaysplotting.com
   location: Chicago
@@ -33,11 +38,6 @@
 
 - name: Katherine Walker
   url: kkwalker.com
-  location: Chicago
-  industry: design
-
-- name: Kik McNally
-  url: kikmcnally.com
   location: Chicago
   industry: design
 
@@ -90,8 +90,8 @@
 # Product & Web
 #####################################
 
-- name: 37signals
-  url: 37signals.com
+- name: Basecamp
+  url: basecamp.com
   location: Chicago
   industry: web
 
@@ -130,6 +130,11 @@
   location: Chicago
   industry: web
 
+- name: Kik McNally
+  url: kikmcnally.com
+  location: Chicago
+  industry: web
+
 - name: Kunal Bhat
   url: kunalbhat.com
   location: Chicago
@@ -145,6 +150,11 @@
   location: Brooklyn
   industry: web
 
+- name: Pedro Carmo
+  url: drocarmo.com
+  location: San Francisco
+  industry: web
+
 - name: Randy Hunt
   url: randyjhunt.com
   location: Brooklyn
@@ -158,6 +168,11 @@
 - name: Tina Roth Eisenberg
   url: swiss-miss.com
   location: Brooklyn
+  industry: web
+
+- name: Victoria Pater
+  url: twitter.com/typeis4lovers
+  location: Chicago
   industry: web
 
 - name: Zack Kitzmiller
@@ -256,8 +271,8 @@
   location: Chicago
   industry: photo
 
-- name: Jason Esser
-  url: jasonesser.com
+- name: Kyle Lamere
+  url: kylelamerephoto.com
   location: Chicago
   industry: photo
 
@@ -276,15 +291,29 @@
   location: Chicago
   industry: photo
 
-- name: Rubbish
-  url: rubbishisgold.com
+- name: Rebecca Peplinski
+  url: rebeccapeplinski.com
   location: Chicago
   industry: photo
 
 - name: Sean Dorgan
   url: seandorgan.com
-  location: Chicago
+  location: Australia
   industry: photo
+
+
+# Interiors
+#####################################
+- name: Jessica Williams
+  url: jessicalynnwilliams.com
+  location: Brooklyn
+  industry: interiors
+
+- name: Megan Born
+  url: meganborn.com
+  location: Chicago
+  industry: interiors
+
 
 # Writing
 #####################################

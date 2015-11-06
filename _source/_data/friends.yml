@@ -61,6 +61,11 @@
   location: Chicago
   industry: design
 
+- name: Mylo Reyes
+  url: myloreyes.com
+  location: Chicago
+  industry: design
+
 - name: Luke Williams
   url: lukelukeluke.com
   location: Brooklyn
@@ -320,6 +325,11 @@
 - name: Alissa Walker
   url: gelatobaby.com
   location: LA
+  industry: writing
+
+- name: Colleen Arturi
+  url: kahlean.com
+  location: Chicago
   industry: writing
 
 - name: Betsy Mikel

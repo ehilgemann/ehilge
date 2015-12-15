@@ -29,5 +29,5 @@ wrap-attributes: 0
 
 // Diagnostics
 quiet: yes
-show-info: no
+show-info: yes
 show-warnings: no

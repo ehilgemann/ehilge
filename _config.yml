@@ -1,6 +1,6 @@
 title:       Mig Reyes
-subtitle:    "Designer, Basecamp"
-description: Mig is a designer at Basecamp focused on making good things for good people.
+subtitle:    "Design Lead, Trunk Club"
+description: Mig is a Design Lead at Trunk Club helping redesign retail.
 
 author:    Mig Reyes
 github:    http://github.com/migreyes
@@ -22,7 +22,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      title: "Mig Reyes, Designer at Basecamp"
+      title: "Mig Reyes, Design Lead at Trunk Club"
       layout: "default"
   -
     scope:

@@ -1,4 +1,26 @@
 @font-face {
+  font-family: 'GT Sectra';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/GT-Sectra-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GT Sectra';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/assets/fonts/GT-Sectra-Regular-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'GT Sectra';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/assets/fonts/GT-Sectra-Bold.woff') format('woff');
+}
+
+
+@font-face {
   font-family: 'Alto';
   font-style: normal;
   font-weight: normal;

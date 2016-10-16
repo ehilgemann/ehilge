@@ -5,7 +5,6 @@
       <li><a href="/is/">About</a></li>
       <li class="footer-nav-here-portfolio"><a href="/makes/">Work</a></li>
       <li><a href="/writes/">Essays</a></li>
-      <li><a href="/shares/">Stream</a></li>
       <li class="footer-nav-here-loves"><a href="/loves/">Resources</a></li>
     </ul>
 
@@ -14,13 +13,12 @@
       <li><a href="{{ site.twitter }}" title="@migreyes">Twitter</a></li>
       <li><a href="{{ site.github }}" target="_blank" title="@migreyes">GitHub</a></li>
       <li><a href="{{ site.dribbble }}" target="_blank" title="@migreyes">Dribbble</a></li>
-      <li><a href="{{ site.pinterest }}" target="_blank" title="@migreyes. Things I wish I made.">Pinterest</a></li>
-      <li><a href="{{ site.instagram }}" target="_blank" title="@migreyes. Selfie-free, guaranteed.">Instagram</a></li>
+      <li><a href="{{ site.instagram }}" target="_blank" title="@migreyes snaps of nice people and nice things.">Instagram</a></li>
     </ul>
 
     <ul class="footer-nav-essays">
       <li><strong>Recent essays</strong></li>
-      {% for essay in site.categories.writes limit:5 %}
+      {% for essay in site.categories.writes limit:4 %}
         {% unless essay.title == page.title %}
           {% if essay.svn %}
             <li><a href="http://signalvnoise.com/posts/{{ essay.svn }}" target="_blank" title="Written on Signal vs. Noise: {{ essay.title }}">{{ essay.title }}</a></li>

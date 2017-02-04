@@ -1,7 +1,8 @@
 ---
 title: "Reminder: Design is still about words"
 category: writes
-svn: 3404
+// svn: 3404
+medium: reminder-design-is-still-about-words-c8ea79e6b8ca
 favorite: true
 preview: Proof that design starts with having something to say, not draw
 ---

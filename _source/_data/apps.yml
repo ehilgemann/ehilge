@@ -22,10 +22,11 @@
   url: http://www.sublimetext.com/2
   info: is where I code.
 
-- name: Uber
-  url: https://www.uber.com/invite/uberMig
-  info: is my favorite way to get around. “UberMig” for $10 off!
+# Delete Uber
+# - name: Uber
+#   url: https://www.uber.com/invite/uberMig
+#   info: is my favorite way to get around. “UberMig” for $10 off!
 
-- name: You Need a Budget
-  url: http://ynab.refr.cc/HWKB56Q
-  info: is how I save a lot of money.
+# - name: You Need a Budget
+#   url: http://ynab.refr.cc/HWKB56Q
+#   info: is how I save a lot of money.

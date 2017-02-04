@@ -6,6 +6,11 @@
   location: Portland
   industry: design
 
+- name: Andy Schwelger
+  url: letterform.net
+  location: Chicago
+  industry: design
+
 - name: Alison Yard Medland
   url: alisonyard.com
   location: Chicago
@@ -16,9 +21,9 @@
   location: Chicago
   industry: design
 
-- name: Glenn Cochon
-  url: glenncochon.com
-  location: New York
+- name: Carli Dottore
+  url: carlidottore.squarespace.com
+  location: Chicago
   industry: design
 
 - name: Jason Esser
@@ -26,9 +31,14 @@
   location: Chicago
   industry: design
 
+- name: Jen Serafini
+  url: serafinicreative.com
+  location: Chicago
+  industry: design
+
 - name: Joseph Delhommer
   url: alwaysplotting.com
-  location: Chicago
+  location: Manhattan
   industry: design
 
 - name: Joy Burke
@@ -38,7 +48,7 @@
 
 - name: Katherine Walker
   url: kkwalker.com
-  location: Chicago
+  location: San Francisco
   industry: design
 
 - name: Knoed
@@ -58,7 +68,7 @@
 
 - name: Mike McQuade
   url: mikemcquade.com
-  location: Chicago
+  location: Philadelphia
   industry: design
 
 - name: Mylo Reyes
@@ -71,19 +81,14 @@
   location: Brooklyn
   industry: design
 
-- name: Plural
-  url: weareplural.com
+- name: Ryan Paule
+  url: dribbble.com/ryanpaule
   location: Chicago
   industry: design
 
 - name: Sean Donohue
   url: about.me/seandonohue
   location: Chicago
-  industry: design
-
-- name: Timothy Goodman
-  url: tgoodman.com
-  location: Brooklyn
   industry: design
 
 - name: UnderConsideration
@@ -110,6 +115,11 @@
   location: Chicago
   industry: web
 
+- name: Glenn Cochon
+  url: glenncochon.com
+  location: New York
+  industry: web
+
 - name: Jake Nickell
   url: jakenickell.com
   location: Chicago
@@ -122,22 +132,12 @@
 
 - name: Jason James
   url: jasonjam.es
-  location: Chicago
+  location: San Francisco
   industry: web
 
 - name: John Schlemmer
   url: johnschlemmer.com
-  location: Chicago
-  industry: web
-
-- name: Josh Peek
-  url: github.com/josh
-  location: Chicago
-  industry: web
-
-- name: Kik McNally
-  url: kikmcnally.com
-  location: Chicago
+  location: San Francisco
   industry: web
 
 - name: Kunal Bhat
@@ -208,9 +208,9 @@
   location: USA
   industry: illustration
 
-- name: Jackson Cavanaugh
-  url: okaytype.com
-  location: Chicago
+- name: Heather Day
+  url: heatherdayart.com
+  location: San Francisco
   industry: illustration
 
 - name: Jessica Hische
@@ -220,7 +220,7 @@
 
 - name: Joe Van Wetering
   url: joevw.com
-  location: Chicago
+  location: San Diego
   industry: illustration
 
 - name: Kate Bingaman-Burt
@@ -238,14 +238,9 @@
   location: Cleveland
   industry: illustration
 
-- name: Mike Colesworthy
-  url: miketendo.com
-  location: Chicago
-  industry: illustration
-
 - name: Ross Zietz
   url: flickr.com/photos/arzie13/
-  location: Chicago
+  location: Atlanta
   industry: illustration
 
 - name: Sonnenzimmer
@@ -256,6 +251,11 @@
 - name: Tad Carpenter
   url: tadcarpenter.com
   location: Missouri
+  industry: illustration
+
+- name: Timothy Goodman
+  url: tgoodman.com
+  location: Brooklyn
   industry: illustration
 
 - name: Tuesday Bassen
@@ -270,6 +270,11 @@
 
 # Video & Photography
 #####################################
+
+- name: Carolina Mariana
+  url: carolinamariana.com
+  location: Chicago
+  industry: photo
 
 - name: Craig Shimala
   url: craigshimala.com
@@ -288,7 +293,7 @@
 
 - name: Nick Campbell
   url: greyscalegorilla.com
-  location: Chicago
+  location: Michigan
   industry: photo
 
 - name: Paul Octavious

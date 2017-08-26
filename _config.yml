@@ -1,13 +1,13 @@
-title:       Mig Reyes
-subtitle:    "Design Lead, Trunk Club"
-description: Mig is a Design Lead at Trunk Club helping redesign retail.
+title:       Evan Hilgemann
+subtitle:    "Mechanical Engineer"
+description: Evan is a mechanical engineer at JPL.
 
-author:    Mig Reyes
-github:    http://github.com/migreyes
-twitter:   http://twitter.com/migreyes
-dribbble:  http://dribbble.com/migreyes
-instagram: http://instagram.com/migreyes
-pinterest: http://pinterest.com/migreyes
+author:     Evan Hilgemann
+#github:    http://github.com/migreyes
+#twitter:   http://twitter.com/migreyes
+#dribbble:  http://dribbble.com/migreyes
+#instagram: http://instagram.com/migreyes
+#pinterest: http://pinterest.com/migreyes
 
 source:      _source
 destination: public
@@ -22,7 +22,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      title: "Mig Reyes, Design Lead at Trunk Club"
+      title: "Evan Hilgemann, Engineer"
       layout: "default"
   -
     scope:

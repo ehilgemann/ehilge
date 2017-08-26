@@ -1,0 +1,144 @@
+<!--
+
+Curious about the code? This site was made by hand with love using Jekyll.
+My favorite parts were extracted to a starting template here:
+http://github.com/migreyes/hazelnut
+
+-->
+
+<!DOCTYPE html>
+<html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+  <head>
+    
+      <title>The Typography behind the Signal vs. Noise redesign</title>
+    
+    <meta name="title" content="Mig Reyes is a designer.">
+    <meta name="description" content="Mig Reyes is a designer from Chicago leading design at Trunk Club and serves as President for AIGA Chicago.">
+    <meta name="author" content="Mig Reyes">
+    <meta name="Copyright" content="Copyright Mig Reyes 1986 - 2017. All Rights Reserved.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/style.css">
+
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/javascript/scripts.js"></script>
+
+    
+
+    <script>(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-43019362-1","mig.io");ga("send","pageview")</script>
+  </head>
+  <body class="blog">
+    <nav class="nav" role="navigation">
+  <a class="nav-home" href="/">Evan<span class="hide-desktop"> is a designer</span></a>
+
+  <div class="nav-links">
+    <button class="nav-links-trigger" data-menu="closed">Menu</button>
+
+    <ul class="nav-links-list">
+      <li><a class="nav-link-about" href="/is/">About</a></li>
+      <li><a class="nav-link-portfolio" href="/makes/">Work</a></li>
+      <li><a class="nav-link-writes" href="/writes/">Essays</a></li>
+      <li><a class="nav-link-loves" href="/loves/">Resources</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-title">
+    <p>
+      Design Lead<br>
+      Trunk Club
+    </p>
+
+    <p><span style="color: #CCC;">/</span></p>
+    
+    <p>
+      President<br>
+      AIGA Chicago
+    </p>
+  </div>
+
+  <div class="nav-contact">
+    
+
+    <h5>Email</h5>
+    <script src="/assets/javascript/plugins/email.js"></script>
+
+    <h5>Instagram</h5>
+    <a href="" title="@migreyes">@migreyes</a>
+
+    <h5>Twitter</h5>
+    <a href="" title="@migreyes">@migreyes</a>
+  </div>
+</nav>
+
+      <div class="content">
+        <header>
+          <h1>The Typography behind the Signal vs. Noise redesign</h1>
+          <h2 class="blog-preview">Dissecting my typography-first redesign I did for the 37signals blog</h2>
+          <p class="blog-date">Shared <time data-post-date="2012-10-19T00:00:00-05:00">on October 19, 2012</time></p>
+        </header>
+
+        <article class="blog-content">
+          <h3 class="blog-date"></h3>
+          <h2>We’ve been sharing our process and company values on Signal vs. Noise since 1999. It’s where we’ve planted the seeds for Getting Real and REWORK. And for many readers, it’s their first taste of 37signals. Yet, we haven’t given the look and feel any serious attention since 2005.</h2>
+
+<p>So I decided to tackle a much-needed redesign. In planning the overhaul, I wanted to focus on creating a beautiful, clear, focused reading experience.</p>
+
+<h2>Designing Outward</h2>
+
+<p>“Blog” has such a temporary, read-and-forget tone to it. On SvN, we take our time writing and editing every article. So rather than treating this like a “blog,” I shifted the mindset to that of a tenured publication. So, the entire redesign process started with typesetting the post, and designing outward.</p>
+
+<p>Instead of poring over other blogs, I spent a week studying books, magazines, and of course, Bringhurst. Capturing the right feel for body text was step one—it sets the tone from here on out.</p>
+
+<p>Perhaps it’s me, but there’s something about 13px sans-serif faces on the web that feels like “my Rails app just spit this out of a database.” I want you to read articles, not text rendered on a screen. Kepler, set at a comfortable size, wound up being a beautiful serif that added the touch of humanity I was looking for. Setting the headlines in Acta added to the look I was going for, and Freight Sans wound up being a great sans-serif pairing.</p>
+
+<p>More often than not, company blogs are littered with pitches for their product. I don’t want to throw new job opportunities at you right away. I don’t want to ask you to subscribe to our RSS feed when you haven’t even read anything yet. These rules informed the layout: content first, everything else second.</p>
+
+<p>I often hear that mobile experiences tend to feel more focused than the desktop counterpart. I agree, mostly. But there’s a stark similarity that mobile devices share with physical books that desktop browsers don’t: a consistent canvas size.</p>
+
+<p>Designers, especially those transitioning from print to web, yearn for that controlled page size. We’re lucky to have it on phones, but the varying sizes of desktop browsers throw us in a loop. Despite that, I was bullish on keeping the width of the desktop text at a comfortable 65-70 characters per line no matter how long your browser becomes. I was steadfast in keeping the content on top—not hugged by filters, settings, search bars and ads. More space in your window doesn’t mean you have to fill it.</p>
+
+<h2>Responsive as I go</h2>
+
+<p>Signal vs. Noise is a Rails app. I got my hands dirty digging through every view, restructuring the markup as I went along. (And Noah fixed all the things I broke. Thanks Noah!) During the design of each page, I styled mobile views at the same time as the desktop. Writing custom Sass @mixins for responsive views sped this process up immensely.</p>
+
+<p>Like JZ mentioned, while the multiple @media query instances aren’t ideal, it’s a better trade off with clarity in code.</p>
+
+<h2>Designing in the open</h2>
+
+<p>There’s plenty more I’ll share, including the concepts behind the waveforms, the language, the new writers page, and our new post editor. This may be just a blog, but it’s our blog. Our ideas. They matter to us, and we want you to feel like they matter to you. We’ll continue to make this—and the rest of our public facing sites—better. And we’ll continue to design in the open.</p>
+
+        </article>
+
+        <div class="blog-stream">
+          <p><a href="/shares">&larr; See all blog posts and updates from Mig</a></p>
+        </div>
+
+        <footer class="footer">
+  
+ 
+  
+</footer>
+      </div>
+
+      <!-- jquery.wanker.js: http://mig.io/makes/wanker -->
+<div class="wanker" data-wanker>
+  <div class="wanker-content">
+    <p>The web was meant to be <a href="/makes/wanker">read, not squished.</a></p>
+
+    <img class="wanker-finger" src="/assets/images/wanker/finger.png">
+
+    <figure class="wanker-hole">
+      <img class="wanker-pinch" src="/assets/images/wanker/hole-pinch.png">
+      <img class="wanker-spread" src="/assets/images/wanker/hole-spread.png">
+    </figure>
+
+    <img class="wanker-poop" src="/assets/images/wanker/poop.png">
+  </div>
+</div>
+  </body>
+</html>

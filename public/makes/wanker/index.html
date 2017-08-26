@@ -1,0 +1,161 @@
+
+<!--
+  
+Quit resizing your browser. A jQuery plugin by Mig Reyes of Basecamp.
+Download on GitHub, https://github.com/migreyes/jquery.wanker
+
+Website: http://mig.io
+Twitter: @migreyes
+
+-->
+
+<!--
+
+Curious about the code? This site was made by hand with love using Jekyll.
+My favorite parts were extracted to a starting template here:
+http://github.com/migreyes/hazelnut
+
+-->
+
+<!DOCTYPE html>
+<html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+  <head>
+    
+      <title>jquery.wanker.js by Mig Reyes</title>
+    
+    <meta name="title" content="Mig Reyes is a designer.">
+    <meta name="description" content="Mig Reyes is a designer from Chicago leading design at Trunk Club and serves as President for AIGA Chicago.">
+    <meta name="author" content="Mig Reyes">
+    <meta name="Copyright" content="Copyright Mig Reyes 1986 - 2017. All Rights Reserved.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/style.css">
+
+    
+      <link rel="stylesheet" type="text/css" href="/assets/stylesheets/individual/makes-wanker.css">
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/javascript/scripts.js"></script>
+
+    
+
+    <script>(function(e,t,n,r,i,s,o){e["GoogleAnalyticsObject"]=i;e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date;s=t.createElement(n),o=t.getElementsByTagName(n)[0];s.async=1;s.src=r;o.parentNode.insertBefore(s,o)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create","UA-43019362-1","mig.io");ga("send","pageview")</script>
+  </head>
+  <body class="wanker-marketing-marketing">
+    <div class="content">
+  <section class="wanker-marketing-introduction">
+    <img class="wanker-marketing-logo" src="images/wanker.png">
+
+    <p>Responsive design has been a blessing to web crafters everywhere. The web, however, was meant to be read, not squished. <strong><a href="https://github.com/migreyes/jquery.wanker">jquery.wanker.js</a></strong> is a tiny (<em>549 bytes minified</em>) jQuery plugin that reveals a public service announcement when people start <a href="http://cdn.elezea.com/gif/responsive.gif" target="_blank">excessively resizing</a> their desktop browser as they try to see your responsive breakpoints.</p>
+    <p><strong><a href="https://github.com/migreyes/jquery.wanker">jquery.wanker.js</a></strong> is the perfect easter egg plugin for designers, photographers, writers, and anyone else <a href="https://github.com/migreyes/jquery.wanker/wiki/Design-Gallery" target="_blank">with a sense of humor</a> displaying their work on the web wishing their viewers to focus more on their work, and less on the magic of media queries.</p>
+  </section>
+
+  <section class="wanker-marketing-example">
+    <h2>See it in action</h2>
+    <p>Resize your browser for more than one second. Go on, we’ll wait. You can also <a href="/makes/wanker/example" target="_blank" title="View a live example of Wanker.">see another live example.</a>
+  </section>
+
+  <section class="wanker-marketing-usage">
+    <h2>Setup, design, and usage</h2>
+
+    <p>First, include jQuery and the plugin:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;head&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/javascript/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+  <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"/assets/javascript/jquery.wanker.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;/head&gt;</span></code></pre></figure>
+
+    <p>Write a public service announcement:</p>
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wanker"</span> <span class="na">data-wanker</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"wanker-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>The web was meant to be read, not squished.<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Prevent excessive browser resizing and get people back to reading.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Download <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://github.com/migreyes/jquery.wanker"</span><span class="nt">&gt;</span>jquery.wanker.js on GitHub<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+
+    <p>Design the message, and hide it by default:</p>
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.wanker</span> <span class="p">{</span>
+  <span class="c">/* Full-screen takeover… */</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="m">#000</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#FFF</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">height</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">left</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">position</span><span class="p">:</span> <span class="nb">fixed</span><span class="p">;</span>
+  <span class="nl">top</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">2014</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.wanker-content</span> <span class="p">{</span>
+  <span class="c">/* Additional design… */</span>
+<span class="p">}</span></code></pre></figure>
+
+    <p>Last, just call the wanker() function on your design.</p>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-wanker]'</span><span class="p">).</span><span class="nx">wanker</span><span class="p">();</span>
+<span class="p">});</span></code></pre></figure>
+
+    <p>Want the message to start sooner and last longer?</p>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// Customize the delay or duration defined in milliseconds</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'[data-wanker]'</span><span class="p">).</span><span class="nx">wanker</span><span class="p">({</span><span class="na">delay</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="na">duration</span><span class="p">:</span> <span class="mi">5000</span><span class="p">});</span>
+<span class="p">});</span></code></pre></figure>
+  </section>
+
+  <section class="wanker-marketing-download">
+    <img class="wanker-marketing-emoji" src="images/emoji-fork.png">
+    <h2>Get it now</h2>
+    <p><a href="https://github.com/migreyes/jquery.wanker" target="_blank">Fork me on GitHub</a>, or get the <a href="https://github.com/migreyes/jquery.wanker/raw/master/jquery.wanker.min.js" target="_blank">minified version now.</a></p>
+  </section>
+
+  <section class="wanker-marketing-share">
+    <img class="wanker-marketing-emoji" src="images/emoji-speaker.png">
+
+    <h2>Spread the good word</h2>
+    <a href="http://twitter.com/share?text=Perhaps%20the%20single-most%20important%20jQuery%20plugin%20for%20web%20design:%20wanker.js%20by%20@migreyes">Tweet about jquery.wanker.js on Twitter.</a>
+  </section>
+
+  <section class="wanker-marketing-colophon">
+    <img class="wanker-marketing-emoji" src="images/emoji-write.png">
+
+    <h2>Colophon</h2>
+    <p><strong>jquery.wanker.js</strong> was writen in CoffeeScript by <a href="http://twitter.com/migreyes">Mig Reyes</a>, a graphic designer at <a href="http://basecamp.com" target="_blank">Basecamp</a> who cares a lot about <a href="http://37signals.com/svn/posts/3404-reminder-design-is-still-about-words" target="_blank">words on the web</a>.</p>
+  </section>
+
+  <div class="wanker-marketing-text spacing-one">
+    <span class="wanker-marketing-text-reflection">&nbsp;</span>
+    <img src="images/emoji-poke-left.png">
+    <img src="images/emoji-computer.png">
+    <img src="images/emoji-poke-right.png">
+    <img src="images/emoji-no.png">
+  </div>
+
+  <div class="footer-chicago">
+    <a href="/loves/chicago" class="chicago-flag" title="My favorite places in Chicago">
+      <p>Made in Chicago</p><br>
+      <span class="flag">✶✶✶✶</span>
+    </a>
+  </div>
+</div>
+<!-- jquery.wanker.js: http://mig.io/makes/wanker -->
+<div class="wanker" data-wanker>
+  <div class="wanker-content">
+    <p>The web was meant to be <a href="/makes/wanker">read, not squished.</a></p>
+
+    <img class="wanker-finger" src="/assets/images/wanker/finger.png">
+
+    <figure class="wanker-hole">
+      <img class="wanker-pinch" src="/assets/images/wanker/hole-pinch.png">
+      <img class="wanker-spread" src="/assets/images/wanker/hole-spread.png">
+    </figure>
+
+    <img class="wanker-poop" src="/assets/images/wanker/poop.png">
+  </div>
+</div>
+  </body>
+</html>

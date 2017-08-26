@@ -1,7 +1,7 @@
-## The work and writing for [Mig Reyes](http://mig.pizza)
+## The work and writing for [Evan Hilgemann]
 
-### About Mig:
-I’m a graphic and product designer from Chicago, leading design at [Trunk Club](http://trunkclub.com) and serving as President for [AIGA Chicago](http://chicago.aiga.org). Before Trunk Club, I shaped brand and product for [Basecamp](http://github.com/basecamp) (_formerly 37signals_) and Threadless.
+### About Evan:
+I’m an engineer at JPL. Wohoo!
 
 =====
 
